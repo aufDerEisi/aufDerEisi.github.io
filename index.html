@@ -79,7 +79,11 @@ display: none;
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
 
 
 
@@ -416,7 +420,7 @@ Die Kommunikations-AG stellt ihre Arbeitsergebnisse vor. Es ist ein detaliert au
 Ein Mensch neben dir fragt die Runde, ob jemand Lust hätte ueber Strategie zu reden.(click: &quot;ueber Strategie zu reden&quot;)[Er fragt ob jemand den Vorschlag der letztens verteilt wurde angeschaut hat und ob man nicht zusammen dazu eine Diskussion führen möchte.
 Der Wunsch wird sofort von einem dürren Mann abgewiesen. Es ergäbe demnach kein Sinn über Strategie zu sprechen, wenn so wenige Menschen anwesend sind. Wir sollten uns viel mehr um das soziale kümmern. (click: &quot;um das soziale kümmern&quot;)[ Nach einem Monolog in dem es darum geht Menschen aus den eigenem Freundeskreis öfters vom Aktionsbündnis zu erzählen, um sie zur Teilnahme am Plenum zu motivieren und an der trüben Stimmung des Plenums zu arbeiten, damit es mehr Spaß macht zum Plenum zu kommen, bist du dir unsicher was du noch dazu sagen könntest und bleibst still. Damit ist das Plenum schon wieder vorbei.
 
-Etwas betrübt [[Der Kiez&lt;-verlässt]] du den Raum, mit dem Gefühl heute nichts geschafft zu haben.]]</tw-passagedata><tw-passagedata pid="12" name="5.Treffen" tags="" position="2821.6666666666665,441" size="100,100">Du kommst etwas früh und freust dich, dass dieses mal doch wieder etwas mehr Menschen gekommen sind. Vielleicht 20 Menschen. Das macht wieder Mut.
+Etwas betrübt [[Der Kiez&lt;-verlässt]] du den Raum, mit dem Gefühl heute nichts geschafft zu haben.]]</tw-passagedata><tw-passagedata pid="12" name="5.Treffen" tags="" position="2821,441" size="100,100">Du kommst etwas früh und freust dich, dass dieses mal doch wieder etwas mehr Menschen gekommen sind. Vielleicht 20 Menschen. Das macht wieder Mut.
 
 Zur Beginn des Plenums wird eine lange Tagesordnungspunkte vorgestellt. Bestehende AGs sollen ihre Ergebnisse Vorstellen, eine Phase wo neue AGs gegründet werden sollen und weitere Vorschläge für mögliche öffentliche und politische Aktionen, die man anfangen könnte vorzubereiten.
 Dir ist eigentlich sofort klar, die Vorbereitung des Plenums hat über das Ziel hinausgeschossen, denn alles am gleichen Abend werdet ihr nicht besprechen können.
@@ -913,7 +917,7 @@ Du gehst heute _lineFeiern oder _lineProjekt oder _lineKulturLinks oder _lineHei
 (set: _lineAusgehenKultur to &quot;Das Wetter ist schön und du hast dir Heute ein neues Hemd bei der Hilde gekauft deswegen hast du Lust ne Runde auf der Eisi zu [[Aktion&lt;-cruisen]]&quot;)
 (set: _lineNichtAusgehen to &quot;Das Wetter ist schön deswegen hast du Lust heute einen kleinen [[Aktion&lt;-Spaziergang]] zu machen.&quot;)
 
-(set: _lineAusgehen to &quot;(if: $feiern is &gt;= (max: $projekt, $kulturLinks, $heim))[_lineAusgehenBar(set: $aktionMitbekommen to &#39;Bar&#39;)](else-if: $projekt is &gt; (max: $feiern, $kulturLinks, $heim))[_lineAusgehenProjekt(set: $aktionMitbekommen to &#39;Hingehen&#39;)](else-if: $kulturLinks is &gt;= (max: $projekt, $feiern, $heim))[_lineAusgehenKultur(set: $aktionMitbekommen to &#39;Kultur&#39;)](else-if: $heim is &gt;= (max: $projekt, $feiern, $feiern))[_lineNichtAusgehen(set: $aktionMitbekommen to &#39;Heim&#39;)]&quot;)
+(set: _lineAusgehen to &quot;(if: $feiern is &gt;= (max: $projekt, $kulturLinks, $heim))[_lineAusgehenBar(set: $aktionMitbekommen to &#39;Bar&#39;)](else-if: ($projekt - 1) is &gt; (max: $feiern, $kulturLinks, $heim))[_lineAusgehenProjekt(set: $aktionMitbekommen to &#39;Hingehen&#39;)](else-if: $kulturLinks is &gt;= (max: $projekt, $feiern, $heim))[_lineAusgehenKultur(set: $aktionMitbekommen to &#39;Kultur&#39;)](else-if: $heim is &gt;= (max: $projekt, $feiern, $feiern))[_lineNichtAusgehen(set: $aktionMitbekommen to &#39;Heim&#39;)]&quot;)
 }\
 **Die Eisenbahnstraße**
 (display: &quot;Kiez-Beschreibung&quot;)\
@@ -946,7 +950,7 @@ Als ihr ankommt seht ihr ungefähr 40 Menschen vor der &amp;lsqb;$wayne[hippe sz
 
 Ihr setzt euch auf den Boden zu einer paar Menschen dazu und fragt ob schon irgendwas passiert ist.
 Die Stimmung ist sehr entspannt, die Chefs der Bar sind heute auch nicht da, erzählt euch eine Kellnerin. Eine Person aus dem Aktionsbündnis drückt euch Flyer in die Hand, aber momentan sind schon ein paar Menschen an jeder Ecke am verteilen, deshalb bleibst du sitzen.
-&lt;img src=&quot;images/cornern2.jpg&quot; alt=&quot;cornern-innen&quot; height=&quot;700&quot; width=&quot;500&quot; /&gt;
+&lt;img src=&quot;images/cornern2.jpg&quot; alt=&quot;cornern-innen&quot; height=&quot;600&quot; width=&quot;500&quot; /&gt;
 
 Nach einer Weile wächst eure Menge vielleicht sogar auf 60-70 Menschen, du kannst es nur schwer einschätzen. Es wird langsam dunkel und die ersten fangen an zu gehen. Die selbe Person die euch die Flyer gegeben hat kommt wieder zu euch und sagt, dass man jetzt zusammen das cornern auflöst. Es soll gleich noch ein kurzes Nachbesprechungstreffen geben, auch um zu schauen wie es weiter gehen könnte. Aber du bist schon etwas müde und die zwei Bier haben dich auch nicht fitter gemacht.</tw-passagedata><tw-passagedata pid="49" name="1.Cornern-Aufgeben" tags="" position="1568,1815" size="100,100">Du bist dir unsicher, was du von dieser Aktion halten solltest. Irgendwie ist das auch wie eine Kriegserklärung an eine goldige Bar im Viertel. Doch hat diese Bar für dich nicht wirklich ersichtlich etwas mit dem Eckladen zu tun. 
 
