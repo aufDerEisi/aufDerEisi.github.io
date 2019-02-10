@@ -840,7 +840,7 @@ Erstellt mit &lt;a href=&quot;http://twinery.org&quot; target=&quot;_blank&quot;
 Das Spiel ist vorbei :) Danke fürs Spielen!
 Vielen Dank auch für Hilfe und Testen an: R&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;d, J&amp;#42;&amp;#42;&amp;#42;s und 
 
-Falls du diese Geschichte der hippen Eisenbahnstraße selbst noch weiter erzählen möchtest, kannst du dies &lt;a href=&quot;link&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;hier&lt;/a&gt; tun.
+Falls du diese Geschichte der hippen Eisenbahnstraße selbst noch weiter erzählen möchtest, kannst du dies &lt;a href=&quot;https://github.com/aufDerEisi/aufDerEisi.github.io&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;hier&lt;/a&gt; tun.
 
 Zur Auswertung(click-replace: &quot;Zur Auswertung&quot;)[
 ###Auswertung
@@ -913,7 +913,7 @@ Du gehst heute _lineFeiern oder _lineProjekt oder _lineKulturLinks oder _lineHei
 (set: _lineAusgehenKultur to &quot;Das Wetter ist schön und du hast dir Heute ein neues Hemd bei der Hilde gekauft deswegen hast du Lust ne Runde auf der Eisi zu [[Aktion&lt;-cruisen]]&quot;)
 (set: _lineNichtAusgehen to &quot;Das Wetter ist schön deswegen hast du Lust heute einen kleinen [[Aktion&lt;-Spaziergang]] zu machen.&quot;)
 
-(set: _lineAusgehen to &quot;(if: $feiern is &gt;= (max: $projekt, $kulturLinks, $heim))[_lineAusgehenBar(set: $aktionMitbekommen to &#39;Bar&#39;)](else-if: $projekt is &gt;= (max: $feiern, $kulturLinks, $heim))[_lineAusgehenProjekt(set: $aktionMitbekommen to &#39;Hingehen&#39;)](else-if: $kulturLinks is &gt;= (max: $projekt, $feiern, $heim))[_lineAusgehenKultur(set: $aktionMitbekommen to &#39;Kultur&#39;)](else-if: $heim is &gt;= (max: $projekt, $feiern, $feiern))[_lineNichtAusgehen(set: $aktionMitbekommen to &#39;Heim&#39;)]&quot;)
+(set: _lineAusgehen to &quot;(if: $feiern is &gt;= (max: $projekt, $kulturLinks, $heim))[_lineAusgehenBar(set: $aktionMitbekommen to &#39;Bar&#39;)](else-if: $projekt is &gt; (max: $feiern, $kulturLinks, $heim))[_lineAusgehenProjekt(set: $aktionMitbekommen to &#39;Hingehen&#39;)](else-if: $kulturLinks is &gt;= (max: $projekt, $feiern, $heim))[_lineAusgehenKultur(set: $aktionMitbekommen to &#39;Kultur&#39;)](else-if: $heim is &gt;= (max: $projekt, $feiern, $feiern))[_lineNichtAusgehen(set: $aktionMitbekommen to &#39;Heim&#39;)]&quot;)
 }\
 **Die Eisenbahnstraße**
 (display: &quot;Kiez-Beschreibung&quot;)\
@@ -946,7 +946,7 @@ Als ihr ankommt seht ihr ungefähr 40 Menschen vor der &amp;lsqb;$wayne[hippe sz
 
 Ihr setzt euch auf den Boden zu einer paar Menschen dazu und fragt ob schon irgendwas passiert ist.
 Die Stimmung ist sehr entspannt, die Chefs der Bar sind heute auch nicht da, erzählt euch eine Kellnerin. Eine Person aus dem Aktionsbündnis drückt euch Flyer in die Hand, aber momentan sind schon ein paar Menschen an jeder Ecke am verteilen, deshalb bleibst du sitzen.
-&lt;img src=&quot;images/cornern2.jpg&quot; alt=&quot;cornern-innen&quot; height=&quot;1000&quot; width=&quot;700&quot; /&gt;
+&lt;img src=&quot;images/cornern2.jpg&quot; alt=&quot;cornern-innen&quot; height=&quot;700&quot; width=&quot;500&quot; /&gt;
 
 Nach einer Weile wächst eure Menge vielleicht sogar auf 60-70 Menschen, du kannst es nur schwer einschätzen. Es wird langsam dunkel und die ersten fangen an zu gehen. Die selbe Person die euch die Flyer gegeben hat kommt wieder zu euch und sagt, dass man jetzt zusammen das cornern auflöst. Es soll gleich noch ein kurzes Nachbesprechungstreffen geben, auch um zu schauen wie es weiter gehen könnte. Aber du bist schon etwas müde und die zwei Bier haben dich auch nicht fitter gemacht.</tw-passagedata><tw-passagedata pid="49" name="1.Cornern-Aufgeben" tags="" position="1568,1815" size="100,100">Du bist dir unsicher, was du von dieser Aktion halten solltest. Irgendwie ist das auch wie eine Kriegserklärung an eine goldige Bar im Viertel. Doch hat diese Bar für dich nicht wirklich ersichtlich etwas mit dem Eckladen zu tun. 
 
@@ -1122,7 +1122,7 @@ Ein Freund neben dir beschwert sich über einen zu undifferenzierten Redebeitrag
 
 Nach dem ihr euch ein Eis geholt habt, diskutiert ihr noch kurz was ihr abends machen wollt. Du hast gehört in dem Eckladen gäbe es vielleicht ein Konzert, aber irgendwie möchten die anderen da nicht mitgehen.
 Bevor ihr euch wieder auf den Weg aufmacht, fängt es an zu Strömen und ihr wartet bis der Regen endlich aufhört.
-Ehe aus Langeweile macht ihr noch eine Runde um den Block, aber euch begegnet fast niemand mehr.</tw-passagedata><tw-passagedata pid="65" name="Flyer2" tags="" position="316,2350" size="100,100">&lt;img src=&quot;images/flyer2.jpg&quot; alt=&quot;Flyer&quot; height=&quot;724&quot; width=&quot;1024&quot; /&gt;</tw-passagedata></tw-storydata>
+Ehe aus Langeweile macht ihr noch eine Runde um den Block, aber euch begegnet fast niemand mehr.</tw-passagedata><tw-passagedata pid="65" name="Flyer2" tags="" position="316,2350" size="100,100">&lt;img src=&quot;images/flyer2.jpg&quot; alt=&quot;Flyer&quot; height=&quot;724&quot; width=&quot;724&quot; /&gt;</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
