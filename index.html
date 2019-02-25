@@ -81,7 +81,9 @@ display: none;
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -197,24 +199,27 @@ _styleAuthor[Außenstehnde*r im inneren Kreis]
 (set: $feiern to it + 1)
 
 (set: _szeneBar to (either:
-  &#39;Du lernst ein Mädchen kennen, sie studiert in zwei Fächern, Genderstudies und BWL, sie erzählt lange von Hindernissen in der freien Entfaltung und wie sich die Wirtschaft mit freiwilligen Regeln helfen könnte. Am Ende des Abends hast du jedoch ihren Namen vergessen. Aber du weißt wieder wie toll es hier ist, da hier soviele coole Menschen abhängen. Hypezig ist vielleicht in den Medien vorbei, doch hier in diesem Viertel nicht!&#39;,
+  &#39;Du lernst ein Mädchen kennen und ihr habt den ganzen Abend ein hinreißendes Gespräch. Sie studiert in zwei Fächern; Genderstudies und BWL. Sie erzählt lange von Hindernissen in der freien Entfaltung und wie sich die Wirtschaft mit freiwilligen Regeln helfen könnte. Am Ende des Abends hast du jedoch ihren Namen vergessen.
+Eigentlich ist nichts aufregendes passiert, aber es war mal wieder einer der Abende die dich erriner wie so du eigentlich hierhergezogen bist. Wegen den Menschen. Hypezig ist vielleicht in den Medien vorbei, doch hier in diesem Viertel nicht!&#39;,
   &#39;Du sprichst drei Stunde lang mit deinen Freunden über Legida, die neue Tapete in der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb;, die Ex von &amp;lsqb;$wayne[irgend einem Freund]&amp;rsqb; und das Georg Orwell Recht hatte&#39;,
   &#39;Der Abend ist lang, du hast mehr Geld ausgegeben als du eigentlich wolltest. Yolo! Du versuchst dir noch was klar zumachen, aber es ist zu spät und nichts vernünftiges ist übrig.&#39;,
   &#39;Die Bar ist heute nicht so aufregend. Du ziehst mit deinen Freunden von einer Bar in die nächste, bist du müde nach Hause läufst&#39;,
   &#39;In der neuen &amp;lsqb;$wayne[hipe szene Bar]&amp;rsqb; ist heute Karaoke Abend. Selbstironisch singst du ein Lied über Dreiecke. Deine Crew geben dir einen aus und du willst nochmal auf die Bühne, aber leider ist die nächste halbe Stunde bereits voll.&#39;))
   
 (set: _ladenProjekt to (either:
-	&#39;Du findest das Spendengals nicht, deshalb fragst du das Barpersonal ob du bei ihnen bezahlen kannst. Der Mensch hinter der Theke gibt dir ein Glas mit Münzen und sagt ohne dich anzuschauen, &quot;ist auf Spende&quot;. Du antwortest genervt, dass du dies weißt und zahlst etwas weniger.&#39;,
-	&#39;Als du dein Bier bestellst, spricht dich das Barpersonal bzgl. einer Demo an und möchte dir ein Flyer für eine Mobilisierungsveranstaltung geben, die morgen hier stattfindet. Du erzählst deinen Friends wie arrogant das Barpersonal hier ist, und das sie wohl glauben was besseres zu sein&#39;,
-	&#39;Du setzt an die Bar und lernst jemand aus Marseille kennen. Er ist Künstler und besetzt dort Häuser. Er besucht mit seiner Freundin Leipzig und sucht ein billiges Zimmer für 2-3 Wochen. Er fragt das Barpersonal und kriegt eine Nummer, von Freunden von Freunden die zufällig ein leeres Zimmer haben.&#39;,
+	&#39;Du findest die Kasse nicht, deshalb fragst du das Barpersonal ob du bei ihnen bezahlen kannst. Der Mensch hinter der Theke gibt dir ein Glas mit Münzen und sagt ohne dich anzuschauen, &quot;ist auf Spende&quot;. Du antwortest genervt, dass du dies weißt und zahlst etwas weniger.&#39;,
+	&#39;Als du dein Bier bestellst, spricht dich das Barpersonal bzgl. einer Demo an und möchte dir ein Flyer für eine Mobilisierungsveranstaltung geben, die morgen hier stattfindet. Der Mensch schaut dich dabei kaum an und wirkt um so eingebildeter.
+Du beschwerst dich bei deinen Friends wie arrogant das Barpersonal hier ist, und das sie wohl glauben was besseres zu sein&#39;,
+	&#39;Du setzt an die Bar und lernst jemand aus Marseille kennen. Er ist Künstler und besetzt dort Häuser. Er besucht mit seiner Freundin Leipzig und sucht ein billiges Zimmer für 3-5 Wochen. Er fragt das Barpersonal und kriegt eine Nummer, von Freunden von Freunden die zufällig ein leeres Zimmer haben.&#39;,
 	&#39;Ein betrunkener Penner spricht dich an. Du gehst zur Abwechslung auf das Gespräch ein um ein wenig Spaß zu haben. Du erfährst, dass er manchmal hier schlafen darf. Du spendest beim dem nächsten Wein etwas mehr und gehst zurück zu deiner Clique&#39;))
 	
 (set: _guteNacht to (either:
 	&#39;Der Abend ist vorbei und du gehst zurück in deine Wohnung&#39;,
-	&#39;Du bist langsam müde und musst ins Bett&#39;
-	,&#39;du hast nicht mehr soviel Geld dabei und möchtest deine Freunde um nichts bitten, deshalb verabschiedest du dich und gehst nach Hause&#39;,
+	&#39;Du bist langsam müde und musst ins Bett&#39;,
+	&#39;du hast nicht mehr soviel Geld dabei und möchtest deine Freunde um nichts bitten, deshalb verabschiedest du dich und gehst nach Hause&#39;,
 	&#39;Du kriegst nach all den Stunden doch etwas hunger... du gehst bei einem Döner vorbei und holst dir einen Gute-Nacht-Snack&#39;,
-	&#39;Nach ein paar weiteren Drinks fängt sich an alles zu drehen. Auf dem Weg nach Hause kotzt du ins Gebüsch.&#39;))
+	&#39;Nach ein paar weiteren Drinks fängt sich an alles zu drehen. Auf dem Weg nach Hause kotzt du ins Gebüsch.&#39;,
+	&#39;Du blickst auf die Uhr. Es ist schon spät und du hast morgen noch einen langen Tag, deshalbst verabschiedest du dich.&#39;))
 }\
 &lt;!-- Kinder des neoliberalen Systems gehen feiern--&gt;
 (if: $woFeiern is &#39;Bar&#39;)[(either:
@@ -222,11 +227,15 @@ _styleAuthor[Außenstehnde*r im inneren Kreis]
 	&#39;Die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; ist heute voll. Du gehst in die Bar gegenüber und bestellst einen &amp;lsqb;$wayne[hiper Cocktail]&amp;rsqb;. Deine Freunde tauchen nicht auf und das Staren auf WhatsApp hilft nicht dabei vorzutäuschen das du dich langweilst.&#39;,
 	&#39;Deine Friends sind heute auf Abwechslung aus und haben kein Geld. Ihr geht in ein Eckladen das auf Spende funktioniert. _ladenProjekt&#39;
 	)]\
-(if: $woFeiern is &#39;Club&#39;)[(either: &#39;Im &amp;lsqb;$wayne[stylischen Club]&amp;rsqb; legt heute &amp;lsqb;$wayne[irgendein DJ]&amp;rsqb; 6 Stunden lang auf. Das musst du dancen. Du fragst schon am Einlass nach Teilen und hast dich nach ein paar Minuten bereits zu deinem 10€-Glück durchgefragt. Die nächsten Stunden sind sehr aufregend und du bist überzeugt, dass du dich in einem Typen verliebt hast, aber als du ihn nach dem du auf dem Klo warst suchen gehst, findest du ihn nicht mehr.&#39;,
+(if: $woFeiern is &#39;Club&#39;)[(either: &#39;Im &amp;lsqb;$wayne[stylischen Club]&amp;rsqb; legt heute &amp;lsqb;$wayne[irgendein DJ]&amp;rsqb; 6 Stunden lang auf. Das musst du dancen. Du fragst schon am Einlass nach Teilen und findest nach ein paar Minuten bereits deinen 10€-Glück.
+Die nächsten Stunden sind sehr aufregend und du bist überzeugt, dass du dich in einem Typen verliebt hast, aber als du ihn nach dem du auf dem Klo warst suchen gehst, findest du ihn nicht mehr.&#39;,
   &#39;Deine Friends schleppen dich zu einem Club mit, doch am Einlass erklären dir Menschen, dass dem garnicht so ist, es sei &amp;lsqb;$wayne[irgendein Projekt]&amp;rsqb; und sie sammeln Geld für &amp;lsqb;$wayne[irgendein Projekt]&amp;rsqb; mit einer Soliparty.
 Du fragst wer auflegt und ob es günstiger ist, weil es schon so spät ist. Als du hörst das es gegen Spende ist, schmeißt du dein Kleingeld in den Topf und gehst an die Bar.
 Lichter in Blau und dunkel Violett blinken in dein Gesicht. Du tanzt dir die Klamotten nass als du merkst, dass du vielleicht doch zu viel Alkohol getrunken hast. Du suchst dir ein Platz zum chillen und kannst von den Menschen neben dir Tabak schnorren.
-Blauer Dunst steigt über dir auf, als deine Freunde dich endlich finden und dir ein Saft in die Hand drücken.&#39;) ]\
+Blauer Dunst steigt über dir auf, als deine Freunde dich endlich finden und dir ein Saft in die Hand drücken.&#39;,
+&#39;Im &amp;lsqb;$wayne[irgendein Club]&amp;rsqb; gibts heute &amp;lsqb;$wayne[deine Liebliengsmusik]&amp;rsqb;. Am Einlass stelst du fest, dass der Eintritt 12€ Kostet. Deine Freunde sind genervt, so geht ihr halt rein, wenn ihr nun mal schon hier seit.
+Du versuchst mit einem Bier zu tanzen, aber kommst nicht so in Stimmung. Auch nach dem zweiten Bier und mehreren Blicken auf die Uhr ist die meiste an dich selbst gestellte Frage, wann du wohl genug da warst um gehen zu können.
+Nach 2 Wodka-Matte fängst du an mit &amp;lsqb;$wayne[irgendjemand]&amp;rsqb; rum zumachen. Doch auch das ist eher enttäuschend.&#39;) ]\
 
 [[Der Kiez&lt;-_guteNacht]]</tw-passagedata><tw-passagedata pid="4" name="Projekt" tags="" position="234,809" size="100,100">{
 (set: $projekt to it + 1)
@@ -238,18 +247,28 @@ Blauer Dunst steigt über dir auf, als deine Freunde dich endlich finden und dir
 (set: _konzertLine to &quot;Auf einmal bauen ein paar flüchtige Bekannte ihr Instrumenten-Set auf. Scheinbar gibt es spontan ein Konzert. (either: &#39;zuerst spielt Raduz etwas auf seinem Klavier und NotAFriend folgt mit einer selbstgebastelter frickel Musik auf seinem Laptop. Danach versuchen sie zusammen etwas zu spielen was an Berghain anmutet, aber sich zu einem undefinierten etwas entwickelt. Die Künstler*innen sind begeistert, die anderen ehe nicht.&#39;,
 	&#39;es sind zwei Bewohner*innen des Nachbarhauses. Sie spielen auf Gitarre Radiohead covers. Als danach noch mehr Menschen mit Instrumenten auftauchen und halbe Stunde lang laut chaotisch Musik machen, bittet sie der Mensch von der Bar genervt dafür den Jam-Session-Tag zu nutzen.&#39;)&quot;)
 (set: _langeweile to &#39;es gibt jede halbe Stunde ein krassen Musik-Bruch, weil irgendjemand anderes an den Musikplayer kommt. Auch von den Gesprächen bist du heute schnell genervt.&#39;)
+(set: _gespraech1 to &#39;du trinkst 2 Getränke und unterhältst dich mit ein paar Freunde bei einer Zigarette.&#39;)
+(set: _gespraech2 to &#39;Du lernst zwei linke an der Bar kennen. Ihr unterhaltet euch lange über fehlende Linke Bewegungen und leere Ideen. Am Ende bleibt ihr bei Griechenland hängen. Es gäbe dort momentan eine Masse die mobilisiert werden kann, das Problem ist nur, das auch viele Rechte Teil der Demonstrantinen sind.
+Nach 2-3 Bier seit ihr euch einig, dass man mit einer Beteiligung nur die rechten Stärker machen würde.&#39;)
+(set: _gespraech3 to &#39;Am Nebentisch unterhalten sich zwei Menschen sehr laut über Gentrifizierung. Sie streiten sich darum welche Rolle Hipster eigentlich in diesem Prozess haben. Eine Person ist der Meinung, dass Problem die Vertreibung an sich ist. Da wo vorher Alkis am Hauseingang standen, ist jetzt das Haus voller junger Leute. Diese Menschen müssen sich einen anderen Ort suchen und in diesem Vertreiben der Körper zeigt sich bereits Gentrifizierung. Die zweite Person ist da anderer Meinung. Das Problem sei nicht, dass in einem Haus aufeinmal fast nur junge Leute wohnen und die mit lauter Musik die alten vertreiben, sondern dass sich die Einwohner&amp;#42;innen, die mit ihrer direkten Nachbarschaft nicht mehr zu frieden sind, im Viertel sonst nirgendwo mehr die Mieten leisten können.&#39;)
+(set: _gespreach to (either:_gespraech1, _gespraech2, _gespraech3))
 
 (set: _rumhaengenLine to (either:
   &#39;Heute gibt es _essenLine bei der VeKü. _vekueLine&#39;,
-  &quot;Es ist ein gewöhnlicher Bar-Abend. (either: _konzertLine, _langeweile, &#39;du trinkst 2 Getränke und unterhältst dich mit ein paar Freunde bei einer Zigarette&#39;)&quot;))
+  &quot;Es ist ein gewöhnlicher Bar-Abend. (either: _konzertLine, _langeweile, _gespreach)&quot;))
 
 (set: _plenumLine to (either:
   &#39;Es war für einige ein langer Tag und das merkt man/frau an der Trägheit des Plenums. Ihr schafft dennoch etwas für &amp;lsqb;$wayne[eures gemeinsames Projekt]&amp;rsqb; zu organisieren. Und unterhaltet euch danach vor der Tür noch etwas über Life im Viertel&#39;,
   &#39;Ihr macht heute ein Emo-Plenum um über aufgestaute Probleme in der Gruppe zu reden. Du hast selbstgemachte Muffins mitgebracht über die sich die wenigen aus der Gruppe freuen die gekommen sind. Einige empfinden die Art wie in letzter Zeit Entscheidungen getroffen wurden nicht ideal. Ihr unterhaltet euch lange darüber wie mögliche Hierarchien aufgelöst werden könnten. Es gibt zwar kein abschließendes Ergebnis, aber du hast das Gefühl ihr seit  als Gruppe weiter als davor.&#39;,
   &#39;Es ist echt kein gutes Plenum. Alle fallen sich ins Wort und kein einziges Top wird zu ende gesprochen, bevor ihr nicht zu einem anderen Thema abschweift. Als die/der Protokollant*in sich beschwert, dass das Protokollieren fast unmöglich ist, entsteht auch noch ein Streit mit denjenigen, die finden das alles nun mal im ganzen so besprochen werden muss und zusammenhängt und der Protokollantin. Du forderst eine Pause und ihr beschließt, dass ihr heute doch jemand zum Moderieren braucht. Ihr schafft danach zumindest ein Thema zu Ende zu besprechen, doch es ist schon halb 10 und niemand hat Energie noch weiter zu plenieren&#39;))
-
 (set: _helfenLine to (either:
-  &#39;bei der VeKü kochen/abspülen&#39;))
+	&#39;heute war VeKü und du hast dich entschieden etwas im Viertel zu helfen in dem du ein paar Töpfe sauber machst. Nach einer halben Stunde gibst du bei einem eingebrannten Topf auf und weichst denn ein, in der Hoffnung das jemand später weiter spült&#39;,
+	&#39;Du hast mitbekommen, dass in &amp;lsqb;$wayne[irgendeinem Ladenprojekt]&amp;rsqb; heute Aktionstag ist. Als du ankommst stellst du fest, dass eigentlich nichts geplannt ist. Eine Person wollte ein Regal für Flyer bauen, aber weder wurde Holz noch Fahrradschläuche besorgt.
+Du räumst irgendwie planlos Sachen von Raum zu Raum, aber gibts auf, da sich das ganze etwas sinnlos anfühlt.&#39;,
+	&#39;Du hast mitbekommen, dass heute im &amp;lsqb;$wayne[irgendeinem Ladenprojekt]&amp;rsqb; Ausmisten-Tag ist. Das bedeutet, es hat sich wieder irgendein Scheiß angehäuft und der soll weg.
+	Nach zweistunden hast du ein Haufen mit einer Kamera, Schlitzschuhen, Bücher und T-Shirts gemacht, die du mitnimmst und zwei Müllsäcke die jemand zu einem (anderen) Umsonstladen bringen will.&#39;))
+
+}\
 
 }\
 
@@ -257,7 +276,7 @@ Blauer Dunst steigt über dir auf, als deine Freunde dich endlich finden und dir
 _rumhaengenLine]\
 (if: $wieLeben is &#39;Orga&#39;)[Die &amp;lsqb;$wayne[Gruppe bei der du mitmachst]&amp;rsqb; trifft sich heute.
 _plenumLine]\
-(if: $wieLeben is &#39;Arbeit&#39;)[Du hilfst etwas in einem unkommerziellen Projekt.
+(if: $wieLeben is &amp;#39;Arbeit&amp;#39;)[Du hilfst etwas in einem unkommerziellen Projekt.
 _helfenLine]\
 
 (if: not $hatProtestAngefangen and $projekt is &gt;= $projektBesucheFuerProtest)[(set: $einladungPer to &quot;Plenum&quot;))(display: &quot;Einladung&quot;)](else-if: $projekt is &gt; 2 and $hndrtnInfo is &lt; 6 and $hopInfo is &lt; 6)[
@@ -272,14 +291,14 @@ Sie erzählen dir was sie gerade beschäftigt(click-replace: &quot;Sie erzählen
 
 (set: _unterdKunst to&#39;Du gehst zu einem Vortrag über Antisemitismus, Gender und freie Kunst und bist fasziniert von den Bildern die während der Präsentation gezeigt wurden und den Geschichten ihrer Entstehung.
 
-Während der Anschließenden Diskussion entsteht ein Streitgespräch ob die Bilder und ihre Entstehung als eine Form des Widerstands zu betrachten sind oder die Bilder Aufzeigen, was selbst unter Unterdrückung möglich ist und wie viel mehr an Kunst ohne die Unterdrückung möglich wäre.
+Während der anschließenden Diskussion entsteht ein Streitgespräch ob die Bilder und ihre Entstehung als eine Form des Widerstands zu betrachten sind oder die Bilder Aufzeigen, was selbst unter Unterdrückung möglich ist und wie viel mehr an Kunst ohne die Unterdrückung möglich wäre.
 
 Du bist dir sicher heute ein tieferes Verständnis gewonnen zu haben und teils auf Insta gleich noch das Bild des Flyers neben deinem Gesicht.&#39;)
-(set: _linkeSzene to &#39;Du gehst zu einem Vortrag mit anschließender Diskussion. Auf dem Flyer stand so etwas wie Analyse von Problemen in linken und szenischen Gruppen. Deine Crew wollte da unbedingt hin, deshalb bist du mit. Aber als du ankommst, ist von denen niemand dar. Du bleibst trotzdem.
+(set: _linkeSzene to &#39;Du gehst zu einem Vortrag mit anschließender Diskussion. Auf dem Flyer stand so etwas wie Analyse von Problemen in linken und szenischen Gruppen. Deine Crew wollte da unbedingt hin, deshalb bist du hin. Aber als du ankommst, ist von denen niemand dar. Du bleibst trotzdem.
 	
 Die Vortragende fängt mit Beispielen einer Raumproduktion in der linken Szene in Berlin an und geht zu Kollektive Identität in sozialen Bewegungen und Raumproduktion im Alltag über.
 
-Du kannst kaum folgen, doch dafür wird die Diskussion um so hitziger. Während der Diskussion streitest du dich mit einem dir unbekannten Typen um den Begriff der Freiräume und die emotional körperliche Identitätskonstruktion. Er wirft dir eine Depersonalisierung von Wahrnehmung vor, die durch Selbstkategorisierung zustande kommt. Du würdest von idealen Mitglieder*innen einer In-Group, ihren Eigenschaften, Einstellungen und Verhaltensweisen ausgehen, wo es jedoch in der Realität keine gäbe.
+Du kannst kaum folgen, doch dafür wird die Diskussion um so hitziger. Während der Diskussion streitest du dich mit einem dir unbekannten Typen um den Begriff der Freiräume und die emotional körperliche Identitätskonstruktion. Er wirft dir eine Depersonalisierung von Wahrnehmung vor, die durch Selbstkategorisierung zustande kommt. Du würdest von idealen Mitglieder&amp;#42;innen einer In-Group, ihren Eigenschaften, Einstellungen und Verhaltensweisen ausgehen, wo es jedoch in der Realität keine gäbe.
 
 Die Vortragende beendet darauf die Diskussion und gibt euch auf dem Weg, dass in Heilig Damm die Inszenierung der linken Gewalt in den Medien in der absoluten absurdesten Überspitzung gezeichnet wurde, und dies in der sogenannten szenische Linken dennoch zur Distanzierung und Spaltung führte.&#39;)
 (set: _hochkunst to &#39;Du gehst mit einem Freund zu einem Vortrag über die Auswirkung der kapitalistischen Ideologie an Kunsthochschulen. Die Vortragenden erzählen von ihren persönlichen Erlebnissen an Kunsthochschulen. Die Ideologie der Profitmaximierung herrscht über die Gesellschaft und Kunsthochschulen Teil der Gesellschaft sind, ist diese auch an der Kunsthochschule zu finden, heißt es.
@@ -311,7 +330,8 @@ Du bist dir nicht sicher, ob das Argument einleuchtend war, aber als du nach dem
 	_hochkunst
 	)]\
 (if: $wasHip is &#39;Film&#39;)[(either:
-	&#39;die Ästhetik des G20 Protests&#39;,
+	&#39;In &amp;lsqb;$wayne[irgendeinem kleinem Kino]&amp;rsqb; wird ein Film über die Ästhetik des G20 Protests gezeigt.
+Der Film behandelt, die inszenierung der Gewalt in der Linken Szene. Du siehst eine halbe Stunde lange selfie-Aufnahmen von schick angezogenen jungen Menschen vor brennenden Autos, am Ende wird eine vermumte Person in einem abgedunkelten Raum interviewt und eine Professorin bewertet, die zuschaustellung von ausufernder Gewalt, als eine Methode vor der eigenen Hilflosigkeit gegenüber dem dominierenden Neoliberalen System zu fliehen.&#39;,
 	&#39;Du gehst mit deinen Peoples zu einem Film über feministischen Rap in Porno Filmen mit Eingeladenen Regisseuren.
 
 Auf der Bühne sitzen zwei Cis-Männer gekleidet in Bunten Röcken und einem BH. Während hinter ihnen auf der Leinwand der Film läuft, erzählen sie einzelne Anekdoten, die während der Aufnahmen stattgefunden haben. Die meisten Penisse, die in den man-on-man Szenen zu sehen sind, seien nicht echt, da keiner der Darsteller lange genung eine Erektion vorweisen konnte.
@@ -372,12 +392,12 @@ Erst jetzt beginnt das eigentliche Plenum.(click: &quot;beginnt das eigentliche 
 Die Stimmung wird trotz des eisgien Anfangs schnell aufgelockert. Einstimmig erklären sich die anwesenden helfen zu wollen und erklären den Projekten, dass sie diese Probleme nicht alleine lösen können und sollten. Die Zukunft der Projekt steht auf dem Spiel, es hätte schon vor lange Zeit ein Treffen einberufen werden müssen.
 Ein Frau aus dem Leipziger Westen meldet sich zu Wort. Rückblickend hat man den selben Fehler begangen und viel Zeit und Energie in eine aussichtslose Verhandlung investiert. Sie ermahnt die Anwesenden die Organisierung der Proteste nicht auf den Schultern der Betroffenen Ladenprojekt-Orgas zu belassen, da diese jetzt umso mehr unter Zeitnot und Stress leiden.
 
-Es ist schon spät geworden, du bist müde(click: &quot;müde&quot;)[ und du merkst dies den anderen ebenso an. Doch eine erleichterte Stimmung herrscht im Raum. Den die Orgas der bedrohten Projekte zeigen ein Sinneswandel und erklären, die Anfangsstatements seinen Aufgrund von Ängsten so formuliert worden. Intransparente Organisierung des Treffens und unmögliche Art der Kommunikation von einzelnen Individuen, wären Hauptursache für die ehe ablehnende Haltung.
+Es ist schon spät geworden, du bist müde und du merkst dies den anderen ebenso an. Doch eine erleichterte Stimmung herrscht im Raum. Den die Orgas der bedrohten Projekte zeigen ein Sinneswandel und erklären, die Anfangsstatements seinen Aufgrund von Ängsten so formuliert worden. Intransparente Organisierung des Treffens und unmögliche Art der Kommunikation von einzelnen Individuen, wären Hauptursache für die ehe ablehnende Haltung.
 
 Ein Bärtiger Mann beendet das Plenum mit dem Hinweis, dass die selbstverwalteten Räume, sich als Commons, in einer Weise also als Gemeingut, betrachten lassen und der jungen Linke und damit uns als Reproduktionsräume dienen.
 
 Als das [[Der Kiez&lt;-Plenum endet]], verteilt ein Mitglied eines der Projekte ein weißes A4-Blatt, mit einem Strategie-Vorschlag und Eskalationsplan für mögliche Proteste.
---Zettel anklickbar machen, aber nur 5 sec zeigen, danach Zettel einstecken und nicht mehr anschauen]]]]</tw-passagedata><tw-passagedata pid="9" name="2.Treffen" tags="Protest" position="2629,578" size="100,100">Rund einen Monat ist es her, dass das erste Treffen stattgefunden hat. Erwartungsvoll begibst du dich mit zwei Freunden zu dem Plenum in dem auch die Zukunft dieses Viertels gestaltet wird. Auf dem Weg fällt dir eine &amp;lsqb;$wayne[witzige sozio-kulturelle Protestaktion]&amp;rsqb; in den Sinn, doch als du den Raum betrittst, vergesst du das nochmal konkret aufzuschreiben.
+--Zettel anklickbar machen, aber nur 5 sec zeigen, danach Zettel einstecken und nicht mehr anschauen]]]</tw-passagedata><tw-passagedata pid="9" name="2.Treffen" tags="Protest" position="2629,578" size="100,100">Rund einen Monat ist es her, dass das erste Treffen stattgefunden hat. Erwartungsvoll begibst du dich mit zwei Freunden zu dem Plenum in dem auch die Zukunft dieses Viertels gestaltet wird. Auf dem Weg fällt dir eine &amp;lsqb;$wayne[witzige sozio-kulturelle Protestaktion]&amp;rsqb; in den Sinn, doch als du den Raum betrittst, vergesst du das nochmal konkret aufzuschreiben.
 
 Du betrittst den Raum.(click: &quot;betrittst&quot;)[
 
@@ -389,10 +409,10 @@ Unzählige Geschichten und ältere Konflikte werden rausgekramt.(click: &quot;ra
 
 Die Geschichten sind viel fältig in der Beschreibung der angehäuften Unterdrückung, aber auch im Grad der Vernetzung der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; zu anderen kommerziellen Kultur-Veranstalterin. Von Preisabsprachen wird berichtet, genauso wie von einer Emanzipatorischen Grundhaltung an die man appelieren könnte.
 
-Nach zwei Stunden brummt dir der Schädel,(click: &quot;brummt&quot;)[ dir ist immer noch nicht klar was die anwesenden für eine Strategie haben. Sowohl sind Stimmen dafür weiter mit den Betreibern der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; zu verhandeln, als auch die Konflikte schnellstmöglich öffentlich zu machen. Aber immerhin, ihr beschließt das Aktionsbündnis zu gründen - einer mehr oder weniger lose Struktur zur Koordinierung von Aktionen für den Erhalt der Ladenprojekte - euch alle 2 Wochen zu treffen und richtet erste AG-Strukturen ein.(click: &quot;AG-Strukturen&quot;)[
+Nach zwei Stunden brummt dir der Schädel, dir ist immer noch nicht klar was die anwesenden für eine Strategie haben. Sowohl sind Stimmen dafür weiter mit den Betreibern der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; zu verhandeln, als auch die Konflikte schnellstmöglich öffentlich zu machen. Aber immerhin, ihr beschließt das Aktionsbündnis zu gründen - einer mehr oder weniger lose Struktur zur Koordinierung von Aktionen für den Erhalt der Ladenprojekte - euch alle 2 Wochen zu treffen und richtet erste AG-Strukturen ein.(click: &quot;AG-Strukturen&quot;)[
 Eine AG soll sich um die Kommunikations-Infrastruktur kümmern und als erstes einen E-Mail-Verteiler einrichten. Eine Gruppe möchte sich mit Erfahrungen aus anderen Kämpfen um Räume auseinander setzten um die Ergebnisse der Gruppe vorzustellen und daraus zu lernen. Eine weitere AG will sich konkret mit möglichen Aktionen im Protest für die zwei Ladenprojekte beschäftigen. Eine vierte Gruppe möchte ein Vorschlag für ein Selbstverständnis für das Aktionsbündnis ausarbeiten.
 
-Müde, mit dem Gefühl einiges heute Abend erarbeitet zu haben und den Kopf voll Ideen gehst du noch mit ein Bekannten&amp;Friends zum nächsten Döner, nach dem das [[Der Kiez&lt;-Plenum beendet]] wurde.]]]]</tw-passagedata><tw-passagedata pid="10" name="3.Treffen" tags="Protest" position="2627,728" size="100,100">Das Plenum findet heute an einem anderen als üblichen Ort statt. Du machst dir etwas sorgen ob die Nachricht des Ortswechsels alle erreicht hat, denn ein E-Mail-Verteiler fehlt euch noch.
+Müde, mit dem Gefühl einiges heute Abend erarbeitet zu haben und den Kopf voll Ideen gehst du noch mit ein Bekannten&amp;Friends zum nächsten Döner, nach dem das [[Der Kiez&lt;-Plenum beendet]] wurde.]]]</tw-passagedata><tw-passagedata pid="10" name="3.Treffen" tags="Protest" position="2627,728" size="100,100">Das Plenum findet heute an einem anderen als üblichen Ort statt. Du machst dir etwas sorgen ob die Nachricht des Ortswechsels alle erreicht hat, denn ein E-Mail-Verteiler fehlt euch noch.
 
 Du betrittst den Raum eines neulich gegründeten Hausprojekts, mit einem großen Projektraum im Erdgeschoss.(click: &quot;Du betrittst den Raum&quot;)[Ein großer Stuhlkreis. Rund 25 Menschen sind gekommen um sich für das Ladenprojekt und den Eckladen einzusetzen.
 
@@ -402,7 +422,7 @@ Für dich ist ganz klar, dass die Orga-Gruppen ein Text ausarbeiten sollten, des
 Du bist dir unsicher wie man damit umgehen sollte, aber vergisst deine Bedenken als ein junger Mann aus dem Plenum sehr abgehackt die Frage nach der Strategie stellt.(click: &quot;Frage nach der Strategie&quot;)[ Er möchte wissen ob es bereits Diskussionen dazu gab und wie weit diese sind.
 Die Aktions-AG, beantwortet damit das als nächstes eine Aktion ausgearbeitet werden soll.
 
-Die nächste AG stellt ihre Ergebnisse vor.(click: &quot;stellt ihre Ergebnisse vor&quot;) Sie haben sich mit ähnlichen Kämpfen um kollektive und öffentliche Räume beschäftigen und berichten von ihreren Recherchen.
+Die nächste AG stellt ihre Ergebnisse vor. Sie haben sich mit ähnlichen Kämpfen um kollektive und öffentliche Räume beschäftigen und berichten von ihreren Recherchen.
 Hefte eines Kollektivs, dass solche Kämpfe dokumentiert, werden durch gereicht. Du blickst auf deine Ausgabe und liest &lt;a href=&quot;https://malaboca.noblogs.org/files/2017/12/Uniti-Possiamo-Tutti-Deutsch.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Malaboca Kollektiv - Uniti Possiamo Tutti&lt;/a&gt;. Die AG erzählt weiter von Kollektivierungsprozessen und Besetzungen in Mailand. Du steckst das Heft weg um es dir später anzuschauen.
 
 Nach dem weitere AGs ihre Ergebnisse vorgestellt haben, geht ihr in kleine Runden, der einzelnen AGs um die weiteren Schritte zu planen.
@@ -411,7 +431,7 @@ Eigentlich habt ihr heute fast nichts geschafft, doch es ist schon fast 22 Uhr u
 
 -- Mehr auf Schizo und Angst vom Goldhorn eingehen, wie sie überall feinde usw. sehen.
 
--- Einbauen das ja leider leider niemand Zeit hat]]]</tw-passagedata><tw-passagedata pid="11" name="4.Treffen" tags="Protest" position="2627,841" size="100,100">Du kommst etwas spät zum Plenum und stellst verwundert fest, dass nur 12 Menschen da sind.
+-- Einbauen das ja leider leider niemand Zeit hat]]</tw-passagedata><tw-passagedata pid="11" name="4.Treffen" tags="Protest" position="2627,841" size="100,100">Du kommst etwas spät zum Plenum und stellst verwundert fest, dass nur 12 Menschen da sind.
 
 Eine etwas depressive Stimmung macht sich breit, als ihr nach 30 Minuten warten beschließt doch anzufangen.
 
@@ -445,7 +465,7 @@ Ein paar Menschen wünschen sich den Plenumstag zu verschieben, da sie sonst nur
 Als du [[Der Kiez&lt;-rausgehst]] blicks du hoch und atmest tief ein. Der Himmel ist schwarz und kein Stern ist zu sehen.]]]]</tw-passagedata><tw-passagedata pid="13" name="Biertrink-Aktion" tags="Protest" position="2827,575" size="100,100">{
 (set: $bierTrinkAktionAktiv to false)
 }\
-Mit einem aufgeregt Schritt nährst du dich dem Treffort für die erste Aktion. Du hast ein paar Freunde mitgebracht und witzelst mit ihnen über den schwarzen Block, als ihr euch einer Crowd nähert die überwiegend schwarz trägt. Heute geht ihr in die &amp;lsqb;$wayne[irgendein Projekt]&amp;rsqb; der Eigentümer, die die zwei Ladenräume verdrängen. Der Plan ist simple. Ihr geht rein, trinkt ein selbst mitgebrachtes Bier und geht wieder.(click: &quot;Der Plan&quot;)[
+Mit einem aufgeregt Schritt nährst du dich dem Treffort für die erste Aktion. Du hast ein paar Freunde mitgebracht und witzelst mit ihnen über den schwarzen Block, als ihr euch einer Crowd nähert die überwiegend schwarz trägt. Heute geht ihr in die &amp;lsqb;$wayne[irgendein Projekt]&amp;rsqb; der Eigentümer, die die zwei Ladenräume verdrängen. Der Plan ist simple. Ihr geht rein, trinkt ein selbst mitgebrachtes Bier und geht wieder.(click: &quot;Ihr geht rein&quot;)[
 
 Du freust dich richtig, denn als du die Köpfe durch zählst kommst du bei 40 Menschen an. Endlich eine gemeinsame Aktion und das gleich so viele da sind macht Mut.
 
@@ -917,7 +937,7 @@ Du gehst heute _lineFeiern oder _lineProjekt oder _lineKulturLinks oder _lineHei
 (set: _lineAusgehenKultur to &quot;Das Wetter ist schön und du hast dir Heute ein neues Hemd bei der Hilde gekauft deswegen hast du Lust ne Runde auf der Eisi zu [[Aktion&lt;-cruisen]]&quot;)
 (set: _lineNichtAusgehen to &quot;Das Wetter ist schön deswegen hast du Lust heute einen kleinen [[Aktion&lt;-Spaziergang]] zu machen.&quot;)
 
-(set: _lineAusgehen to &quot;(if: $feiern is &gt;= (max: $projekt, $kulturLinks, $heim))[_lineAusgehenBar(set: $aktionMitbekommen to &#39;Bar&#39;)](else-if: ($projekt - 1) is &gt; (max: $feiern, $kulturLinks, $heim))[_lineAusgehenProjekt(set: $aktionMitbekommen to &#39;Hingehen&#39;)](else-if: $kulturLinks is &gt;= (max: $projekt, $feiern, $heim))[_lineAusgehenKultur(set: $aktionMitbekommen to &#39;Kultur&#39;)](else-if: $heim is &gt;= (max: $projekt, $feiern, $feiern))[_lineNichtAusgehen(set: $aktionMitbekommen to &#39;Heim&#39;)]&quot;)
+(set: _lineAusgehen to &quot;(if: $feiern is &gt;= (max: $projekt, $kulturLinks, $heim))[_lineAusgehenBar(set: $aktionMitbekommen to &#39;Bar&#39;)](else-if: ($projekt - 3) is &gt; (max: $feiern, $kulturLinks, $heim))[_lineAusgehenProjekt(set: $aktionMitbekommen to &#39;Hingehen&#39;)](else-if: $kulturLinks is &gt;= (max: $projekt, $feiern, $heim))[_lineAusgehenKultur(set: $aktionMitbekommen to &#39;Kultur&#39;)](else-if: $heim is &gt;= (max: $projekt, $feiern, $feiern))[_lineNichtAusgehen(set: $aktionMitbekommen to &#39;Heim&#39;)]&quot;)
 }\
 **Die Eisenbahnstraße**
 (display: &quot;Kiez-Beschreibung&quot;)\
