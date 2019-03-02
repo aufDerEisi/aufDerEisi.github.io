@@ -82,7 +82,9 @@ display: none;
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -160,8 +162,8 @@ display: none;
 (set: $protestTage to 0)
 (set: $besucheAktionsbuendnis to 0)
 
-(set: $protestAnfangTage to 6)
-(set: $projektBesucheFuerProtest to 5)
+(set: $protestAnfangTage to 7)
+(set: $projektBesucheFuerProtest to 6)
 (set: $tageZumVorspulen to 2)
 (set: $tageZumVorspulenVomBuendins to 3)
 (set: $tageNichtBeimPlenum to 0)
@@ -270,16 +272,14 @@ Du räumst irgendwie planlos Sachen von Raum zu Raum, aber gibts auf, da sich da
 
 }\
 
-}\
-
 (if: $wieLeben is &#39;Beziehung&#39;)[Du hängst in einem selbstverwalteten Projekt ab.
 _rumhaengenLine]\
 (if: $wieLeben is &#39;Orga&#39;)[Die &amp;lsqb;$wayne[Gruppe bei der du mitmachst]&amp;rsqb; trifft sich heute.
 _plenumLine]\
-(if: $wieLeben is &amp;#39;Arbeit&amp;#39;)[Du hilfst etwas in einem unkommerziellen Projekt.
+(if: $wieLeben is &#39;Arbeit&#39;)[Du hilfst etwas in einem unkommerziellen Projekt.
 _helfenLine]\
 
-(if: not $hatProtestAngefangen and $projekt is &gt;= $projektBesucheFuerProtest)[(set: $einladungPer to &quot;Plenum&quot;))(display: &quot;Einladung&quot;)](else-if: $projekt is &gt; 2 and $hndrtnInfo is &lt; 6 and $hopInfo is &lt; 6)[
+(if: not $hatProtestAngefangen and ($projekt is &gt;= $projektBesucheFuerProtest))[(set: $einladungPer to &quot;Plenum&quot;)(display: &quot;Einladung&quot;)](else-if: $projekt is &gt; 2 and $hndrtnInfo is &lt; 6 and $hopInfo is &lt; 6)[
 
 Bevor du gehst, setzt du dich an die Bar/Am ende sitzt ihr noch etwas zusammen/Draußen vor der Tür unterhalten sich Leute über das Ladenprojekt.
 
@@ -373,6 +373,8 @@ Irgendwie hast du doch wieder genug und begibst dich wieder zurück.
 
 (set: _einladungAls to &quot;(if: $einladungPer is &#39;Mail&#39;)[_einladungMail](else-if: $einladungPer is &#39;Plenum&#39;)[_einladungPlenum](else-if: $einladungPer is &#39;Freunde&#39;)[_einaldungErzählen]&quot;)
 }\
+
+***Einladung***
 (if: $einladungPer is &#39;Mail&#39;)[_einladungMail](else_if: $einladungPer is &#39;Plenum&#39;)[_einladungPlenum(click-replace: _einladungPlenum)[(display: &quot;Einladungstext&quot;)]](else_if: $einladungPer is &#39;Freunde&#39;)[_einaldungErzählen(click-replace: _einaldungErzählen)[(display: &quot;Einladungstext&quot;)]]</tw-passagedata><tw-passagedata pid="8" name="1.Treffen" tags="Protest" position="2648,432" size="100,100">Du kommst etwas früher an als es für dich üblich ist. Im Raum sitzen ca. 40 Menschen. Neben den üblichen Gesichter auch einige die du nur vom sehen oder garnicht kennst. In verschiedenen Ecken gibt es leise Gespräche, doch ansonsten ist die Stimmung angespannt.
 
 Der Plenumsbeginn wird eingeleitet.(click: &quot;Plenumsbeginn&quot;)[ Ein sehr großer junger Mann umreist mit einer kurzen Einleitung die Lage. Zwei Menschen die unter anderem eine &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; auf der Eisi besitzen und Eigetnümer eines Hauses sind, gefährden die Existenz zweier kollektiven Projekte auf der Eisenbahnstraße. Eines Eckladens und eines Ladenproejkts. Dem Eckladen in Form von Hauseigentümer, in dem sie den Mietvertrag nicht verlängern. Bei dem Ladenprojekt als Betreiber einer Bar im selben Haus und den erwirkten Getränke-Schutzklausel gegen das Projekt. Auf die schnelle konnte man nur wenig Menschen für dieses Plenum erreichen, trotzdem soll heute geschaut werden, wie man als Viertel dagegen vorgehen kann.
@@ -399,7 +401,7 @@ Ein Bärtiger Mann beendet das Plenum mit dem Hinweis, dass die selbstverwaltete
 Als das [[Der Kiez&lt;-Plenum endet]], verteilt ein Mitglied eines der Projekte ein weißes A4-Blatt, mit einem Strategie-Vorschlag und Eskalationsplan für mögliche Proteste.
 --Zettel anklickbar machen, aber nur 5 sec zeigen, danach Zettel einstecken und nicht mehr anschauen]]]</tw-passagedata><tw-passagedata pid="9" name="2.Treffen" tags="Protest" position="2629,578" size="100,100">Rund einen Monat ist es her, dass das erste Treffen stattgefunden hat. Erwartungsvoll begibst du dich mit zwei Freunden zu dem Plenum in dem auch die Zukunft dieses Viertels gestaltet wird. Auf dem Weg fällt dir eine &amp;lsqb;$wayne[witzige sozio-kulturelle Protestaktion]&amp;rsqb; in den Sinn, doch als du den Raum betrittst, vergesst du das nochmal konkret aufzuschreiben.
 
-Du betrittst den Raum.(click: &quot;betrittst&quot;)[
+Du betrittst den Raum.(click: &quot;Du betrittst&quot;)[
 
 Rund 30 Menschen sind gekommen. Viele neue Gesichter, aber auch ein paar bekannte aus dem letztem Plenum.
 
@@ -618,8 +620,7 @@ Goldhorn soll nicht angegriffen werden</tw-passagedata><tw-passagedata pid="24" 
 ***Probleme beim Ladenkulturprojekt***
 (if: $hopInfo is 1)[Scheinbar hat das Ladenkulturprojekt Stresse durch die Betreibern der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; in ihrem Haus.
 
-Die Betreiber regen sich darüber auf, dass die Besucherin des Ladenprojekts die Toiletten der Bar benutzten und den Fußweg vermüllen. Das Gespräch ist sehr aufgeregt und geht ewig, aber auch nach einer halben Stunde zuhören ist dir nicht wirklich verständlich wo hier das schwerwiegende Problem sein soll.]\
-(if: $hopInfo is 2)[Der Ladenkulturprojekt hat Stress mit dem Ordnungsamt.
+Die Betreiber regen sich darüber auf, dass die Besucherin des Ladenprojekts die Toiletten der Bar benutzten und den Fußweg vermüllen. Das Gespräch ist sehr aufgeregt und geht ewig, aber auch nach einer halben Stunde zuhören ist dir nicht wirklich verständlich wo hier das schwerwiegende Problem sein soll.](if: $hopInfo is 2)[Der Ladenkulturprojekt hat Stress mit dem Ordnungsamt.
 
 Eine Party im Haus wurde wohl so laut, dass eine Meldung beim Ordnungsamt aufgegeben wurde. Du verstehst mal wieder kein Wort, denn dir ist überhaupt nicht klar wieso die Gruppe sich so ein Kopf macht um eine Party in ihrem Haus.
 Erst nach mehreren hin und her, stellt sich heraus dass ein Brief reingeflattert ist, in dem das Ladenkulturprojekt beschuldigt wird. Die Polizei war nicht vor Ort, und versucht nun schriftlich den Schuldigen zu finden.
@@ -627,23 +628,20 @@ Die Gruppe berät sich sehr lange darüber ein Schriftstück aus einer der WGs a
 
 Ein wenig dumm kommst du dir vor, denn auch hier stößt du nur Fragen von dir. Du fragst die Gruppe wieso es nicht ausreicht als Ladenkulturprojekt zu schlicht zu schweigen und dem Ordnungsamt einfach keiner Information zu liefern. Die Gruppe schaut dich an als wärst du als Kind auf den Kopf gefallen, erwidert dass die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb aus ihrem Haus gegen das Ladenprojekt ausgesagt hat und fährt weiter mit der Planung des weiteren Vorgehens fort.
 
-Du versuchst noch mal eine Frage zu stellen, wirst aber ab jetzt ignoriert.]\
-(if: $hopInfo is 3)[Du erfährst von dem Stress, denn das Ladenkulturprojekt, mit der angrenzenden &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; im Haus, hat.
+Du versuchst noch mal eine Frage zu stellen, wirst aber ab jetzt ignoriert.](if: $hopInfo is 3)[Du erfährst von dem Stress, denn das Ladenkulturprojekt, mit der angrenzenden &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; im Haus, hat.
 
 Die Betreiber der Bar verlangen von dem Ladenkulturprojekt nicht mehr am selben Tag wie die Bar aufzuhaben. Die Gruppe ist sichtlich verängstigt, wie die Räume unter diesen Umständen zu halten seien, denn die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; hat fast jeden Abend auf.
 
 Du begreifst nicht worum es geht. Du fragst die Gruppe wie die Bar überhaupt dazu kommt solche Forderungen zu stellen.
 Die Begründung ist kurz und verwirrend. Scheinbar werfen die Barbetreiber dem Ladenkulturprojekt vor, Besucherinnen des Ladenkulturprojekt bringen ihr Bier in die Bar mit. Man ist sich sicher, dass es Besucherinnen des Ladenkulturprojekt sein müssen, denn die Betreiber der Bar sammeln am Ende 2-3 Kisten mehr Pfand ein, als Bier verkauft worden ist.
 
-Du möchtest wieder etwas fragen, aber...Du bist dir nicht sicher ob du die Begründung wirklich verstanden hast. In deinem Kopf ist ein Durcheinander, so bleibst du dieses mal lieber still.]\
-(if: $hopInfo is 4)[Du erfährst von dem Stress, denn das Ladenkulturprojekt mit den Eigentümern hat.
+Du möchtest wieder etwas fragen, aber...Du bist dir nicht sicher ob du die Begründung wirklich verstanden hast. In deinem Kopf ist ein Durcheinander, so bleibst du dieses mal lieber still.](if: $hopInfo is 4)[Du erfährst von dem Stress, denn das Ladenkulturprojekt mit den Eigentümern hat.
 
 Seit Jahren kriegen sie kein neuen Mietvertrag. Als die neuen Eigentümer das Haus kauften kündigten sie allen Mietparteien. Die Bewohnerinnen, das Ladenkulturprojekt und die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; aus dem Haus schlossen sich zusammen. Die Betreiber der Bar holten für die Verhandlungen einen Anwalt. Dieser erreichte, dass die Eigentümer neue Mietverträge aufstellen müssen, wenn die alten ohne Grund gekündigt werden.
 
 Es klingt zur Abwechslung wie eine schöne Geschichte und du fragst die Gruppe wo nun das Problem sei. Sie erzählen dir, dass die Betreiber der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; mit den Hauseigentümern befreundet sind und ihren Vertrag sofort bekamen, doch die anderen verhandeln seit dem mit der Hilfe des Anwaltes weiter.
 Man ist jedoch auf der sicheren Seite, denn die Bewohnerinnen und das Ladenkulturprojekt haben die unrechtmäßige Kündigung nur dann akzeptiert, sollten wirklich für Alle neue Mietverträge ausgestellt werden. Passiert dies nicht, gelten weiterhin die alten Verträge.
-Das klingt recht kompliziert, aber einleuchten auf dich. Zum ersten mal fühlst du dich nicht total dumm...zumindest nicht ganz.]\
-(if: $hopInfo is 5)[Du erfährst von dem Stress, denn das Ladenkulturprojekt mit der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; aus dem Haus und den Eigentümern des Hauses hat.
+Das klingt recht kompliziert, aber einleuchten auf dich. Zum ersten mal fühlst du dich nicht total dumm...zumindest nicht ganz.](if: $hopInfo is 5)[Du erfährst von dem Stress, denn das Ladenkulturprojekt mit der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; aus dem Haus und den Eigentümern des Hauses hat.
 
 Die Bewohnerinnen des Hauses warten weiter auf den Abschluss der neuen Mietverträge, denn dieser wird gerade von den Ladenprojekt-Verhandlungen blockiert. Die Barbetreiber haben von den Eigentümern das Recht bekommen, Klauseln in den Mietvertrag des Ladenprojekts aufzunehmen.
 
@@ -651,46 +649,7 @@ Die Barbetreiber verlangen unter anderem einen Getränkeschutz für sich. Demnac
 
 Es hört sich für dich nach einem Skandal an, doch die Ladengruppe widerspricht dir. Denn ein Gewerbe wollte man ehe nie anmelden und sobald die Klauseln unterschrieben sind, wurde ihnen und den Bewohner*innen des Hauses ziemlich gute Mietverträge versprochen.
 
-Du willst zunächst mit dem Kopf schütteln, doch bist dann von der Antwort verunsichert. Irgendwas scheinst du entweder nicht verstanden zu haben oder doch die anderen?]\{
-(set: $hopInfo to it + 1)
-}\
-***Probleme beim Ladenkulturprojekt***
-(if: $hopInfo is 1)[Scheinbar hat das Ladenkulturprojekt Stresse durch die Betreibern der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; in ihrem Haus.
-
-Die Betreiber regen sich darüber auf, dass die Besucherin des Ladenprojekts die Toiletten der Bar benutzten und den Fußweg vermüllen. Das Gespräch ist sehr aufgeregt und geht ewig, aber auch nach einer halben Stunde zuhören ist dir nicht wirklich verständlich wo hier das schwerwiegende Problem sein soll.]\
-(if: $hopInfo is 2)[Der Ladenkulturprojekt hat Stress mit dem Ordnungsamt.
-
-Eine Party im Haus wurde wohl so laut, dass eine Meldung beim Ordnungsamt aufgegeben wurde. Du verstehst mal wieder kein Wort, denn dir ist überhaupt nicht klar wieso die Gruppe sich so ein Kopf macht um eine Party in ihrem Haus.
-Erst nach mehreren hin und her, stellt sich heraus dass ein Brief reingeflattert ist, in dem das Ladenkulturprojekt beschuldigt wird. Die Polizei war nicht vor Ort, und versucht nun schriftlich den Schuldigen zu finden.
-Die Gruppe berät sich sehr lange darüber ein Schriftstück aus einer der WGs aufzusetzen um die Lautstärke mit einer WG-Party zu erklären und somit Stress vom Ladenkulturprojekt mit dem Ordnungsamt abzuwenden.
-
-Ein wenig dumm kommst du dir vor, denn auch hier stößt du nur Fragen von dir. Du fragst die Gruppe wieso es nicht ausreicht als Ladenkulturprojekt zu schlicht zu schweigen und dem Ordnungsamt einfach keiner Information zu liefern. Die Gruppe schaut dich an als wärst du als Kind auf den Kopf gefallen, erwidert dass die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb aus ihrem Haus gegen das Ladenprojekt ausgesagt hat und fährt weiter mit der Planung des weiteren Vorgehens fort.
-
-Du versuchst noch mal eine Frage zu stellen, wirst aber ab jetzt ignoriert.]\
-(if: $hopInfo is 3)[Du erfährst von dem Stress, denn das Ladenkulturprojekt, mit der angrenzenden &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; im Haus, hat.
-
-Die Betreiber der Bar verlangen von dem Ladenkulturprojekt nicht mehr am selben Tag wie die Bar aufzuhaben. Die Gruppe ist sichtlich verängstigt, wie die Räume unter diesen Umständen zu halten seien, denn die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; hat fast jeden Abend auf.
-
-Du begreifst nicht worum es geht. Du fragst die Gruppe wie die Bar überhaupt dazu kommt solche Forderungen zu stellen.
-Die Begründung ist kurz und verwirrend. Scheinbar werfen die Barbetreiber dem Ladenkulturprojekt vor, Besucherinnen des Ladenkulturprojekt bringen ihr Bier in die Bar mit. Man ist sich sicher, dass es Besucherinnen des Ladenkulturprojekt sein müssen, denn die Betreiber der Bar sammeln am Ende 2-3 Kisten mehr Pfand ein, als Bier verkauft worden ist.
-
-Du möchtest wieder etwas fragen, aber...Du bist dir nicht sicher ob du die Begründung wirklich verstanden hast. In deinem Kopf ist ein Durcheinander, so bleibst du dieses mal lieber still.]\
-(if: $hopInfo is 4)[Du erfährst von dem Stress, denn das Ladenkulturprojekt mit den Eigentümern hat.
-
-Seit Jahren kriegen sie kein neuen Mietvertrag. Als die neuen Eigentümer das Haus kauften kündigten sie allen Mietparteien. Die Bewohnerinnen, das Ladenkulturprojekt und die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; aus dem Haus schlossen sich zusammen. Die Betreiber der Bar holten für die Verhandlungen einen Anwalt. Dieser erreichte, dass die Eigentümer neue Mietverträge aufstellen müssen, wenn die alten ohne Grund gekündigt werden.
-
-Es klingt zur Abwechslung wie eine schöne Geschichte und du fragst die Gruppe wo nun das Problem sei. Sie erzählen dir, dass die Betreiber der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; mit den Hauseigentümern befreundet sind und ihren Vertrag sofort bekamen, doch die anderen verhandeln seit dem mit der Hilfe des Anwaltes weiter.
-Man ist jedoch auf der sicheren Seite, denn die Bewohnerinnen und das Ladenkulturprojekt haben die unrechtmäßige Kündigung nur dann akzeptiert, sollten wirklich für Alle neue Mietverträge ausgestellt werden. Passiert dies nicht, gelten weiterhin die alten Verträge.
-Das klingt recht kompliziert, aber einleuchten auf dich. Zum ersten mal fühlst du dich nicht total dumm...zumindest nicht ganz.]\
-(if: $hopInfo is 5)[Du erfährst von dem Stress, denn das Ladenkulturprojekt mit der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; aus dem Haus und den Eigentümern des Hauses hat.
-
-Die Bewohnerinnen des Hauses warten weiter auf den Abschluss der neuen Mietverträge, denn dieser wird gerade von den Ladenprojekt-Verhandlungen blockiert. Die Barbetreiber haben von den Eigentümern das Recht bekommen, Klauseln in den Mietvertrag des Ladenprojekts aufzunehmen.
-
-Die Barbetreiber verlangen unter anderem einen Getränkeschutz für sich. Demnach darf kein*e Besucher*inn des Ladenprojekts die Räume mit einem Getränk verlassen, sonst drohen Geldstrafen und Kündigung. Zusätzlich darf sich das Ladenprojekt für ihre Räume keine Genehmigung beim Bauamt für öffentliche Veranstaltungen einholen, was ein langfristiges legales überleben unmöglich macht. Eine Person aus der Gruppe wird immer schriller, als sie dir das erzählt und es hört hier nicht auf. Den eigentlich hat man nur die Wahl zwischen dem Akzeptieren der Klausel oder den Verlust der Räume, denn ohne Klausel wird es kein Mietvertrag geben.
-
-Es hört sich für dich nach einem Skandal an, doch die Ladengruppe widerspricht dir. Denn ein Gewerbe wollte man ehe nie anmelden und sobald die Klauseln unterschrieben sind, wurde ihnen und den Bewohner*innen des Hauses ziemlich gute Mietverträge versprochen.
-
-Du willst zunächst mit dem Kopf schütteln, doch bist dann von der Antwort verunsichert. Irgendwas scheinst du entweder nicht verstanden zu haben oder doch die anderen?]\</tw-passagedata><tw-passagedata pid="26" name="Problem-hndrt" tags="" position="345,1085" size="100,100">{
+Du willst zunächst mit dem Kopf schütteln, doch bist dann von der Antwort verunsichert. Irgendwas scheinst du entweder nicht verstanden zu haben oder doch die anderen?]</tw-passagedata><tw-passagedata pid="26" name="Problem-hndrt" tags="" position="345,1085" size="100,100">{
 (set: $hndrtnInfo to it + 1)
 }\
 ***Probleme beim Eckladenprojekt***
@@ -701,24 +660,20 @@ Auch die eingeworfene Fensterscheibe bereitet finanziele sorgen. Die Eigentümer
 Und nun funktionieren auch noch einige Steckdosen und Lichtschalter nicht mehr. Ein befreunde Elektriker der Gruppe konnte dem Eckladen nicht helfen. Da der Sicherungskasten marode zusammengeschustert wurde, traut er sich keine Reparatur zu und für eine neue Verlegung wollen die Eigentümer nicht aufkommen.
 
 Die Gruppe berät sich, wie man Geld sammeln könnte um zumindest die wichtigen Reparaturen zu finanzieren, doch kommt zu keinem Ergebnis.
-Du bist überfordert und weiß nicht was du der Gruppe sagen kannst. Vielleicht gibt es irgendwelche Fördertöpfe?]\
-(if: $hndrtnInfo is 2)[Du erfährst von Problemen des Eckladenprojekts bzgl. ihres Mietvertrages. Seit dem Betreiber einer &amp;lsqb;$wayne[hippen szene Bar]&amp;rsqb; aus dem Viertel zusammen mit Verwandten das Haus vor 4-5 Jahren gekauft haben, kriegt der Eckladen nur noch 2 Jahre befristete Mietverträge.
+Du bist überfordert und weiß nicht was du der Gruppe sagen kannst. Vielleicht gibt es irgendwelche Fördertöpfe?](if: $hndrtnInfo is 2)[Du erfährst von Problemen des Eckladenprojekts bzgl. ihres Mietvertrages. Seit dem Betreiber einer &amp;lsqb;$wayne[hippen szene Bar]&amp;rsqb; aus dem Viertel zusammen mit Verwandten das Haus vor 4-5 Jahren gekauft haben, kriegt der Eckladen nur noch 2 Jahre befristete Mietverträge.
 Bald läuft der Mietvertrag wieder aus und die Gruppe macht sich sorgen die erneute Mieterhöhung nicht mehr bezahlen zu können.
-Vielleicht ein Spendenkonto für Mitglieder*innen einrichten? Oder Workshops fördern lassen um die Miete zu bezahlen? Bis spät in den Abend sitzen sie zusammen und suchen nach möglichen Finanzierungskonzepten. Du schleichst dich langsam weg, aber du weißt nun mal auch nicht wie du helfen kannst.]
-(if: $hndrtnInfo is 3)[Du erfährst vom vergangen Streit des Eckladenrprojekts mit den Eigentümern.
+Vielleicht ein Spendenkonto für Mitglieder*innen einrichten? Oder Workshops fördern lassen um die Miete zu bezahlen? Bis spät in den Abend sitzen sie zusammen und suchen nach möglichen Finanzierungskonzepten. Du schleichst dich langsam weg, aber du weißt nun mal auch nicht wie du helfen kannst.](if: $hndrtnInfo is 3)[Du erfährst vom vergangen Streit des Eckladenrprojekts mit den Eigentümern.
 Vor Jahren gab es wohl eine kleine Wasserpanne im Badezimmer. Mehrmals beim Duschen ist Wasser ausgelaufen und schlecht gelüftet worden, seit dem Behaupten die Eigentümer, dass der Schimmel im Bad verschlimmert wurde. Hinzu kommt das die Eigentümer den Eckladen als eine mögliche Gefahrenquelle für das Haus betrachten. Da überall noch mit Öfen geheizt wird und der Eckladen bereits bewiesen hat die Mietsachen schlecht zu behandeln, sei es nur eine Frage der Zeit bis das Haus abbrennt, so der Vorwurf.
 
 Doch vor zwei Jahren kam es zu einem riesen Streit. Die Gruppe bekam Einsicht in ein Gutachten, das für das Haus eingeholt wurde und stellte überraschend fest, dass Risse im Mauerwerk gefunden wurden, Hausschawam+Schimmel im ganzen Haus zu finden ist und schnellstmöglich saniert werden muss. Es entbrannte ein Streit.
 
 Der Eckladen konnte sich jedoch kaum wehren, egal wie sehr sie sich aufregen, die Sanierungen sind, trotz der falschen Anschuldigungen ihnen gegenüber, notwendig. Man einigte sich am Ende darauf die Miete von 2€ auf 3,5 zu erhöhen, mit dem Versprechen dass nicht nur der Keller und Erdgeschoss Saniert werden, sondern auch die Öfen im gleichen Zug durch eine Fußbodenheizung ersetzt werden.
 
-Du fragst die Gruppe ironisch, und verwundet zu gleich, wieso die Räume dann wie ein Drecksloch aussehen. Genervte Augen blicken dich entgegen und du kriegst zu hören, dass seitdem weder der Schimmel beseitigt noch der Fußboden saniert wurde.]
-(if: $hndrtnInfo is 4)[Du erfährst von Problemen des Eckladenprojekts mit den Eigentümern.
+Du fragst die Gruppe ironisch, und verwundet zu gleich, wieso die Räume dann wie ein Drecksloch aussehen. Genervte Augen blicken dich entgegen und du kriegst zu hören, dass seitdem weder der Schimmel beseitigt noch der Fußboden saniert wurde.](if: $hndrtnInfo is 4)[Du erfährst von Problemen des Eckladenprojekts mit den Eigentümern.
 
 Die Gruppe ist ganz aufgebracht. Es braucht etwas Zeit bist du verstehst worum es geht. Ihre Räume sollen verkleiner werden. In Zukunft wird der Eckladen halbiert, um in der zweiten Hälfte eine Wohnung einzubauen. Wohnen sei nämlich ein sozialer Zweck und damit wichtiger. Der Mietvertrag läuft nämlich bald wieder aus und die Eigetnümer stellen sich in Zukunft für den hinteren Teil des Raumes eine bessere Verwendung vor.
 
-Die Gruppe ist sauer, doch nach ein paar Gesprächen bemerkst du auch Erleichterung. Du verstehst die Welt nicht mehr und fragst ob du auf dem Schlauch stehst. Sie erklären dir, dass sie bei der anstehenden Mieterhöhung so zumindest bei der selben Gesamtmiete bleiben würden. Du bist dir nicht sicher was du darauf erwidern könntest und schweigst betrübt.]
-(if: $hndrtnInfo is 5)[Du erfährst von Problemen des Eckladenprojekts mit ihren Mietvertrag.
+Die Gruppe ist sauer, doch nach ein paar Gesprächen bemerkst du auch Erleichterung. Du verstehst die Welt nicht mehr und fragst ob du auf dem Schlauch stehst. Sie erklären dir, dass sie bei der anstehenden Mieterhöhung so zumindest bei der selben Gesamtmiete bleiben würden. Du bist dir nicht sicher was du darauf erwidern könntest und schweigst betrübt.](if: $hndrtnInfo is 5)[Du erfährst von Problemen des Eckladenprojekts mit ihren Mietvertrag.
 Der Ladencrew ist verstört, gerade wurde ihnen von den Eigentümer angekündigt, für ihre Räume eine Ausschreibung durchzuführen. Man wisse gar nicht wer den Laden überhaupt benutzt und für welchen Zweck. Tag ein Tag aus kann jede*r reinspazieren und die gefährlichen Öfen stehen unbewacht.
 Deshalb möchte man nach alternativen Suchen. Alle aus dem Viertel sollen sich bewerben dürfen, auch die Gruppe des Eckladens. Am Ende gewinnt &quot;der Bessere&quot;, so soll nicht nur für das Haus, sondern auch für das Viertel das best mögliche Ergebnis gefunden werden.
 
@@ -748,14 +703,16 @@ Du entscheidest dich mit ein paar Freund*innen die Party wenigstens noch mitzune
 
 (set: _gentriStandHaus to &quot;(if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 5)[zwei-drei leerstehende Häuser](else-if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 8)[ein-zwei leerstehende Häuser](else:)[ein leer stehendes Haus]&quot;)
 
-(set: _gentriStandKultur to &quot;(if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 4)[Hier und da sieht man neben einem Dönerladen auch mal eine Bar oder ein Caffee](else-if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 12)[Hier und da ist ein Platten- oder Tattooshop zu sehen. Aber das Bild der Eisi wird vordergründig von Baustellen geprägt.](else:)[Popup Geschäfte entstehen da wo früher mal ein Friseursalon war, aber da bist du ehe nie rein gegangen.]&quot;)
+(set: _gentriStandKultur to &quot;(if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 4)[Hier und da sieht man neben einem Dönerladen auch mal eine Bar oder ein Caffee.](else-if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 12)[Hier und da ist ein Platten- oder Tattooshop zu sehen. Aber das Bild der Eisi wird vordergründig von Baustellen geprägt.](else:)[Popup Geschäfte entstehen da wo früher mal ein Friseursalon war, aber da bist du ehe nie rein gegangen.]&quot;)
 
 (set: _vielImmo to &#39;Es gibt viel Aktivität auf dem Immobilienmarkt&#39;)
 (set: _mietenBillig to &#39;Die Mieten sind billig und ermöglichen Menschen sich auszuprobieren.&#39;)
 (set: _gentriStand to &quot;(if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 2)[_mietenBillig](else-if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 4)[_mietenBillig _vielImmo.](else-if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 9)[_vielImmo und die Hauspreise explodieren.](else-if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 12)[_vielImmo und die Hauspreise explodieren... die Mieten ebenso.](else:)[_vielImmo die Mieten haben sich in den letzten Jahren verdoppelt, teilweise verdreifacht.]&quot;)
 
 (if: $feiern is &gt; 4)[(set: _umzug to &quot;Du wurdest gefragt ob du beim Umzug helfen kannst, aber die Gestalten hast du schon ewig nicht gesehen, obwohl du sie regelmäßig in die Karaoke-Bar einlädst, und sowieso hast du schon was vor...&quot;)](else:)[(set: _umzug to &quot;&quot;)]
-(set: _ereignis to &quot;(if: (count: (history:), &#39;Der Kiez&#39;) is 2)[Die zweite Galerie im Viertel macht zu. Dort haben HGB-Studis aus dem Viertel ihre arbeiten ausgehängt. Ein Kommentar unter einem Facebook-Beitrag behauptet es gäbe halt keine Künstlerinnen mehr im Viertel. Du antwortest darauf, dass die Atelierräume zwar billig waren, aber dafür ohne Strom und Wasser und ärgerst dich noch bis zum Abend über den blöden Kommentar.](else-if: (count: (history:), &#39;Der Kiez&#39;) is 5)[War das öffentliche Leben früher von verschiedenen Vereinen und lokalen Initiativen geprägt, wird dieses heute nun mehr von Freiraum-Tagen der lokalen Geschäfte gestaltet. Du bist dir unsicher was du davon halten sollest, als du mit deinen Freund*innen im Caffee an der Ecke für ein Freiraum-capppuccini 5€ zahlst.](else-if: (count: (history:), &#39;Der Kiez&#39;) is 13)[Freunde von dir sind aus dem Viertel nach Anger-Crottendorf gezogen. Es ist zwar weiter von der Innenstadt weg, aber dafür etwas billiger. _umzug](else:)[]&quot;)
+(set: _ereignis to &quot;(if: (count: (history:), &#39;Der Kiez&#39;) is 2)[Eine Galerie im Viertel macht zu. Dort haben HGB-Studis aus dem Viertel ihre arbeiten ausgehängt. Als du früh Abends vor deinem Browser sitzt, liest du ein von einer Person unter einem Facebook-Beitrag es gäbe halt keine Künstlerinnen mehr im Viertel.
+Du antwortest darauf, dass die Atelierräume zwar billig waren, aber dafür ohne Strom und Wasser und ärgerst dich noch bis zum Abend über den blöden Kommentar.](else-if: (count: (history:), &#39;Der Kiez&#39;) is 5)[War das öffentliche Leben früher von verschiedenen Vereinen und lokalen Initiativen geprägt, wird dieses heute nun mehr von Freiraum-Tagen der lokalen Geschäfte gestaltet.
+Du bist dir unsicher was du davon halten sollest, als mit deinen Freund*innen in einem Caffee an der Ecke für ein Freiraum-capppuccini 5€ zahlst.](else-if: (count: (history:), &#39;Der Kiez&#39;) is 13)[Freunde von dir sind aus dem Viertel nach Anger-Crottendorf gezogen. Es ist zwar weiter von der Innenstadt weg, aber dafür etwas billiger. _umzug](else:)[]&quot;)
 
 }\
 Ein _ort. Das Viertel ist voll mit Lebensmittelläden, Handyläden, Schischabars und Spielhallen. Gleichzeitig sind Wagenplätze, Hausprojekte, Ladenprojekte, kleine Gärten und Bauspielplätze anzutreffen.
@@ -797,12 +754,15 @@ Du läufst schnell zum Döner gegenüber. Beim Imbiss triffst du endlich eine Fr
 
 Der Regen hört langsam auf und du bist satt. Das erste was du mitbekommst als du die Party betrittst, ist wie ein Mann rausgeworfen wird. Du verstehst das meiste nicht, den er blabert zu viel und es interessiert dich auch nicht wirklich.
 
-Nach etwas Gedränge bist du bei deinem Ziel, der Bar, angelangt. In der Schlange vor dir stehen zwei Menschen, die etwas wütend rummotzen. Sie werfen der Bar-Crew vor ein unorganisierter Haufen zu sein. Erst nach ein paar Sätzen kapierst du, dass wohl zu wenig Bier eingekauft wurde, denn es ist schon all.
+Nach etwas Gedränge bist du bei deinem Ziel, der Bar, angelangt. In der Schlange vor dir stehen zwei Menschen, die etwas wütend rummotzen. Sie werfen der Bar-Crew vor ein unorganisierter Haufen zu sein. Erst nach ein paar Sätzen kapierst du, worum es geht. Es wrude zu wenig Bier eingekauft, denn es ist schon jetzt alle.
 
 Egal. Es ist schon lange nach Mitternacht so gönnst du dir eine Mate mit Wodka und quetschst dich durch zu der Tanzfläche. Es ist stickig, aber du hast dein Spaß, bis wieder irgendwelche Typen ein Streit anfangen und rausgeworfen werden.
 
 Doch als die Tür dafür aufgeht, bricht die Musik ab.
-Ein junger Mann und eine junge Frau stehen vor dem Ausgang und versuchen sich Gehör zu verschaffen. Die Party sei vorbei und ihr sollt alle langsam [[Party-Ende&lt;-rausgehen]].</tw-passagedata><tw-passagedata pid="33" name="Ausreden" tags="" position="997,1308" size="100,100">--Gestern haben viele Leute aus der linken Szene und ihre Party Freunde die 109 Crew emotional heftig fertig gemacht, so dass einige Stunden lang nicht mehr klarkamen oder zuhause mit Freunden den Frust weg gesoffen haben. Der Vorwurf grob, die 109 ist selber schuld und jetzt ist ehe alles zu spät. Gepaart mit den selben Vorwürfen bzgl der LETZTEN Party. Dabei hat &quot;niemand&quot; weder versucht zu kämpfen(was denke ich immer noch erfolgreich wäre), noch bei der 109 repro Arbeit oder sonst wo geholfen.
+
+Ein junger Mann und eine junge Frau stehen vor dem Ausgang und versuchen sich Gehör zu verschaffen.
+
+Du hörst nur &quot;Die Party ist vorbei!&quot; und ihr sollt alle langsam [[Party-Ende&lt;-rausgehen]].</tw-passagedata><tw-passagedata pid="33" name="Ausreden" tags="" position="997,1308" size="100,100">--Gestern haben viele Leute aus der linken Szene und ihre Party Freunde die 109 Crew emotional heftig fertig gemacht, so dass einige Stunden lang nicht mehr klarkamen oder zuhause mit Freunden den Frust weg gesoffen haben. Der Vorwurf grob, die 109 ist selber schuld und jetzt ist ehe alles zu spät. Gepaart mit den selben Vorwürfen bzgl der LETZTEN Party. Dabei hat &quot;niemand&quot; weder versucht zu kämpfen(was denke ich immer noch erfolgreich wäre), noch bei der 109 repro Arbeit oder sonst wo geholfen.
 
 --Die Fragen und Vorwürfe bzgl der 109 Einstellung und Strategie, nehme ich nicht mehr ernst. Kommt nie was ernsthaftes und niemand hat sich mit nichts auseinander gesetzt, nur rum philosophieren. Ich sage, das Viertel/die Szene ist schuld das wir uns in dieser Lage befinden und nicht die 109 Crew, die in dem absoluten Gefühl alleine zu stehen, immer wieder zweifelte ob das Bündnis überhaupt zu irgendwas in der Lage ist.
 
@@ -848,8 +808,7 @@ Findest auch du es wichtig, als ein Mädchen bemerkt, dass neben all dem was in 
 Nach einer Weile gehst du [[Der Kiez&lt;-zurück nach Hause]].</tw-passagedata><tw-passagedata pid="36" name="Problem-Projekt" tags="" position="277,941" size="100,100">{
 (set: _infoLaeden to &quot;(if: $hndrtnInfo is &gt; 5 and $hopInfo is &lt; 6)[(display: &#39;Problem-Hop&#39;)](else-if: $hndrtnInfo is &lt; 6 and $hopInfo is &gt; 5)[(display: &#39;Problem-hndrt&#39;)](else:)[(either: (display: &#39;Problem-Hop&#39;), (display: &#39;Problem-hndrt&#39;))]&quot;)
 }\
-_infoLaeden</tw-passagedata><tw-passagedata pid="37" name="Einladungstext" tags="" position="1671,90" size="100,100">***Einladung***
-
+_infoLaeden</tw-passagedata><tw-passagedata pid="37" name="Einladungstext" tags="" position="1671,90" size="100,100">
 Die Lage um die zwei Projekte auf der Eisi ist ziemlich eskaliert. Beide Projekte kriegen kein Mietvertrag und werden von den selben Akteueren in ihrer existenz bedroht. Ein paar Menschen aus dem Viertel laden zu einem Krisentreffen ein.
 Zusammen soll geschaut werden wie man dagegen vorgehen kann und wieviel Unterstützung aus dem Viertel da ist.
 
@@ -862,7 +821,7 @@ Auf der Eisi - _styleAuthor[Ein Spiel von:] &lt;a href=&quot;mailto:l_i_e_b_e@ri
 Erstellt mit &lt;a href=&quot;http://twinery.org&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;twine&lt;/a&gt;
 
 Das Spiel ist vorbei :) Danke fürs Spielen!
-Vielen Dank auch für Hilfe und Testen an: R&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;d, J&amp;#42;&amp;#42;&amp;#42;s und 
+Vielen Dank auch für Hilfe und Testen an: F&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;d, J&amp;#42;&amp;#42;&amp;#42;s und 
 
 Falls du diese Geschichte der hippen Eisenbahnstraße selbst noch weiter erzählen möchtest, kannst du dies &lt;a href=&quot;https://github.com/aufDerEisi/aufDerEisi.github.io&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;hier&lt;/a&gt; tun.
 
@@ -926,9 +885,9 @@ Das Ergebnis deiner Auswertung(click-replace: &quot;Das Ergebnis deiner Auswertu
 }\
 **Die Eisenbahnstraße**
 (display: &quot;Kiez-Beschreibung&quot;)\
+(if: (count: (history:), &quot;Der Kiez&quot;) is &lt; 2)[Du wohnst im Viertel.
 
-Du wohnst im Viertel.
-
+]
 ***Was tust du heute Abend?***
 
 Du gehst heute _lineFeiern oder _lineProjekt oder _lineKulturLinks oder _lineHeim _lineAktionsbuendnis</tw-passagedata><tw-passagedata pid="42" name="Kiez-Ende" tags="" position="828,315" size="100,100">{
@@ -986,12 +945,12 @@ Die andere Geschichte ist eine Bar, mit Angestellten. Von der auch Menschen lebe
 
 Irgend ein Haufen scheint ohne ein Plenum weiter zu machen, so kannst du deine Bedenken also auch nicht gerecht äußern.
 
-* Oder das mit den &quot;eurer Plan ist blöd. Wieso greift ihr das Goldhorn an? 109 und Hop haben doch nichts miteinander zutun&quot;. Mmhh, die selben Leute die mit 109 verhandeln, verhandeln auch mit dem Hop. Sollte man einfach Eigentumsverhältnisse ignorieren, wenn jemand zwei juristische Personen gründet, weils dann &quot;nichts mit einender zu tun hat&quot;?</tw-passagedata><tw-passagedata pid="50" name="1.Cornern-Bar" tags="" position="1559,1923" size="100,100">Du machst dich mit deinen tightesten friends in diesem Quartal zur eurer goldgeliebten lsqb;$wayne[hippe szene Bar]&amp;rsqb;. Aus dem Weiten seht ihr, dass rund 40 Menschen vor der Bar cornern.
+* Oder das mit den &quot;eurer Plan ist blöd. Wieso greift ihr das Goldhorn an? 109 und Hop haben doch nichts miteinander zutun&quot;. Mmhh, die selben Leute die mit 109 verhandeln, verhandeln auch mit dem Hop. Sollte man einfach Eigentumsverhältnisse ignorieren, wenn jemand zwei juristische Personen gründet, weils dann &quot;nichts mit einender zu tun hat&quot;?</tw-passagedata><tw-passagedata pid="50" name="1.Cornern-Bar" tags="" position="1559,1923" size="100,100">Du machst dich mit deinen tightesten friends in diesem Quartal zur eurer goldgeliebten &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb;. Aus dem Weiten seht ihr, dass rund 40 Menschen vor der Bar cornern.
 &lt;img src=&quot;images/cornern1.jpg&quot; alt=&quot;cornern-außen&quot; height=&quot;1000&quot; width=&quot;700&quot; /&gt;
 
 Als ihr näher kommt, seht ihr dass die Menschen Flyer verteilen. Ganz cool geht ihr an der Menge vorbei, ohne drauf zu reagieren als euch eine junge Frau ein Zettel anbietet. Ihr setzt euch draußen an den Tisch und lauscht.
 
-Angeblich würde die lsqb;$wayne[hippe szene Bar]&amp;rsqb; zwei unkommerzielle Ladenräume um die Ecke vertreiben. Du kannst es kaum glauben und gehst rein an die Theke. Den Dude dahinter kennst du gut, denn er hat dir schomal ein Schnaps ausgegeben. Er erzählt dir, dass das nur Spinner sind, außerdem gibt es bei den vielen Faschos da draußen weitaus wichtigere Sachen zu tun als gegen eine Bar, die einem nicht gefällt, zu demonstrieren.
+Angeblich würde die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; zwei unkommerzielle Ladenräume um die Ecke vertreiben. Du kannst es kaum glauben und gehst rein an die Theke. Den Dude dahinter kennst du gut, denn er hat dir schomal ein Schnaps ausgegeben. Er erzählt dir, dass das nur Spinner sind, außerdem gibt es bei den vielen Faschos da draußen weitaus wichtigere Sachen zu tun als gegen eine Bar, die einem nicht gefällt, zu demonstrieren.
 
 Das gezapfte Bier geht aufs Haus und du kehrst zu deinen lachenden Freunden zurück, sie scheinen Spaß am Treiben zu haben und beobachten wie ein weiteres Dutzend zu der Cornern-Gruppe dazu stößt.
 
@@ -1081,13 +1040,13 @@ Auch der Flyer an denen sie schon wieder schreiben findest du sehr kritikwürdig
 
 Deine Freunde erzählen dir, dass die &amp;lsqb;$wayne[irgendeine hippe szene Bar]&amp;rsqb; in der ihr wart, scheinbar von irgendwelchen Leuten im Viertel angegriffen wurde und diese hätte nun einen klärenden &lt;a href=&quot;https://www.facebook.com/dergoldhorn/posts/1691604540876782?__tn__=K-R&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Facebook-Post&lt;/a&gt; veröffentlicht, der auf alle Punkte ziemlich gut eingeht.
 
-Ein Freund ist richtig wütend, denn irgendwelche Zecken hätten 45000€ Schäden verursacht und nicht nur das sie sich weigern für die Schäden aufzukommen die sie am Eigentum anderer verursacht haben, sie fangen auch noch ein Krieg mit Rufschädigung an.
+Ein Freund ist richtig wütend, denn irgendwelche Zecken haben 45000€ Schäden verursacht und nicht nur das sie sich weigern für die Schäden aufzukommen die sie am Eigentum anderer verursacht haben, sie fangen auch noch ein Krieg mit Rufschädigung an.
 Du versuchst ihn etwas zu beruhigen, doch eine Freundin sagt dass es wahr sei. Sie wäre letztes in einem der Projekte bei der Bar gewesen und hätte Anti&amp;lsqb;$wayne[irgendeine Bar]&amp;rsqb;-Tags gesehen. &amp;lsqb;$wayne[irgendeine hippe szene Bar]&amp;rsqb; versuche sich jetzt nur zu Schützen.
 
 Dein Freund erzählt weiter, dass einer der Läden froh sein soll, dass sie solange toleriert wurden. Schließlich gefährden sie mit ihren billigen Preisen die &amp;lsqb;$wayne[irgendeine hippe szene Bar]&amp;rsqb;.
 Du hackst nach, denn der Vorwurf ist dir zu schwammig, aber kriegst nur zuhören, dass die &amp;lsqb;$wayne[irgendeine hippe szene Bar]&amp;rsqb; schließlich Gehälter zahlen und davon Menschen leben. Das müse man mitbedenken, da der angrenzende Ladenkulturprojekt nur einer Art Studi-Künsterin-Treff ist.
 
-Irgendwie erscheint dir die Behauptungen doch zu sehr aus der Luft gegriffen, aber als deine Freundin dich anmotzt ob du Beweisen kannst, dass es nicht stimmen würde, schweigst du. Sie nippt wissend an ihrem Kaffee und erzählt dir, sie hätte gehört, Leute aus dem Umkreis des Ladenprojekts hätten einem Mitarbeitet aus &amp;lsqb;$wayne[irgendeine hippe szene Bar]&amp;rsqb; zusammenschlagen wollen und seien ihm hinterhergerannt. Das sind wieder die selben Spinner wie bei G20, schließt sie ihren Punkt und dir ist auch klar, dass das einfach zu weit geht. Wer so handelt, hat deine Solidarität nicht verdient.</tw-passagedata><tw-passagedata pid="59" name="Party-Bar" tags="" position="221,2177" size="100,100">Die gesamte Straßenecke ist voll mit mehr als 250 Menschen. Du siehst auf der anderen Seite Polizeiautos. Jemand vor dir erzählt, dass die Bullen die Party aufgelöst haben.
+Irgendwie erscheint dir die Behauptungen doch zu sehr aus der Luft gegriffen, aber als deine Freundin dich anmotzt ob du Beweisen kannst, dass das alles nicht stimmen würde, schweigst du. Sie nippt wissend an ihrem Kaffee und erzählt dir, sie hätte gehört, Leute aus dem Umkreis des Ladenprojekts hätten einem Mitarbeitet aus &amp;lsqb;$wayne[irgendeine hippe szene Bar]&amp;rsqb; zusammenschlagen wollen und seien ihm hinterhergerannt. Das sind wieder die selben Spinner wie bei G20, schließt sie ihren Punkt und dir ist auch klar, dass das einfach zu weit geht. Wer so handelt, hat deine Solidarität nicht verdient.</tw-passagedata><tw-passagedata pid="59" name="Party-Bar" tags="" position="221,2177" size="100,100">Die gesamte Straßenecke ist voll mit mehr als 250 Menschen. Du siehst auf der anderen Seite Polizeiautos. Jemand vor dir erzählt, dass die Bullen die Party aufgelöst haben.
 Plötzlich wird eine Feuerwerksrakete gezündet und du hörst vereinzelt schreie &quot;Bullen verpisst euch&quot;.
 Hinten aus den Räumen ruft eine&amp;#42;r das die Party weitergeht und das man sich von den Bullen nicht einschüchtern lassen will. Doch es hat sich ein Grüppchen am Einlass positioniert und lässt niemand rein.
 
