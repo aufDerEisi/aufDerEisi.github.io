@@ -88,7 +88,9 @@ display: none;
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -760,9 +762,9 @@ Du entscheidest dich mit ein paar Freund*innen die Party wenigstens noch mitzune
 (set: _gentriStand to &quot;(if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 2)[_mietenBillig](else-if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 4)[_mietenBillig _vielImmo.](else-if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 9)[_vielImmo und die Hauspreise explodieren.](else-if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 12)[_vielImmo und die Hauspreise explodieren... die Mieten ebenso.](else:)[_vielImmo die Mieten haben sich in den letzten Jahren verdoppelt, teilweise verdreifacht.]&quot;)
 
 (if: $feiern is &gt; 4)[(set: _umzug to &quot;Du wurdest gefragt ob du beim Umzug helfen kannst, aber die Gestalten hast du schon ewig nicht gesehen, obwohl du sie regelmäßig in die Karaoke-Bar einlädst, und sowieso hast du schon was vor...&quot;)](else:)[(set: _umzug to &quot;&quot;)]
-(set: _ereignis to &quot;(if: (count: (history:), &#39;Der Kiez&#39;) is 2)[Eine Galerie im Viertel macht zu. Dort haben HGB-Studis aus dem Viertel ihre arbeiten ausgehängt. Als du früh Abends vor deinem Browser sitzt, liest du ein von einer Person unter einem Facebook-Beitrag es gäbe halt keine Künstlerinnen mehr im Viertel.
-Du antwortest darauf, dass die Atelierräume zwar billig waren, aber dafür ohne Strom und Wasser und ärgerst dich noch bis zum Abend über den blöden Kommentar.](else-if: (count: (history:), &#39;Der Kiez&#39;) is 5)[War das öffentliche Leben früher von verschiedenen Vereinen und lokalen Initiativen geprägt, wird dieses heute nun mehr von Freiraum-Tagen der lokalen Geschäfte gestaltet.
-Du bist dir unsicher was du davon halten sollest, als mit deinen Freund*innen in einem Caffee an der Ecke für ein Freiraum-capppuccini 5€ zahlst.](else-if: (count: (history:), &#39;Der Kiez&#39;) is 13)[Freunde von dir sind aus dem Viertel nach Anger-Crottendorf gezogen. Es ist zwar weiter von der Innenstadt weg, aber dafür etwas billiger. _umzug](else:)[]&quot;)
+(set: _ereignis to &quot;(if: (count: (history:), &#39;Der Kiez&#39;) is 2)[Eine Galerie im Viertel macht zu. Dort haben HGB-Studis aus dem Viertel ihre arbeiten ausgehängt. Als du früh Abends vor deinem Browser sitzt, liest du in einem Facebook-Kommentar es gäbe halt keine Künstlerinnen mehr im Viertel.
+Du antwortest darauf, dass die Atelierräume zwar billig waren, aber dafür ohne Strom und Wasser und ärgerst dich noch bis zum Abend über die blöde Bemerkung.](else-if: (count: (history:), &#39;Der Kiez&#39;) is 5)[War das öffentliche Leben früher von verschiedenen Vereinen und lokalen Initiativen geprägt, wird dieses heute nun mehr von Freiraum-Tagen der lokalen Geschäfte gestaltet.
+Du bist dir unsicher was du davon halten sollest, als du mit deinen Freund*innen in einem Caffee an der Ecke für ein Freiraum-capppuccini 5€ zahlst.](else-if: (count: (history:), &#39;Der Kiez&#39;) is 13)[Freunde von dir sind aus dem Viertel nach Anger-Crottendorf gezogen. Es ist zwar weiter von der Innenstadt weg, aber dafür etwas billiger. _umzug](else:)[]&quot;)
 
 }\
 Ein _ort. Das Viertel ist voll mit Lebensmittelläden, Handyläden, Schischabars und Spielhallen. Gleichzeitig sind Wagenplätze, Hausprojekte, Ladenprojekte, kleine Gärten und Bauspielplätze anzutreffen.
@@ -875,7 +877,8 @@ Auf der Eisi - _styleAuthor[Ein Spiel von:] &lt;a href=&quot;mailto:l_i_e_b_e@ri
 Erstellt mit &lt;a href=&quot;http://twinery.org&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;twine&lt;/a&gt;
 
 Das Spiel ist hier vorbei :) Danke fürs Spielen!
-Diese interaktive Geschichte ist ein Ergebnis aus Sammeln unzähliger Notitzen, Protokolle, Messenger-Gesprächsverläufe, E-Mails und Gesprächen mit Beteiligten. Vielen Dank gehrt vor allem für Hilfe und Testen an: R&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;d, F&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;d, J&amp;#42;&amp;#42;&amp;#42;s, D&amp;#42;&amp;#42;&amp;#42;n und 
+Diese interaktive Geschichte ist ein Ergebnis aus Sammeln unzähliger Notitzen, Protokolle, Messenger-Gesprächsverläufe, E-Mails, Flyern und Gesprächen mit Beteiligten.
+Dank geht vor allem für Hilfe und Testen an: F&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;d, J&amp;#42;&amp;#42;&amp;#42;s, D&amp;#42;&amp;#42;&amp;#42;n, R&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;d, T&amp;#42;&amp;#42;i und 
 
 Falls du diese Geschichte der hippen Eisenbahnstraße selbst noch weiter erzählen möchtest, kannst du dies &lt;a href=&quot;https://github.com/aufDerEisi/aufDerEisi.github.io&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;hier&lt;/a&gt; tun.
 
@@ -901,7 +904,7 @@ Das Ergebnis deiner Auswertung(click-replace: &quot;Das Ergebnis deiner Auswertu
 - Du (colour: red + white)[hast] ein kollektiven Raum im Viertel (colour: red + white)[aufgegeben]
 - Du (colour: red + white)[hast geschwiegen] oder dich Teilweise gegen unkommerzielle Projekte positioniert, während sie von kommerziellen Akteueren verdrängt wurden
 - Du (colour: red + white)[hast nichts] gegen die Verbreitung von Lügen und Diffamierungen gegenüber ehrenamtlichen und linken Projekten (colour: red + white)[unternommen] oder hast diese Teilweise mit verbreitet
-- Du (colour: red + white)[lässt es weiterhin zu], dass ein anderes selbstverwaltetes Projekt von den selben Akteuren gefickt wird
+- Du (colour: red + white)[lässt es weiterhin zu], dass ein weiteres selbstverwaltetes Projekt von den selben Akteuren gefickt wird
 
 ***Abzeichen:*** (colour: red + white)[(weißes) (akademisches) neoliberales (cis) Abschaum]]]</tw-passagedata><tw-passagedata pid="39" name="Solimail" tags="" position="2711,1078" size="100,100">&lt;img src=&quot;images/Solimail.png&quot; alt=&quot;solimail&quot; height=&quot;500&quot; width=&quot;700&quot; /&gt;
 
