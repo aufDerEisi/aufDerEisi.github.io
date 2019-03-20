@@ -896,10 +896,11 @@ Zusammen soll geschaut werden wie man dagegen vorgehen kann und wieviel Unterst�
 
 Du bist dir unsicher ob du [[Aktionsbuendnis&lt;-hingehen]] willst oder [[Der Kiez&lt;-fernbleiben]] möchtest.</tw-passagedata><tw-passagedata pid="38" name="Auswertung" tags="" position="797,2408" size="100,100">{
 (set: _styleAuthor to (text-style: &quot;shadow&quot;) + (text-style: &quot;italic&quot;))
+(set: _ladenInfos to $hopInfo + $hndrtnInfo + $ladenInfo)
 }\
 (background: #696969)[&lt;blockquote&gt;Wo auf der gesellschaftlichen Ebene Solidarität als Konzept aufgegeben wurde, werden privat Stress und Erschöpfung angehäuft.&lt;/blockquote&gt;]
 ###Ende
-(if: _LadenInfos is 13)[
+(if: _ladenInfos is 13)[
 Das Schlimmste an dieser Geschichte sind die Beteiligten.
 
 Auf der einen Seite wurde verlangt sich emotional auf die Lage der Goldhorn-Betreiber einzulassen. Mittels rein an den Wohlbefinden der Betreibern dieser Bar verlaufenden Argumentation, wurde darüber diskutiert wieso, in diesem (erst durch die Ankündigung des Rauswurfs verursachten) Kampf um einen sozial-kulturell-ökonomischen Raum, ein Protest falsch sein - oder sogar die 109 gehen sollte und das CHH keine Getränke ausgeben darf. Die Eigetnümer haben womöglich fehlende Einnahmen wegen den unkommerziellen Bars, also bedrohen die linken Räume Lohnarbeit und damit Leben. Die Eigetümer fühlen sich von dem Läden oder Aktionsbnündnis bedroht, demnach solidarisiert man sich mit den &quot;Verängstigten&quot; oder entsolidarisiert sich von dem vermeintlichen linken Aggresor.
@@ -941,8 +942,8 @@ Insgesamt verbrachtest du (colour: red + white)[(count: (history:), &quot;Der Ki
 - (colour: red + white)[$kulturLinks] mal bei einer links kultrulleren Veranstaltugen gewesen
 - (colour: red + white)[$heim] mal abends daheim geblieben
 
-(set: _LadenInfos to $hopInfo + $hndrtnInfo + $ladenInfo)\
-Du hast (colour: red + white)[_LadenInfos] von 13 Geschichten über die Ladenprojekte gefunden.
+(set: _ladenInfos to $hopInfo + $hndrtnInfo + $ladenInfo)\
+Du hast (colour: red + white)[_ladenInfos] von 13 Geschichten über die Ladenprojekte gefunden.
 
 Du hast das Aktionsbündnis (colour: red + white)[(if: $einladungPer is &#39;&#39;)[nicht] entdeckt](if: $einladungPer is not &#39;&#39;)[ und bist
 - (colour: red + white)[$besucheAktionsbuendnis] bei einem Plenum gewesen
@@ -1002,7 +1003,7 @@ Du gehst heute _lineFeiern oder _lineProjekt oder _lineKulturLinks oder _lineHei
 (set: _lineAusgehenKultur to &quot;Das Wetter ist schön und du hast dir Heute ein neues Hemd bei der Hilde gekauft deswegen hast du Lust ne Runde auf der Eisi zu [[Aktion&lt;-cruisen]]&quot;)
 (set: _lineNichtAusgehen to &quot;Das Wetter ist schön deswegen hast du Lust heute einen kleinen [[Aktion&lt;-Spaziergang]] zu machen.&quot;)
 
-(set: _lineAusgehen to &quot;(if: $feiern is &gt;= (max: $projekt, $kulturLinks, $heim))[_lineAusgehenBar(set: $aktionMitbekommen to &#39;Bar&#39;)](else-if: ($projekt - 3) is &gt; (max: $feiern, $kulturLinks, $heim))[_lineAusgehenProjekt(set: $aktionMitbekommen to &#39;Hingehen&#39;)](else-if: $kulturLinks is &gt;= (max: $projekt, $feiern, $heim))[_lineAusgehenKultur(set: $aktionMitbekommen to &#39;Kultur&#39;)](else-if: $heim is &gt;= (max: $projekt, $feiern, $feiern))[_lineNichtAusgehen(set: $aktionMitbekommen to &#39;Heim&#39;)]&quot;)
+(set: _lineAusgehen to &quot;(if: $feiern is &gt;= (max: $kulturLinks, $heim))[_lineAusgehenBar(set: $aktionMitbekommen to &#39;Bar&#39;)](else-if: $kulturLinks is &gt;= (max: $feiern, $heim))[_lineAusgehenKultur(set: $aktionMitbekommen to &#39;Kultur&#39;)](else-if: $heim is &gt;= (max: $kulturLinks, $feiern))[_lineNichtAusgehen(set: $aktionMitbekommen to &#39;Heim&#39;)]&quot;)
 }\
 **Die Eisenbahnstraße**
 (display: &quot;Kiez-Beschreibung&quot;)\
