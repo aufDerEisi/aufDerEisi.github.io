@@ -106,7 +106,9 @@ tw-story {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -368,6 +370,8 @@ Nach einer weile [[Der Kiez&lt;-verabschiedest]] du dich und gehst Heim.](else:)
 Nach einer weile [[Der Kiez&lt;-verabschiedest]] du dich und gehst Heim.]</tw-passagedata><tw-passagedata pid="5" name="Kultur Links" tags="" position="645,788" size="100,100">{
 (set: $kulturLinks to it + 1)
 
+(set: _getraenk to (either: &quot;eine Flasche Weißwein&quot;, &quot;einen Sekt&quot;, &quot;zwei Flaschen Bier&quot;))
+
 (set: _unterdKunst to&#39;Du gehst zu einem Vortrag über Antisemitismus, Gender und freie Kunst und bist fasziniert von den Bildern die während der Präsentation gezeigt wurden und den Geschichten ihrer Entstehung.
 
 Während der anschließenden Diskussion entsteht ein Streitgespräch ob die Bilder und ihre Entstehung als eine Form des Widerstands zu betrachten sind oder die Bilder Aufzeigen, was selbst unter Unterdrückung möglich ist und wie viel mehr an Kunst ohne die Unterdrückung möglich wäre.
@@ -380,26 +384,26 @@ Die Vortragende fängt mit Beispielen einer Raumproduktion in der linken Szene i
 Du kannst kaum folgen, doch dafür wird die Diskussion um so hitziger. Nach dem Vortrag streitest du dich mit einem dir unbekannten Typen um den Begriff des Freiraums und die emotional körperliche Identitätskonstruktion. Er wirft dir eine Depersonalisierung von Wahrnehmung vor, die durch Selbstkategorisierung zustande kommt. Du würdest von idealen Mitglieder&amp;#42;innen einer In-Group, ihren Eigenschaften, Einstellungen und Verhaltensweisen ausgehen, wo es jedoch in der Realität keine gäbe.
 
 Die Vortragende beendet darauf die Diskussion und gibt euch auf dem Weg, dass in Heilig Damm die Inszenierung der linken Gewalt in den Medien in der absoluten absurdesten Überspitzung gezeichnet wurde, und dies in der sogenannten szenische Linken dennoch zur Distanzierung und Spaltung führte.&#39;)
-(set: _hochkunst to &#39;Du gehst mit einem Freund zu einem Vortrag über die Auswirkung der kapitalistischen Ideologie an Kunsthochschulen. Die Vortragenden erzählen von ihren persönlichen Erlebnissen an Kunsthochschulen. Die Ideologie der Profitmaximierung herrscht über die Gesellschaft und Kunsthochschulen Teil der Gesellschaft sind, ist diese auch an der Kunsthochschule zu finden, heißt es.
+(set: _hochkunst to &#39;Du gehst mit einem Freund zu einem Vortrag über die Auswirkung der kapitalistischen Ideologie an Kunsthochschulen. Die Vortragenden erzählen von ihren persönlichen Erlebnissen an Kunsthochschulen. Die Ideologie der Profitmaximierung herrscht über die Gesellschaft und da Kunsthochschulen Teil der Gesellschaft sind, ist diese auch an der Kunsthochschule zu finden, heißt es.
 
 Die Kunsthochschulen müssen sparen um eine gute Bilanz vorweisen zu können, deshalb fehlt es überall an Geld, Lehrstühlen und Räumen. Abgeschlossen wird der Vortrag mit Bildern einer kollektiven Performance auf dem HGB-Rundgang, bei dem die mitmachenden Schriftzüge mit -10.000€ tragen und Schwarz angezogen sind.
 
 Eine Zuhörerin erwidert, dass diese Wellen vom Sparen die letzten Jahre durch viele Unis in Deutschland gegangen sind und fragt ob man sich nicht z.B. mit Studieprotesten der anderen Hochschulen in Leipzig verbinden könnte. Doch ihr wird entgegnet, dass sich Kunstunis mit den technischen Unis nicht vergleichen lassen.
 
-Du bist dir nicht sicher, ob das Argument einleuchtend war, aber als du nach dem Vortrag mit deiner Begleitung darüber reden willst, ist das Interesse kaum vorhanden, denn er sagt, er wäre dieses Semester eher nicht einmal in der Uni gewesen.&#39;)
+Du bist dir nicht sicher, ob das Argument einleuchtend war. Aber als du nach dem Vortrag mit deiner Begleitung darüber reden willst, ist das Interesse kaum vorhanden. Denn er sagt, er wäre dieses Semester eher nur zweimal an der Uni gewesen.&#39;)
 
 (set: _woGalerie to (either: &#39;in ihrem Atelier&#39;, &#39;in der Galerie eines Bekannten&#39;, &#39;in einem Ladenprojekt um die Ecke&#39;))
 (set: _werIstDa to (either:
 	&#39;Ein paar deiner Freunde sind auch schon da, ihr stoßt erstmal an und eine der Austellerin erzählt, dass sie gerade Stress hat alle Unterlagen für das Bafög einzureichen. Nach einer weiteren Kippe machst du eine kleine Runde.&#39;,
-	&#39;Noch ist niemand da. Alles wirkt sehr kalt. Du begrüßt die Künstler*innen und im zweiten Satz fragen sie schon ob es ok ist, wenn sie sich kurz einen Döner um die Ecke holen. Denn alle hätten heute kaum Zeit um etwas zu essen gehabt. Du nickst verständnisvoll und bleibst in der Stille zurück, um dir die Bilder anzuschauen.&#39;,
+	&#39;Beim reinkommen stellst du fest, noch ist niemand da. Alles wirkt sehr kalt. Du begrüßt die Künstler*innen und im zweiten Satz fragen sie schon ob es ok ist, wenn sie sich kurz einen Döner um die Ecke holen. Denn alle hätten heute kaum Zeit um etwas zu essen gehabt. Du nickst verständnisvoll und bleibst in der Stille zurück, um dir die Bilder anzuschauen.&#39;,
 	&#39;Als du da bist läuft laut Musik, du gehst an eine provisorisch errichtete Bar und siehst ein paar bekannte Gesichter. Scheinbar soll es auch eine Party geben, denn in der Eckke baut schon ein DJ auf. Nach kurzer Zeit, hast du zwei Gläser Sekt in dir und als die Bar die ersten Popsongs einschaltet, entscheidest du dich dir doch noch kurz die Bilder anzuschauen.&#39;,
 	&#39;Niemand grüßt dich. Außer den Künstlern, sind nur zwei Menschen da. Die Wände und Boden sind voll mit unfertigen Zeichnungen und Farbe. Einer der ausstellenden drückt seine Kippe aus, geht zu einem Bild und malt weiter. Wahrscheinlich ist es eine Art Performance meets come together, denkst du dir und drehst dich einmal in langsamen Schritten im Kreis und nährst dich dem ersten Bild.&#39;))
 (set: _wasAusgestellt to (either:
 	&#39;Die Wand ist voll mit unzähligen Bilder verschiedener Größe. Auf jedem Bild ist ein Dreieck zu sehen. Der Raum ist voller Dreiecke in allen Farben. Du musst ironisch Schmunzeln, als du auf dem kleinsten Bild die sixtinische Madonna siehst, die von einem Dreiecke übermalt worden ist.&#39;,
-	&#39;Auf eine Wand ist ein Projektor, gerichtet. Links und recht davon jeweils ein Bild. Der Projekter zeigt eine Aufnahme aus einem Videospiel. Es handelt sich um ein Rallye Rennspiel aus dem Anfang des Jahrtausends. Pixelgrafik trifft Matsch. Auf den beiden Bildern ist jeweils Bild einer Rennstrecke zu sehen. Du fragst den Küstler nach dem Grund und er erwidert, dass es sich um ein tolles Spiel handele.&#39;,
+	&#39;Auf eine Wand ist ein Projektor gerichtet. Links und recht davon jeweils ein Bild. Die Projektion zeigt eine Aufnahme aus einem Videospiel. Es handelt sich um ein Rallye-Rennspiel aus dem Anfang des Jahrtausends. Pixelgrafik trifft Matsch. Auf den beiden Bildern an der Wand ist jeweils eine Abbildung einer Rennstrecke zu sehen. Du fragst den Küstler nach dem Grund und er erwidert, dass es sich um ein tolles Spiel handele.&#39;,
 	&#39;Es hängen mehrere Fotos verlassener Fabriken an der Wand. Verwildert, voll getaggt, zerstört, verwüstet und schön. Drunter hängen Versuche, die Fotos nachzuzeichnen. Du machst davon ein Foto um es mit deinen Insta-Friends zu teilen.&#39;,
 	&#39;Die Bilder sind grotesk. Auf einem Zeichnung siehst du Jesus, dem aus der Vagina ein Dämon rauskriecht mit der Überschrift Versager. Der Künstler erzählt dir kurz danach das Bild auf einem Trip gesehen zu haben.&#39;,
-	&#39;Neben den Bildern hängt ein großer Spiegel. Ebenso auf der genau gegenüberliegenden Seite. Auf den Spiegel steht DU. Du bist dir unsicher ob das wirklich so dumm ist, oder nur zu deep für dich, deshalb sagst du lieber nichts und startest mit einer Person neben dir ein Gespräch über den neuen Club, der vor kurzem aufgemacht hat. Die Person dir gegenüber finde dies auch spannend. Zurück starrend fragt deine Gegenüber rhetorisch was der neue Club für die musikalische Bereicherung dieser Stadt bedeutet wird.&#39;))
+	&#39;Neben den Bildern hängt ein großer Spiegel. Ebenso auf der genau gegenüberliegenden Seite. Auf den Spiegel steht in großen Buchstaben DU. Du bist dir unsicher ob das wirklich so dumm ist, oder nur zu deep für dich, deshalb sagst du lieber nichts und startest mit einer Person neben dir ein Gespräch über den neuen Club, der vor kurzem aufgemacht hat. Die Person dir gegenüber finde dies auch spannend. Zurück starrend fragt deine Gegenüber rhetorisch was der neue Club für die musikalische Bereicherung dieser Stadt bedeutet wird.&#39;))
 &lt;!-- struktureller Antisemitismus gegenüber ongoin Projekt von Künstlern aus dem Viertel, in dem am Ende die Künstler aus dem Viertel verquert selbst den Vorwurf des strukturellen Antisemitismus an ongoin Projekt richten--&gt;
 }\
 &lt;!-- progressive neoliberale--&gt;
@@ -409,10 +413,12 @@ Du bist dir nicht sicher, ob das Argument einleuchtend war, aber als du nach dem
 	_hochkunst
 	)]\
 (if: $wasHip is &#39;Film&#39;)[(either:
-	&#39;In &amp;lsqb;$wayne[irgendeinem kleinem Kino]&amp;rsqb; wird ein Film über die Ästhetik des G20 Protests gezeigt.
-Der Film behandelt, die inszenierung der Gewalt in der Linken Szene. Du siehst eine halbe Stunde lange selfie-Aufnahmen von schick angezogenen jungen Menschen vor brennenden Autos.
-Am Ende wird eine vermumte Person in einem abgedunkelten Raum interviewt und eine Professorin bewertet, die zuschaustellung von ausufernder Gewalt, als eine Methode vor der eigenen Hilflosigkeit gegenüber dem dominierenden Neoliberalen System zu fliehen.&#39;,
-	&#39;Du gehst mit deinen Peoples zu einem Film über feministischen Rap in Porno Filmen mit Eingeladenen Regisseur&amp;#42;innen.
+	&#39;In &amp;lsqb;$wayne[irgendeinem kleinem Kino]&amp;rsqb; wird ein Film über die Ästhetik des G20 Protests gezeigt und behandelt wohl die Inszenierung der Gewalt in der linken Szene. Ein wichtiges Thema, findest du und gehst hin.
+
+Die erste halbe Stunde lange werden selfie-Aufnahmen von schick angezogenen jungen Menschen vor brennenden Autos gezeigt. Danach wird eine vermumte Person in einem abgedunkelten Raum interviewt. Der Film endet mit eine Professorin, die die zuschaustellung von ausufernder Gewalt, als einen Prozess vor der eigenen Hilflosigkeit gegenüber dem dominierenden Neoliberalen System zu fliehen, bewertet.
+
+Als der Abspann läuft, schnappst du neben dir die Wortfetzen &quot;Randalierer Zerstören den Rückhalt&quot;, &quot;mediale Aufmerksamkeit&quot; und &quot;Respekt vor Eigentum&quot; auf. Du bist still und starrst auf eine Nachricht auf deinem Smartphone.&#39;,
+	&#39;Du gehst mit deinen Peoples zu einem Film über feministischen Rap in Porno-Filmen mit eingeladenen Regisseur&amp;#42;innen.
 
 Auf der Bühne sitzen zwei Cis-Männer gekleidet in Bunten Röcken und einem BH. Während hinter ihnen auf der Leinwand der Film läuft, erzählen sie einzelne Anekdoten, die während der Aufnahmen stattgefunden haben. Die meisten Penisse, die in den man-on-man Szenen zu sehen sind, seien nicht echt, da keiner der Darsteller lange genung eine Erektion vorweisen konnte.
 
@@ -420,14 +426,14 @@ Du findest die Geschichten gewitzt und spannend. Doch die Musik ist leider viel 
 	&#39;Auf einem Flyer hast du gesehen, dass heute ein Kurzfilmabend ist, mit dem Thema critical whiteness and postcapitalism. Das klang spannend, deswegen bist mit einer weiteren Freundin hin.
 
 Gezeigt wird eine wilde Sammlung von Kurzclips. Ein paar kannst du nicht einordnen, denn man sieht nur verzehrte Körper, ein Raum der sich mit Geld füllt, oder Haare die sich um Menschen schlingen.
-Als letztes seht ihr eine Kollage aus Auschnitten verschiedener Reportagen über &amp;lsqb;S&amp;rsqb;chwarze trans Personen, die gegen Obdachlosigkeit und Ausbeutung protestieren. Fliegende Steine und Polizeigewalt werden eingeblendet. Ausschnitten aus einem Interview nach den Protesten folgen. Eine Person wirft Akademiker&amp;#42;in vor, sich das Wort queer repressiv einzueignen. Ökonomische Unterdrückung von queers wird aus den Diskusionen verdrängt und durch Ziele ersetzt, die sich um Diskriminierungsfreiheit im Beruf oder um Ehe- und Steuerrecht drehen.
+Als letztes seht ihr eine Kollage aus Auschnitten verschiedener Reportagen über &amp;lsqb;S&amp;rsqb;chwarze trans Personen, die gegen Obdachlosigkeit und Ausbeutung protestieren. Fliegende Steine und Polizeigewalt werden eingeblendet. Ausschnitten aus einem Interview nach den Protesten folgen. Eine Person wirft Akademiker&amp;#42;in vor, sich das Wort queer repressiv und subversiv einzueignen. Ökonomische Unterdrückung von queers wird aus den Diskusionen verdrängt und durch Ziele ersetzt, die sich um Diskriminierungsfreiheit im Beruf oder um Ehe- und Steuerrecht drehen. Eigener Rassimus und Sexismus wird nicht reflektiert und die Kritik auf andere projiziert.
 
 Du führst mit der Freundin noch lange ein Gespräch über das Gesehene. Ihr stimmt den meisten Dingen zu, aber findet auch, dass die Filme ein wenig propagandistisch rüber kamen und die Kapitalismuskritik den eigentlichen Kern verwässerte.&#39;)]\
-(if: $wasHip is &#39;Galerie&#39;)[(either: &#39;Zwei&#39;, &#39;Drei&#39;) Freunde von dir machen heute eine Ausstellung _woGalerie. Du läufst auf dem Weg dahin bei einem Späti vorbei und holst eine Flasche Weißwein.
+(if: $wasHip is &#39;Galerie&#39;)[(either: &#39;Zwei&#39;, &#39;Drei&#39;) Freunde von dir machen heute eine Ausstellung _woGalerie. Du läufst auf dem Weg dahin bei einem Späti vorbei und holst _getraenk.
 
 _werIstDa
 
-Für die Ausstellung stehen zwei Räume zur Verfügung. _wasAusgestellt
+Für die Ausstellung (either: &quot;stehen zwei Räume&quot;, &quot;steht ein Raum&quot;) zur Verfügung. _wasAusgestellt
 
 Irgendwie hast du doch wieder genug und begibst dich wieder zurück.
 ]\
@@ -1019,11 +1025,13 @@ _styleAuthor[Auf der Eisi
 &amp;ensp; &amp;ensp; &amp;ensp;Ein Spiel von:] &lt;a href=&quot;mailto:l_i_e_b_e@riseup.net&quot;&gt;liebe&lt;/a&gt;
 &amp;ensp; &amp;ensp; &amp;ensp;_styleAuthor[Erstellt mit] &lt;a href=&quot;http://twinery.org&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;twine&lt;/a&gt;
 
-Danke fürs Spielen!
 Das Spiel ist hier vorbei, die Geschichte nicht.
+
 Diese Text-Spiel ist ein Ergebnis aus Sammeln unzähliger Notitzen, Protokolle, Messenger-Gesprächsverläufe, E-Mails, Flyern und Gesprächen mit Beteiligten.
 
-_styleAuthor[Dank geht vor allem für Hilfe und Testen an:] F&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;d, J&amp;#42;&amp;#42;&amp;#42;s, D&amp;#42;&amp;#42;&amp;#42;n, R&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;d, T&amp;#42;&amp;#42;i und 
+_styleAuthor[Dank geht vor allem für Hilfe und Testen an:] F&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;d, J&amp;#42;&amp;#42;&amp;#42;s, D&amp;#42;&amp;#42;&amp;#42;n, R&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;d, T&amp;#42;&amp;#42;i, HT&amp;#42;&amp;#42;iT&amp;#42;&amp;#42;iT&amp;#42;&amp;#42;iT&amp;#42;&amp;#42;s und 
+
+Danke auch an dich fürs Spielen!
 
 Falls du diese Geschichte der hippen Eisenbahnstraße selbst noch weiter erzählen möchtest, kannst du dies &lt;a href=&quot;https://github.com/aufDerEisi/aufDerEisi.github.io&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;hier&lt;/a&gt; tun.
 
@@ -1042,7 +1050,7 @@ Du hast (colour: red + white)[_ladenInfos] von 13 Geschichten über die Ladenpro
 Du hast das Aktionsbündnis (colour: red + white)[(if: $einladungPer is &#39;&#39;)[nicht] entdeckt](if: $einladungPer is not &#39;&#39;)[ und bist
 - (colour: red + white)[$besucheAktionsbuendnis] bei einem Plenum gewesen
 - (colour: red + white)[0] zu einer Aktion hingegangen
-- warst (colour: red + white)[nicht] an der Organisierung von öffentlichen Aktionen beteiligt]
+- warst (colour: red + white)[nicht] an der Organisierung von öffentlichem Protest beteiligt]
 
 Das Ergebnis deiner Auswertung(click-replace: &quot;Das Ergebnis deiner Auswertung&quot;)[
 ***Ergebnis***
