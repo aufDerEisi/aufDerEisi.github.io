@@ -107,7 +107,9 @@ tw-story {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -296,25 +298,30 @@ Nach 2 Wodka-Matte fängst du an mit &amp;lsqb;$wayne[irgendjemand]&amp;rsqb; ru
 
 (set: _essenLine to (either: &#39;veganes Sushi&#39;, &#39;Nudeln mit Tomatensoße&#39;, &#39;Eintopf mit Kartoffeln&#39;, &#39;herzhafte Pfannkuchen&#39;, &#39;veganes Gulasch mit Reis&#39;, &#39;Salat und eine Kürbissuppe&#39;, &#39;vegane Burger mit gebackenen Kartoffeln&#39;))
 (set: _hoerspielLine to &quot;Hörspiel-Abend zu sein. Jemand hat einen Beitrag über (either: &#39;Oury Jalloh&#39;, &#39;Polizeigewalt in Sachsen&#39;, &#39;gesellschaftliche Reproduktionsarbeit und die Arbeitsbedinungen von Migrant*innen&#39;, &#39;Geschlecht im Kapitalismus&#39;, &#39;Queer in Russland - Zwischen Lebensgefahr und aufkeimender Szene&#39;) mitgebracht. Du bleibst nach dem Essen sitzen und hörst dir das Hörspiel zu ende an.&quot;)
-(set: _vortragLine to &quot;Vortrag-Abend zu sein. (either: &#39;Menschen von der IWW haben eine Präsentation über das Währungsystem vorbereitet.&#39;, &#39;Eine junge Frau hat zusammen mit einer Gruppe eine Reise in Südamerika gemacht und dort verschiedene basisdemokratische Organisationen besucht. Die Reise haben sie mit vielen Fotos dokumentiert die ihr euch anschaut und Geschichten hört wie sich dort die Menschen für ihre Rechte einsetzten und gegen große Zerstörung durch Konzerne kämpfen.&#39;)&quot;)
-(set: _abendWieImmerLine to &#39;gewöhnlicher Abend zu sein. Eigentlich nichts spannendes. Nach dem du dir ein paar Flyer angeschaut hast, langweilst du dich und gehst wieder nach Hause.&#39;)
+(set: _vortragLine to &quot;Vortrag-Abend zu sein. (either: &#39;Menschen von der IWW haben eine Präsentation über das Währungsystem vorbereitet. Der Vortrag wird leider ständig gestört, weil jemand unbedingt quer durch den Raum will. Am Ende sitzt nur noch die Hälfte der Zuhörer&amp;#42;innen.&#39;, &#39;Eine junge Frau hat zusammen mit einer Gruppe eine Reise in Südamerika gemacht und dort verschiedene basisdemokratische Organisationen besucht. Die Reise haben sie mit vielen Fotos dokumentiert die ihr euch anschaut und Geschichten hört wie sich dort die Menschen für ihre Rechte einsetzten und gegen große Zerstörung durch Konzerne kämpfen.&#39;)&quot;)
+(set: _abendWieImmerLine to &#39;gewöhnlicher Abend zu sein. Eigentlich nichts spannendes. Nach dem du dir ein paar Flyer angeschaut hast, langweilst du dich.&#39;)
 
 (set: _vekueLine to &quot;Von deinen Freunden ist niemand da, deswegen schnappst du dir ein Teller und setzt dich auf eine freie Couch.
+
 Heute scheint ein (either: _hoerspielLine, _vortragLine, _abendWieImmerLine)&quot;)
-(set: _konzertLine to &quot;Auf einmal bauen ein paar (either: &#39;flüchtige Bekannte&#39;, &#39;Menschen&#39;) ihr Instrumenten-Set auf. Scheinbar gibt es spontan ein Konzert. (either: &#39;zuerst spielt Raduz etwas auf seinem Klavier und Nichtfreund folgt mit einer selbstgebastelter frickel Musik auf seinem Laptop. Danach versuchen sie zusammen etwas zu spielen was an Berghain anmutet, aber sich zu einem undefinierten etwas entwickelt. Die Künstler*innen sind begeistert, die anderen ehe nicht.&#39;,
-	&#39;es sind zwei Bewohner*innen des Nachbarhauses. Sie spielen auf Gitarre Radiohead covers. Als danach noch mehr Menschen mit Instrumenten auftauchen und halbe Stunde lang laut chaotisch Musik machen, bittet sie der Mensch von der Bar genervt dafür die Jam-Session von &amp;lsqb;$wayne[irgend ein Ladenprojekt]&amp;rsqb; zu nutzen.&#39;)&quot;)
-(set: _langeweile to (either: &#39;Jede halbe Stunde folgt ein krasser Musik-Bruch demnächsten, weil irgendjemand anderes an den Musikplayer kommt. Auch von den Gesprächen bist du heute schnell genervt und winkst relativ schnell ab.&#39;, &#39;heute ist es etwas voll. Es wird viel geraucht und ist sehr laut. Deine Freunde erzählen eigentlich nichts spannendes, und du starst alle 5 minuten auf dein Smartphone. Nach zwei &amp;lsqb;$wayne[irgendein Getränk]&amp;rsqb; gibst du auf und gehst wieder.&#39;,
+(set: _konzertLine to &quot;Auf einmal bauen ein paar (either: &#39;flüchtige Bekannte&#39;, &#39;Menschen&#39;) ihr Instrumenten-Set auf. Sieht so aus als gäbe es spontan ein Konzert. (either: &#39;Zuerst spielt Raduz etwas auf seinem Klavier und Nichtfreund folgt mit einer selbstgebastelter frickel Musik auf seinem Laptop. Danach versuchen sie zusammen etwas zu spielen was an Berghain anmutet, aber sich zu einem undefinierten etwas entwickelt. Die Künstler*innen sind begeistert, die anderen ehe nicht.&#39;,
+&#39;Es sind zwei Bewohner*innen des Nachbarhauses. Sie spielen auf Gitarre Radiohead covers. Als danach noch mehr Menschen mit Instrumenten auftauchen und halbe Stunde lang laut chaotisch Musik machen, bittet sie der Mensch von der Bar genervt dafür die Jam-Session von &amp;lsqb;$wayne[irgend ein Ladenprojekt]&amp;rsqb; zu nutzen.&#39;)&quot;)
+(set: _langeweile to (either: &#39;Jede halbe Stunde folgt ein krasser Musik-Bruch demnächsten, weil irgendjemand anderes an den Musikplayer kommt. Auch von den Gesprächen bist du heute schnell genervt und winkst relativ schnell ab.&#39;,
+&#39;Heute ist es etwas voll. Es wird viel geraucht und ist sehr laut. Deine Freunde erzählen eigentlich nichts spannendes, und du starst alle 5 minuten auf dein Smartphone. Nach zwei &amp;lsqb;$wayne[irgendein Getränk]&amp;rsqb; gibst du auf.&#39;,
 &#39;Mit ein paar Freunden triffst du dich bei &amp;lsqb;$wayne[irgendein Ladenprojekt]&amp;rsqb;. An der Bar angekommen, holst du dein Geldbeutel raus und wartest, doch da is niemand. Nach zwei minuten Warten fragst du ein Mädel neben dir, ob sie wisse, wann der Barmensch zurück kommt. Sie antwortet dir, dass sie heute die Bar macht, aber gerade keine Lust hat. Du kannst dir selbst ein Getränk rausnehmen, wenn du willst.
 
 Etwas ungewohnt, aber wieso nicht. Du greifst in den Kühlschrank und kehrst wieder auf die andere Seite zurück. Deine Freunde sagen dir es wäre hier normal, als du sie darauf ansprichst. Die Leute seinen keine Angestellten, sondern betreiben den Raum ehr als Treffpunkt. Du antwortest genervt, dass du das selbst weißt.&#39;))
 
 (set: _gespraech1 to &#39;du trinkst 2 Getränke und unterhältst dich mit ein paar Freunde bei einer Zigarette.&#39;)
-(set: _gespraech2 to &#39;Du lernst zwei linke an der Bar kennen. Ihr unterhaltet euch lange über fehlende Linke Bewegungen und leere Ideen. Am Ende bleibt ihr bei Griechenland hängen. Es gäbe dort momentan eine Masse die mobilisiert werden kann, das Problem ist nur, das auch viele Rechte Teil der Demonstrantinen sind.
+(set: _gespraech2 to &#39;Du lernst zwei linke an der Bar kennen. Ihr unterhaltet euch lange über eine fehlende linke Bewegung und leere Ideen. Am Ende bleibt ihr bei Griechenland hängen. Es gäbe dort momentan eine Masse die mobilisiert werden kann, das Problem ist nur, das auch viele Rechte Teil der Demonstrantinen sind.
 Nach 2-3 Bier seit ihr euch einig, dass man mit einer Beteiligung nur die rechten Stärker machen würde.&#39;)
-(set: _gespraech3 to &#39;Am Nebentisch unterhalten sich zwei Menschen sehr laut über Gentrifizierung. Sie streiten sich darum welche Rolle Hipster eigentlich in diesem Prozess haben. Eine Person ist der Meinung, dass Problem die Vertreibung an sich ist. Da wo vorher Alkis am Hauseingang standen, ist jetzt das Haus voller junger Leute. Diese Menschen müssen sich einen anderen Ort suchen und in diesem Vertreiben der Körper zeigt sich bereits Gentrifizierung. Die zweite Person ist da anderer Meinung. Das Problem sei nicht, dass in einem Haus aufeinmal fast nur junge Leute wohnen und die mit lauter Musik die alten vertreiben, sondern dass sich die Einwohner&amp;#42;innen, die mit ihrer direkten Nachbarschaft nicht mehr zu frieden sind, im Viertel sonst nirgendwo mehr die Mieten leisten können.&#39;)
-(set: _gespraech4 to &#39;Am Fenster sitzt eine Gruppe die sich mehr oder weniger laut streitet. Es geht schon wieder um Umweltzerstörung. Eigentlich ist dazu schon alles gesagt und das Thema ausgezehrt, deswegen bist du etwas genervt.
-Eine Person regt sich über die Untätigkeit auf. Das Ökosystem breche zusammen und das einzige was alle interessiert ist die Steigung des Profits.
-Seine Gesprächspartner&amp;#42;innen erwiedern, dass Veränderungen nun mal sehr viel Zeit brauchen, da Verständnis sich nur langsam verbreitet und man in einer Demoratie alle mitnehmen muss. Die Person widerspricht jedoch. Am Ende wurde alles hingenohmen, weils kurzfristig bielig ist. Jetz bleibe keine Zeit mehr. Auch die Linke hätte jahrzehnte verschwendet, jetzt müsste man zusammen Proteste und Blockaden organisieren, durch reden werde man nichts bewegen können und die Zeit drängt.
+(set: _gespraech3 to &#39;Am Nebentisch unterhalten sich zwei Menschen sehr laut über Gentrifizierung. Sie streiten sich darum welche Rolle Hipster eigentlich in diesem Prozess haben.
+Eine Person ist der Meinung, dass Problem fange schon im Kleinen an; in für uns unbedeutenden Handlungen. Verdrängung die wir unreflektiert stehen lassen und im Laufe der Zeit akkumulieren. Da wo vorher Alkis am Hauseingang standen, ist jetzt das Haus voller junger linker Studis. Die Menschen zuvor müssen sich einen anderen Ort suchen und in diesem Vertreiben von Körpern zeigt sich bereits Gentrifizierung. Richtig wäre hier den Menschen als neue Einwohner&amp;#42;in engegenzukommen; schon ein Klo anzubieten wäre so ein Fortschritt.
+Die zweite Person ist da anderer Meinung. Das Problem sei nicht, dass in einem Haus aufeinmal fast nur junge Leute wohnen oder mit Anwesenheit und lauter Musik die alten vertrieben werden. Sondern dass sich die Einwohner&amp;#42;innen, die mit ihrer direkten Nachbarschaft nicht mehr zufrieden sind, im Viertel sonst nirgendwo mehr die Mieten leisten können.
+Beide Perspektiven findest du krtitisch, da für dich zu kurz gedacht. Aber da du weder die beiden kennst, noch weißt was du sagen könntest, sagst du nichts.&#39;)
+(set: _gespraech4 to &#39;Am Fenster sitzt eine Gruppe die sich mehr oder weniger laut streitet. Es geht schon wieder um Umweltzerstörung. Eigentlich ist dazu schon alles gesagt und das Thema ausgebrannt, deswegen bist du etwas genervt.
+
+Eine Person regt sich über die allgemeine Untätigkeit auf. Das Ökosystem breche zusammen und das einzige was alle interessiert ist die Steigung des Profits und der neue MacBook. Seine Gesprächspartner&amp;#42;innen erwiedern, dass Veränderungen nun mal sehr viel Zeit brauchen, da Verständnis sich nur langsam verbreitet und man in einer Demoratie alle mitnehmen muss. Die Person widerspricht jedoch. Am Ende wurde und wird alles hingenohmen, weils kurzfristig billig ist. Jetz bleibe keine Zeit mehr. Auch die Linke hätte jahrzehnte verschwendet, jetzt müsste man zusammen Proteste und Blockaden organisieren, durch Reden werde man nichts bewegen können und die Zeit drängt.
 Das Gespräch bricht abbrupt ab, als die Person endlich unterbrochen wird. Man lasse sich nichts vordiktieren und schon garnicht mit Ängsten unter Druck setzten.&#39;)
 (set: _gespraech5 to &#39;Drin ist es etwas voll und da es draußen sowieso noch warm ist, gehst du mit deinem &amp;lsqb;$wayne[irgendein Getränk]&amp;rsqb; raus.
 
@@ -329,33 +336,42 @@ Stille bricht ein und du begibst dich wieder zurück.&#39;)
 (set: _rumhaengenLine to (either:
   &#39;Heute gibt es _essenLine bei der VeKü.
   _vekueLine&#39;,
-  &quot;Es ist ein gewöhnlicher Bar-Abend. (either: _konzertLine, _langeweile, _gespreach)&quot;))
+  &quot;Es ist ein gewöhnlicher Bar-Abend.
+  
+  (either: _konzertLine, _langeweile, _gespreach)&quot;))
 
 (set: _plenumLine to (either:
-  &#39;Es war für einige ein langer Tag und das merkt man/frau an der Trägheit des Plenums. Ihr schafft dennoch etwas für &amp;lsqb;$wayne[eures gemeinsames Projekt]&amp;rsqb; zu organisieren. Und unterhaltet euch danach vor der Tür noch etwas über Life im Viertel&#39;,
-  &#39;Ihr macht heute ein Emo-Plenum um über aufgestaute Probleme in der Gruppe zu reden. Du hast selbstgemachte Muffins mitgebracht über die sich die wenigen aus der Gruppe freuen die gekommen sind. Einige empfinden die Art wie in letzter Zeit Entscheidungen getroffen wurden nicht ideal.
+  &#39;Es war für einige ein langer Tag und das merkt man/frau an der Trägheit des Plenums. Ihr schafft dennoch etwas für &amp;lsqb;$wayne[eures gemeinsames Projekt]&amp;rsqb; zu organisieren. Und unterhaltet euch danach vor der Tür noch etwas über das Life im Viertel.&#39;,
+  &#39;Ihr macht heute ein Emo-Plenum um über aufgestaute Probleme in der Gruppe zu reden. Du hast selbstgemachte Muffins mitgebracht, über die sich die wenigen aus der Gruppe freuen die gekommen sind. Einige empfinden die Art wie in letzter Zeit Entscheidungen getroffen wurden nicht ideal.
 Ihr unterhaltet euch lange darüber wie mögliche Hierarchien aufgelöst werden könnten. Es gibt zwar kein abschließendes Ergebnis, aber du hast das Gefühl ihr seit  als Gruppe weiter als davor.&#39;,
   &#39;Es ist echt kein gutes Plenum. Alle fallen sich ins Wort und kein einziges Top wird zu ende besprochen, bevor ihr nicht zu einem anderen Thema abschweift. Als die/der Protokollant&amp;#42;in sich beschwert, dass das Protokollieren fast unmöglich ist, entsteht auch noch ein Streit mit denjenigen, die finden das alles nun mal im ganzen so besprochen werden muss und zusammenhängt.
 Du forderst eine Pause und ihr beschließt, dass ihr heute doch jemand zum Moderieren braucht. Ihr schafft danach zumindest ein Thema zu Ende zu besprechen, doch dann es ist schon halb 10 und niemand hat Energie noch weiter zu plenieren&#39;))
+(set: _muell to (either: &quot;einer Kamera, Bücher und T-Shirts&quot;,
+&quot;Schlitzschuhen, einem Notzibuch mit ein paar ausgerissenen Seiten und zwei leeren(?) Tapes&quot;, &quot;Fahrradpumpe, einer Hose und zwei Paar Schuhe&quot;))
+(set: _zahlS to (either: &quot;zwei&quot;, &quot;drei&quot;))
 (set: _helfenLine to (either:
-	&#39;heute war VeKü und du hast dich entschieden etwas im Viertel zu helfen in dem du ein paar Töpfe sauber machst. Nach einer halben Stunde gibst du bei einem eingebrannten Topf auf und weichst denn ein, in der Hoffnung das jemand später weiter spült&#39;,
+	&#39;Heute war VeKü und du hast dich entschieden etwas im Viertel zu helfen in dem du ein paar Töpfe sauber machst. Nach einer halben Stunde gibst du bei einem eingebrannten Topf auf und weichst denn ein, in der Hoffnung das jemand später weiter spült&#39;,
 	&#39;Du hast mitbekommen, dass in &amp;lsqb;$wayne[irgendeinem Ladenprojekt]&amp;rsqb; heute Aktionstag ist. Als du ankommst stellst du fest, dass eigentlich nichts geplannt ist. Eine Person wollte ein Regal für Flyer bauen, aber weder wurde Holz noch Fahrradschläuche besorgt.
 Du räumst irgendwie planlos Sachen von Raum zu Raum, aber gibts auf, da sich das ganze etwas sinnlos anfühlt.&#39;,
 	&#39;Du hast mitbekommen, dass heute im &amp;lsqb;$wayne[irgendeinem Ladenprojekt]&amp;rsqb; Ausmisten-Tag ist. Es hat sich also wieder irgendein Scheiß angehäuft und der soll weg.
-Nach 2 Stunden hast du ein Haufen mit einer Kamera, Schlitzschuhen, Bücher und T-Shirts gemacht, die du mitnimmst und zwei Müllsäcke, die jemand zu einem (anderen) Umsonstladen bringen will.&#39;))
+
+Nach einer Stunden hast du ein Haufen mit _muell gemacht, die du mitnimmst. Und _zahlS Müllsäcken, die jemand zu einem (anderen) Umsonstladen bringen will.&#39;))
 
 }\
 
 (if: $wieLeben is &#39;Beziehung&#39;)[Du hängst in einem selbstverwalteten Projekt ab.
+
 _rumhaengenLine]\
 (if: $wieLeben is &#39;Orga&#39;)[Die &amp;lsqb;$wayne[Gruppe bei der du mitmachst]&amp;rsqb; trifft sich heute.
+
 _plenumLine]\
 (if: $wieLeben is &#39;Arbeit&#39;)[Du hilfst etwas in einem unkommerziellen Projekt.
+
 _helfenLine]\
 
 (if: not $hatProtestAngefangen and ($projekt is &gt;= $projektBesucheFuerProtest))[(set: $einladungPer to &quot;Plenum&quot;)(display: &quot;Einladung&quot;)](else-if: $projekt is &gt; 2 and ($hndrtnInfo != 5 or $hopInfo != 5))[
 
-Bevor du gehst, setzt du dich an die Bar/Am ende sitzt ihr noch etwas zusammen/Draußen vor der Tür unterhalten sich Leute über das Ladenprojekt.
+(either: &quot;Bevor du gehst, setzt du dich an die Bar zu ein paar Menschen vom Ladenprojekt.&quot;, &quot;Draußen vor der Tür unterhalten sich Leute über das Ladenprojekt.&quot;)
 
 Sie erzählen dir was sie gerade beschäftigt(click-replace: &quot;Sie erzählen dir was sie gerade beschäftigt&quot;)[(display: &quot;Problem-Projekt&quot;)]
 
@@ -365,9 +381,9 @@ Draußen vor der Tür unterhalten sich Leute über das Ladenprojekt.
 
 Sie erzählen dir was sie gerade beschäftigt(click-replace: &quot;Sie erzählen dir was sie gerade beschäftigt&quot;)[(display: &quot;Laden-Probleme&quot;)]
 
-Nach einer weile [[Der Kiez&lt;-verabschiedest]] du dich und gehst Heim.](else:)[
+Nach einer Weile [[Der Kiez&lt;-verabschiedest]] du dich und gehst Heim.](else:)[
 
-Nach einer weile [[Der Kiez&lt;-verabschiedest]] du dich und gehst Heim.]</tw-passagedata><tw-passagedata pid="5" name="Kultur Links" tags="" position="645,788" size="100,100">{
+Nach einer Weile [[Der Kiez&lt;-verabschiedest]] du dich und gehst Heim.]</tw-passagedata><tw-passagedata pid="5" name="Kultur Links" tags="" position="645,788" size="100,100">{
 (set: $kulturLinks to it + 1)
 
 (set: _getraenk to (either: &quot;eine Flasche Weißwein&quot;, &quot;einen Sekt&quot;, &quot;zwei Flaschen Bier&quot;))
