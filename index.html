@@ -108,7 +108,9 @@ tw-story {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -231,7 +233,8 @@ tw-story {
 
 ###Auf der Eisi
 
-Auf der hippen Eisenbahnstraße 2016-2018. Eine interaktive Geschichte über Ausgehabende in einem schillerndem Viertel, Aufgeben, kollektive Projekte, Solidariät, kommerzielle Strukturen und Schuld.
+Auf der hippen Eisenbahnstraße 2016-2018.
+Eine interaktive Geschichte über Ausgehabende in einem schillerndem Viertel, Aufgeben, kollektive Projekte, Solidariät, kommerzielle Strukturen und Schuld.
 
 _styleAuthor[Außenstehnde*r im inneren Kreis]
 
@@ -251,47 +254,81 @@ _styleAuthor[Außenstehnde*r im inneren Kreis]
 (set: $feiern to it + 1)
 
 (set: _szeneBar to (either:
-  &#39;Du lernst ein Mädchen kennen und ihr habt den ganzen Abend ein hinreißendes Gespräch. Sie studiert in zwei Fächern; Genderstudies und BWL. Sie erzählt lange von Hindernissen in der freien Entfaltung und wie sich die Wirtschaft mit freiwilligen Regeln helfen könnte. Am Ende des Abends hast du jedoch ihren Namen vergessen.
-Eigentlich ist nichts aufregendes passiert, aber es war mal wieder einer der Abende die dich erriner wie so du eigentlich hierhergezogen bist. Wegen den Menschen. Hypezig ist vielleicht in den Medien vorbei, doch hier in diesem Viertel nicht!&#39;,
+&#39;Ihr wollt euch bei &amp;lsqb;$wayne[irgendeine Bar]&amp;rsqb; treffen, doch als du ankommst stellst du fest: Es ist heute voll. Also schreibst du deinen friends, dass du in die Bar gegenüber gehst und bestellst einen &amp;lsqb;$wayne[hipper Cocktail]&amp;rsqb;.
+Deine Freunde tauchen nicht auf und das Staren auf WhatsApp hilft nicht dabei vorzutäuschen das du dich langweilst.&#39;,
+  &#39;Du lernst einen Jungen, in einem grünen Pullover und einem USB als Ohring, kennen. Ihr habt den ganzen Abend ein hinreißendes Gespräch.
+Er studiert in zwei Fächern: Genderstudies und BWL. Lange erzählt er von Hindernissen in der freien Entfaltung und wie sich die Wirtschaft mit freiwilligen Regeln selbst helfen könnte. Am Ende des Abends hast du jedoch seinen Namen vergessen.
+
+Eigentlich ist nichts aufregendes passiert, aber es war mal wieder einer der Abende die dich erinner wieso du eigentlich hierhergezogen bist. Wegen den Menschen! Hypezig ist vielleicht in den Medien vorbei, doch hier in diesem Viertel nicht!&#39;,
   &#39;Du sprichst drei Stunde lang mit deinen Freunden über Legida, die neue Tapete in der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb;, die Ex von &amp;lsqb;$wayne[irgendeinem Freund]&amp;rsqb; und das Georg Orwell Recht hatte.
+
 Ein Freund nörgelt den ganzen Abend rum, wie Menschenverachtend gerade alles auf der Welt ist, bist du ihm erwiederst, dass es Menschen gibt die einfach alles schlecht reden und nie das Gute sehen wollen.&#39;,
-  &#39;Der Abend ist lang, du hast mehr Geld ausgegeben als du eigentlich wolltest. Yolo!
+  &#39;Ein Freund hat &amp;lsqb;$wayne[irgendein Ereignis]&amp;rsqb;, also gibt es was zu feiern. Früh kommt ihr schon an und die Stimmung ist gut. Der Abend wird lang und du hast mehr Geld ausgegeben als du eigentlich wolltest. Yolo!
+
 Du versuchst dir noch was klar zumachen, aber es ist zu spät und nichts vernünftiges ist übrig. Jetzt schon spürrst du einen Kater.
-Als du vom Klo zurückkommst, rennst du in deine&amp;#42;n Ex. Du tuest so als hättest du niemand gesehen, in dem du wichtig wirkend auf dein smartphone starrst.&#39;,
-  &#39;Die Bar ist heute nicht so aufregend. Du ziehst mit deinen Freunden von einer Bar in die nächste, bist du müde nach Hause läufst&#39;,
-  &#39;In der neuen &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; ist heute Karaoke Abend. Selbstironisch singst du ein Lied über Dreiecke. Deine Crew geben dir einen aus und du willst nochmal auf die Bühne, aber leider ist die nächste halbe Stunde bereits voll.&#39;))
+
+Als du vom Klo zurückkommst, rennst du in deine&amp;#42;n Ex. Wichtig wirkend starrst du sofort auf dein smartphone und tuest so als hättest du niemand gesehen.&#39;,
+  &#39;Die Bar ist heute Abend nicht so aufregend. So ziehst du mit deinen Freunden von einer Bar zur der nächsten, bist du aussteigst und müde nach Hause läufst&#39;,
+  &#39;In der neuen &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; ist heute Karaoke Abend. Deine Freunde sind heiß drauf. Du brauchst jedoch etwas Mut und gehst and die Bar.
+
+Nach einem Bier stehst du schon auf der Bühne. Selbstironisch singst du ein Lied über Dreiecke. Deine Crew geben dir cred und einen aus. Nach 15 min willst du nochmal, aber leider ist die nächste halbe Stunde bereits voll.&#39;))
   
 (set: _ladenProjekt to (either:
-	&#39;Du findest die Kasse nicht, deshalb fragst du das Barpersonal ob du bei ihnen bezahlen kannst. Der Mensch hinter der Theke gibt dir ein Glas mit Münzen und sagt ohne dich anzuschauen, &quot;ist auf Spende&quot;. Du antwortest genervt, dass du dies weißt und zahlst etwas weniger.&#39;,
-	&#39;Als du dein Bier bestellst, spricht dich das Barpersonal bzgl. einer Demo an und möchte dir ein Flyer für eine Mobilisierungsveranstaltung geben, die morgen hier stattfindet. Der Mensch schaut dich dabei kaum an und wirkt um so eingebildeter.
+	&#39;Es ist ganz witzig, denn irgendwie ist es eine Bar und irgendwie nicht. Die Sitzgelegenheiten sind offen gestaltet, und kleine private Tische für drei sind nur in Ecken zu finden.
+
+Ihr geht an die Bar und du findest die Kasse nicht. Deshalb fragst du das Barpersonal ob du bei ihnen bezahlen kannst. Der Mensch hinter der Theke gibt dir ein Glas mit Münzen. Dadrauf steht groß SPENDE. Und sagt ohne dich anzuschauen, &quot;ist auf Spende&quot;. Du antwortest genervt, dass du dies weißt und zahlst diesmal etwas weniger.&#39;,
+	&#39;Als ihr reinkommt siehst du irgendjemand ein Plakat aufhängen. (either: &quot;Er&quot;, &quot;Sie&quot;) hat noch ein Stapel dabei und haut wieder schnell ab. Noch ist nicht soviel los. Vielleicht 10-15 Menschen.
+
+Du nährst dich der Bar. Als du (either: &quot;dein Bier&quot;, &quot;deine Mate&quot;, &quot;dein Wein&quot;) bestellst, spricht dich das Barpersonal bzgl. einer Demo an. Es ist ein Mädel mit bunten Haaren und sie möchte dir ein Flyer für eine Mobilisierungsveranstaltung geben. Der Mensch schaut dich dabei kaum an, wirkt kühl und um so eingebildeter.
+
 Du beschwerst dich bei deinen Friends wie arrogant das Barpersonal hier ist, und das sie wohl glauben was besseres zu sein&#39;,
-	&#39;Du setzt an die Bar und lernst jemand aus Marseille kennen. Er ist Künstler und besetzt dort Häuser. Er besucht mit seiner Freundin Leipzig und sucht ein billiges Zimmer für 3-5 Wochen. Er fragt das Barpersonal und kriegt eine Nummer von Freundes-Freunden die zufällig ein leeres Zimmer haben.&#39;,
-	&#39;Ein betrunkener Penner spricht dich an. Du gehst zur Abwechslung auf das Gespräch ein, auch weil du dich etwas langweilst. Du erfährst, dass er manchmal hier schlafen darf. Du spendest beim dem nächsten Wein etwas mehr und gehst zurück zu deiner Clique&#39;))
+	&#39;Ihr kommt rein und geht geradeaus an die mit Sticker beklebte Bar, das Portemonnaie griffbereit.
+
+An der Bar sitzen ungewöhnliche gestalten. Du setzt dich dazu und hörst französisch. Deine Freundin war gerade ein halbes Jahr da und muss sie natürlich sofort ansprechen. Schnell wechselt ihr auf englisch.
+Der erster Eindruck ist ganz nett. Sie kommen aus Marseille. Er ist Künstler und besetzt dort Häuser. Sie ist Künstlerin und hilft dort Obdachlosen selbst Häuser zu besetzten. Sie sind einfach Unterwegs, besuchen mal Leipzig und suchen ein billiges Zimmer für 3-5 Wochen.
+Er fragt das Barpersonal und kriegt eine Nummer von friends of friends, die zufällig ein leerstehendes Zimmer haben.&#39;,
+	&#39;Es ist noch Sonnig und die meisten hängen draußen vor der Tür. Ihr geht rein um euch ein Getränk zu holen.
+	
+Vor der Bar sitz ein Penner. Vermutlich leicht betrunken. Er spricht dich an.
+Zur Abwechslung gehst du mal auf das Gespräch ein - auch weil du dich etwas langweilst. Nach einer Weile erzählt er, dass er manchmal hier schlafen darf. Du spendest beim dem nächsten (either: &quot;Wein&quot;, &quot;Bier&quot;) etwas mehr und gehst zurück zu deiner Clique.&#39;))
 	
 (set: _guteNacht to (either:
 	&#39;Der Abend ist vorbei und du gehst zurück in deine Wohnung&#39;,
+	&#39;Nach einr Weile hast du genug und gehst Heim.&#39;,
 	&#39;Du bist langsam müde und musst ins Bett&#39;,
-	&#39;du hast nicht mehr soviel Geld dabei und möchtest deine Freunde um nichts bitten, deshalb verabschiedest du dich und gehst nach Hause&#39;,
+	&#39;Du hast nicht mehr soviel Geld dabei und möchtest deine Freunde um nichts bitten, deshalb verabschiedest du dich und gehst nach Hause&#39;,
 	&#39;Du kriegst nach all den Stunden doch etwas hunger... du gehst bei einem Döner vorbei und holst dir einen Gute-Nacht-Snack&#39;,
 	&#39;Nach ein paar weiteren Drinks fängt sich an alles zu drehen. Auf dem Weg nach Hause kotzt du ins Gebüsch.&#39;,
 	&#39;Du blickst auf die Uhr. Es ist schon spät und du hast morgen noch einen langen Tag, deshalbst verabschiedest du dich.&#39;))
 }\
 &lt;!-- Kinder des neoliberalen Systems gehen feiern--&gt;
 (if: $woFeiern is &#39;Bar&#39;)[(either:
-	&#39;Du gehst mit deinen Freunden in das &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; auf der Eisi. _szeneBar&#39;,
-	&#39;Du gehst mit deinen Freunden in das &amp;lsqb;$wayne[irgendeine hippe Bar]&amp;rsqb; auf der Eisi. _szeneBar&#39;,
-	&#39;Die &amp;lsqb;$wayne[irgendeine Bar]&amp;rsqb; ist heute voll. Du gehst in die Bar gegenüber und bestellst einen &amp;lsqb;$wayne[hipper Cocktail]&amp;rsqb;. Deine Freunde tauchen nicht auf und das Staren auf WhatsApp hilft nicht dabei vorzutäuschen das du dich langweilst.&#39;,
-	&#39;Deine Friends sind heute auf Abwechslung aus und haben kein Geld. Ihr geht in ein Eckladen das auf Spende funktioniert. _ladenProjekt&#39;
-	)]\
-(if: $woFeiern is &#39;Club&#39;)[(either: &#39;Im &amp;lsqb;$wayne[stylischen Club]&amp;rsqb; legt heute &amp;lsqb;$wayne[irgendein DJ]&amp;rsqb; 6 Stunden lang auf. Das musst du dancen. Du fragst schon am Einlass nach Teilen und findest nach ein paar Minuten bereits deinen 10€-Glück.
-Die nächsten Stunden sind sehr aufregend. Du tanzst, schwitzt, lachst, weinst und bist überzeugt, dass du dich in einem Typen verliebt hast. Aber als du ihn, nach dem du auf dem Klo warst, suchen gehst, findest du ihn nicht mehr.&#39;,
-  &#39;Deine Friends schleppen dich zu einem Club mit, doch am Einlass erklären dir Menschen, dass dem garnicht so ist, es sei &amp;lsqb;$wayne[irgendein Projekt]&amp;rsqb; und sie sammeln Geld für &amp;lsqb;$wayne[irgendein Projekt]&amp;rsqb; mit einer Soliparty.
-Du fragst wer auflegt und ob der Eintritt schon günstiger ist, weil es schon so spät ist. Als du hörst das es gegen Spende ist, schmeißt du dein Kleingeld in den Topf und gehst an die Bar.
-Lichter in Blau und dunkel Violett blinken in dein Gesicht. Du tanzt dir die Klamotten nass als du merkst, dass du vielleicht doch zu viel Alkohol getrunken hast. Du suchst dir ein Platz zum chillen und kannst von den Menschen neben dir Tabak schnorren.
-Blauer Dunst steigt über dir auf, als deine Freunde dich endlich finden und dir ein Saft in die Hand drücken.&#39;,
-&#39;Im &amp;lsqb;$wayne[irgendein Club]&amp;rsqb; gibts heute &amp;lsqb;$wayne[deine Liebliengsmusik]&amp;rsqb;. Am Einlass stelst du fest, dass der Eintritt 12€ Kostet. Deine Freunde sind genervt, so geht ihr halt rein, wenn ihr nun mal schon hier seit.
-Du versuchst mit einem Bier zu tanzen, aber kommst nicht so in Stimmung. Auch nach dem zweiten Bier und mehreren Blicken auf die Uhr ist die meiste an dich selbst gestellte Frage, wann du wohl genug da warst um gehen zu können.
-Nach 2 Wodka-Matte fängst du an mit &amp;lsqb;$wayne[irgendjemand]&amp;rsqb; rum zumachen. Doch auch das ist eher enttäuschend.&#39;) ]
+	&#39;Du gehst mit deinen Freunden in das &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; auf der Eisi.
+
+_szeneBar&#39;,
+	&#39;Du gehst mit deinen Freunden in das &amp;lsqb;$wayne[irgendeine hippe Bar]&amp;rsqb; auf der Eisi.
+
+_szeneBar&#39;)]\
+(if: $woFeiern is &#39;ProjektBar&#39;)[(either: &quot;Deine Friends sind heute auf Abwechslung aus - und haben kein Geld. Ihr geht deshalb in ein Eckladen das auf Spende funktioniert.
+
+_ladenProjekt&quot;)]\
+(if: $woFeiern is &#39;Club&#39;)[(either: &#39;Im &amp;lsqb;$wayne[stylischen Club]&amp;rsqb; legt heute &amp;lsqb;$wayne[irgendein DJ]&amp;rsqb; 6 Stunden lang auf. Das musst du einfach dancen. Schon am Einlass fragst du dich nach Teilen durch und findest nach ein paar Minuten bereits dein 10€-Glück.
+
+Mit einem Getränk in der Hand und einem leichten kribbeln läufst du auf die Tanzfläche. Die nächsten Stunden sind sehr aufregend. Du tanzst, schwitzt, lachst, weinst und bist überzeugt, dich in einem Typen verliebt zu haben. Aber als du ihn, nach dem du auf dem Klo warst, suchen gehst, findest du ihn nicht mehr.&#39;,
+  &#39;Deine Friends schleppen dich zu einem Club mit, doch am Einlass erklären dir Menschen, dass dem garnicht so sei. Es ist &amp;lsqb;$wayne[irgendein Projekt]&amp;rsqb; und sie sammeln Geld für &amp;lsqb;$wayne[irgendein Projekt]&amp;rsqb; mit einer Soliparty.
+
+Du fragst wer auflegt und ob der Eintritt schon günstiger ist, weil es schon so spät ist. Sie erzählen dir, dass das Projekt mit Spenden Funktioniert und bieten dir an das Prinzip zu erklären. Als du hörst das es gegen Spende ist, schmeißt du dein Kleingeld in den Topf und gehst an die Bar.
+
+Lichter in Blau und dunkel Violett blinken in dein Gesicht. Der Raum ist voll und du stüzt in die crowd. Es gibt jetzt nur noch tanzen und Musik.
+
+Deine Klamotten sind nass als du merkst, dass du vielleicht doch zu viel Alkohol getrunken hast. Du suchst dir ein Platz zum chillen und kannst von den Menschen neben dir Tabak schnorren.
+Blauer Rauch steigt über deinem Kopf auf, als deine Freunde dich endlich finden und dir einen Saft in die Hand drücken.&#39;,
+&#39;Im &amp;lsqb;$wayne[irgendein Club]&amp;rsqb; gibts heute &amp;lsqb;$wayne[deine Liebliengsmusik]&amp;rsqb;.
+
+Am Einlass stelst du fest, dass der Eintritt 12€ Kostet. Ihr startet ein Gespräch, aber deine Freunde sind genervt von dem hin und her, so geht ihr halt rein, wenn ihr nun mal schon hier seit.
+
+Du versuchst mit einem Bier zu tanzen, aber kommst nicht so richtig in Stimmung. Auch nach dem zweiten Bier und mehreren Blicken auf die Uhr ist die meiste an dich selbst gestellte Frage, wann du wohl genug da warst um gehen zu können.
+Nach 2 Wodka-Matte fängst du an mit &amp;lsqb;$wayne[irgendjemand]&amp;rsqb; rum zumachen. Doch auch das ist eher enttäuschend, denn er/sie sabert leicht beim Küssen.&#39;) ]
 
 [[Der Kiez&lt;-_guteNacht]]</tw-passagedata><tw-passagedata pid="4" name="Projekt" tags="" position="234,809" size="100,100">{
 (set: $projekt to it + 1)
@@ -308,7 +345,7 @@ Heute scheint ein (either: _hoerspielLine, _vortragLine, _abendWieImmerLine)&quo
 &#39;Es sind zwei Bewohner*innen des Nachbarhauses. Sie spielen auf Gitarre Radiohead covers. Als danach noch mehr Menschen mit Instrumenten auftauchen und halbe Stunde lang laut chaotisch Musik machen, bittet sie der Mensch von der Bar genervt dafür die Jam-Session von &amp;lsqb;$wayne[irgend ein Ladenprojekt]&amp;rsqb; zu nutzen.&#39;)&quot;)
 (set: _langeweile to (either: &#39;Jede halbe Stunde folgt ein krasser Musik-Bruch demnächsten, weil irgendjemand anderes an den Musikplayer kommt. Auch von den Gesprächen bist du heute schnell genervt und winkst relativ schnell ab.&#39;,
 &#39;Heute ist es etwas voll. Es wird viel geraucht und ist sehr laut. Deine Freunde erzählen eigentlich nichts spannendes, und du starst alle 5 minuten auf dein Smartphone. Nach zwei &amp;lsqb;$wayne[irgendein Getränk]&amp;rsqb; gibst du auf.&#39;,
-&#39;Mit ein paar Freunden triffst du dich bei &amp;lsqb;$wayne[irgendein Ladenprojekt]&amp;rsqb;. An der Bar angekommen, holst du dein Geldbeutel raus und wartest, doch da is niemand. Nach zwei minuten Warten fragst du ein Mädel neben dir, ob sie wisse, wann der Barmensch zurück kommt. Sie antwortet dir, dass sie heute die Bar macht, aber gerade keine Lust hat. Du kannst dir selbst ein Getränk rausnehmen, wenn du willst.
+&#39;Mit ein paar Freunden triffst du dich bei &amp;lsqb;$wayne[irgendein Ladenprojekt]&amp;rsqb;. An der Bar angekommen, stellst du dich in die Schlange, nimmst 2€ aus deinem Geldbeutel in die Hand und wartest. Doch hinter der Theke ist niemand. Nach zwei minuten Warten fragst du ein Mädel neben dir, ob sie wisse, wann der Barmensch zurück kommt. Sie antwortet dir, dass sie heute die Bar macht, aber gerade keine Lust hat. Du kannst dir selbst ein Getränk rausnehmen, wenn du willst.
 
 Etwas ungewohnt, aber wieso nicht. Du greifst in den Kühlschrank und kehrst wieder auf die andere Seite zurück. Deine Freunde sagen dir es wäre hier normal, als du sie darauf ansprichst. Die Leute seinen keine Angestellten, sondern betreiben den Raum ehr als Treffpunkt. Du antwortest genervt, dass du das selbst weißt.&#39;))
 
@@ -1085,7 +1122,7 @@ Das Ergebnis deiner Auswertung(click-replace: &quot;Das Ergebnis deiner Auswertu
 (set: _auswahlFeiern to (either:
 	&quot;in eine Bar um die Ecke(set: $woFeiern to &#39;Bar&#39;)&quot;,
 	&quot;in eine Bar(set: $woFeiern to &#39;Bar&#39;)&quot;,
-	&quot;in eine Bar bei dir fast gegenüber(set: $woFeiern to &#39;Bar&#39;)&quot;,
+	&quot;in eine Bar gegen Spende(set: $woFeiern to &#39;ProjektBar&#39;)&quot;,
 	&quot;in einen Club(set: $woFeiern to &#39;Club&#39;)&quot;))
 (set: _auswahlProjekt to (either:
 	&quot;du hängst in einem selbstverwalteten Projekt ab(set: $wieLeben to &#39;Beziehung&#39;)&quot;,
