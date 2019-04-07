@@ -16,17 +16,21 @@
 display: none;
 }
 tw-story {
-	background-color: #110713;
+	background-color: #0b0016;
 }
 
+tw-link, enchantment-link /* sets both base link colors */
+{ color: #395284; }
+tw-link:hover, enchantment-link:hover /* sets both hover link colors */
+{ color: #ff7400; }
+.visited /* all visited links */
+{ color: #395284; }
+.visited:hover /* all visited hover links */
+{ color: #ff7400; }
 
-
-
-
-
-
-
-
+a {
+color: #F5B4DD;
+}
 
 
 
@@ -208,6 +212,8 @@ tw-story {
 
 
 
+
+
 </script><tw-passagedata pid="1" name="Intro" tags="" position="82,0" size="100,100">{
 (set: $feiern to 0)
 (set: $projekt to 0)
@@ -233,7 +239,7 @@ tw-story {
 (set: $protestIstVorbei to false)
 
 (set: _styleAuthor to (text-style: &quot;shadow&quot;) + (text-style: &quot;italic&quot;))
-(set: $wayne to (text-style: &quot;italic&quot;))
+(set: $wayne to (text-style: &quot;italic&quot;) + (text-style: &quot;smear&quot;))
 }\
 
 
@@ -260,22 +266,22 @@ _styleAuthor[Außenstehnde*r im inneren Kreis]
 (set: $feiern to it + 1)
 
 (set: _szeneBar to (either:
-&#39;Ihr wollt euch bei &amp;lsqb;$wayne[irgendeine Bar]&amp;rsqb; treffen, doch als du ankommst stellst du fest: Es ist heute voll. Also schreibst du deinen friends, dass du in die Bar gegenüber gehst und bestellst einen &amp;lsqb;$wayne[hipper Cocktail]&amp;rsqb;.
+&#39;Ihr wollt euch bei $wayne[&amp;lsqb;irgendeine Bar&amp;rsqb;] treffen, doch als du ankommst stellst du fest: Es ist heute voll. Also schreibst du deinen friends, dass du in die Bar gegenüber gehst und bestellst einen $wayne[&amp;lsqb;hipper Cocktail&amp;rsqb;].
 Deine Freunde tauchen nicht auf und das Staren auf WhatsApp hilft nicht dabei vorzutäuschen das du dich langweilst.&#39;,
   &#39;Du lernst (either:&quot;einen Jungen, in einem grünen Pullover und einem USB als Ohring&quot;, &quot;ein Mädchen, mit silbernen Haaren und großen Sicherheitsnadel als Jackenknöpfe&quot;, &quot;eine Frau in einem langen schwarzen Mantel und einem halben Iro&quot;), kennen. Ihr habt den ganzen Abend ein hinreißendes Gespräch.
 Die Person studiert in zwei Fächern: (either: &quot;Genderstudies und BWL&quot;, &quot;Geschichte und Marketing&quot;, &quot;Sozialwissenschaften und VWL&quot;). Lange redet ihr über Hindernissen in der freien Entfaltung und wie sich die Wirtschaft mit freiwilligen Regeln selbst helfen könnte. Am Ende des Abends hast du jedoch den Namen vergessen.
 
 Eigentlich ist nichts aufregendes passiert, aber es war mal wieder einer der Abende die dich erinner wieso du eigentlich hierhergezogen bist. Wegen den Menschen! Hypezig ist vielleicht in den Medien vorbei, doch hier in diesem Viertel nicht!&#39;,
-  &#39;Du sprichst drei Stunde lang mit deinen Freunden über (either: &quot;Legida&quot;, &quot;AfD&quot;, &quot;Pegida&quot;), die neue Tapete in der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb;, die Ex von &amp;lsqb;$wayne[irgendeinem Freund]&amp;rsqb; und das Georg Orwell Recht hatte.
+  &#39;Du sprichst drei Stunde lang mit deinen Freunden über (either: &quot;Legida&quot;, &quot;AfD&quot;, &quot;Pegida&quot;), die neue Tapete in der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;], die Ex von $wayne[&amp;lsqb;irgendeinem Freund&amp;rsqb;] und das Georg Orwell Recht hatte.
 
 Ein Freund nörgelt den ganzen Abend rum, wie Menschenverachtend gerade alles auf der Welt ist, bist du ihm erwiederst, dass es Menschen gibt die einfach alles schlecht reden und nie das Gute sehen wollen.&#39;,
-  &#39;Ein Freund hat &amp;lsqb;$wayne[irgendein Ereignis]&amp;rsqb;, also gibt es was zu feiern. Früh kommt ihr schon an und die Stimmung ist gut. Der Abend wird lang und du hast mehr Geld ausgegeben als du eigentlich wolltest. Yolo!
+  &#39;Ein Freund hat $wayne[&amp;lsqb;irgendein Ereignis&amp;rsqb;], also gibt es was zu feiern. Früh kommt ihr schon an und die Stimmung ist gut. Der Abend wird lang und du hast mehr Geld ausgegeben als du eigentlich wolltest. Yolo!
 
 Du versuchst dir noch was klar zumachen, aber es ist zu spät und nichts vernünftiges ist übrig. Jetzt schon spürrst du einen Kater.
 
 Als du vom Klo zurückkommst, rennst du (either: &quot;in deine&amp;#42;n Ex&quot;, &quot;in eine&amp;#42;n alte&amp;#42;n Freund&amp;#42;in, mit dem du nichts mehr zutun haben willst&quot;). Wichtig wirkend starrst du sofort auf dein smartphone und tuest so als hättest du niemand gesehen.&#39;,
   &#39;Die Bar ist heute Abend nicht so aufregend. So ziehst du mit deinen Freunden von einer Bar zur der nächsten, bist du aussteigst und müde nach Hause läufst&#39;,
-  &#39;In der neuen &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; ist heute Karaoke Abend. Deine Freunde sind heiß drauf. Du brauchst jedoch etwas Mut und gehst and die Bar.
+  &#39;In der neuen $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] ist heute Karaoke Abend. Deine Freunde sind heiß drauf. Du brauchst jedoch etwas Mut und gehst and die Bar.
 
 Nach einem Bier stehst du schon auf der Bühne. Selbstironisch singst du ein Lied über (either: &quot;Dreiecke&quot;, &quot;Liebe&quot;, &quot;Freiheit&quot;). Deine Crew geben dir cred und einen aus. Nach 15 min willst du nochmal, aber leider ist die nächste (either: &quot;halbe Stunde&quot;, &quot;Stunde&quot;) bereits voll.&#39;))
   
@@ -310,19 +316,19 @@ Zur Abwechslung gehst du mal auf das Gespräch ein - auch weil du dich etwas lan
 }\
 &lt;!-- Kinder des neoliberalen Systems gehen feiern--&gt;
 (if: $woFeiern is &#39;Bar&#39;)[(either:
-	&#39;Du gehst mit deinen Freunden in das &amp;lsqb;$wayne[irgendeine hippe szene Bar]&amp;rsqb; auf der Eisi.
+	&#39;Du gehst mit deinen Freunden in das $wayne[&amp;lsqb;irgendeine hippe szene Bar&amp;rsqb;] auf der Eisi.
 
 _szeneBar&#39;,
-	&#39;Du gehst mit deinen Freunden in das &amp;lsqb;$wayne[irgendeine hippe Bar]&amp;rsqb; in der Näh der Eisi.
+	&#39;Du gehst mit deinen Freunden in das $wayne[&amp;lsqb;irgendeine hippe szene Bar&amp;rsqb;] in der Näh der Eisi.
 
 _szeneBar&#39;)]\
 (if: $woFeiern is &#39;ProjektBar&#39;)[(either: &quot;Deine Friends sind heute auf Abwechslung aus - und haben kein Geld. Ihr geht deshalb in ein Eckladen das auf Spende funktioniert.
 
 _ladenProjekt&quot;)]\
-(if: $woFeiern is &#39;Club&#39;)[(either: &#39;Im &amp;lsqb;$wayne[stylischen Club]&amp;rsqb; legt heute &amp;lsqb;$wayne[irgendein DJ]&amp;rsqb; (either: 6, 5, 7) Stunden lang auf. Das musst du einfach dancen. Schon am Einlass fragst du dich nach Teilen durch und findest nach ein paar Minuten bereits dein 10€-Glück.
+(if: $woFeiern is &#39;Club&#39;)[(either: &#39;Im $wayne[&amp;lsqb;stylischen Club&amp;rsqb;] legt heute $wayne[&amp;lsqb;irgendein DJ&amp;rsqb;] (either: 6, 5, 7) Stunden lang auf. Das musst du einfach dancen. Schon am Einlass fragst du dich nach Teilen durch und findest nach ein paar Minuten bereits dein 10€-Glück.
 
 Mit einem Getränk in der Hand und einem leichten kribbeln läufst du auf die Tanzfläche. Die nächsten Stunden sind sehr aufregend. Du tanzst, schwitzt, lachst, weinst und bist überzeugt, dich in einem Typen verliebt zu haben. Aber als du ihn, nach dem du auf dem Klo warst, suchen gehst, findest du ihn nicht mehr.&#39;,
-  &#39;Deine Friends schleppen dich zu einem Club mit, doch am Einlass erklären dir Menschen, dass dem garnicht so sei. Es ist &amp;lsqb;$wayne[irgendein Projekt]&amp;rsqb; und sie sammeln Geld für &amp;lsqb;$wayne[irgendein Projekt]&amp;rsqb; mit einer Soliparty.
+  &#39;Deine Friends schleppen dich zu einem Club mit, doch am Einlass erklären dir Menschen, dass dem garnicht so sei. Es ist $wayne[&amp;lsqb;irgendein Projekt&amp;rsqb;] und sie sammeln Geld für $wayne[&amp;lsqb;irgendein Projekt&amp;rsqb;] mit einer Soliparty.
 
 Du fragst wer auflegt und ob der Eintritt schon günstiger ist, weil es schon so spät ist. Sie erzählen dir, dass das Projekt mit Spenden Funktioniert und bieten dir an das Prinzip zu erklären. Als du hörst das es gegen Spende ist, schmeißt du dein Kleingeld in den Topf und gehst an die Bar.
 
@@ -330,12 +336,12 @@ Lichter in Blau und dunkel Violett blinken in dein Gesicht. Der Raum ist voll un
 
 Deine Klamotten sind nass als du merkst, dass du vielleicht doch zu viel Alkohol getrunken hast. Du suchst dir ein Platz zum chillen und kannst von den Menschen neben dir Tabak schnorren.
 Blauer Rauch steigt über deinem Kopf auf, als deine Freunde dich endlich finden und dir einen Saft in die Hand drücken.&#39;,
-&#39;Im &amp;lsqb;$wayne[irgendein Club]&amp;rsqb; gibts heute &amp;lsqb;$wayne[deine Liebliengsmusik]&amp;rsqb;.
+&#39;Im $wayne[&amp;lsqb;irgendein Club&amp;rsqb;] gibts heute $wayne[&amp;lsqb;deine Liebliengsmusik&amp;rsqb;].
 
 Am Einlass stelst du fest, dass der Eintritt (either: &quot;12€&quot;, &quot;14€&quot;, &quot;15€&quot;) kostet. Ihr startet ein Gespräch, aber deine Freunde sind genervt von dem hin und her, so geht ihr halt rein, wenn ihr nun mal schon hier seit.
 
 Du versuchst mit einem Bier zu tanzen, aber kommst nicht so richtig in Stimmung. Auch nach dem zweiten Bier und mehreren Blicken auf die Uhr ist die meiste an dich selbst gestellte Frage, wann du wohl genug da warst um gehen zu können.
-Nach 2 Wodka-Matte fängst du an mit &amp;lsqb;$wayne[irgendjemand]&amp;rsqb; rum zumachen. Doch auch das ist eher enttäuschend, denn er/sie (either: &quot;sabert leicht beim Küssen.&quot;, &quot;labert manchmal Mist&quot;, &quot;ist nicht wirklich dein Typ&quot;)&#39;) ]
+Nach 2 Wodka-Matte fängst du an mit $wayne[&amp;lsqb;irgendjemand&amp;rsqb;] rum zumachen. Doch auch das ist eher enttäuschend, denn er/sie (either: &quot;sabert leicht beim Küssen.&quot;, &quot;labert manchmal Mist&quot;, &quot;ist nicht wirklich dein Typ&quot;)&#39;) ]
 
 [[Der Kiez&lt;-_guteNacht]]</tw-passagedata><tw-passagedata pid="4" name="Projekt" tags="" position="234,809" size="100,100">{
 (set: $projekt to it + 1)
@@ -350,11 +356,11 @@ Du bist nicht ganz zufrieden mit dem Vortrag. Irgendwas fehlt, aber direkt mit d
 
 Heute scheint ein (either: _hoerspielLine, _vortragLine, _abendWieImmerLine)&quot;)
 (set: _konzertLine to &quot;Auf einmal bauen ein paar (either: &#39;flüchtige Bekannte&#39;, &#39;Menschen&#39;) ihr Instrumenten-Set auf. Sieht so aus als gäbe es spontan ein Konzert. (either: &#39;Zuerst spielt Raduz etwas auf seinem Klavier und Nichtfreund folgt mit einer selbstgebastelter frickel Musik auf seinem Laptop. Danach versuchen sie zusammen etwas zu spielen was an Berghain anmutet, aber sich zu einem undefinierten etwas entwickelt. Die Künstler*innen sind begeistert, die anderen ehe nicht.&#39;,
-&#39;Es sind zwei Bewohner*innen des Nachbarhauses. Sie spielen auf Gitarre Radiohead covers. Als danach noch mehr Menschen mit Instrumenten auftauchen und halbe Stunde lang laut chaotisch Musik machen, bittet sie der Mensch von der Bar genervt dafür die Jam-Session von &amp;lsqb;$wayne[irgend ein Ladenprojekt]&amp;rsqb; zu nutzen.&#39;,
+&#39;Es sind zwei Bewohner*innen des Nachbarhauses. Sie spielen auf Gitarre Radiohead covers. Als danach noch mehr Menschen mit Instrumenten auftauchen und halbe Stunde lang laut chaotisch Musik machen, bittet sie der Mensch von der Bar genervt dafür die Jam-Session von $wayne[&amp;lsqb;irgendein Ladenprojekt&amp;rsqb;] zu nutzen.&#39;,
 &#39;Zwei Dudes verbinden elektronische Geräte und machen irgendwas mit Kabeln. Und zwar eine Stunde lang bis es endlich losgeht. Dann geht es los, einer macht einen driving beat, der andere rapt. Zwischen durch klingelt beim einem das Handy und das Konzert wird kurz unterbrochen. Der flow wechselt machnmal abrupt und die Texte sind schwer zu deuten, aber die authentizität gefällt dir.&#39;)&quot;)
 (set: _langeweile to (either: &#39;Jede halbe Stunde folgt ein krasser Musik-Bruch demnächsten, weil irgendjemand anderes an den Musikplayer kommt. Auch von den Gesprächen bist du heute schnell genervt und winkst relativ schnell ab.&#39;,
-&#39;Heute ist es etwas voll. Es wird viel geraucht und ist sehr laut. Deine Freunde erzählen eigentlich nichts spannendes, und du starst alle 5 minuten auf dein Smartphone. Nach zwei &amp;lsqb;$wayne[irgendein Getränk]&amp;rsqb; gibst du auf.&#39;,
-&#39;Mit ein paar Freunden triffst du dich bei &amp;lsqb;$wayne[irgendein Ladenprojekt]&amp;rsqb;. An der Bar angekommen, stellst du dich in die Schlange, nimmst 2€ aus deinem Geldbeutel in die Hand und wartest. Doch hinter der Theke ist niemand. Nach zwei minuten Warten fragst du ein Mädel neben dir, ob sie wisse, wann der Barmensch zurück kommt. Sie antwortet dir, dass sie heute die Bar macht, aber gerade keine Lust hat. Du kannst dir selbst ein Getränk rausnehmen, wenn du willst.
+&#39;Heute ist es etwas voll. Es wird viel geraucht und ist sehr laut. Deine Freunde erzählen eigentlich nichts spannendes, und du starst alle 5 minuten auf dein Smartphone. Nach zwei $wayne[&amp;lsqb;irgendein Getränk&amp;rsqb;] gibst du auf.&#39;,
+&#39;Mit ein paar Freunden triffst du dich bei $wayne[&amp;lsqb;irgendein Ladenprojekt&amp;rsqb;]. An der Bar angekommen, stellst du dich in die Schlange, nimmst 2€ aus deinem Geldbeutel in die Hand und wartest. Doch hinter der Theke ist niemand. Nach zwei minuten Warten fragst du ein Mädel neben dir, ob sie wisse, wann der Barmensch zurück kommt. Sie antwortet dir, dass sie heute die Bar macht, aber gerade keine Lust hat. Du kannst dir selbst ein Getränk rausnehmen, wenn du willst.
 
 Etwas ungewohnt, aber wieso nicht. Du greifst in den Kühlschrank und kehrst wieder auf die andere Seite zurück. Deine Freunde sagen dir es wäre hier normal, als du sie darauf ansprichst. Die Leute seinen keine Angestellten, sondern betreiben den Raum ehr als Treffpunkt. Du antwortest genervt, dass du das selbst weißt.&#39;,
 &#39;Es ist ziemlich voll und du drängst dich bis an die Bar durch. Mit einem Getränk in der Hand läufst du durch die Räume, musst aber feststellen, dass du (either: &quot;absolut niemanden&quot;, &quot;eigentlich niemanden&quot;) kennst.
@@ -372,7 +378,7 @@ Beide Perspektiven findest du krtitisch, da für dich zu kurz gedacht. Aber da d
 Eine Person regt sich über die allgemeine Untätigkeit auf. Das Ökosystem breche zusammen und das einzige was alle interessiert ist (either: &quot;die Steigung des Profits und der neue MacBook&quot;, &quot;der Wirtschaftswachstum und das neue IPhone&quot;, &quot;die Arbeitslosenzahlen und der nächste Urlaub&quot;).
 Seine Gesprächspartner&amp;#42;innen erwiedern, dass Veränderungen nun mal sehr viel Zeit brauchen, da Verständnis sich nur langsam verbreitet und man in einer Demoratie alle mitnehmen muss. Die Person widerspricht jedoch. Am Ende wurde und wird alles hingenohmen, weils kurzfristig billig ist. Jetz bleibe keine Zeit mehr und müsste zusammen Proteste und Blockaden organisieren. Durch Reden werde man nichts bewegen können und die Zeit drängt.
 Das Gespräch bricht plötzlich ab, als die Person endlich unterbrochen wird. Man lasse sich nichts vordiktieren und schon garnicht mit Ängsten unter Druck setzten.&#39;)
-(set: _gespraech5 to &#39;Drin ist es etwas voll und da es draußen sowieso noch warm ist, gehst du mit deinem &amp;lsqb;$wayne[irgendein Getränk]&amp;rsqb; raus.
+(set: _gespraech5 to &#39;Drin ist es etwas voll und da es draußen sowieso noch warm ist, gehst du mit deinem $wayne[&amp;lsqb;irgendein Getränk&amp;rsqb;] raus.
 
 Vor der Tür sitzen 3 Menschen, die sich über die momentane Verdrängung von mehreren kollektiven Projekten aus einer alten Werkshalle im Leipziger Westen unterhalten.
 Eine Person philosophiert über die untätigkeit der Szene im Leipziger Westen. Anstelle sich zusammen zu organisieren, feindet man sich gegenseitig an, entsolidarisiert sich von einander. Und weswegen? Weil man glaubt so in der Gunst der Eigentümer&amp;#42;innen zu stehen und so 1 Jahr länger bleiben darf?
@@ -390,7 +396,7 @@ Stille bricht herein.&#39;)
   (either: _konzertLine, _langeweile, _gespreach)&quot;))
 
 (set: _plenumLine to (either:
-  &#39;Es war für einige ein langer Tag und das merkt man/frau an der Trägheit des Plenums. Ihr schafft dennoch etwas für &amp;lsqb;$wayne[eures gemeinsames Projekt]&amp;rsqb; zu organisieren. Und unterhaltet euch danach vor der Tür noch etwas über das Life im Viertel.&#39;,
+  &#39;Es war für einige ein langer Tag und das merkt man/frau an der Trägheit des Plenums. Ihr schafft dennoch etwas für $wayne[&amp;lsqb;irgendein Projekt&amp;rsqb;] zu machen. Und unterhaltet euch danach vor der Tür noch etwas über das Life im Viertel.&#39;,
   &#39;Ihr macht heute ein Emo-Plenum um über aufgestaute Probleme in der Gruppe zu reden. Du hast (either: &quot;selbstgemachte Muffins&quot;, &quot;Kekse vom Netto&quot;, &quot;Birnen und Bananen&quot;) mitgebracht, über die sich die wenigen aus der Gruppe freuen die gekommen sind. Einige empfinden die Art wie in letzter Zeit Entscheidungen getroffen wurden nicht ideal.
 Ihr unterhaltet euch lange darüber wie mögliche Hierarchien aufgelöst werden könnten. Es gibt zwar kein abschließendes Ergebnis, aber du hast das Gefühl ihr seit  als Gruppe weiter als davor.&#39;,
   &#39;Es ist echt kein gutes Plenum. Alle fallen sich ins Wort und kein einziges Top wird zu ende besprochen, bevor ihr nicht zu einem anderen Thema abschweift. Als die/der Protokollant&amp;#42;in sich beschwert, dass das Protokollieren fast unmöglich ist, entsteht auch noch ein Streit mit denjenigen, die finden das alles nun mal im ganzen so besprochen werden muss und zusammenhängt.
@@ -400,9 +406,9 @@ Du forderst eine Pause und ihr beschließt, dass ihr heute doch jemand zum Moder
 (set: _zahlS to (either: &quot;zwei&quot;, &quot;drei&quot;))
 (set: _helfenLine to (either:
 	&#39;Heute war VeKü und du hast dich entschieden etwas im Viertel zu helfen in dem du ein paar Töpfe sauber machst. Nach einer (either: &quot;halben Stunde&quot;, &quot;viertel Stunde&quot;) (either: &quot;gibst du bei einem eingebrannten Topf auf und weichst denn ein, in der Hoffnung das jemand später weiter spült&quot;, &quot;kommt jemand dazu und hilft dir bei dem Rest.&quot;)&#39;,
-	&#39;Du hast mitbekommen, dass in &amp;lsqb;$wayne[irgendeinem Ladenprojekt]&amp;rsqb; heute Aktionstag ist. Als du ankommst stellst du fest, dass eigentlich nichts geplannt ist. Eine Person wollte ein (either: &quot;Regal für Flyer bauen, aber weder wurde Holz noch Fahrradschläuche besorgt.&quot;, &quot;Eine Tafel bauen um aktuelle Infos und Termin vom Laden drauf schreiben zu können, aber weder wurde eine Holzplatte noch Tafelfarbe besorgt.&quot;, &quot;Plan mit Aufgaben erstellen, aber ist selbst nicht da.&quot;)
+	&#39;Du hast mitbekommen, dass in $wayne[&amp;lsqb;irgendein Ladenprojekt&amp;rsqb;] heute Aktionstag ist. Als du ankommst stellst du fest, dass eigentlich nichts geplannt ist. Eine Person wollte ein (either: &quot;Regal für Flyer bauen, aber weder wurde Holz noch Fahrradschläuche besorgt.&quot;, &quot;Eine Tafel bauen um aktuelle Infos und Termin vom Laden drauf schreiben zu können, aber weder wurde eine Holzplatte noch Tafelfarbe besorgt.&quot;, &quot;Plan mit Aufgaben erstellen, aber ist selbst nicht da.&quot;)
 Du räumst irgendwie planlos Sachen von Raum zu Raum, aber gibts auf, da sich das ganze etwas sinnlos anfühlt.&#39;,
-	&#39;Du hast mitbekommen, dass heute im &amp;lsqb;$wayne[irgendeinem Ladenprojekt]&amp;rsqb; Ausmisten-Tag ist. Es hat sich also wieder irgendein Scheiß angehäuft und der soll weg.
+	&#39;Du hast mitbekommen, dass heute im $wayne[&amp;lsqb;irgendein Ladenprojekt&amp;rsqb;] Ausmisten-Tag ist. Es hat sich also wieder irgendein Scheiß angehäuft und der soll weg.
 
 Nach einer Stunden hast du ein Haufen mit _muell gemacht, die du mitnimmst. Und _zahlS Müllsäcken, die jemand zu einem (anderen) Umsonstladen bringen will.&#39;))
 
@@ -411,7 +417,7 @@ Nach einer Stunden hast du ein Haufen mit _muell gemacht, die du mitnimmst. Und 
 (if: $wieLeben is &#39;Beziehung&#39;)[Du hängst in einem selbstverwalteten Projekt ab.
 
 _rumhaengenLine]\
-(if: $wieLeben is &#39;Orga&#39;)[Die &amp;lsqb;$wayne[Gruppe bei der du mitmachst]&amp;rsqb; trifft sich heute.
+(if: $wieLeben is &#39;Orga&#39;)[Die $wayne[&amp;lsqb;Gruppe bei der du mitmachst&amp;rsqb;] trifft sich heute.
 
 _plenumLine]\
 (if: $wieLeben is &#39;Arbeit&#39;)[Du hilfst etwas in einem unkommerziellen Projekt.
@@ -460,7 +466,7 @@ Du bist dir nicht sicher, ob das Argument einleuchtend war. Aber als du nach dem
 (set: _woGalerie to (either: &#39;in ihrem Atelier&#39;, &#39;in der Galerie eines Bekannten&#39;, &#39;in einem Ladenprojekt um die Ecke&#39;))
 (set: _werIstDa to (either:
 	&#39;Ein paar deiner Freunde sind auch schon da, ihr stoßt erstmal an und eine der Austellerin erzählt, dass sie gerade Stress hat alle Unterlagen für das Bafög einzureichen. Nach einer weiteren Kippe machst du eine kleine Runde.&#39;,
-	&#39;Beim reinkommen stellst du fest, noch ist niemand da. Alles wirkt sehr kalt. Du begrüßt die Künstler*innen und im zweiten Satz fragen sie schon ob es ok ist, wenn sie sich kurz einen Döner um die Ecke holen. Denn alle hätten heute kaum Zeit um etwas zu essen gehabt. Du nickst verständnisvoll und bleibst in der Stille zurück, um dir die Bilder anzuschauen.&#39;,
+	&#39;Beim reinkommen stellst du fest, noch ist niemand da. Alles wirkt sehr kalt. Du begrüßt die Künstler&amp;#42;innen und im zweiten Satz fragen sie schon ob es ok ist, wenn sie sich kurz einen Döner um die Ecke holen. Denn alle hätten heute kaum Zeit um etwas zu essen gehabt. Du nickst verständnisvoll und bleibst in der Stille zurück, um dir die Bilder anzuschauen.&#39;,
 	&#39;Als du da bist läuft laut Musik, du gehst an eine provisorisch errichtete Bar und siehst ein paar bekannte Gesichter. Scheinbar soll es auch eine Party geben, denn in der Eckke baut schon ein DJ auf. Nach kurzer Zeit, hast du zwei Gläser Sekt in dir und als die Bar die ersten Popsongs einschaltet, entscheidest du dich dir doch noch kurz die Bilder anzuschauen.&#39;,
 	&#39;Niemand grüßt dich. Außer den Künstlern, sind nur zwei Menschen da. Die Wände und Boden sind voll mit unfertigen Zeichnungen und Farbe. Einer der ausstellenden drückt seine Kippe aus, geht zu einem Bild und malt weiter. Wahrscheinlich ist es eine Art Performance meets come together, denkst du dir und drehst dich einmal in langsamen Schritten im Kreis und nährst dich dem ersten Bild.&#39;))
 (set: _wasAusgestellt to (either:
@@ -478,7 +484,7 @@ Du bist dir nicht sicher, ob das Argument einleuchtend war. Aber als du nach dem
 	_hochkunst
 	)]\
 (if: $wasHip is &#39;Film&#39;)[(either:
-	&#39;In &amp;lsqb;$wayne[irgendeinem kleinem Kino]&amp;rsqb; wird ein Film über die Ästhetik des G20 Protests gezeigt und behandelt wohl die Inszenierung der Gewalt in der linken Szene. Ein wichtiges Thema, findest du und gehst hin.
+	&#39;In $wayne[&amp;lsqb;irgendeinem kleinem Kino&amp;rsqb;] wird ein Film über die Ästhetik des G20 Protests gezeigt und behandelt wohl die Inszenierung der Gewalt in der linken Szene. Ein wichtiges Thema, findest du und gehst hin.
 
 Die erste halbe Stunde lange werden selfie-Aufnahmen von schick angezogenen jungen Menschen vor brennenden Autos gezeigt. Danach wird eine vermumte Person in einem abgedunkelten Raum interviewt. Der Film endet mit eine Professorin, die die zuschaustellung von ausufernder Gewalt, als einen Prozess vor der eigenen Hilflosigkeit gegenüber dem dominierenden Neoliberalen System zu fliehen, bewertet.
 
@@ -507,7 +513,7 @@ Du bleibst noch etwas und [[Der Kiez&lt;-gehst]] dann nach Hause.</tw-passagedat
 (set: $heim to it + 1)
 
 (set: _lineFriendsLabern to (either:
-	&#39;die neue Serie von &amp;lsqb;$wayne[irgend ein&amp;#42;e Regisseur&amp;#42;in]&amp;rsqb; und über den Auftritt von Trump (either: &quot;bei einem Veteranen-Treff&quot;, &quot;vor dem Kongress&quot;, &quot;auf dem G7 Gipfel&quot;, &quot;in einer Fernsehen-Ansprache&quot;)&#39;,
+	&#39;die neue Serie von $wayne[&amp;lsqb;irgendein&amp;#42;e Regisseur&amp;#42;in&amp;rsqb;] und über den Auftritt von Trump (either: &quot;bei einem Veteranen-Treff&quot;, &quot;vor dem Kongress&quot;, &quot;auf dem G7 Gipfel&quot;, &quot;in einer Fernsehen-Ansprache&quot;)&#39;,
 	&#39;Justin Trudeau coolen handshake mit Trump und das Deutschland mehr Flüchtlinge im Mac-Pom aufnehmen könnte. Ein Freund merkt an, dass man einfach alles schlecht reden könnte und Sachen manchmal einfach postiver betrachtet werden müssten. Sonst bleibt bei dir nichts hängen.&#39;,
 	&#39;das social credit System in China. Ein wenig mulmig ist dir schon, wenn du an das riesen Systeme denkst, das mit Algorithmen Informationen über das Verhalten sammelt und Menschen kontrolliert und einschränkt.
 Eine Freundin weißt dich darauf hin, dass hier ähnliches mit (either: &quot;Schufa&quot;, &quot;Krankenkassen&quot;, &quot;Job-Platformen&quot;) abläuft. Der Unterschied wäre die Systeme seien in der Hand von Unternehmen und dort vom Staat.
@@ -516,7 +522,7 @@ Nach etwas schweigen, weicht ihr auf ein Gespräch über (either &quot;das neue 
 	&#39;die Auswirkungen von social Media. Es sei zwar toll, dass man so schnell sich über Alles informieren kann, aber irgendwie verbringt man doch die meiste Zeit mit Unsinn.
 Ein Freund erzählt darauf, dass er gerne mal bei anderen Leuten in der Straßenbahn auf den Screen schaut. Die meisten Leute, besonders abends, würden (either: &quot;sich nur Klamotten kaufen&quot;, &quot;nur Spiele spielen&quot;). Ihr lacht lange ohne dass du wirklich weißt warum.&#39;))
 
-(set: _andereVA to (either: &quot;&amp;lsqb;$wayne[irgendeine Veranstaltung]&amp;rsqb;&quot;, &quot;&amp;lsqb;$wayne[irgendeine Party]&amp;rsqb;&quot;, &quot;&amp;lsqb;$wayne[irgendein Barabend]&amp;rsqb;&quot;))
+(set: _andereVA to (either: &quot;$wayne[&amp;lsqb;irgendeine Veranstaltung&amp;rsqb;]&quot;, &quot;$wayne[&amp;lsqb;irgendeine Party&amp;rsqb;]&quot;, &quot;$wayne[&amp;lsqb;irgendein Barabend&amp;rsqb;]&quot;))
 
 (set: _vorSpeise to (either: &#39;Sushi&#39;, &#39;Ouzo-Bällchen&#39;, &#39;Salat mit Falafel&#39;))
 (set: _mahlzeit to &quot;vegetarische gefühlte (either: &#39;Paprika&#39;, &#39;Zucchini&#39;, &#39;Pilze&#39;)&quot;)
@@ -530,12 +536,12 @@ Ein Freund erzählt darauf, dass er gerne mal bei anderen Leuten in der Straßen
 	&#39;einem Kochabend ein. Für die Vorspeise hast du _vorSpeise besorgt und für die Hauptmahlzeit gibt es _mahlzeit.
 
 Ihr redet lange über _lineFriendsLabern&#39;,
-	&#39;einem Spieleabend. &amp;lsqb;$wayne[Dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in]&amp;rsqb; bring eine Sammlung Brettspiele mit. Ihr spielt nur nebenbei, denn eure Smartphones scheinen euch mehr zu unterhalten als die Spiele. Die Regeln sind sehr verwirrend und du hast vergessen ob du schon _spielZug hast.
-Nach dem &amp;lsqb;$wayne[dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in]&amp;rsqb; gewonnen hat, feixt ihr nur zum Spaß, dass das nur so ist weil &amp;lsqb;$wayne[dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in]&amp;rsqb; das Spiel schon so gut kennt.&#39;)
+	&#39;einem Spieleabend. $wayne[&amp;lsqb;Dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] bring eine Sammlung Brettspiele mit. Ihr spielt nur nebenbei, denn eure Smartphones scheinen euch mehr zu unterhalten als die Spiele. Die Regeln sind sehr verwirrend und du hast vergessen ob du schon _spielZug hast.
+Nach dem $wayne[&amp;lsqb;dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] gewonnen hat, feixt ihr nur zum Spaß, dass das nur so ist weil $wayne[&amp;lsqb;dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] das Spiel schon so gut kennt.&#39;)
 
 _freundeGehen&quot;)
 
-(set: _muedeLine to (either: &quot;Der Tag war heute wieder sehr (either: &#39;ermüdend&#39;, &#39;anstrengend&#39;, &#39;lange&#39;). Du entspannst bei eine Runde Netflix schauen. Die neue Staffel von &amp;lsqb;$wayne[irgend eine Serie]&amp;rsqb; ist draußen.
+(set: _muedeLine to (either: &quot;Der Tag war heute wieder sehr (either: &#39;ermüdend&#39;, &#39;anstrengend&#39;, &#39;lange&#39;). Du entspannst bei eine Runde Netflix schauen. Die neue Staffel von $wayne[&amp;lsqb;irgendeine Serie&amp;rsqb;] ist draußen.
 
 Nach ein paar Folgen und einer Pizza fühlst du dich ausgelaugt und&quot;,
 &quot;Eigentlich war der Tag wie jeder andere, aber so richtig Energie hast du nicht mehr.
@@ -546,18 +552,18 @@ Nach einer Weile ist dein Teller leer und dein Browserverlauf voll. Was hast du 
 
 Naja, vielleicht kannst du morgen die Zeit etwas sinnvoller nutzen, wenn du noch Kraft hast. Du wechselst vom Computer zu Smartphone, von Tisch zu Bett und&quot;))
 
-(set: _aloneLine to (either: &quot;Der warst den ganzten Tag wieder &amp;lsqb;$wayne[irgendeine Tätigkeit]&amp;rsqb; und willst dich nicht wirklich noch mit irgendwas Beschäftigen. Du isst schnell was und bleibst dann vor dem Bildschirm hängen. Nach 3 Stunden stellst du fest, dass weder Facebook noch Youtube irgendwas spannendes bieten kann. Weil es aber schon spät ist entscheidest du dich dafür ins Bett zu legen und &amp;lsqb;$wayne[irgendeine Sendung]&amp;rsqb; anzumachen.
+(set: _aloneLine to (either: &quot;Der warst den ganzten Tag wieder $wayne[&amp;lsqb;irgendeine Tätigkeit&amp;rsqb;] und willst dich nicht wirklich noch mit irgendwas Beschäftigen. Du isst schnell was und bleibst dann vor dem Bildschirm hängen. Nach 3 Stunden stellst du fest, dass weder Facebook noch Youtube irgendwas spannendes bieten kann. Weil es aber schon spät ist entscheidest du dich dafür ins Bett zu legen und $wayne[&amp;lsqb;irgendeine Sendung&amp;rsqb;] anzumachen.
 
-Dein Smartphone blinkt ständig auf und das &amp;lsqb;$wayne[irgendeine Sendung]&amp;rsqb; verkommt zu einem blossen Hintergrundsrauschen.
+Dein Smartphone blinkt ständig auf und das $wayne[&amp;lsqb;irgendeine Sendung&amp;rsqb;] verkommt zu einem blossen Hintergrundsrauschen.
 
 Der Abend ist fast rum. Irgendwie fühlst du dich nicht enspannter, sondern leerer; so sicher kannst du das nicht sagen, denn du bist jetzt müde und&quot;,
 &quot;Du kommst nach Hause, mit (either: &#39;schmerzenden Rücken&#39;, &#39;einem brummenden Schädel&#39;, &#39;verspannten Muskeln&#39;). 
 
 Dein Smartphone blinkt. Ein paar Freunde fragen ob du rum kommst. Es wäre zwar schön, aber du bist zu gestresst und musst leider absagen. Morgen hast du noch einiges vor, deswegen ist dir nicht so nach Ausgehen.
 
-Eigentlich willst du nur abschalten. Vielleicht finest du ein spannenden &amp;lsqb;$wayne[irgendein Hörbeitrag]&amp;rsqb; im Netz? Doch nach dem du &amp;lsqb;$wayne[irgendein Hörbeitrag]&amp;rsqb; eingeschaltet hast, gibst du schon nach ein paar Minuten auf.
+Eigentlich willst du nur abschalten. Vielleicht finest du ein spannenden $wayne[&amp;lsqb;irgendein Hörbeitrag&amp;rsqb;] im Netz? Doch nach dem du $wayne[&amp;lsqb;irgendein Hörbeitrag&amp;rsqb;] eingeschaltet hast, gibst du schon nach ein paar Minuten auf.
 
-Am Ende liegst du im Bett und schauest &amp;lsqb;$wayne[irgendein Film]&amp;rsqb;. Dein Monitor wechselt 80 min zwischen verschiedenen Farbtönen. Nur, als der Abspann läuft, kannst du nicht mal mehr sagen wie die Geschichte anfingt.
+Am Ende liegst du im Bett und schauest $wayne[&amp;lsqb;irgendein Film&amp;rsqb;]. Dein Monitor wechselt 80 min zwischen verschiedenen Farbtönen. Nur, als der Abspann läuft, kannst du nicht mal mehr sagen wie die Geschichte anfingt.
 Jetzt ist es schon spät und du&quot;))
 
 }\
@@ -579,15 +585,15 @@ Jetzt ist es schon spät und du&quot;))
 ***Einladung***
 (if: $einladungPer is &#39;Mail&#39;)[_einladungMail](else_if: $einladungPer is &#39;Plenum&#39;)[_einladungPlenum(click-replace: _einladungPlenum)[(display: &quot;Einladungstext&quot;)]](else_if: $einladungPer is &#39;Freunde&#39;)[_einaldungErzählen(click-replace: _einaldungErzählen)[(display: &quot;Einladungstext&quot;)]]</tw-passagedata><tw-passagedata pid="8" name="1.Treffen" tags="Protest" position="2628,415" size="100,100">Du kommst etwas früher an als es für dich üblich ist. Im Raum sitzen ca. 40 Menschen. Neben den üblichen Gesichter auch einige die du nur vom sehen oder garnicht kennst. In verschiedenen Ecken gibt es leise Gespräche, doch ansonsten ist die Stimmung angespannt.
 
-Das Plenum beginnt(click: &quot;Plenum beginnt&quot;)[ in dem ein sehr großer junger Mann mit einer kurzen Einleitung die Lage umreist. Zwei Menschen aus dem Viertel, die unter anderem eine &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; auf der Eisi besitzen und Eigetnümer eines Hauses sind, gefährden die Existenz zweier kollektiven Projekte auf der Eisenbahnstraße. Und zwar von dem Eckladen und vom Ladenkulturprojekt. Dem Eckladen in Form von Hauseigentümern und der nicht Verlängerung des Mietvertrages. Bei dem Ladenkulturprojekt als Betreiber einer Bar im selben Haus und dem Erwirken von Getränke-Verbostklauseln gegen das Projekt.
+Das Plenum beginnt(click: &quot;Plenum beginnt&quot;)[ in dem ein sehr großer junger Mann mit einer kurzen Einleitung die Lage umreist. Zwei Menschen aus dem Viertel, die unter anderem eine $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] auf der Eisi besitzen und Eigetnümer eines Hauses sind, gefährden die Existenz zweier kollektiven Projekte auf der Eisenbahnstraße. Und zwar von dem Eckladen und vom Ladenkulturprojekt. Dem Eckladen in Form von Hauseigentümern und der nicht Verlängerung des Mietvertrages. Bei dem Ladenkulturprojekt als Betreiber einer Bar im selben Haus und dem Erwirken von Getränke-Verbostklauseln gegen das Projekt.
 Auf die schnelle konnte man nur wenig Menschen erreichen, trotzdem soll heute geschaut werden, wie man als Viertel dagegen vorgehen kann.
 
 Bevor das eigentliche Plenum anfängt, steht jedoch eine junge Frau aus einem der betroffenen Projekte auf und bittet ein Statement vorzulesen, bevor weiter mit dem Plenum verfahren wird.(click: &quot;Statement vorzulesen&quot;)[
-Das Projekt verbiete den Anwesenden Informationen bzgl. des Konflikts ohne ihre Erlaubnis zu veröffentlichen. Ein Stillschweigen wird gefordert und ermahnt nicht über die Köpfe der Betroffenen zu entscheiden. Außerdem sei man nicht dazu bereit irgendein persönlichen Feldzug gegen die Betreiber der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; zu führen, einen ideologischen Kampf zu folgen oder Selbstprofilierung einzelner anwesender zu unterstützen.
+Das Projekt verbiete den Anwesenden Informationen bzgl. des Konflikts ohne ihre Erlaubnis zu veröffentlichen. Ein Stillschweigen wird gefordert und ermahnt nicht über die Köpfe der Betroffenen zu entscheiden. Außerdem sei man nicht dazu bereit irgendein persönlichen Feldzug gegen die Betreiber der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] zu führen, einen ideologischen Kampf zu folgen oder Selbstprofilierung einzelner anwesender zu unterstützen.
 
 Stille tritt ein... dir ist alles andere als klar wer oder was damit gemeint sein könnte. Die meisten anwesenden erwecken eher den Eindruck als würden sie sich sorgen um die Zukunft der Projekte und ihres Viertels machen.
 
-Eine weitere junge Frau steht spürbar widerwillig auf und erklärt, in einer abstrakten Form ohne Details, dass sich das Ladenkulturprojekt mit der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; in Verhandlung befinde. Die Klausel die das Ladenkulturprojekt unterschreiben werde, sind zwar existenzbedrohend, aber dafür wurden gute Verträge ausgehandelt. Das Ladenkulturprojekt sei nicht gegen die Versammlung, nur hätte die Menschen Angst, diese könnte die Verträge gefährden.
+Eine weitere junge Frau steht spürbar widerwillig auf und erklärt, in einer abstrakten Form ohne Details, dass sich das Ladenkulturprojekt mit der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] in Verhandlung befinde. Die Klausel die das Ladenkulturprojekt unterschreiben werde, sind zwar existenzbedrohend, aber dafür wurden gute Verträge ausgehandelt. Das Ladenkulturprojekt sei nicht gegen die Versammlung, nur hätte die Menschen Angst, diese könnte die Verträge gefährden.
 
 Menschen des Eckladens melden sich darauf, allerdings sichtbar unvorbereitet, zur Wort. Es gäbe kein Konsens in der Gruppe und dementsprechend keine Einheitliche Position zu dem Treffen, erklären sie. Intern gibt es gerade zwei Strategien und einen größeren Konflikt, der zuerst gelöst werden muss.
 
@@ -605,21 +611,21 @@ Ein Bärtiger Mann beendet das Plenum mit dem Hinweis, dass die selbstverwaltete
 Als das [[Der Kiez&lt;-Plenum endet]], verteilt ein junger Mann ein weißes A4-Blatt, mit einem [Strategie-Vorschlag]&lt;replace1|(click: ?replace1)[(live:1s)[(set:$pause to it +1)(if:$pause &lt;6)[
 &lt;img src=&quot;images/vorschlag-eskalationsplan.png&quot; alt=&quot;vorschlag-eskalationsplan&quot; height=&quot;600&quot; width=&quot;500&quot; /&gt;
 ](elseif:$pause &gt;6)[(set:$pause to 0)(stop:)]]] und Eskalationsplan für mögliche Proteste.
-Du schauest es dir kurz an und steckst es wieder weg. Als er geht meint eine Bekannte zu dir, dass es irgendwie schräg sei. Strategien müsse man zusammen erarbeiten, eine Ego-Nummer draus zu machen sei falsch.]]]</tw-passagedata><tw-passagedata pid="9" name="2.Treffen" tags="Protest" position="2635,574" size="100,100">Rund einen Monat ist es her, dass das erste Treffen stattgefunden hat. Erwartungsvoll begibst du dich mit zwei Freunden zu dem Plenum in dem auch die Zukunft dieses Viertels gestaltet wird. Auf dem Weg fällt dir eine &amp;lsqb;$wayne[witzige sozio-kulturelle Protestaktion]&amp;rsqb; in den Sinn, doch als du den Raum betrittst, vergesst du das nochmal konkret aufzuschreiben.
+Du schauest es dir kurz an und steckst es wieder weg. Als er geht meint eine Bekannte zu dir, dass es irgendwie schräg sei. Strategien müsse man zusammen erarbeiten, eine Ego-Nummer draus zu machen sei falsch.]]]</tw-passagedata><tw-passagedata pid="9" name="2.Treffen" tags="Protest" position="2635,574" size="100,100">Rund einen Monat ist es her, dass das erste Treffen stattgefunden hat. Erwartungsvoll begibst du dich mit zwei Freunden zu dem Plenum in dem auch die Zukunft dieses Viertels gestaltet wird. Auf dem Weg fällt dir eine $wayne[&amp;lsqb;witzige sozio-kulturelle Protestaktion&amp;rsqb;] in den Sinn, doch als du den Raum betrittst, vergesst du das nochmal konkret aufzuschreiben.
 
 Du betrittst den Raum.(click: &quot;Du betrittst den Raum.&quot;)[
 
 Rund 30 Menschen sind gekommen. Viele neue Gesichter, aber auch ein paar bekannte aus dem letztem Plenum.
 
-Nach der Vorstellungsrunde kommt aus ein paar Ecken, der Wunsch nach einer Umreisung des Konflikts. Vielen ist nicht ganz genau klar wie eine &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; in der Lage ist einem Ladenkulturprojekt in den Mietvertrag Getränke-Verbostklauseln reinzunehmen.
-Nach einer längeren Diskussion, sind die gemüter leicht irritiert und erhitzt, als der Punkt aufkommt, dass die Betreiber der selben &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; auch Eigentümer am Haus des Eckladens sind und dessen Mietvertrag nicht verlängern wollen.
+Nach der Vorstellungsrunde kommt aus ein paar Ecken, der Wunsch nach einer Umreisung des Konflikts. Vielen ist nicht ganz genau klar wie eine $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] in der Lage ist einem Ladenkulturprojekt in den Mietvertrag Getränke-Verbostklauseln reinzunehmen.
+Nach einer längeren Diskussion, sind die gemüter leicht irritiert und erhitzt, als der Punkt aufkommt, dass die Betreiber der selben $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] auch Eigentümer am Haus des Eckladens sind und dessen Mietvertrag nicht verlängern wollen.
 
 Unzählige Geschichten und ältere Konflikte werden rausgekramt. Von wiederholten Mietsteigerungen und fehlenden Reparatur oder Sanierungen im Haus, durch die Eigentümer vom Eckladen, wird berichtet. Die beiden drücken sich davor notwendige Reparaturen am Stromkasten vorzunehmen und wurden bereits beim Lügen erwischt als Versprochene Sanierungen trotzt Mieterhöhungen nicht stattfanden.
-Auch von Vorgaben der Häufigkeit der Veranstaltungen, Umgang mit Gästen, Vorschriften der Öffnungszeiten usw. für das Ladenkulturprojekt im Namen der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; wird erzäht. Mehrere Äußerungen werden rezitiert, bei dennen klar wird, dass die beiden Betreiber ein Problem damit haben, dass das Ladenkulturprojekt &quot;mit ihrer Spendenpolitik&quot; die Einnahmen der Bar zerstören würden und die Orga als einen verpeilten haufen ansehen.
+Auch von Vorgaben der Häufigkeit der Veranstaltungen, Umgang mit Gästen, Vorschriften der Öffnungszeiten usw. für das Ladenkulturprojekt im Namen der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] wird erzäht. Mehrere Äußerungen werden rezitiert, bei dennen klar wird, dass die beiden Betreiber ein Problem damit haben, dass das Ladenkulturprojekt &quot;mit ihrer Spendenpolitik&quot; die Einnahmen der Bar zerstören würden und die Orga als einen verpeilten haufen ansehen.
 
-Die Geschichten sind vielfältig in der Beschreibung der angehäuften Unterdrückung, aber auch im Grad der Vernetzung der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; zu anderen kommerziellen Kultur-Veranstalterin. Von Preisabsprachen wird berichtet, genauso wie von einer Emanzipatorischen Grundhaltung an die man appelieren könnte.
+Die Geschichten sind vielfältig in der Beschreibung der angehäuften Unterdrückung, aber auch im Grad der Vernetzung der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] zu anderen kommerziellen Kultur-Veranstalterin. Von Preisabsprachen wird berichtet, genauso wie von einer Emanzipatorischen Grundhaltung an die man appelieren könnte.
 
-Nach zwei Stunden brummt dir der Schädel, dir ist immer noch nicht klar was die anwesenden für eine Strategie haben. Sowohl sind Stimmen dafür weiter mit den Betreibern der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; zu verhandeln, als auch die Konflikte schnellstmöglich öffentlich zu machen. Aber immerhin, ihr beschließt das Aktionsbündnis zu gründen - einer mehr oder weniger lose Struktur zur Koordinierung von Aktionen für den Erhalt der Ladenprojekte - und euch alle 2 Wochen zu treffen. Auch richtet ihr erste AG-Strukturen ein.(click: &quot;AG-Strukturen&quot;)[
+Nach zwei Stunden brummt dir der Schädel, dir ist immer noch nicht klar was die anwesenden für eine Strategie haben. Sowohl sind Stimmen dafür weiter mit den Betreibern der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] zu verhandeln, als auch die Konflikte schnellstmöglich öffentlich zu machen. Aber immerhin, ihr beschließt das Aktionsbündnis zu gründen - einer mehr oder weniger lose Struktur zur Koordinierung von Aktionen für den Erhalt der Ladenprojekte - und euch alle 2 Wochen zu treffen. Auch richtet ihr erste AG-Strukturen ein.(click: &quot;AG-Strukturen&quot;)[
 
 Eine AG soll sich um die Kommunikations-Infrastruktur kümmern und als erstes einen E-Mail-Verteiler einrichten. Eine Gruppe möchte sich mit Erfahrungen anderer Kämpfen um Räume auseinander setzten um die Ergebnisse beim nächsten Plenum vorzustellen und daraus zu lernen. Eine weitere AG will sich konkret mit möglichen Aktionen im Protest für die zwei Ladenprojekte beschäftigen. Eine vierte Gruppe möchte ein Vorschlag für ein Selbstverständnis für das Aktionsbündnis ausarbeiten.]
 
@@ -631,12 +637,12 @@ Zur beginn des Plenums wünschen sich mehrere Anwesende, dass der Konflikt von d
 Für dich ist ganz klar, dass die Menschen aus den betroffenen Projekten, die gesammten Infos zusammentragen und daraus ein Text ausarbeiten sollten. Es mache schließlich kein Sinn, eine AG im Aktionsbündnis damit zu beauftragen, da sich diese erst lange in das ganze einarbeiten müsste.]
 
 Doch die Diskussion nimmt einen anderen Verlauf, als du es erwatest. Du bist verwundet. Denn Menschen eines der betroffenen Projekte sind strikt dagegen, dass der Konflikt irgendwo schriftlich notiert wird...zumindest nicht anonymisiert.
-Die Angst sei groß, dass der Text sonst ungewollt verbreitet wird und die Verhandlungen mit der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; damit unmöglich machen wird.
+Die Angst sei groß, dass der Text sonst ungewollt verbreitet wird und die Verhandlungen mit der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] damit unmöglich machen wird.
 
-Ihr schweift wieder etwas in Geschichten rund um die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb;, gepregt von Paranoia, Konsum und Feindschaften, ab. Bereits auf eine im Eckladen ausgelegte Förderinnen-Liste reagierten die Eigentümer bereits mit einer Nachfrage bei der Orga. Man hätte von einer Unterschriftenliste gegen ihre Bar gehört. Auch Informationen die über das Ladenkulturprojekt im Viertel kursieren, sorgten für Anfeindungen und Vorwürfen gegenüber der Orga.
+Ihr schweift wieder etwas in Geschichten rund um die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;], gepregt von Paranoia, Konsum und Feindschaften, ab. Bereits auf eine im Eckladen ausgelegte Förderinnen-Liste reagierten die Eigentümer bereits mit einer Nachfrage bei der Orga. Man hätte von einer Unterschriftenliste gegen ihre Bar gehört. Auch Informationen die über das Ladenkulturprojekt im Viertel kursieren, sorgten für Anfeindungen und Vorwürfen gegenüber der Orga.
 
-Du bist dir unsicher wie man damit umgehen sollte, aber vergisst deine Bedenken als ein junger Mann aus dem Plenum sehr abgehackt die Frage nach einer Strategie stellt.(click: &quot;Frage nach einer Strategie&quot;)[ Er möchte wissen ob es bereits Diskussionen dazu gab und wie weit diese sind. Ob über den aus dem ersten Plenum vorgeschlagenen Eskalationplan gesprochen wurde oder eine alternative in Arbeit ist.
-Menschen aus der Aktions-AG sind etwas verwirrt, ein Teil weiß nichts von einem Vorschlag der andere hat sich diesen noch nicht angeschaut. Die Aktions-AG beantwortet seine Frage damit, das als nächstes eine Aktion ausgearbeitet werden soll und ihr schreitet weiter voran.
+Du bist dir unsicher wie man damit umgehen sollte, aber vergisst deine Bedenken als ein junger Mann aus dem Plenum sehr abgehackt die Frage nach einer Strategie stellt.(click: &quot;Frage nach einer Strategie&quot;)[ Er möchte wissen ob es bereits Diskussionen dazu gab und wie weit diese sind. Ob über den aus dem ersten Plenum vorgeschlagenen Eskalationplan gesprochen wurde. Man könnte z.B. mit Solipartys für die kollektiven Räume anfangen und dabei ein paar Flyer verteilen. Oder ist eine alternative in Arbeit?
+Menschen aus der Aktions-AG sind etwas verwirrt, ein Teil weiß nichts von einem Vorschlag der andere hat sich diesen noch nicht angeschaut. Eine junge Frau aus der Aktions-AG beantwortet seine Frage damit, das als nächstes eine Aktion ausgearbeitet werden soll und ihr schreitet weiter voran.
 
 Die nächste AG stellt ihre Ergebnisse vor. Sie haben sich mit ähnlichen Kämpfen um kollektive und öffentliche Räume beschäftigen und berichten von ihrer Recherche.
 Hefte eines Kollektivs, dass solche Kämpfe dokumentiert, werden durchgereicht. Du blickst auf deine Ausgabe und liest &lt;a href=&quot;https://malaboca.noblogs.org/files/2017/12/Uniti-Possiamo-Tutti-Deutsch.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Malaboca Kollektiv - Uniti Possiamo Tutti&lt;/a&gt;. Die AG erzählt weiter von Kollektivierungsprozessen und Besetzungen in Mailand. Du steckst das Heft weg um es dir später anzuschauen.
@@ -654,29 +660,31 @@ Ein Mensch neben dir fragt die Runde, ob jemand Lust hätte ueber Strategie zu r
 
 Der Wunsch wird sofort von einem dürren Mann abgewiesen. Es ergäbe demnach kein Sinn über Strategie zu sprechen, wenn so wenige Menschen anwesend sind. Besser wäre es sich viel mehr um das soziale zu kümmern. (click: &quot;um das soziale zu kümmern&quot;)[ Nach einem Monolog in dem es darum geht Menschen aus den eigenem Freundeskreis öfters vom Aktionsbündnis zu erzählen, um diese zur Teilnahme am Plenum zu motivieren und an der trüben Stimmung des Plenums zu arbeiten, damit es mehr Spaß macht zum Plenum zu kommen, bist du dir unsicher was du noch dazu sagen könntest und bleibst still. Damit ist das Plenum schon wieder vorbei.
 
-Etwas betrübt [[Der Kiez&lt;-verlässt]] du den Raum, mit dem Gefühl heute nichts geschafft zu haben.]]</tw-passagedata><tw-passagedata pid="12" name="5.Treffen" tags="" position="2821,441" size="100,100">Du kommst etwas früh und freust dich, dass dieses mal doch wieder etwas mehr Menschen gekommen sind. Vielleicht 20 Menschen. Das macht wieder Mut.
+Etwas betrübt [[Der Kiez&lt;-verlässt]] du den Raum, mit dem Gefühl heute nichts geschafft zu haben.]]</tw-passagedata><tw-passagedata pid="12" name="5.Treffen" tags="" position="2821,441" size="100,100">Du kommst etwas früh und freust dich, dass dieses mal doch wieder etwas mehr Menschen gekommen sind. Vielleicht 20 Menschen. Das gibt der Sache wieder Schwung.
 
 Zur Beginn des Plenums wird eine lange Tagesordnungspunkte vorgestellt. Existierende AGs sollen ihre Ergebnisse vorstellen, es gibt eine Phase wo neue AGs gegründet werden sollen und weitere Vorschläge für mögliche öffentliche und politische Aktionen, die man anfangen könnte vorzubereiten.
 Dir ist eigentlich sofort klar, die Vorbereitung des Plenums hat über das Ziel hinausgeschossen, denn alles am gleichen Abend werdet ihr nicht besprechen können.
 
-Bevor ihr anfängt im Info-Top euch gegenseitig auf den neuesten Stand zu bringen, wird das Plenum jedoch unterbrochen.(click: &quot;unterbrochen&quot;)[
+Bevor ihr anfängt im Info-Top euch gegenseitig auf den neuesten Stand zu bringen, wird das Plenum jedoch unterbrochen.(click: &quot;wird das Plenum jedoch unterbrochen&quot;)[
 
-Ein dürrer Mann schlägt vor das Bündnis aufzulösen. Schließlich waren das letzte mal so wenige Menschen da, dass wir uns die Frage stellen sollten, ob nicht eine andere Form der Organisierung besser geeignet wäre. Fraglich sei überhaupt ob der Leipziger Osten gut genug vernetzt sei, um längere Proteste zu organisieren. Dies wäre im Süden oder im Westen möglich, jedoch nicht in diesem Viertel.
+Ein dürrer Mann schlägt vor das Bündnis aufzulösen...
+Schließlich waren das letzte mal so wenige Menschen da, dass wir uns die Frage stellen sollten, ob nicht eine andere Form der Organisierung besser geeignet wäre. Fraglich sei überhaupt ob der Leipziger Osten gut genug vernetzt sei, um längere Proteste zu organisieren. Dies wäre im Süden oder im Westen möglich, jedoch nicht in diesem Viertel.
 Er schlägt anstellte der Plena-Runden vor sich bei gemeinsamen Treffen nicht zu strikt, zu durchorganisieren, einzuschränken und lieber in gemütlichen Runden bei einem Bier zu treffen und von da aus zuschauen, was organisiert werden kann und wie sich das Projekt entwickelt. Bei einer lockeren Stimmung würden sicher auch mehr Menschen zu den Treffen erscheinen.
 
 Doch die Moderation des Plenums weist den Vorschlag sehr barsch zurück. Das einbrechen der Motivation sei nicht die fehlende soziale Komponente, schließlich können sich alle unabhängig vom Plenum zu einem Bier verabreden, oder sich nach dem Treffen in gemütliche Runden begeben. Das Problem der langfristigen Motivation sei bei allen linken Projekten zu beobachten, bemerkt er dazu.
 Nach dem ihr weiter zu dem Problem der langfristigen Motivation abschweift, bist du recht froh als sich der Gegenvorschlag durchsetzt mit dem Plenum weiter zu machen.
-Gemeinsam einen Weg suchen eine größere Struktur aufzubauen und mehr Menschen aus der Szene und dem Viertel über die momentane Lage der Läden zu informieren ist entscheidend, merkt eine Person an, bevor ihr weiter macht.(click: &quot;weiter zu machen&quot;)[
+Gemeinsam einen Weg suchen eine größere Struktur aufzubauen und mehr Menschen aus der Szene und dem Viertel über die momentane Lage der Läden zu informieren ist entscheidend, merkt eine Person an, bevor ihr weiter macht.(click: &quot;mit dem Plenum weiter zu machen&quot;)[
 
-Du bist dir unsicher, was genau das Problem im Plenum ist, doch dir wird klar es gibt eins. Denn auch die zweite Diskussion entwickelt sehr schnell zwei komplett entgegengesetzte Pole, die nicht mit einander arbeiten wollen.
+Du bist dir unsicher, was genau das Problem im Plenum ist, doch dir wird klar es gibt eins. Denn auch die zweite Diskussion entwickelt sehr schnell zwei komplett entgegengesetzte Pole, die nicht mit einander arbeiten.
 Um erstmal die Grundlage zu legen, müssen mehr Verbündete gefunden werden. Dafür wird das Besuchen von Plena befreundeter Projekte vorgeschlagen, um mehr Projekte über die Bedrohung der Projekträume zu informieren. Doch der Vorschlag wird von einzelnen als lächerlich abgelehnt. Es sei bevormundend, dass wir versuchen Proteststrukturen für andere zu organisieren. Die Betroffenen müssen selbst kämpfen, seien jedoch nicht mal anwesend. Ein dürrer Mann setzt mit einer langen Erzählung fort, in der die Linken der 68 kritisiert werden, die zu den Arbeiterinnen gegangen sind um sie herunterschauend zu retten. Auch weil sie mit denen nichts zu tun hatten wären sie zurecht zurückgewiesen worden.
-Dir Gefällt die Dynamik der Gruppe garnicht. Emotional staucht sich das ganze jedoch weiter auf, als ihm entgegnet wird, dass das Viertel unser aller Lebensumfeld ist und selbst wenn kaum Menschen aus den Läden anwesend sind, man sich gegen eigene Verdrängung widersetzen muss und darf.
+Dir gefällt die Dynamik der Gruppe garnicht. Emotional staucht sich das ganze jedoch weiter auf, als ihm entgegnet wird, dass das Viertel unser aller Lebensumfeld ist und selbst wenn keine Menschen aus den Läden anwesend sind, man sich gegen eigene Verdrängung widersetzen muss und darf.
 
 Es ist sehr anstrengend, das wieder einzelne ihre Probleme im Plenum in einem Streit münden lassen und du bist mehr als genervt. Du unterbrichst das ganze in dem du in die laufende Diskussion reinredest und schlägst vor gleich in die AG-Phase zu gehen.(click: &quot;in die AG-Phase zu gehen&quot;)[
 
 Du entscheidest dich für die Aktions-AG. Eine Person neben dir fragt, ob jemand Interesse hat einen Eskalationsplan auszuarbeiten und ob sich jemand den Vorschlag von letztens mal angeschaut hat. Du kriegst Migräne, als erwidert wird, dass der Fragende wohl Revolution machen will, wir hier aber doch mal ernsthaft bleiben sollten.
-Doch verwundet stellst du fest es entbrennt kein neuer Streit. Ihr könnt euch sogar einigen. Bis zum nächsten Treffen beschließt ihr eine konkrete Aktion durchzuführen. Grob könnt ihr euch bereits auf ein Konsens einigen gemeinsam mit einer symbolischen Aktion anzufangen, um anzutasten wie breit die Unterstützung in der Szene ist.
-Der Plan ist es mit einer stummen Aktion mit 40 Menschen in die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; zu gehen, nach 30 Minuten wieder rauszugehen und dabei leere, selbst mitgebrachte, Flaschen dazulassen.
+Doch verwundet stellst du fest es entbrennt kein neuer Streit... Ihr könnt euch sogar einigen. Bis zum nächsten Treffen beschließt ihr eine konkrete Aktion durchzuführen. Grob könnt ihr euch bereits auf ein Konsens einigen gemeinsam mit einer symbolischen Aktion anzufangen, um anzutasten wie breit die Unterstützung in der Szene ist.
+
+Der Plan ist es mit einer stummen Aktion mit 40 Menschen in die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] zu gehen, nach 30 Minuten wieder rauszugehen und dabei leere, selbst mitgebrachte, Flaschen dazulassen.
 Dir ist zwar nicht klar, wie dieser Aktion jemand erreichen soll, wenn alle nur stumm ihr Bier trinken, aber lenkst ein als dir erklärt wird, dass bevor man mit großen Aktionen anfängt, zuerst Zuversicht und Vertrauen aufbauen möchte und deshalb mit einer kleinen Aktion starten will.
 
 Nach der AG-Phase kommt ihr zusammen um die Ergebnisse vorzustellen. Trotz des schwierigen anfangs, war der Abend für dich produktiv. Auch andere scheinen etwas erleichtert zu wirken.
@@ -685,170 +693,177 @@ Ein paar Menschen wünschen sich den Plenumstag zu verschieben, da sie sonst nur
 Als du [[Der Kiez&lt;-rausgehst]] blicks du hoch und atmest tief ein. Der Himmel ist schwarz und kein Stern ist zu sehen.]]]</tw-passagedata><tw-passagedata pid="13" name="Biertrink-Aktion" tags="Protest" position="2827,575" size="100,100">{
 (set: $bierTrinkAktionAktiv to false)
 }\
-Mit einem aufgeregten Schritt nährst du dich dem Treffort für die erste Aktion. Du hast ein paar Freunde mitgebracht und witzelst mit ihnen über den schwarzen Block, als ihr euch einer Crowd nähert die überwiegend schwarz trägt. Heute geht ihr in die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; der Eigentümer, die die zwei Ladenräume verdrängen. Der Plan ist simple. Ihr geht rein, trinkt ein selbst mitgebrachtes Bier und geht wieder.(click: &quot;Ihr geht rein&quot;)[
+Mit einem aufgeregten Schritt nährst du dich dem Treffort für die erste Aktion. Du hast ein paar Freunde mitgebracht und witzelst mit ihnen über den schwarzen Block, als ihr euch einer Crowd nähert die überwiegend schwarz trägt. Heute geht ihr in die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] der Eigentümer, die die zwei Ladenräume verdrängen. Der Plan ist simple. Ihr geht rein, trinkt ein selbst mitgebrachtes Bier und geht wieder.
 
-Du freust dich richtig, denn als du die Köpfe durch zählst kommst du bei 40 Menschen an. Endlich eine gemeinsame Aktion. Und das gleich so viele da sind schafft Hoffnung.
+Du freust dich richtig, denn als du die Köpfe durchzählst kommst du bei 40 Menschen an. Endlich eine gemeinsame Aktion. Und das gleich so viele da sind schafft Mut.
 
 Ihr geht rein und verteilt euch über den gesamten Raum. Es ist schon recht voll, aber du quetschtst dich mit deiner Begleitung noch an einer kleinen Ecke zusammen.
 
 Etwas aufgeregt holt ihr eure Bier raus und fangt ein Gespräch an.
-Deine Begleitung regt sich über das web 2.0 auf. Es biete eine unendliche Informationsflut, in der man zum ersten mal in die Lage versetzt wird das unglaublich Ausmaß von Armut von vielen und Reichtum von wenigen gleichzeitig zu sehen. Unsere Gesellschaft beschäftigt sich jedoch mit Katzen-Videos und Shopping. An jeder Ecke gibt es Aufdeckungen von organisierter kriminellen Machenschaften, wie den Panama-Papers oder dem Abgas-Skandal. Aber die meisten lässt es kalt, da sich alle dran gewöhnt haben, dass man mit Geld alle(s) bezahlen kann.
+Deine Begleitung regt sich über die BRD auf. An jeder Ecke gibt es Aufdeckungen von organisierter kriminellen Machenschaften, wie den Panama-Papers oder dem Abgas-Skandal. Aber die meisten lässt es kalt, da sich alle dran gewöhnt haben, dass man mit Geld alle(s) bezahlen kann.
 
 Nach einem weiteren Bier und unzähligen Anekdoten über das Leben im Viertel ist die abgesprochene Stunde schon vorbei.
-Du hörst wie mehrere dutzend Flaschen auf den Tisch schlagen. Das war das Zeichen. Ihr geht gemeinsam raus mit einem grinsen auf dem Gesicht um euch zu der nächsten VeKü zu begeben, wo ihr noch den ganzen Abend über den Sinn und Unsinn der Aktion, die vielen beteiligten und was man alles [[Der Kiez&lt;-als nächstes]] machen könnte unterhält.]</tw-passagedata><tw-passagedata pid="14" name="6.Treffen" tags="" position="2827,718" size="100,100">Rund 20 Gesichter blicken dir entgegen, als du den Plenaraum betritst. Seit dem letztem Plenum gab es einige Vortschritte.(click: &quot;einige Vortschritte&quot;)[ So wurde nicht nur der Mail-Verteiler des Aktionsbündnis in der zwischenzeit eingerichtet, sondern eure erste Aktion, auch wenn nicht Spektakulär, fand statt.]
+Du hörst wie mehrere dutzend Flaschen auf den Tisch schlagen. Das war das Zeichen. Ihr geht gemeinsam raus mit einem grinsen auf dem Gesicht um euch zu der nächsten VeKü zu begeben, wo ihr noch den ganzen Abend über die Sinnhaftigkeit der Aktion, die vielen beteiligten und was man alles [[Der Kiez&lt;-als nächstes machen]] könnte unterhält.</tw-passagedata><tw-passagedata pid="14" name="6.Treffen" tags="" position="2827,718" size="100,100">Rund 18 Gesichter blicken dir entgegen, als du den Plenaraum betritst. Seit dem letztem Plenum gab es einige Vortschritte.(click: &quot;einige Vortschritte&quot;)[ So wurde nicht nur der Mail-Verteiler des Aktionsbündnis in der zwischenzeit eingerichtet, sondern eure erste Aktion, auch wenn nicht Spektakulär, fand statt.]
 
 Es gibt aber noch einiges zu tun, so fang ihr mit dem Plenum recht pünktlich an.
 
-Allerdings, schon die Info-Runde wird ausufernd. Das Ladenkulturprojekt berichtet davon die, von der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; vorgegeben, Klauseln unterschrieben zu haben. Mit gemischten Gefühlen, unsicher ob der Schritt gut oder schlecht war, hörst du dir die Neuigkeiten an.
+Allerdings, schon die Info-Runde wird ausufernd. Das Ladenkulturprojekt berichtet davon die, von der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] vorgegeben, Klauseln unterschrieben zu haben. Mit gemischten Gefühlen, unsicher ob der Schritt gut oder schlecht war, hörst du dir die Neuigkeiten an.
 Doch leider hat sich damit das Problem alles andere als erledigt. Denn die Eigentümer des Hauses unterschreiben dennoch nicht denn Mietvertrag des Ladenkulturprojekts. Man akzeptiere zwar die Klauslen, doch weder passt ihnen die ausgehandelte Vertragsdauer noch akzeptieren sie einen Verein als Vertragspartner.
-Damit befindet sich das Projekt weiter in einer Situation ohne richtigen Mietvertrag. Schlimmer sogar. Neben den Konkurrenzschutz, von den Eigentümern der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; zugesichert, gelten jetzt verschiedene Klauseln, die die Getränkeausgabe und Form der Veranstalltungen einschränken. Mit dazugehörenden Sanktionen.
+Damit befindet sich das Projekt weiter in einer Situation ohne richtigen Mietvertrag. Schlimmer sogar. Neben den Konkurrenzschutz, von den Eigentümern der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] zugesichert, gelten jetzt verschiedene Klauseln, die die Getränkeausgabe und Form der Veranstalltungen einschränken. Mit dazugehörenden Sanktionen.
 Der Anwalt der Gruppe sei außer sich, berichtet man euch, und auch in dir macht sich ein mulmiges Gefühl breit.
 
-Ein drittes Projekt meldet sich daraufhin zu wort. Ein Projektraum ein paar Straßen weite hat ähnliche Probleme mit den gleichen Eigentümern. So wurden sie nicht nur bereits beim Ordnungsamt gemeldet, auch weigern sich die Eigentümer jegliche Reparaturen vorzunehmen. Nach dem die Gruppe im Winter, auf eigene Kosten jedoch vom Eigentümern unerlaubt, eine defekte Heizug reparierte, droht ihnen ein Verfahren wegen Sachbeschädigung. Die Gruppe ist sich unsicher ob das Problem publik gemacht werden soll. Auch gibt es kein Konsens ob man am dem Problem zusammen mit dem Aktionsbündnis arbeiten möchte. Denn unteranderem gebe es auch einiges zu kritisieren.
+Ein drittes Projekt meldet sich daraufhin zu wort. Ein Projektraum ein paar Straßen weite hat ähnliche Probleme mit den gleichen Eigentümern. So wurden sie nicht nur bereits beim Ordnungsamt gemeldet, auch weigern sich die Eigentümer jegliche Reparaturen vorzunehmen. Nach dem die Gruppe im Winter, auf eigene Kosten jedoch vom Eigentümern unerlaubt, eine defekte Heizug reparierte, droht ihnen ein Verfahren wegen Sachbeschädigung. Die Gruppe ist unsicher ob das Problem publik gemacht werden soll. Auch gibt es kein Konsens ob man am dem Problem zusammen mit dem Aktionsbündnis arbeiten möchte. Denn unteranderem gebe es auch einiges zu kritisieren. Sie seinen unter anderem auch hier um ihre Kritik persönlich zu diskutieren.(click: &quot;persönlich zu diskutieren&quot;)[
 
-Du bist etwas sprachlos als du dir eine heftige Kritik vom Projektraum anhörst. Die Biertrink-Aktion wäre diffus und intrasparent, da niemandem klar ist was die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; mit dem drohnenden Verlust von den kollektiven Räumen zu tun hat. Es verärgere nur die Menschen, da es nicht für die bedrohten Projekte kämpfe, sondern gegen eine &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb;. Deshalb habe der Projektraum explizit nicht an der Aktion teilgenommen und distanziert sich auch von dieser.
+Du bist etwas sprachlos als du dir eine heftige Kritik vom Projektraum anhörst. Die Biertrink-Aktion wäre diffus und intrasparent, da niemandem klar ist was die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] mit dem drohnenden Verlust von den zwei kollektiven Räumen zu tun hat. Es verärgere nur die Menschen, da es nicht für die bedrohten Projekte kämpfe, sondern gegen ihre $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;]. Deshalb habe der Projektraum explizit nicht an der Aktion teilgenommen und distanziert sich auch von dieser.
 
 Das war zu viel, bevor die Situation eskaliert macht die Moderation ein break um nach der Pause eine vernüftige Diskussion zu führen.
-Du gehst nach draußen, denn du brauchst frische Luft. Auf dem Weg zu der Tür siehst du ein Grüppchen, dass sich um Menschen des Projekteraum bildet. Scheinbar wollen sie die Pause nutzen um weiter privat zu diskutieren.
+Du gehst nach draußen, denn auch du brauchst frische Luft. Auf dem Weg zu der Tür siehst du ein Grüppchen, dass sich um Menschen des Projekteraum bildet. Scheinbar wollen sie die Pause nutzen um weiter privat zu diskutieren.
 
-Die Pause war kurz, doch sie tat gut. Auch die Menschen vom Projekteraum nehmen alles zurück. Der Konflikt hätte in einem kurzen Gespräch gelöst werden können.
-Doch eine andere Person sprengt einfach wieder das Plenum. Für einen Mann aus dem Aktionsbündnis hat sich nämlich mit der Ausprache nichts geändert. Das Problem bestünde weiter. Denn weder werden Informationen über den Konflikt veröffentlicht, noch werden auf einer anderen Weise Menschen und Projekte im Viertel über den drohnenden Verlust der kollektiven Räume informiert. Es gäbe schon jetzt ein neoliberales Narativ was von den Betreibern der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; verbreitet wird. Wie Gerüchte über angebliche zuwenig gezalte Mieten durch linke Räume auf Kosten der Eigentümer und Zerstörung von Lebensunterhalt. Vom Aktionsbündnis gäbe es jedoch nur Stille. Dies Schade der Kampagne und sorge für die vom Projektraum beobachtete Verärgerung der Anwohner&amp;#42;innen im Viertel, gegenüber bald öffentlich stattfinden Aktionen.
+In der Pause quatschst du etwas mit den anderen und gehst wieder zurück. (click-replace: &quot;In der Pause quatschst du etwas mit den anderen und gehst wieder zurück.&quot;)[Die Pause war kurz, doch sie tat gut. Scheibar auch den Mensschen vom Projekteraum, denn in ihrer ersten Wortmeldung nehmen sie alles zurück. Der Konflikt hätte in einem kurzen Gespräch gelöst werden können.
 
-Wie konnte es anders sein, ein langer Streit um Veröffentlichungen von Informationen entbrennt. Die eine Seite wirft eine lächerliche nicht zu Ende gedachte Vorschläge vor; den Besuch linker Projekte im Leipzier Osten, um ihnen von dem drohenden Verlust der Räume zu berichten, könne jede&amp;#42;r alleine machen. Die andere Seite kotzt ab, dass alle Vorschläge Abgeblock werden, selbst aber keine Ausgearbeitet werden. Was es brauche seien, konstruktieve Verbesserungen oder alternative Strategien.
-Davon unabhängig sind wiederum Stimmen gegen jegliche Eskalation, bevor den bertreibern der lsqb;$wayne[hippe szene Bar]&amp;rsqb; nicht zumindest ein solidarische Lösungsvorschlag angeboten wird. Einige sehen sich und ihre Freundschaft zu den Betreibern der Bar gefährdet, für wiederum andere is es ein moralischer Standard.
+Doch eine andere Person sprengt einfach wieder das Plenum. Für einen Mann aus dem Aktionsbündnis hat sich nämlich mit der Ausprache nichts geändert. Das Problem bestünde weiter. Denn weder werden Informationen über den Konflikt veröffentlicht, noch werden auf einer anderen Weise Menschen und Projekte im Viertel über den drohnenden Verlust der kollektiven Räume informiert. Es gäbe schon jetzt ein neoliberales Narativ was von den Betreibern der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] verbreitet wird. Wie Gerüchte über angebliche zuwenig gezalte Mieten durch linke Räume auf Kosten der Eigentümer und Zerstörung von Lebensunterhalt. Vom Aktionsbündnis gäbe es jedoch nur Stille. Dies schadet der Kampagne und sorge für die vom Projektraum beobachtete Verärgerung der Anwohner&amp;#42;innen im Viertel, gegenüber bald öffentlich stattfinden Aktionen. Man müsse anfangen selbst ein Narrativ auszuarbeiten.
 
-Am Ende einigt ihr euch auf eine konkrette Ideen. Das Verfassen einer Solidaritäts-Mail. Mit dem Ziel durch Verschicken dieser Mail von Verschiedenen lokalen Projekten an die Betreiber der lsqb;$wayne[hippe szene Bar]&amp;rsqb;, zu ziegen dass viele Menschen aus dem Leipziger Osten sich sorgen um die existenz dier Freiräume machen und diese wollen und brauchen. Die E-Mail soll in einem freundlichen, keinem konfrontativen Ton, geschrieben werden, da die zwei Betreiber der Bar als höchst Paranoid bekannt sind.
+Wie konnte es anders sein, ein langer Streit um Veröffentlichungen von Informationen entbrennt.
+Die eine Seite wirft eine lächerliche nicht zu Ende gedachte Vorderungen vor. Außerdem könnte Vernetzung, einen Besuch linker Projekte im Leipzier Osten um ihnen von dem drohenden Verlust der Räume zu berichten, jede&amp;#42;r alleine machen. Die andere Seite kotzt an, dass alle Vorschläge abgeblock werden, selbst aber keine Ausgearbeitet werden. Was es brauche seien, konstruktieve Verbesserungen oder alternative Strategien.
+Davon unabhängig sind wiederum Stimmen gegen jegliche Eskalation, bevor den bertreibern der lsqb;$wayne[hippe szene Bar&amp;rsqb;] nicht zumindest ein solidarische Lösungsvorschlag angeboten wird. Einige sehen sich und ihre Freundschaft zu den Betreibern der Bar gefährdet, für wiederum andere is es ein moralischer Standard.
 
-Verschickt werden soll die [[Solimail]] bereits nächste Woche. Mit diesem letzten Beschluss, [[Der Kiez&lt;-beendet ihr das Plenum]].</tw-passagedata><tw-passagedata pid="15" name="7.Treffen" tags="Protest" position="2827,843" size="100,100">Bereits etwas aufgeregt schreitest du zum Plenum. Als du den Raum betrittst siehst du 13 Gesichter, denn es nicht viel anders geht. Denn nach dem eure Solimail von mehreren Projekten verschickt wurde, dauerte es nicht lange bis die Betreiber der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; an mehrere Projekte in Leipzig eine [[Antwort-Solimail&lt;-Antwort]] verschickten.
+Am Ende einigt ihr euch auf eine konkrette Ideen. Das Verfassen einer Solidaritäts-Mail. Mit dem Ziel, durch Verschicken dieser Mail von verschiedenen lokalen Projekten an die Betreiber der lsqb;$wayne[hippe szene Bar&amp;rsqb;], zu zeigen dass viele Menschen aus dem Leipziger Osten sich sorgen um die existenz dieser Freiräume machen, diese im Viertel wollen und brauchen. Die E-Mail soll in einem freundlichen, keinem konfrontativen Ton, geschrieben werden, da die zwei Betreiber der Bar als höchst Paranoid bekannt sind.
 
---V und F stellen sich als Opfer dar
+Verschickt werden soll die [[Solimail]] bereits nächste Woche. Mit diesem letzten Beschluss, [[Der Kiez&lt;-beendet ihr das Plenum]].]]</tw-passagedata><tw-passagedata pid="15" name="7.Treffen" tags="Protest" position="2827,843" size="100,100">Bereits etwas aufgeregt schreitest du zum Plenum. Als du den Raum betrittst siehst du 13 Gesichter, denn es nicht viel anders geht. Denn nach dem eure Solimail von mehreren Projekten verschickt wurde, dauerte es nicht lange bis die Betreiber der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] an mehrere Projekte in Leipzig eine [[Antwort-Solimail&lt;-Antwort]] verschickten.
 
 Eine Person wünscht sich eine Strategie-Debatte, um schnellst möglich die nächsten Schritte planen zu können. Man habe immer noch keine Strategie. Eine Debatte die man jetzt führen wird, kann nirgendwo rein fließen. Man wird 2 Stunden lang reden und danach immer noch kein Plan haben, wie man weiter verfährt.
-Irgendwie schräg, denn die Stimmung im Plenum steht klar dagegen. Als ein Mann aus der Runde die Wichtigkeit herausstellt die Antwort in aller Ausführlichkeit zu Diskutieren und die Versuche die Vorwürfe unter den Tisch kehren zu lassen als daneben deklariert, nickt der gesamte Raum. Auch du.
+Irgendwie schräg der Vorschlag, denn die Stimmung im Plenum ist klar dagegen. Als ein Mann aus der Runde die Wichtigkeit herausstellt die Antwort in aller Ausführlichkeit zu Diskutieren und die Versuche die Vorwürfe unter den Tisch kehren zu lassen als daneben deklariert, nickt der gesamte Raum. Auch du.(click: &quot;in aller Ausführlichkeit zu Diskutieren&quot;)[
 
-Und diese hat es in sich. Bevor ihr irgendeine Information zu den Konflikten veröffentlicht habt, verbreiten die Betreiber der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; ihre Version des Konflikts. In einem Brief an verschiedene lokalen Projekte beschuldigen sie die kollektiven Räume und stellen sich selbst als Opfer dar.
-So hätte der Eckladen massive Schäden versacht und der Ladekulturprojekt hätte aufgrund von angeblicher Vermüllung und Latstürekerproblemen zu Stress mit dem Ordnungsamt gesorgt. Das alles könnte man nicht mehr, weder persönlich noch als lsqb;$wayne[hippe szene Bar]&amp;rsqb;, akzeptieren.
+Und diese hat es in sich. Bevor ihr irgendeine Information zu den Konflikten veröffentlicht habt, verbreiten die Betreiber der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] ihre Version des Konflikts. In einem Brief an verschiedene lokalen Projekte beschuldigen sie die kollektiven Räume und stellen sich selbst als Opfer dar.
+So hätte der Eckladen massive Schäden versacht und der Ladekulturprojekt hätte aufgrund von angeblicher Vermüllung und Latstürekerproblemen zu Stress mit dem Ordnungsamt gesorgt. Das alles könnte man nicht mehr, weder persönlich noch als lsqb;$wayne[hippe szene Bar&amp;rsqb;], akzeptieren.
 
 Behauptungen die nur von ihnen belegt werden könnten, aber von euch faktisch nicht ohne ein teures Gutachten für das Haus oder Zugang zu Akten des Ordnungsamtes widerlegt werden können.
 
-Der Text steckt voller Lügen und Diffamierungen, platzt es aus einer anwesenden Person heraus, was eine ewige Diskussion beginnt und das Plenum quasi sprengt.
-Von Vereinbarungen die Aufgrund von Vermüllung getroffen werden mussten, kann Objektiv nicht die rede sein, wenn das Projekt in der Realität regelmässig nach Veranstaltung die Straße kehrte. Und zu den Getränkeverbot-Klauseln würde man, obwohl man relativ zu der Bar kaum Getränke rausgibt, gezwungen. Auch hätte man angeboten andere Getränke zu kaufen, um zu messen in wie weit überhaupt Besucher&amp;#42;innen des Ladenkulturprojekts mit ihrem Getränk zu der Bar gehen würden.
+Lange unterhaltet ihr euch auch darüber ob es falsch sei private E-Mails zu benutzen. Ein Mann macht einen Witz, dass er den beiden Betreiber der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] bereits geschrieben hat, das $wayne[&amp;lsqb;irgendeine Person&amp;rsqb;] die Mails weitergab. Die beiden wären außer sich und befürchten damit zu Recht privat angegriffen zu werden, was falsch sei, merkt eine andere anwesende Person an. Auch bei Freunden würden sie versuchen rauszufinden, wer ihre E-Mail-Adresse weitergegeben hätte.
+
+Der Text steckt voller Lügen und Diffamierungen, platzt es aus einer Anwesenden heraus, was eine ewige Diskussion beginnt und das Plenum weiter sprengt.
+Von Vereinbarungen die Aufgrund von Vermüllung getroffen werden mussten, kann Objektiv nicht die rede sein, wenn das Projekt in der Realität regelmässig nach Veranstaltung die Straße kehrte. Und zu den Getränkeverbot-Klauseln wurde das Ladenkulturprojekt, obwohl es relativ zu der Bar kaum Getränke rausgibt, sozusagen gezwungen, und hätte nichts mit Ärger mit Nachbar&amp;#42;innen oder dem Ordnungsamt zu tun. Auch hätte man angeboten andere Getränke zu kaufen, um zu messen in wie weit überhaupt Besucher&amp;#42;innen des Ladenkulturprojekts mit ihrem Getränk zu der Bar gehen würden.
 Von Behauptungen von einer Notwendigen Mieterhöhung um Sanierungen finanzieren zu können, obwohl der Eckladen bereits mit der letzten Mieterhöhung 2 Jahre lang für die Sanierungen bezahlt hat, bis zu falschen Anschuldigungen eines verursachten Schadens am Keller und Fußbodenaufbau, obwohl ein von den Eigentümer erstelltes Gutachten, dieses auf die schlechte Bauweise des Hauses zurückführte, ist alles dabei was auch den Eckladen in einem schlechten Licht stehen lassen soll.
+Die stellen es so dar, als hätten sie jahrelang den Eckladen auf eigene Kosten subventioniert, dabei hätten man kollektiv als linke Szene ihr Haus abbezahlt, schließt eine weitere verärgerte Stimme an.
 
-Es braucht lange Zeit bis ihr euch beruhigt und wirklich alles ausdiskutiert habt. Ihr sprecht über mögliche Reaktionen; darüber wie eine Podiumsdiskussion aussehen könnte und die Problematik; dass der Konflikt nun öffentlich nur von einer Seite erzählt wird, und zwar nicht von euch.
-Bis ein etwas großer breiter unbeholfener junger Mann ansetzt. Er sei schon mehr mal zu dem Plenum gekommen und ist ein wenig frustriert. Wir würden nur diskutieren oder schrieben Texte, ist sein Vorwurf an die Gruppe. Er möchte zwar helfen, aber wisse nicht wie und wünscht sich mehr Aktionen. Zustimmende Hände ragen in die Luft.
-Doch als er vorschlägt, z.B. den Eingang der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; einzumauern, witzeln ein Paar und als die Wörter &quot;ernsthaft bleiben&quot; fallen, fällt dir auf das er bis zum Ende des Plenums verstummt.
+Es braucht lange Zeit bis ihr euch beruhigt und wirklich alles ausdiskutiert habt.(click: &quot;wirklich alles ausdiskutiert &quot;)[ Ihr sprecht über mögliche Reaktionen; darüber wie eine Podiumsdiskussion aussehen könnte und die Problematik; dass der Konflikt nun öffentlich nur von einer Seite erzählt wird, und zwar nicht von euch. Das sich die Eigentümer als Opfer von linken, die ihre Räume zerstören und ihr Geschäft durch Ordnungsamt bedrohnen, darstellen. Darüber das sie den Rauschmiss des Eckladens nun als Selbstverteidigungs-Schritt inszenieren usw. usw.]
+Bis ein etwas großer breiter unbeholfener junger Mann ansetzt. Er sei schon mehr mal zu dem Plenum gekommen und ist ein wenig frustriert. Wir würden nur diskutieren oder schrieben Texte, ist sein Vorwurf an die Runde. Er möchte zwar helfen, aber wisse nicht wie und wünscht sich mehr Aktionen. Zustimmende Hände ragen in die Luft.
+Doch als er eine Idee anbringt, z.B. den Eingang der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] einzumauern, witzeln ein paar; die Wörter &quot;ernsthaft bleiben&quot; fallen, und dir fällt auf das er bis zum Ende des Plenums verstummt.
 
-Ein anderer - leider auch dieses mal ein junger Mann - schlägt vor mit einer konkreten Lösung an die Eigentümer der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb, und an die Öffentlichkeit, zu tretten.
-Da die beiden Eigentümmer bereits bewiesen haben, dass sie Miterhöhungen nicht für versprochene Sanierungen verwenden und auch ein erneute befristeter Mietvertrag das Problem nur verschieben würde, gäbe es nur eine Lösung. Die Eigentümer sollen die Räume des Eckladens, für den ursprünglichen Einkaufspreis, an eine solidarische Struktur verkaufen.
-Man sollte diesen friedlichen Lösungsvorschlag des Konflikts den Eigentümer persönlich unterbreiten, auch als eine Handreichung, doch danach recht zügig damit in die Öffentlichkeit treten. Der Vorschlag wäre geignet um im Zentrum einer Kampagne zu verdeutlichen, dass hier ein Eigentumsproblem an kollektiven Räumen besteht, es jedoch Lösungen gibt.
-Privat Personen dürften momentan über soziokulturellen Lebensraum von mehreren Communitys bestimmen und könten diese, ohne sich rechtfertigen zu müssen, aus dem Viertel einfach entfernen. Es gebe jedoch alternativen zu kapitalistischen Verwaltung von Eigentum und dass das Problem leicht mit bestehenden linken Strukturen gelöst werden kann. Dies würde das Miethäuser-Syndikat oder auch verschiedene solidarische Wohnungsgenossenschaften in Leipzig beweisen, die bei einem Kauf sicher auch helfen würden.
+Ein anderer schlägt daraufhin vor mit einer konkreten Lösung an die Eigentümer der $wayne[&amp;lsqb;hippe szene Bar]&amp;rsqb, und an die Öffentlichkeit, zu tretten.
+Da die beiden Eigentümmer bereits bewiesen hätten, dass sie Miterhöhungen nicht für versprochene Sanierungen verwenden und auch ein erneute befristeter Mietvertrag das Problem nur verschieben würde, gäbe es nur eine Lösung. Die Eigentümer sollen die Räume des Eckladens, für den ursprünglichen Einkaufspreis, an eine solidarische Struktur verkaufen.
+Man sollte diesen friedlichen Lösungsvorschlag des Konflikts den Eigentümern persönlich unterbreiten, auch als eine Handreichung, doch danach recht zügig damit in die Öffentlichkeit treten. Der Vorschlag wäre geignet um im Zentrum einer Kampagne zu verdeutlichen, dass hier ein Eigentumsproblem an kollektiven Räumen besteht, es jedoch bekannte Lösungen gibt.
+Privat Personen dürften momentan über soziokulturellen Lebensraum von mehreren Communitys bestimmen und könten diese, ohne sich rechtfertigen zu müssen, aus dem Viertel entfernen. Es gebe jedoch alternativen zu kapitalistischen Verwaltung von Eigentum. Das Problem könnte leicht mit bestehenden linken Strukturen gelöst werden. Das Miethäuser-Syndikat oder auch verschiedene solidarische Wohnungsgenossenschaften in Leipzig seien nicht unbekannt und beweisen das es anders geht. Auch würden diese bei einem Kauf sicher helfen.
 
-Doch wieder entbrennt ein Streit. Der Vorschlag sei zu unkonkret und schon gar nicht realistisch. Es macht kein Sinn den Eigentümern so ein Angebot zu unterbreiten, da sie diesen nur als Angriff wahrnehmen würden. Außerdem macht es kein Sinn dazu irgendwas auszuarbeiten, denn man wisse überhaupt nicht ob der Eckladen dahinter stehen würde.
-Eine andere Person greift diesen Punkt auf. Das Problem sei, man wäre nicht legitimiert mit dieser Lösung Öffentlichkeit für den Eckladen einzutreten. Die Orga-Gruppe müsse selbst die Verhandlungen führen oder wenigstens mit euch zusammen, sei jedoch nicht mal anwesend.
-Du hast das Gefühl die Person von der der Vorschlag kommt, hätte sich bereits als Mietglied der Orga vorgestellt, doch er schweigt, so schweigst zunächst auch du.
+Doch wieder entbrennt ein Streit.(click: &quot;Doch wieder entbrennt ein Streit.&quot;)[ Der Vorschlag sei zu unkonkret und schon gar nicht realistisch. Es mache schlicht kein Sinn den Eigentümern so ein Angebot zu unterbreiten, da sie diesen nur als Angriff wahrnehmen würden. Außerdem macht es kein Sinn dazu irgendwas auszuarbeiten, denn man wisse nicht mal ob der Eckladen dahinter stehen würde.
+Eine andere Person greift diesen Punkt auf. Das Problem sei, man wäre nicht legitimiert mit dieser Lösung öffentlich für den Eckladen einzutreten. Die Orga-Gruppe müsse selbst die Verhandlungen führen oder wenigstens mit euch zusammen, sei jedoch nicht mal anwesend.
 
-Vielleicht auch wegen der langen aufgebrachten Diskussion zu der Antwort auf eure Solimail und dem Hin-und-Her-Streit-Austausch, überwindest du dich und unterbrichs. In dem du vorschlägst die Kaufidee, irgendwie auch nur weil der einzigste Lösungsvorschlag ist den man hat, dem Betroffen Eckladen vorgeschlagen werden soll. Eine Person geht zum dem Plenum des Projekts, fragt ob sie das gut finden. Wenn ein Positive Einstellung gezeigt wird, soll der Vorschlag ausgearbeitet werden, ansonsten nicht. Simpel.
+Vielleicht auch wegen der langen aufgebrachten Diskussion zu der Antwort auf eure Solimail und dem Hin-und-Her-Streit-Austausch, überwindest du dich und unterbrichst. In dem du vorschlägst die Kaufidee, irgendwie auch nur weil das der einzigste Lösungsvorschlag ist den man hat, dem betroffen Eckladen durch eine&amp;#42;n von euch vorzustellen. Eine Person geht zum dem Plenum des Projekts, fragt ob sie das gut finden. Reagiert die Gruppe positive, soll der Vorschlag ausgearbeitet werden. Ansonsten nicht. Simpel.
 
-Gefühlt zum ersten mal am heutigen Abend stimmen alle überein und [[Der Kiez&lt;-ihr beendet]] damit das Plenum.</tw-passagedata><tw-passagedata pid="16" name="8.Treffen" tags="Protest" position="3053,443" size="100,100">Du kommst zum Plenum und siehst das nur Rund 9 Menschen anwesend sind. Das drückt schon zu Beginn auf deine Stimmung.
+Gefühlt zum ersten mal am heutigen Abend stimmen alle überein und [[Der Kiez&lt;-ihr beendet]] damit das Plenum.]]</tw-passagedata><tw-passagedata pid="16" name="8.Treffen" tags="Protest" position="3053,443" size="100,100">Du kommst zum Plenum und siehst das nur Rund 9 Menschen anwesend sind. Das drückt schon zu Beginn auf deine Stimmung.
 
-Das Plenum soll zwei größere Punkte abarbeiten. Im ersten Teil möchte eine AG ein ausgearbeitetes [[Selbstverstaendnis&lt;-Selbstverständnis vorstellen]]. Ihr habt hier und da eine Anmerkung und wie das so ist schweift ihr bei der Diskussion ins Abstrakte ab, aber nach einer dreiviertel Stunde seit ihr durch. Es ist gut. Man kannst nicht anders sagen, was selbstverständnis schreiben angeht ist die AG geübt.
+Das Plenum soll zwei größere Punkte abarbeiten. Im ersten Teil möchte eine AG ein ausgearbeitetes [[Selbstverstaendnis&lt;-Selbstverständnis vorstellen]]. Ihr habt hier und da eine Anmerkung, und wie das so ist schweift ihr bei der Diskussion ins Abstrakte ab, aber nach einer dreiviertel Stunde seit ihr durch. Es ist gut. Man kannst nicht anders sagen. Was selbstverständnis schreiben angeht ist die AG geübt.
 
-Ihr schreitet zugüg weiter und beginnt mit der Diskussion um den Vorschlags eines Kaufes.
+Ihr schreitet zugüg weiter und beginnt mit der Diskussion um den Vorschlag eines Kaufes.
 
-Die Diskussion beginnt damit, das eine Person erklärt wieso, ein Kauf des Hauses nicht über den Köpfen der Bewohner&amp;#42;innen stattfinden darf, sondern zuerst mit diesen abgesprochen werden muss. Nach einer gewollt humoristischen Erzählung, dass in der DDR das selbe falsche Verständnis von kollektiven Besitzt herrschte, schreitet eine Sitznachbarin ein. Der Vorschlag würde funktionieren, auch wenn der Kaufangebot nur auf Ladenräume ausgesprochen wird, klärt sie auf. Der Plan war es, die Idee dem betroffen Eckladen vorzustellen und heute weiter zu entscheiden, erinnert eine Sitznachbarin neben dir.
+Die Diskussion beginnt damit, das eine Person erklärt wieso, ein Kauf des Hauses nicht über den Köpfen der Bewohner&amp;#42;innen stattfinden darf, sondern zuerst mit diesen abgesprochen werden muss. Nach einer gewollt humoristischen Erzählung, dass in der DDR das selbe falsche Verständnis von kollektiven Besitzt herrschte, schreitet eine Sitznachbarin ein. Der Vorschlag würde funktionieren, auch wenn der Kaufangebot nur auf Ladenräume ausgesprochen wird, klärt sie auf. Der Plan war es, die Idee dem betroffen Eckladen vorzustellen und heute weiter zu entscheiden, erinnert eine Sitznachbarin neben dir.(click: &quot;heute weiter zu entscheiden&quot;)[
 
-Doch der Mensch, der zum Plenum geschickt wurde ist gar nicht da. Eine Person aus dem Plenum des Ladenprojekts ist jedoch anwesend. Die Person von der der eigentliche Vorschlag ursprünglich kam. Und erklärt, dass man sich gefreut hat, dass ein vom Aktionsbündnis zum Plenum jemand vorbei kam und sich wünscht, dass diese Kommunikation so weiter ausgebaut wird. Die Idee des Kaufes wurde vorgestellt und kam gut an. Das Aktionsbnündnis darf den Vorschlag ausarbeiten, soll aber das Endergebnis nochmal zurückmelden. Man finde es gut das es Menschen gibt die sich für den Laden organisieren, man selbst führe jedoch Verhandlungen mit den Eigentümern.
+Doch der Mensch, der zum Plenum geschickt wurde ist gar nicht da.
+Eine Person aus dem Plenum des Ladenprojekts ist jedoch anwesend. Die Person von der der eigentliche Vorschlag ursprünglich kam. Die Person erklärt, dass man sich gefreut hat, dass ein vom Aktionsbündnis zum Plenum jemand vorbei kam und sich wünscht, dass diese Kommunikation so weiter ausgebaut wird. Die Idee des Kaufes wurde vorgestellt und kam gut an. Das Aktionsbnündnis darf den Vorschlag ausarbeiten, soll aber das Endergebnis nochmal zurückmelden. Man finde es gut das es Menschen gibt die sich für den Laden organisieren, man selbst führe jedoch Verhandlungen mit den Eigentümern.
 
-Doch eine andere Person meldet sich zu Wort und widerspricht der Aussage. Ein junger Mann erläutert selbst lange ein Teil des Eckladens gewesen zu sein; in den letzten Monaten wäre er zwar nicht mehr zu den Plena gegangen, aber durch Gespräche mit den anderen wisse er, dass der Eckladen nicht 100% zum Aktionsbnündnis steht. Diese Peson vom Eckladen erklärt weiter, die Strategie die Orga wäre sich auf die Räume zu bewerben, daher werden sie wohl ehr nicht gleichzeitig ein Kaufangebot unterbreiten.
+So richtig weißt du nich, was du von dieser Einschätzung halten solltest. Da meldet sich schon eine andere Person zu Wort und widerspricht der Aussage. Ein junger Mann erläutert selbst lange ein Teil des Eckladens gewesen zu sein; in der letzten Zeit wäre er zwar nicht mehr zu den Plena gegangen, aber durch Gespräche mit den anderen wisse er, dass der Eckladen nicht 100% zum Aktionsbnündnis steht. Diese Peson vom Eckladen erklärt weiter, die Strategie der Orga ist es sich auf die Räume zu bewerben! Daher werden sie wohl ehr nicht gleichzeitig ein Kaufangebot unterbreiten und ein einmischen einer Externen Gruppe als kontraproduktiv wahrnehmen.
 
-Du bist dir höchst unsicher. Ein langes Mitglied des Eckladens behauptet, dass die hier dargestellte Meinung nicht alle so teilen würden und man eigentlich gar nicht weiß ob das Plenum des Eckladens hinter dem Aktionsbündnis steht. Die erste Person behauptet wiederum ihr hätten eine unkonkrete Idee vorgeschlagen, für die Ausarbeiten dieser gebe es von ihnen ein Go, alles andere muss man konkret noch mal besprechen.
+Du bist dir höchst unsicher. Ein langes Mitglied des Eckladens behauptet, dass die hier dargestellte Meinung nicht alle so teilen würden und man eigentlich gar nicht weiß ob das Plenum des Eckladens hinter dem Aktionsbündnis steht. Die erste Person behauptet wiederum ihr hätten eine unkonkrete Idee vorgeschlagen, für die Ausarbeiten dieser gebe es von ihnen ein Go, alles andere müsse man konkret noch mal besprechen.
 
-Eine andere Person schreitet ein. Im Eckladen gäbe es viele Unterschiedliche Meinungen, die einen sagen das, die andere wiederum was anderes. Das sei ein Problem, denn so wisse man als Aktionsbnündnis nicht woran man ist. Solange man nicht weiß ob der Eckladen hinter dem Aktionsbündnis steht, würde es kein Sinn machen, den Kaufvorschlag auszuarbeiten.
+Eine andere Person schreitet ein. Im Eckladen gäbe es viele Unterschiedliche Meinungen. Die einen sagen das, die andere wiederum was anderes. Das sei schon immer ein Problem, denn so wisse man als Aktionsbnündnis nicht woran man ist. Solange man nicht weiß ob der Eckladen hinter dem Aktionsbündnis steht, würde es kein Sinn machen, den Kaufvorschlag auszuarbeiten.
 
-Die erste Person vom Eckladen versucht wieder einzulenken und verweist euch auf eure eigenes Board im Netz. Da hätte vom Aktionsbündnis zum Besuch des Eckladen-Pelnums beauftrage Person ihren Besuch und das Ergebnis protokolliert. Doch ein dürrer Mann erwidert spottend, dass man doch nicht in den Protokollen des Eckladens rumsuchen will, sondern eine klare Ansage hören möchte, ob der Eckladen nun hinter dem Aktionsbündnis steht oder nicht.
+Die erste Person vom Eckladen versucht wieder einzulenken und verweist euch auf eures eigenes Board im Netz. Da hätte vom Aktionsbündnis zum Besuch des Eckladen-Plenums beauftrage Person ihren Besuch und das Ergebnis protokolliert. Doch ein dürrer Mann erwidert spottend, dass man nicht in den Protokollen des Eckladens rumsuchen will, sondern eine klare Ansage hören möchte, ob der Eckladen nun hinter dem Aktionsbündnis steht oder nicht.
 
 Die erste Person vom Eckladen versucht wieder das Wort zu ergreifen, doch die Moderation unterbrich hier und schlägt vor, zum nächsten Plenum des Eckladens soll wieder eine Person vom Aktionsbnündnis geschickt werden um nochmals abzufragen ob die Aktion ok sei. Vielleicht wäre es besser sowieso regelmässig Menschen zum Eckladen-Plenum zu schicken um eine bessere Kommunikation aufzubauen. So würde man das nächste mal ein besseres Gefühl haben um einzuschätzen, was die Meinung des Eckladens ist, denn wie man sieht ändert sich diese von Person zu Person und alle erzählen etwas unterschiedliches.
+Zustimmung geht durch den Raum.
 
-Du merkst an, dass man doch bereits für den Kaufvorschlag gefragt hat und jetzt die Ausarbeitung des Kaufvorschlags weiter um 2 Wochen zu verschieben nur Zeit vergeuden würde.
-Ein paar Menschen stimmen dir zu und bilden eine Gruppe. Sie formulieren bis zum nächstem mal einen konkreten Vorschlag, um in 2 Wochen mal einer vernünftige Grundlage zu haben.
+Du merkst an, dass man bereits für den Kaufvorschlag gefragt hat und jetzt die Ausarbeitung des Kaufvorschlags weiter um 2 Wochen zu verschieben nur wieder Zeit vergeuden würde.
+Ein paar Menschen stimmen dir zu und bilden eine Gruppe. Sie formulieren bis zum nächstem mal einen konkreten Vorschlag, um in 2 Wochen eine vernünftige Diskussions-Grundlage zu haben.
 
-[[Der Kiez&lt;-ihr beendet das Plenum]]</tw-passagedata><tw-passagedata pid="17" name="9.Treffen" tags="Protest" position="3053,576" size="100,100">Du verspätest dich etwas und als du den Raum betrittst, hat das Plenum schon angefangen. Du durschtreifst mit einem Blick den Raum um einen Sitzplatz zu finden. Es sind ca. 17 Menschen anwesend, auch ein paar Gesichter die du schon lange nicht mehr gesehen hast sind dabei; vielleicht sogar nur beim erstem Plenum.
+[[Der Kiez&lt;-ihr beendet das Plenum]]]</tw-passagedata><tw-passagedata pid="17" name="9.Treffen" tags="Protest" position="3053,576" size="100,100">Du verspätest dich etwas und als du den Raum betrittst, hat das Plenum schon angefangen. Du durschtreifst mit einem Blick den Raum um einen Sitzplatz zu finden. Es sind ca. 15 Menschen anwesend, auch ein paar Gesichter die du schon lange nicht mehr gesehen hast sind dabei; vielleicht sogar nur beim erstem Plenum.
 
-Die Gruppe spricht gerade über den Konsens des Eckladens. Einer vom Aktionsbnündnis war beim Plenum des Eckladens. Er bestätigen, dass sie dafür sind, von euch ein Kaufvorschlag auszuarbeiten und damit in die Öffentlichkeit zu treten, würde helfen.
-Die Gruppe hat nun selbst sich offiziell auf die Räume mit einem Konzept beworben und ist damit zum Warten verdammt. Aber ihnen ist klar, dass selbst wenn sie die Räume kriegen, dies wieder nur auf einen befristeten Mietvertrag hinauslaufen würde und die Miete für ihren Sozialen-Treffpunkt weiter steigen. Da das Problem damit nur verschoben wird, bräuchte man langfristige Lösungen.
+Die Gruppe spricht gerade über den Konsens des Eckladens. Einer vom Aktionsbnündnis war beim Plenum des Eckladens. Er bestätigen das sie dafür sind von wenn ihr ein Kaufvorschlag ausarbeitet und damit in die Öffentlichkeit tretet. Dies würde helfen.
+Die Gruppe hat nun selbst sich offiziell auf die Räume mit einem Konzept beworben und ist damit zum Warten verdammt. Aber ihnen ist klar, dass selbst wenn sie die Räume kriegen, dies wieder nur auf einen befristeten Mietvertrag hinauslaufen würde und die Miete für ihren Sozialen-Treffpunkt weiter steigen wird. Da das Problem damit höchstens nur verschoben wäre, bräuchte man langfristige Lösungen.
 
-Wieder entsteht die selbe Diskussion wie vor zwei Wochen. Der selbe junger Mann vom letzten Plenum setzt dem entgegen, dass gerade viele Menschen, wegen Semesterfieren usw., aus dem Eckladen nicht da seien und hier eine Entscheidung getroffen wurde, hinter dem nicht die gesamte Gruppe des Eckladens steht.
-Doch er wird recht kühl von einem Mann unterbrochen. Um diesen Streit vorzubeugen, hat das Eckladenplenum beschlossen, er dürfte nicht mehr im Namen des Eckladens beim Aktionsbündnis sprechen... Er sei seit 6 Monaten nicht beim Plenum erschienen und ist damit nicht mehr auf dem aktuellen Stand. Das wisser er selbst!
+Wieder entsteht die selbe Diskussion wie vor zwei Wochen. Der selbe junger Mann vom letzten Plenum setzt dem entgegen, dass gerade viele Menschen aus dem Eckladen nicht da seien und hier eine Entscheidung getroffen wurde, hinter dem nicht die gesamte Gruppe des Eckladens hinter steht.
+Doch er wird recht kühl von einem Mann unterbrochen. Um diesen Streit vorzubeugen, hat das Eckladenplenum beschlossen: jeniger dürfte nicht mehr im Namen des Eckladens beim Aktionsbündnis sprechen... Er sei seit mehr als einem halben Jahr nicht beim Plenum erschienen und ist damit nicht mehr auf dem aktuellen Stand. Das wisser er selbst.
 
-Du könntest nicht einschätzen, wie lange es still bleibt(click: &quot;wie lange es still bleibt&quot;)[, aber der Zeit in der die harten Worte in Raum nach schallen, folgt eine unangenehme Leere - und eine geknickte Stimmung - bis ihr mit dem nächsten Thema weiter macht.
+Du könntest nicht einschätzen, wie lange es still bleibt wie lange es still bleibt, aber der Zeit in der die harten Worte in Raum nach schallen, folgt eine unangenehme Leere - und eine geknickte Stimmung - bis ihr mit dem nächsten Thema weiter macht.(click: &quot;mit dem nächsten Thema weiter macht.&quot;)[
 
 Eine Vorbereitungsgruppe hat sich für die Ausarbeitung des Kaufvorschlags getroffen und ein Mann aus der Gruppe möchte nun ihre Ergebnisse präsentieren. Bei einer tieferen Betrachtung seien jedoch berechtige Fragen aufgekommen die weiteres blockiert haben und die zuerst geklärt werden müssten.
-Wenn im Moment dieses Vorschlags nicht bereits eine Institution da ist, die das Haus kaufen könnte, würde hinter den Worten nichts stehen. Die Leeren Worte würden auffliegen, denn nichts ist dahinter. Damit brauchen wir diesen Vorschlag nicht zu machen, weil es lächerlich ist, schließt er die Argumentaion.
-Da die Person mit dem ursprünglichen Vorschlag bereits eine konkrete solidarische Wohnungsgenostschaft vor ein paar Wochen vorschlug, wäre es zunächst gut zu wissen wie weit diese Genossenschaft bereits zugesagt hat, beendet er seine Vorstellung der Ergebnisse.
+Wenn im Moment dieses Vorschlags nicht bereits eine Institution da ist, die das Haus kaufen könnte, würde hinter den Worten nichts stehen. Bei der Verhandlung würden die Eigentümmer Fragen stellen und die leeren Worte würden auffliegen, denn nichts sei dahinter. Damit brauchen wir diesen Vorschlag nicht zu machen, weil es lächerlich ist, schließt er die Argumentaion.
+Da die Person mit dem ursprünglichen Vorschlag bereits eine konkrete solidarische Wohnungsgenostschaft vor ein paar Wochen vorschlug, wäre es zunächst gut zu wissen wie weit die Verhandlungen sind, ob diese Genossenschaft bereits zugesagt hat und wie der Stand sei, beendet er seine Vorstellung der Ergebnisse.
 
-Du schaust auf die Person, an die die Frage indirekt gerichtet ist. Ein junger Mann; der bereits zu oft für ein Streit sorgte, aber er wurde nun mal wieder gefragt. Einer der wie viele Männer immer viel eingebildet spricht und meistens doch nichts einhält. Doch er antwortet nicht. Sein blick starrt auf die Decke, bis er aufsteht und den Raum verlässt.
+Du schaust auf die Person, an die die Frage indirekt gerichtet ist. Ein junger Mann, der bereits zu oft für ein Streit sorgte. Einer der wie viele Männer immer viel eingebildet (ver-)spricht und meistens doch nichts einhält.
+Doch er antwortet nicht. Sein blick starrt auf die Decke, bis er aufsteht und den Raum verlässt.
 
-Unverständnis macht sich in dir breit. Nach einer Weile sagst du, dass die Eigentümer wahrscheinlich nicht verkaufen werden, sondern das Angebot als ein Angriff aufnehmen würden und ihr das dementsprechend in eure weiteren Schritte einkalkulieren müsst.
+Unverständnis macht sich in dir breit. Nach einer Weile sagst du, dass die Eigentümer wahrscheinlich nicht verkaufen werden, sondern das Angebot als ein Angriff wahrnehmen würden und ihr das dementsprechend in eure weiteren Schritte einkalkulieren müsst.
 Der Mensch aus der Vorbereitungsgruppe entgegnet dir, dass man jedoch keine Absage nur fürs Protokoll abzuholen brauche.
 
-Ihr redet lange über Sinn und Unsinn einer rein Symbolischen Aktion. Ein junger sehr großer Mann - der erkennst ihn nur von aller ersten Plenas - steht auf, sagt dass heute wieder nur gelabert wurde, er wieder zurück kommt, wenn das Aktionsbündnis anfängt praktisch zu werden und verlässt den Raum.
+Ihr redet lange über Sinn und Unsinn einer rein Symbolischen Aktion. Ein junger sehr großer Mann - du erkennst ihn nur von aller ersten Plenas - steht auf, sagt dass heute wieder nur gelabert wurde, er wieder zurück kommt, wenn das Aktionsbündnis anfängt praktisch zu werden und verlässt den Raum.
 
 Die Person mit dem Vorschlag für eine Genossenschaft kommt zurück. Seine Augen sind verquollen, er setzt sich hin und sagt nichts.
 Ein Bärtiger Mann spricht ihn an. Auch ihn erkennst du nur vom aller ersten Plenum. Er wirft ihm fragend vor, was dieser &quot;Friedensvorschlag&quot; überhaupt soll. Die Eigentümer der Bar seien Menschen die bereits bewiesen haben wie sie mit den Projekten umgehen. Wo seien die Aktionen? Nach 5 Monaten sei immer noch nichts vorbereitet, beendet er.
 
-Der Mann beantwortet die Frage nicht sofort, sondern bricht in Tränen aus und läuft wieder raus um nach ein paar Minuten wieder zurück zu kehren.
-Dir ist nicht klar wieso, aber ein junge Frau dir Gegenüber versucht sich daraufhin bei ihm tatsächlich zu entschuldigen und spricht seine Entäuschung an.
+Der Mann beantwortet die Frage wieder nicht - sofort. Sondern bricht in Tränen aus und läuft wieder raus. Ein Mensch folgt ihm, doch kommt recht kurz wieder genervt zurück.
 
-Doch er eskaliert alles weiter. Die Gruppe hätte sich gegen jeden Vorschlag zu Strategie oder Veröffentlichung quer gestellt, ist sein Vorwurf. Er hätte viele Ideen angebracht, nur würde schlussendlich alles immer im Metagelaber enden. Auf alles was konkrett vorgeschlagen wird, folgten angegriffe. Er wüsste nicht mehr weiter. Deshalb das Kaufangebot. Eine eher politische-symbolische Aktion um den Konflikt in die Öffentlichkeit zu tragen. Aber auch das wird wieder abgeblockt. Jetzt redet die Gruppe darüber ob das Geld und die Instituion schon da seien. Ihr hättet keine Ahnung, wie lange die Vorbereitung für ein Kauf dauern würde. Dabei müsse man sich so oder so auf ein Nein vorbereiten und die nächsten Schritte planen.
+Ihr setzt eure Unterhaltung über Sind und Unsinn von symbolischen Aktion fort. Nach ein paar Minuten kehrt der Mann wieder zurück.
+Dir ist nicht klar wieso, aber ein junge Frau dir Gegenüber versucht sich daraufhin bei ihm tatsächlich zu entschuldigen und spricht eine vermeintliche Entäuschung an.
+
+Doch er eskaliert ab da alles weiter. Eine Welle an unklaren Anschuldigung schreit er euch entgegen. Die Gruppe hätte sich gegen jeden Vorschlag zu Strategie oder Veröffentlichung quer gestellt, ist sein Vorwurf. Man wolle weder Proteste vorbereiten, noch Vernetzungsarbeit betreiben und auch keine Info-Texte schreiben. Er hätte viele Vorschläge angebracht, nur würde schlussendlich alles immer im Metagelaber enden. Auf alles was konkrett vorgeschlagen wird folgten Angegriffe. Selbst würde man an nichts arbeiten wollen, sondern geht monate lang haltlose skeptische Einwände durch. Er wüsste nicht mehr weiter. Deshalb das Kaufangebot. Eine eher politische-symbolische Aktion um den Konflikt in die Öffentlichkeit zu tragen. Aber auch das wird wieder abgeblockt. Jetzt redet die Gruppe darüber ob das Geld und die Instituion schon da seien. Geld was sich ohne Probleme nach ein paar Monaten beschaffen lassen würde. Ihr hättet keine Ahnung, wie lange die Vorbereitung für ein Kauf dauern. Dabei müsse man sich so oder so auf ein Nein vorbereiten und die nächsten Schritte planen.
 Er sehe jedoch ein, dass die Anwesenden nicht seine Verbündeten sind und weder zusammenarbeiten, noch selbst an Aktionen arbeiten wollen. Sich ausreden und Schuldige suchen wieso man nicht vorankommt, anstelle einfach selbst zu machen, kannst du noch entziffern. Alles andere geht in heulen unter. Er steht mit den Worten auf, dass er das Bündnis nun verlässt um nach Verbündeten zu suchen und geht.
 
-Ihr quatscht vielleicht noch eine halbe Stunde, aber bei dir bleibt eigentlich nichts mehr hängen. Ein paar Menschen sind recht irritiert, ein paar sind sauer, ein paar enttäuscht.
+Ihr quatscht vielleicht noch 20 minuten, aber bei dir bleibt eigentlich nichts mehr hängen. Ein paar Menschen sind recht irritiert, ein paar sind sauer, ein paar enttäuscht, ein paar kotz alles an.
 
 Du schweigst bis ihr [[Der Kiez&lt;-das Plenum beendet]].
 
-Als du gehst, steht vor der Tür noch eine Gruppe. Sie sind davon genervt, dass das Plenum mal wieder gesprengt wurde. Im Raum streiten sich 1-2 cis-Männer und alle anderen werden blockiert, so ihre Beobachtung.]</tw-passagedata><tw-passagedata pid="18" name="10.Treffen" tags="Protest" position="3055,726" size="100,100">Es sind ca. 10 Menschen da. Kein Wunder, der ständige Streit zeigt sein Effekt.
+Als du gehst, steht vor der Tür noch eine Gruppe. Sie sind davon genervt, dass das Plenum zum x-ten mal gesprengt wurde. Im Raum streiten sich 1-2 cis-Männer und alle anderen werden blockiert, so ihre Beobachtung.]</tw-passagedata><tw-passagedata pid="18" name="10.Treffen" tags="Protest" position="3055,726" size="100,100">Es sind ca. 10 Menschen da. Kein Wunder, der ständige Streit zeigt sein Effekt.
 
-Zur Beginn des Plenums kündigt eine kleine Gruppe von Menschen an an der Kaufidee weiter gearbeitet zu haben. Sie haben einen Vorschlag für eine Mail an die Eigentümer und ein öffentliches Statement ausgearbeitet. Dieses wollen sie vorstellen und das ganze mit einer Strategiedebatte verbinden um zuschauen, wie man ab jetzt als Aktionsbündnis weiter macht.
+Zur Beginn des Plenums kündigt eine kleine Gruppe von Menschen an, an der Kaufidee weiter gearbeitet zu haben. Sie haben einen Vorschlag für eine Mail an die Eigentümer und ein öffentliches Statement ausgearbeitet. Dieses wollen sie vorstellen und das ganze mit einer Strategiedebatte verbinden um zu schauen, wie man ab jetzt als Aktionsbündnis weiter machen kann.
 
-Doch eine paar Menschen aus dem Plenum stellen sich dem klar entgegen. Die Kommunikation in den letzten Monaten war mehr als Problematisch, einzelne cis-Männer haben immer wieder für Streit gesorgt. Auch wenn diese nicht anwesend sind, könnte man das ganze nicht unter den Tisch kehren. Zunächst muss diskutiert werden, wie man in Zukunft mit einander reden will und wo in der Vergangenheit das Problem lag, bevor man sich weiter mit Ausarbeitung von Aktionen beschäftigen kann.
+Doch eine paar Menschen aus dem Plenum stellen sich dem klar entgegen. Die Kommunikation in den letzten Monaten war mehr als Problematisch, einzelne cis-Männer haben immer wieder für Streit gesorgt. Es geht nicht so weiter, das einzelne immer wieder die große Runde blockieren, um sich selbst zu profilieren. Auch wenn diese nicht anwesend sind, ist es einfach falsche zu versuchen das ganze unter den Tisch zu kehren. Zunächst muss diskutiert werden, wie man in Zukunft mit einander reden will und wo in der Vergangenheit das Problem lag, bevor man sich weiter mit Ausarbeitung von Aktionen beschäftigen kann.
 
-Du klingst dich einfach aus. Es ist dir zu viel, denn bei der Debatte entsteht nur wieder Streit und als nach mehr als 45 Minuten das Thema ausdiskutiert wurde und Personen das Plenum beendet wollen, weil das ganze Treffen zu nervenaufreibend war, greifen sich einzelne auch noch persönlich an. Ihr unterbrecht hier denn es geht nicht mehr weiter.
+Du klingst dich einfach aus. Es ist dir zu viel, denn bei der Debatte entsteht nur wieder Streit und als nach mehr als 45 Minuten das Thema ausdiskutiert wurde und Personen das Plenum beendet wollen, weil das ganze Treffen zu nervenaufreibend war und sie somit keine Energie mehr haben, greifen sich einzelne auch noch persönlich an. Ihr unterbrecht hier denn es geht nicht mehr weiter.
 
-In der Pause schwankst du ob du (link: &quot;gehen&quot;)[(goto: &quot;10.Gehen&quot;)] oder (link: &quot;bleiben&quot;)[(goto: &quot;10.Bleiben&quot;)] solltest.</tw-passagedata><tw-passagedata pid="19" name="11.Treffen" tags="Protest" position="3049,884" size="100,100">Als du bei dem Treffen ankommst, bist du etwas enttäuscht. Es sind außer dir gerade mal 6 Menschen da. Du hättest dir mehr gewünscht, aber es ist nun mal so. Wahrscheinlich geht es denn anderen ähnlich, denn ihr fangt recht Zügig an die einzelne Arbeitsaufgaben durchzugehen.
+In der Pause schwankst du ob du (link: &quot;gehen&quot;)[(goto: &quot;10.Gehen&quot;)] oder (link: &quot;bleiben&quot;)[(goto: &quot;10.Bleiben&quot;)] solltest.</tw-passagedata><tw-passagedata pid="19" name="11.Treffen" tags="Protest" position="3049,884" size="100,100">Als du bei dem Treffen ankommst, bist du etwas enttäuscht. Es sind außer dir gerade mal 5 Menschen da. Du hättest dir mehr gewünscht, aber es ist nun mal so. Wahrscheinlich geht es denn anderen ähnlich, denn ihr fangt recht Zügig an die einzelne Arbeitsaufgaben durchzugehen.
 
-Als erstes soll &lt;a href=&quot;http://aktionsbuendnis.blogsport.eu&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Blog&lt;/a&gt; erstellt werden, um eine Plattform zu haben Infos und längere Texte im Netz zu veröffentlichen.
+Als erstes soll ein &lt;a href=&quot;http://aktionsbuendnis.blogsport.eu&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Blog&lt;/a&gt; erstellt werden, um eine Plattform zu haben Infos und längere Texte im Netz zu veröffentlichen.
 
-Es braucht zunächst [[AktionsbuendnisPlakat&lt;-Plakate]] im Viertel. Eine Person hat bereits ein Design vorbereitet. Die Gruppe ist begeistert, denn mit eurem Selbstverständnis als Text könnt ihr schon jetzt das Plakatieren anfangen und das Aktionsbündnis auch visuelle dem Viertel vorstellen.
+Es braucht zunächst [[AktionsbuendnisPlakat&lt;-Plakate]] im Viertel. Eine Person hat sogar bereits ein Design vorbereitet. Die Gruppe ist begeistert, denn mit eurem Selbstverständnis als Text könnt ihr schon jetzt das Plakatieren anfangen und das Aktionsbündnis nun visuelle dem Viertel vorstellen.
 Auch Flyer sind schon in Arbeit, doch vor allem fällt es hier noch an Text. Ihr erstellt schnell ein Pad um noch gemeinsam etwas ausarbeiten zu können.
 
-Doch eine unbeantwortet Frage bleibt. Wie wollt ihr die Druckkosten bezahlen? Eine Person hat sich zwar beim letzten Plenum bereit erklärt, sich um Quellen zu kümmern, doch ist heute nicht da. Euch bleibt erst mal nichts anderes als das ganze zu verschieben und zur Not für die Kosten zusammenzulegen und später Geld zu sammeln.
+Doch eine unbeantwortet Frage bleibt. Wie wollt ihr die Druckkosten bezahlen? Ein Mann hat sich zwar beim letzten Plenum bereit erklärt, sich um Quellen zu kümmern, doch ist heute nicht da. Euch bleibt erst mal nichts anderes als das ganze zu ignorieren und zur Nor das Geld vorzuschiessen und später Spenden zu sammeln.
 
-Eine weile Brainstorm ihr wild verschiede Aktionsformen. Twitter-Hashtag, Sticker, vor der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; Bier zu verschenken, Podiumsdiskussionen usw. Auch die Frage nach einem Eskalationsplan kommt auf. Es gab vor längeren Zeit einen Vorschlag, denn man sich vielleicht anschauen könnte, merkt jemand an. Aber euch erscheint es fraglich ob dieses nach all den Monaten noch mit der aktuellen Lage zusammen passen kann.
-Nach etwas Diskussion beschließt ihr in einer Woche mit einer Cornern-Flashmob auf der Straße vor der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; auf den drohenden Verlust eurer Räume aufmerksam zu machen. Knapp 3 Wochen danach gibt es auch schon ein Stadtteilfest, dass für euch eine gute Gelegenheit bietet viele Menschen auf einmal mit einer Kundgebung zu erreichen.
+Eine Weile Brainstorm ihr wild verschiede Aktionsformen. Twitter-Hashtag, Sticker, vor der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] Bier zu verschenken, Podiumsdiskussionen usw. Auch die Frage nach einem Eskalationsplan kommt auf. Es gab vor längeren Zeit einen Vorschlag, denn man sich vielleicht anschauen könnte, merkt jemand an. Aber euch erscheint es fraglich ob dieses nach all den Monaten noch mit der aktuellen Lage zusammen passen kann.
+Nach etwas Diskussion beschließt ihr in einer Woche mit einem Cornern-Flashmob auf der Straße vor der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] auf den drohenden Verlust von Freiräumen aufmerksam zu machen. Knapp 3 Wochen danach gibt es auch schon ein Stadtteilfest, dass für euch eine gute Gelegenheit bietet viele Menschen auf einmal mit einer Kundgebung zu erreichen.
 
-Um nach Außen als eine ernste Menschengruppe des Viertel mit einem Anliegen wirken zu können, wollt ihr die Ladenprojekt bieten für die Kundgebung Statements zu verfassen, in denen sie sich zu den Protesten und dem Aktionsbündnis positionieren sollen.
+Um nach Außen als eine Menschengruppe aus dem Viertel mit einem ernste Anliegen wirken zu können, wollt ihr die Ladenprojekt bieten für die Kundgebung Statements zu verfassen, in denen sie sich zu den Protesten und dem Aktionsbündnis positionieren sollen.
 
-Eure Forderungen sind klar. Die Klausel beim Ladenkulturprojekt müssen weg und ein Mietvertrag für den Eckladen her.
+Eure Forderungen sind klar. Die Klausel beim Ladenkulturprojekt müssen weg und ein Mietvertrag für den Eckladen soll her.
 
-[[Der Kiez&lt;-ihr beendet das Plenum]]</tw-passagedata><tw-passagedata pid="20" name="12.Treffen" tags="Protest" position="3072,1034" size="100,100">{
+[[Der Kiez&lt;-ihr beendet das Plenum]] mit dem Gefühl selten soviel erreicht zu haben wie heute.</tw-passagedata><tw-passagedata pid="20" name="12.Treffen" tags="Protest" position="3072,1034" size="100,100">{
 (set: $buendnisbesuchMoeglich to false)
 (set: $aktionsBuendnisVorStreit to false)
 }
 
 Zwei Tagen vor der ersten Aktion, wolltet ihr euch treffen. Absprechen ob für das Cornern alles steht. Vielleicht schon genauer über die Kundgebung sprechen, mal schauen.
 
-Doch als der Tag nähe rückt stellst du fest, du hast gerade keine Kapazität dafür frei. Du bist dir unsicher ob es richtig ist öffentlich vor der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; zu protestieren. Auch der Stress in der Gruppe war nicht ohne.
+Doch als der Tag nähe rückt stellst du fest, du hast gerade keine Kapazität dafür frei. Du bist dir unsicher ob es richtig ist öffentlich vor der $wayne[&amp;lsqb;irgendeine hippe szene Bar&amp;rsqb;] zu protestieren. Auch der Stress in der Gruppe war nicht ohne.
 
-Du bleibst heute fern, es geht nicht anders.
+Du bleibst heute fern. Es geht nicht anders.
 
 Am Abend sitzt du vor dem Schirm. Ein paar Mails vom Aktionsbündnis-Verteiler liegen in deinem Postfach.
-Nur 2 Personen seinen gekommen, liest du. Wobei eine auch nur Zeit hatte ganu kurz vorbeizuschauen.
-Manche schreiben, dass das Aktionsbündnis damit faktisch aufgelöst ist. Irgendjemand schreibt eine Mail, er/sie hätte soeben, die Kundgebung angemeldet. Aber als der-/diejenige um Hilfe bei der Organisierung bittet, bleibts still.
+Nur 2 Personen seinen gekommen, liest du. Wobei eine auch nur Zeit hatte um kurz vorbeizuschauen.
+Manche schreiben, dass das Aktionsbündnis damit faktisch aufgelöst ist. Irgendjemand schreibt eine Mail, er/sie hätte soeben, die Kundgebung angemeldet. Aber als der-/diejenige um Hilfe bei der Organisierung bittet, bleibt es still.
 
-Du siehst noch eine Mail über den Verteiler gehen, dass jemand nun die Plakate gedruckt hat und hofft, dass jemand Zeit hat diese Kleistern zu gehen. Aber auch dir ist momentan alles zu viel.
+Du siehst noch eine Mail über den Verteiler gehen, dass jemand nun die Plakate gedruckt hat und hofft, dass jemand Zeit hat diese Kleistern zu gehen. Aber auch dir ist momentan alles einfach viel zu viel.
 
-Du schließt das Mail-Programm und fragst dich was wohl in zwei Tagen [[Der Kiez&lt;-im Kiez]] passieren wird. </tw-passagedata><tw-passagedata pid="21" name="1.Cornern" tags="Protest" position="1558,1556" size="100,100">(if: $aktionMitbekommen is &quot;Hingehen&quot;)[(display: &quot;1.Cornern-Aktivistin&quot;)](else-if: $aktionMitbekommen is &quot;NichtHingehen&quot;)[(display: &quot;1.Cornern-Aufgeben&quot;)](else-if: $aktionMitbekommen is &quot;Bar&quot;)[(display: &quot;1.Cornern-Bar&quot;)]
+Du schließt das Mail-Programm und fragst dich was wohl in zwei Tagen [[Der Kiez&lt;-im Kiez passieren]] wird. </tw-passagedata><tw-passagedata pid="21" name="1.Cornern" tags="Protest" position="1558,1556" size="100,100">(if: $aktionMitbekommen is &quot;Hingehen&quot;)[(display: &quot;1.Cornern-Aktivistin&quot;)](else-if: $aktionMitbekommen is &quot;NichtHingehen&quot;)[(display: &quot;1.Cornern-Aufgeben&quot;)](else-if: $aktionMitbekommen is &quot;Bar&quot;)[(display: &quot;1.Cornern-Bar&quot;)]
 (else-if: $aktionMitbekommen is &quot;Kultur&quot;)[(display: &quot;1.Cornern-Kultur&quot;)](else-if: $aktionMitbekommen is &quot;Heim&quot;)[(display: &quot;1.Cornern-Heim&quot;)]</tw-passagedata><tw-passagedata pid="22" name="Kundgebung" tags="" position="1940,1567" size="100,100">{
 (if:(count: (history:), &quot;Aktionsbuendnis&quot;) is 0)[(set: $protestIstVorbei to true)]
 }\
@@ -865,7 +880,7 @@ Goldhorn soll nicht angegriffen werden</tw-passagedata><tw-passagedata pid="24" 
 (set: $hopInfo to it + 1)
 }\
 ***Probleme beim Ladenkulturprojekt***
-(if: $hopInfo is 1)[Scheinbar hat das Ladenkulturprojekt Stresse durch die Betreibern der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; in ihrem Haus.
+(if: $hopInfo is 1)[Scheinbar hat das Ladenkulturprojekt Stresse durch die Betreibern der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] in ihrem Haus.
 
 Die Betreiber regen sich darüber auf, dass die Besucher&amp;#42;innen des Ladenprojekts die Toiletten der Bar benutzten und den Fußweg vermüllen würden. Das Gespräch ist sehr aufgeregt und geht ewig, aber auch nach einer halben Stunde zuhören ist dir nicht wirklich verständlich wo hier das schwerwiegende Problem sein soll.](if: $hopInfo is 2)[Der Ladenkulturprojekt hat Stress mit dem Ordnungsamt.
 
@@ -873,25 +888,25 @@ Eine Party im Haus wurde wohl so laut, dass eine Meldung beim Ordnungsamt aufgeg
 Erst nach mehreren hin und her stellt sich heraus das ein Brief vom Ordnungsamt reingeflattert ist, in dem das Ladenkulturprojekt beschuldigt wird. Die Polizei war nicht vor Ort, und versucht nun schriftlich den Schuldigen zu finden.
 Die Gruppe berät sich sehr lange darüber ein Schriftstück aus einer der WGs aufzusetzen um die Lautstärke mit einer WG-Party zu erklären und somit Stress vom Ladenkulturprojekt mit dem Ordnungsamt abzuwenden.
 
-Ein wenig dumm kommst du dir vor, denn auch hier stößt du nur Fragen von dir. Du fragst die Gruppe wieso es nicht ausreicht als Ladenkulturprojekt schlicht zu schweigen und dem Ordnungsamt einfach keine Information zu liefern. Die Gruppe schaut dich an als wärst du als Kind auf den Kopf gefallen, erwidert dass die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb aus ihrem Haus gegen das Ladenprojekt ausgesagt hat und fährt weiter mit der Planung des weiteren Vorgehens fort.
+Ein wenig dumm kommst du dir vor, denn auch hier stößt du nur Fragen von dir. Du fragst die Gruppe wieso es nicht ausreicht als Ladenkulturprojekt schlicht zu schweigen und dem Ordnungsamt einfach keine Information zu liefern. Die Gruppe schaut dich an als wärst du als Kind auf den Kopf gefallen, erwidert dass die $wayne[&amp;lsqb;hippe szene Bar]&amp;rsqb aus ihrem Haus gegen das Ladenprojekt ausgesagt hat und fährt weiter mit der Planung des weiteren Vorgehens fort.
 
-Du versuchst noch mal eine Frage zu stellen, wirst aber ab jetzt ignoriert.](if: $hopInfo is 3)[Du erfährst von dem Stress, denn das Ladenkulturprojekt, mit der angrenzenden &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; im Haus, hat.
+Du versuchst noch mal eine Frage zu stellen, wirst aber ab jetzt ignoriert.](if: $hopInfo is 3)[Du erfährst von dem Stress, denn das Ladenkulturprojekt, mit der angrenzenden $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] im Haus, hat.
 
-Die Betreiber der Bar verlangen von dem Ladenkulturprojekt nicht mehr am selben Tag wie die Bar aufzuhaben. Die Gruppe ist sichtlich verängstigt wie die Räume unter diesen Umständen zu halten seien, denn die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; hat fast jeden Abend auf.
+Die Betreiber der Bar verlangen von dem Ladenkulturprojekt nicht mehr am selben Tag wie die Bar aufzuhaben. Die Gruppe ist sichtlich verängstigt wie die Räume unter diesen Umständen zu halten seien, denn die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] hat fast jeden Abend auf.
 
 Du begreifst mal wieder nicht worum es geht und fragst die Gruppe wie die Barbetreiber überhaupt dazu kommt solche Forderungen zu stellen.
-Die Begründung ist kurz und verwirrend. Scheinbar werfen die Barbetreiber dem Ladenkulturprojekt vor, Besucher&amp;#42;innen des Projekts würden ihr Bier in die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; mitbringen. So enstehe ein finanzieller Schaden, denn man nicht mehr tollerieren will. Die Betreiber der Bar sind sich sicher, dass es Besucher&amp;#42;innen des Ladenkulturprojekt sein müssen, denn die Angestellen der Bar sammeln am Ende 2-3 Kisten mehr Pfand ein, als Bier verkauft worden ist.
+Die Begründung ist kurz und verwirrend. Scheinbar werfen die Barbetreiber dem Ladenkulturprojekt vor, Besucher&amp;#42;innen des Projekts würden ihr Bier in die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] mitbringen. So enstehe ein finanzieller Schaden, denn man nicht mehr tollerieren will. Die Betreiber der Bar sind sich sicher, dass es Besucher&amp;#42;innen des Ladenkulturprojekt sein müssen, denn die Angestellen der Bar sammeln am Ende 2-3 Kisten mehr Pfand ein, als Bier verkauft worden ist.
 
 Du möchtest wieder etwas fragen, aber...Du bist dir nicht sicher ob du die Begründung wirklich verstanden hast. In deinem Kopf ist ein Durcheinander, so bleibst du dieses mal lieber still.](if: $hopInfo is 4)[Du erfährst von dem Stress, denn das Ladenkulturprojekt mit den Eigentümern hat.
 
-Seit Jahren kriegen sie kein neuen Mietvertrag. Als die neuen Eigentümer das Haus kauften kündigten sie allen Mietparteien. Die Bewohner&amp;#42;innen, das Ladenkulturprojekt und die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; aus dem Haus schlossen sich zusammen. Die Betreiber der Bar holten für die Verhandlungen einen Anwalt. Dieser erreichte, dass die Eigentümer neue Mietverträge austellen müssen, wenn die alten ohne Grund gekündigt werden.
+Seit Jahren kriegen sie kein neuen Mietvertrag. Als die neuen Eigentümer das Haus kauften kündigten sie allen Mietparteien. Die Bewohner&amp;#42;innen, das Ladenkulturprojekt und die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] aus dem Haus schlossen sich zusammen. Die Betreiber der Bar holten für die Verhandlungen einen Anwalt. Dieser erreichte, dass die Eigentümer neue Mietverträge austellen müssen, wenn die alten ohne Grund gekündigt werden.
 
-Zumindest klingt dies zur Abwechslung wie eine schöne Geschichte und du fragst die Gruppe nach den Grund ihrer langen Gesichtern. Sie erzählen dir, dass die Betreiber der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; mit den Hauseigentümern &amp;#036;dicke&amp;#036; sind und ihren Vertrag sofort bekamen, doch die anderen verhandeln seit dem, mit der Hilfe des Anwaltes, weiter.
+Zumindest klingt dies zur Abwechslung wie eine schöne Geschichte und du fragst die Gruppe nach den Grund ihrer langen Gesichtern. Sie erzählen dir, dass die Betreiber der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] mit den Hauseigentümern &amp;#036;dicke&amp;#036; sind und ihren Vertrag sofort bekamen, doch die anderen verhandeln seit dem, mit der Hilfe des Anwaltes, weiter.
 Man ist jedoch auf der sicheren Seite, denn die Bewohner&amp;#42;innen und das Ladenkulturprojekt haben ihre Kündigung nur dann akzeptiert, sollten wirklich für Alle neue Mietverträge ausgestellt werden. Passiert dies nicht, gelten weiterhin die alten Verträge.
-Das klingt recht kompliziert, aber einleuchten für dich. Zum ersten mal fühlst du dich nicht total dumm...zumindest nicht ganz.](if: $hopInfo is 5)[Du erfährst von dem Stress, denn das Ladenkulturprojekt mit der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; aus dem Haus und den Eigentümern des Hauses hat.
+Das klingt recht kompliziert, aber einleuchten für dich. Zum ersten mal fühlst du dich nicht total dumm...zumindest nicht ganz.](if: $hopInfo is 5)[Du erfährst von dem Stress, denn das Ladenkulturprojekt mit der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] aus dem Haus und den Eigentümern des Hauses hat.
 
 Die Bewohner&amp;#42;innen des Hauses warten weiter auf den Abschluss der neuen Mietverträge, denn dieser wird gerade von den Ladenprojekt-Verhandlungen blockiert. 
-Die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; und das Ladenkulturprojekt zogen fast zeitgleich ins Haus ein. Das gefiel der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; nicht und sie #036;erwirkten#036; von den Eigentümern eine Konkurenzschutz-Recht für sich. Seit dem schreibt die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; dem Ladenkulturprojekt Regeln vor, folglich gab es schon immer Streit. Doch mit den neuen Mietverträgen eskalierte alles. Den die Barbetreiber bekammen von den Eigentümern das Recht Klauseln in den Mietvertrag des Ladenprojekts aufzunehmen.
+Die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] und das Ladenkulturprojekt zogen fast zeitgleich ins Haus ein. Das gefiel der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] nicht und sie #036;erwirkten#036; von den Eigentümern eine Konkurenzschutz-Recht für sich. Seit dem schreibt die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] dem Ladenkulturprojekt Regeln vor, folglich gab es schon immer Streit. Doch mit den neuen Mietverträgen eskalierte alles. Den die Barbetreiber bekammen von den Eigentümern das Recht Klauseln in den Mietvertrag des Ladenprojekts aufzunehmen.
 
 Die Barbetreiber verlangen unter anderem einen Getränkeschutz für sich. Demnach darf kein&amp;#42;e Besucher&amp;#42;inn des Ladenprojekts die Räume mit einem Getränk verlassen, sonst drohen Geldstrafen und Kündigung. Zusätzlich darf sich das Ladenprojekt für ihre Räume keine Genehmigung beim Bauamt für öffentliche Veranstaltungen einholen, was ein langfristiges legales überleben unmöglich macht. Eine Person aus der Gruppe wird immer schriller, als sie dir das erzählt und es hört hier nicht auf. Den eigentlich hat man nur die Wahl zwischen dem Akzeptieren oder den Verlust der Räume, denn ohne Klausel eben auch kein Mietvertrag.
 
@@ -908,7 +923,7 @@ Auch die eingeworfene Fensterscheibe bereitet finanziele schmerzen. Die Eigentü
 Und nun funktionieren auch noch einige Steckdosen und Lichtschalter nicht mehr. Ein befreunde Elektrikerin der Gruppe konnte dem Eckladen nicht helfen. Da der Sicherungskasten marode zusammengeschustert wurde, traut sie sich keine Reparatur zu und für eine neue Verlegung wollen die Eigentümer nicht aufkommen.
 
 Die Gruppe berät sich, wie man Geld sammeln könnte um zumindest die wichtigen Reparaturen zu finanzieren, doch kommt zu keinem Ergebnis.
-Du bist überfordert und weiß nicht was du der Gruppe sagen kannst. Vielleicht gibt es irgendwelche Fördertöpfe?](if: $hndrtnInfo is 2)[Du erfährst von Problemen des Eckladenprojekts bzgl. ihres Mietvertrages. Seit dem Betreiber einer &amp;lsqb;$wayne[hippen szene Bar]&amp;rsqb; aus dem Viertel zusammen mit Verwandten dieses Haus vor 4-5 Jahren gekauft haben, kriegt der Eckladen nur noch 2 Jahre befristete Mietverträge.
+Du bist überfordert und weiß nicht was du der Gruppe sagen kannst. Vielleicht gibt es irgendwelche Fördertöpfe?](if: $hndrtnInfo is 2)[Du erfährst von Problemen des Eckladenprojekts bzgl. ihres Mietvertrages. Seit dem Betreiber einer $wayne[&amp;lsqb;hippen szene Bar&amp;rsqb;] aus dem Viertel zusammen mit Verwandten dieses Haus vor 4-5 Jahren gekauft haben, kriegt der Eckladen nur noch 2 Jahre befristete Mietverträge.
 Bald läuft der Mietvertrag wieder aus und die Gruppe macht sich Sorgen die erneute Mieterhöhung nicht mehr bezahlen zu können.
 Vielleicht ein Spendenkonto für Mitglieder&amp;#42;innen einrichten? Oder Workshops fördern lassen um die Miete zu bezahlen? Bis spät in den Abend sitzen sie zusammen und suchen nach möglichen Finanzierungskonzepten. Du schleichst dich langsam weg, aber du weißt nun mal auch nicht wie du helfen kannst.](if: $hndrtnInfo is 3)[Du erfährst vom vergangen Streit des Eckladenrprojekts mit den Eigentümern.
 Vor Jahren gab es wohl eine kleine Wasserpanne im Badezimmer. Mehrmals beim Duschen ist Wasser ausgelaufen und schlecht gelüftet worden. Seit dem behaupten die Eigentümer, dass der Schimmel im Bad verschlimmert wurde und man jetzt für die Beseitigung selbst aufkommen muss. Hinzu kommt das die Eigentümer den Eckladen als eine mögliche Gefahrenquelle für das Haus betrachten. Da überall noch mit Öfen geheizt wird und der Eckladen bereits bewiesen hätte die Mietsachen schlecht zu behandeln, sei es nur eine Frage der Zeit bis das Haus abbrennt, so der Vorwurf.
@@ -933,7 +948,7 @@ Sie fangen an zu brainstormen. Machen sich Notizen. Was soll Teil des Konzepts s
 Du erstarrst ein wenig. Dir ist nicht wirklich klar was gerade passiert und wie es soweit kommen konnte. Die Gruppe ist bereits ganz in ihrem Arbeitsmodus und jeder Versuch von dir noch zu erfahren was sie gerade machen und wieso scheitert.]</tw-passagedata><tw-passagedata pid="27" name="Party-Ende" tags="" position="354,1974" size="100,100">(if: $projekt &gt; 6)[(display: &quot;Party-Aktivistin&quot;)](else-if: $kulturLinks is &gt;= $feiern)[(display: &quot;Party-Kultur&quot;)](else:)[(display: &quot;Party-Bar&quot;)]
 
 [[Auswertung&lt;-Ende]]</tw-passagedata><tw-passagedata pid="28" name="Party-Anfang" tags="" position="361,1628" size="100,100">{
-(set: _wasMachtZu to &quot;(if: $projekt is &gt; 6)[Krass. Der Eckladen auf der Eisi schließt nun.](else-if: $kulturLinks is &gt; 4)[Einer der Ladenprojekte im Viertel macht zu, weil sie einen Wasserschaden verursacht haben.](else-if: $feiern is &gt; 4)[&amp;lsqb;$wayne[Irgendein Ladenprojekt]&amp;rsqb; macht heute eine Party.](else:)[&amp;lsqb;$wayne[Irgendein Ladenprojekt]&amp;rsqb; im Viertel macht zu. Eins das der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; aus dem Viertel Stress gemacht hat.]&quot;)
+(set: _wasMachtZu to &quot;(if: $projekt is &gt; 6)[Krass. Der Eckladen auf der Eisi schließt nun.](else-if: $kulturLinks is &gt; 4)[Einer der Ladenprojekte im Viertel macht zu, weil sie einen Wasserschaden verursacht haben.](else-if: $feiern is &gt; 4)[$wayne[&amp;lsqb;Irgendein Ladenprojekt&amp;rsqb;] macht heute eine Party.](else:)[$wayne[&amp;lsqb;Irgendein Ladenprojekt&amp;rsqb;] im Viertel macht zu. Eins das der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] aus dem Viertel Stress gemacht hat.]&quot;)
 
 (set: _reaktionProjektFriends to &quot;Schade, dass die Gruppe den Laden schließt.&quot;)
 (set: _reaktionKulturLinks to &quot;Es gibt eine Fette Party, wo man all die Gesichter aus dem Viertel nochmal sehen kann.&quot;)
@@ -942,7 +957,7 @@ Du erstarrst ein wenig. Dir ist nicht wirklich klar was gerade passiert und wie 
 (set: _wieReagieren to &quot;(if: $projekt is &gt; 6)[_reaktionProjektFriends _reaktionKulturLinks](else-if: $kulturLinks is &gt; 6)[_reaktionKulturLinks _reaktionGeldbeutel](else:)[_reaktionGeldbeutel]&quot;)
 }\
 
-Eine Nachricht erscheint auf dem Display deines Smartphones. Du machst dein lieblings &amp;lsqb;$wayne[irgendein Messenger]&amp;rsqb; auf und siehst das Bild eines Flyers. (click: &quot;Flyers&quot;)[(display: &quot;Party-Flyer&quot;)]
+Eine Nachricht erscheint auf dem Display deines Smartphones. Du machst dein lieblings $wayne[&amp;lsqb;irgendein Messenger&amp;rsqb;] auf und siehst das Bild eines Flyers. (click: &quot;Flyers&quot;)[(display: &quot;Party-Flyer&quot;)]
 
 _wasMachtZu
 _wieReagieren
@@ -951,7 +966,7 @@ Es gibt Tagsüber-Brunch(if: $projekt is &gt;= 7 or $kulturLinks is &gt;= 7)[, z
 (if: $heim is &gt;= 7)[
 Aber du hast nächste Woche schon wieder soviel zutun, dass du dich entscheidest mal zur Abwechslung zu Hause zu bleiben.
 
-Ein paar Tage später, erfährst du das die Räume des Ladenprojekts den Betreibern der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; gehören und das es Proteste gab, die den Rausschmiss verhindern wollten.
+Ein paar Tage später, erfährst du das die Räume des Ladenprojekts den Betreibern der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] gehören und das es Proteste gab, die den Rausschmiss verhindern wollten.
 
 Du weißt nicht so richtig was du davon halten sollst, schließlich hast du bisher nur gehört es wären linke Spinner die bloss eine Schmutzkampage führen würden. Naja, ob das den protestierenden nun das Recht gibt gegen eine Bar zu haten? Unschön so ner Schmutzkampane...muss der Name der Bar jetzt wirklich in den Dreck gezogen werden?
 Was wohl demnächst in den Laden reinkommen wird?
@@ -1099,7 +1114,7 @@ Das Spiel ist hier vorbei, die Geschichte nicht.
 
 Diese Text-Spiel ist ein Ergebnis aus Sammeln unzähliger Notitzen, Protokolle, Messenger-Gesprächsverläufe, E-Mails, Flyern und Gesprächen mit Beteiligten.
 
-_styleAuthor[Dank geht vor allem für Hilfe und Testen an:] F&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;d, J&amp;#42;&amp;#42;&amp;#42;s, D&amp;#42;&amp;#42;&amp;#42;n, R&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;d, T&amp;#42;&amp;#42;i, HT&amp;#42;&amp;#42;iT&amp;#42;&amp;#42;iT&amp;#42;&amp;#42;iT&amp;#42;&amp;#42;s und 
+_styleAuthor[Dank geht vor allem für Hilfe und Testen an:] F&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;d, T&amp;#42;&amp;#42;i, J&amp;#42;&amp;#42;&amp;#42;s, D&amp;#42;&amp;#42;&amp;#42;n, H&amp;#42;&amp;#42;&amp;#42;&amp;#42;s und 
 
 Danke auch an dich fürs Spielen!
 
@@ -1170,8 +1185,8 @@ Das Ergebnis deiner Auswertung(click-replace: &quot;Das Ergebnis deiner Auswertu
 ***Was tust du heute Abend?***
 
 Du gehst heute _lineFeiern oder _lineProjekt oder _lineKulturLinks oder _lineHeim _lineAktionsbuendnis</tw-passagedata><tw-passagedata pid="42" name="Kiez-Ende" tags="" position="828,315" size="100,100">{
-(set: _lineAusgehenBar to &quot;Das Wetter ist schön deswegen hast Lust heute in die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; im Kiez zu [[Aktion&lt;-gehen]]&quot;)
-(set: _lineAusgehenProjekt to &quot;Das Wetter ist schön und du hast mitbekommen, dass es heute ine Aktion vor der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; um für die Ladenprojekte zu demonstrieren, deswegen [[Aktion&lt;-gehst]] du hin um dir das mal anzuschauen.&quot;)
+(set: _lineAusgehenBar to &quot;Das Wetter ist schön deswegen hast Lust heute in die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] im Kiez zu [[Aktion&lt;-gehen]]&quot;)
+(set: _lineAusgehenProjekt to &quot;Das Wetter ist schön und du hast mitbekommen, dass es heute ine Aktion vor der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] um für die Ladenprojekte zu demonstrieren, deswegen [[Aktion&lt;-gehst]] du hin um dir das mal anzuschauen.&quot;)
 (set: _lineAusgehenKultur to &quot;Das Wetter ist schön und du hast dir Heute ein neues Hemd bei der Hilde gekauft deswegen hast du Lust ne Runde auf der Eisi zu [[Aktion&lt;-cruisen]]&quot;)
 (set: _lineNichtAusgehen to &quot;Das Wetter ist schön deswegen hast du Lust heute einen kleinen [[Aktion&lt;-Spaziergang]] zu machen.&quot;)
 
@@ -1197,18 +1212,18 @@ Wir sind Viele, wir sind entschlossen!
 **Seid solidarisch und schließt euch uns an!**]
 http://aktionsbuendnis.blogsport.eu/selbstverstaendnis/
 
-[[8.Treffen&lt;-zurück]]</tw-passagedata><tw-passagedata pid="44" name="10.Bleiben" tags="Protest" position="3277,716" size="100,100">Es ist dir zu wichtig, als dass du jetzt einfach gehen könntest. Die Projekte wurden nun öffentlich von den Betreibern der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; diffamiert. Der Konflikt ist öffentlich. Doch verbreitet wird nicht der Ruasschmiss des Eckladens noch der Getränkeverbot für das Ladenkulturprojekt, sondern ein Netz an Lügen über die Projekte. Niemand weiß weiterhin wie es um die Existenz der Projekte steht und die Zeit drängt.
+[[8.Treffen&lt;-zurück]]</tw-passagedata><tw-passagedata pid="44" name="10.Bleiben" tags="Protest" position="3277,716" size="100,100">Es ist dir zu wichtig, als dass du jetzt einfach gehen könntest. Die Projekte wurden nun öffentlich von den Betreibern der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] diffamiert. Der Konflikt ist öffentlich. Doch verbreitet wird nicht der Ruasschmiss des Eckladens, noch der Getränkeverbot für das Ladenkulturprojekt. Sondern ein Netz an Lügen über die Projekte. Niemand weiß weiterhin wie es um die Existenz der Projekte steht und die Zeit drängt.
 
-Das was fehlt ist die Veröffentlichung wie die Projekte Verdrängt werden. Es braucht Plakate, Flyer und Aktionen. Darauf könnt ihr euch einigen. Nach 5 Monaten beschließt ihr endlich konkret zu werden. Irgendwie befreiend, doch es ist wirklich viel zu tun.
-Ihr beschließt deshalb eine Aktion vor der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; in zwei Wochen durchzuführen und danach eine Kundgebung zu organisieren. Die Zeit drängt, deshalb soll es nächste Woche ein größeres Arbeitstreffen geben. Um in zwei Wochen, ein paar Tage vor der ersten Aktion, alles wichtige stehen zu haben.
+Das was fehlt ist die Veröffentlichung wie die Projekte Verdrängt werden. Es braucht Plakate, Flyer und Aktionen. Darauf könnt ihr euch einigen. Nach einem langen Plenum beschließt ihr endlich konkret zu werden. Irgendwie befreiend, doch es ist wirklich viel zu tun.
+Ihr beschließt deshalb eine Aktion vor der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] in zwei Wochen durchzuführen und danach eine Kundgebung zu organisieren. Die Zeit drängt, deshalb soll es nächste Woche ein größeres Arbeitstreffen geben. Um in zwei Wochen - ein paar Tage vor der ersten Aktion - alles wichtige stehen zu haben.
 
-Bis dahin ist noch einiges zu erledigen. Design, Materialkosten, Texte usw. um alles müsst ihr euch jetzt kümmern.
+Bis dahin ist noch einiges zu tun. Design, Materialkosten, Texte usw. um alles müsst ihr euch jetzt kümmern.
 
 Ihr verteilt die Aufgaben unter euch und [[Der Kiez&lt;-beendet das Plenum]].</tw-passagedata><tw-passagedata pid="45" name="10.Gehen" tags="Protest" position="3414,717" size="100,100">Doch es war einfach zu viel und du bist müde. Bevor die Pause noch vorbei ist, [[Der Kiez&lt;-verlässt du das Plenum]]</tw-passagedata><tw-passagedata pid="46" name="AktionsbuendnisPlakat" tags="Protest" position="3317,934" size="100,100">&lt;img src=&quot;images/Aktionsbündnis-stellt-sich-vor.jpg&quot; alt=&quot;Aktionsbnündnis Plakat&quot; height=&quot;800&quot; width=&quot;600&quot;/&gt;
 
 [[11.Treffen&lt;-zurück]]</tw-passagedata><tw-passagedata pid="47" name="Kleistern" tags="Protest" position="1393,1742" size="100,100">&lt;img src=&quot;images/kleistern.jpg&quot; alt=&quot;plakat&quot; style=&quot;height: 768; width:564&quot; /&gt;</tw-passagedata><tw-passagedata pid="48" name="1.Cornern-Aktivistin" tags="" position="1556,1699" size="100,100">Draußen ist es Warm und noch hell. Ein wenig aufgeregt bist du schon. Ob überhaupt eine&amp;#42;r kommen wird? Du hast mirbekommen, dass irgendjemand plakatieren war, aber so richtig Plenum und Treffen scheint es nicht mehr zu geben. Es ist nicht mal ganz klar ob genug Flyer gedruckt werden. Deshalb entscheidest du dich mit ein paar Freunden etwas später zu kommen.
 
-Als ihr ankommt seht ihr ungefähr 40 Menschen vor der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; in mehreren Grüppchen sitzen.
+Als ihr ankommt seht ihr ungefähr 40 Menschen vor der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] in mehreren Grüppchen sitzen.
 
 Eine Person aus dem Aktionsbündnis erkennt euch und drückt euch ein Bündel Flyer in die Hand, aber momentan sind schon ein paar Menschen an jeder Ecke am verteilen. Deshalb setzt ihr euch auf den Boden zu einer paar Menschen dazu und fragt ob schon irgendwas passiert ist.
 
@@ -1221,7 +1236,7 @@ Es wird langsam dunkel und die ersten fangen an zu gehen. Die selbe Person die e
 
 Doch du bist zufrieden. Irgendwie unerwartet, aber es lief eigentlich ganz gut. Vielleicht sollte man das cornern einfach regelmässig machen?</tw-passagedata><tw-passagedata pid="49" name="1.Cornern-Aufgeben" tags="" position="1568,1815" size="100,100">Du bist dir unsicher, was du von dieser Aktion halten solltest. Irgendwie ist das auch wie eine Kriegserklärung. Doch hat diese Bar für dich ersichtlich nicht wirklich etwas mit den Mietvertrag des Eckladen zu tun.
 
-Klar gibt es eine Überschneidung zwschen den Eigentümern des Eckladens und den Betreibern der Bar neben dem Ladenkulturprojekt, aber der Eckladen und das Ladenkulturprojekt hat nun mal nichts miteinander zutun. Das eine ist ein Konflikt mit dem Vermieter und das andere ist ein Konflikt zwischen einer Bar und einem Projekt. Das ganze durcheinader zu bringen und die Betrreiber der &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; in den Vorderungung der Kritik zu stellen findest du einfach falsch.
+Klar gibt es eine Überschneidung zwschen den Eigentümern des Eckladens und den Betreibern der Bar neben dem Ladenkulturprojekt, aber der Eckladen und das Ladenkulturprojekt hat nun mal nichts miteinander zutun. Das eine ist ein Konflikt mit dem Vermieter und das andere ist ein Konflikt zwischen einer Bar und einem Projekt. Das ganze durcheinader zu bringen und die Betrreiber der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] in den Vorderungung der Kritik zu stellen findest du einfach falsch.
 Kritisch vorallem ist es in einem kapitalistischen Verhältnis Individuen die Schuld zu geben, oder nicht? Solange das Aktionbündnis die Kritik nicht Strukturell und weniger an den Personen ausrichtet, willst zumidest du dies nicht unterstützen.
 
 Du kriegst den Kopf nicht frei und machst einen Spaziergang.
@@ -1231,12 +1246,12 @@ Die Situation ist einfach sehr komplex, um so einfach heruntergebrochen zu werde
 Die eine Geschichte sind Eigentümer, die nun mal auch Zahlungsverpflichtungen haben und das Haus abbezahlen müssen.
 Die andere Geschichte ist eine Bar, mit Angestellten. Von der auch Menschen leben. Das muss man alles mit einkalkulieren.
 
-(if: $besucheAktionsbuendnis is &gt; 5)[Du hast im Mail-Verteiler mitbekommen, dass irgendein Haufen ohne ein Plenum weiter die Aktionen organisiert. So kannst du deine Bedenken also auch nicht gerecht äußern. Das ist nicht deine Art, so willst du nicht arbeiten. Du findest es zumindest schwierig, dass diese Menschen einfach ohne Konsens weiter machen.]</tw-passagedata><tw-passagedata pid="50" name="1.Cornern-Bar" tags="" position="1559,1923" size="100,100">Du machst dich mit deinen tightesten friends in diesem Quartal zur eurer goldgeliebten &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb;. Aus dem Weiten seht ihr, dass rund 40 Menschen vor der Bar cornern.
+(if: $besucheAktionsbuendnis is &gt; 5)[Du hast im Mail-Verteiler mitbekommen, dass irgendein Haufen ohne ein Plenum weiter die Aktionen organisiert. So kannst du deine Bedenken also auch nicht gerecht äußern. Das ist nicht deine Art, so willst du nicht arbeiten. Du findest es zumindest schwierig, dass diese Menschen einfach ohne Konsens weiter machen.]</tw-passagedata><tw-passagedata pid="50" name="1.Cornern-Bar" tags="" position="1559,1923" size="100,100">Du machst dich mit deinen tightesten friends in diesem Quartal zur eurer goldgeliebten $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;]. Aus dem Weiten seht ihr, dass rund 40 Menschen vor der Bar cornern.
 &lt;img src=&quot;images/cornern1.jpg&quot; alt=&quot;cornern-außen&quot; height=&quot;768&quot; width=&quot;455&quot; /&gt;
 
 Als ihr näher kommt, seht ihr dass die Menschen Flyer verteilen. Ganz cool geht ihr an der Menge vorbei, ohne drauf zu reagieren als euch eine junge Frau ein Zettel anbietet. Ihr setzt euch draußen an den Tisch und lauscht.
 
-Angeblich würde die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; zwei unkommerzielle Ladenräume um die Ecke vertreiben. Du kannst es kaum glauben und gehst rein, an die Theke. Den Dude dahinter kennst du gut, denn er hat dir schomal ein Schnaps ausgegeben. Er erzählt dir, dass das nur Spinner sind. Und außerdem gibt es bei den vielen Faschos da draußen weitaus wichtigere Sachen zu tun als gegen eine Bar, die einem nicht gefällt, zu demonstrieren.
+Angeblich würde die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] zwei unkommerzielle Ladenräume um die Ecke vertreiben. Du kannst es kaum glauben und gehst rein, an die Theke. Den Dude dahinter kennst du gut, denn er hat dir schomal ein Schnaps ausgegeben. Er erzählt dir, dass das nur Spinner sind. Und außerdem gibt es bei den vielen Faschos da draußen weitaus wichtigere Sachen zu tun als gegen eine Bar, die einem nicht gefällt, zu demonstrieren.
 
 Das gezapfte Bier geht aufs Haus und du kehrst zu deinen lachenden Freunden zurück, sie scheinen Spaß am Treiben zu haben und beobachten wie ein weiteres Dutzend zu der Cornern-Gruppe dazu stößt.
 
@@ -1253,7 +1268,7 @@ Du schaust es dir kurz an
 
 Es ist irgend ein Info-Text, dafür hast du nun wirklich keine Zeit. Du gibst den Flyer zurück und gehst weiter.</tw-passagedata><tw-passagedata pid="52" name="1.Cornern-Kultur" tags="" position="1564,2160" size="100,100">Als du die Straße entlang gehst, begegnen dir ein Paar Freund&amp;#42;innen. Du erzählst ihnen von einer coolen Party die morgen stattfinden soll und ihr verabredet euch für den Samstag auf jeden Fall auf einen Kaffee.
 
-Als du weiter gehst begegnet dir eine größere Gruppe vor deiner &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb;. Sie scheinen zu demonstrieren und verteilen Flyer. Du nimmst eins in die Hand und läufst cool weiter ohne etwas zu sagen.
+Als du weiter gehst begegnet dir eine größere Gruppe vor deiner $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;]. Sie scheinen zu demonstrieren und verteilen Flyer. Du nimmst eins in die Hand und läufst cool weiter ohne etwas zu sagen.
 
 Nach ein paar Meter schaust du dir den Flyer an.
 (display: &quot;Flyer1&quot;)
@@ -1283,7 +1298,7 @@ Nach kaum einer Stunde fängt es an zu schütten wie aus Eimer. Ihr rennt an Men
 Als eine Band anfängt zu spielen, lauft verstreut ihr euch jedoch etwas. Eine möchte sich noch ein Döner holen, ein anderer unbedingt in den Umsonst-Klamotten stöbern.
 Du gehst die Info-Stände ab, als dir ein schicker Flyer auffällt. (click: &quot;Flyer&quot;)[(display: &quot;Scheiße-und-Goldhorn&quot;)]
 
-Scheinbar bricht der Shitstorm über &amp;lsqb;$wayne[irgend eine hippe szene Bar]&amp;rsqb; einfach nicht auf. Es ist sogar noch schlimmer geworden, denn Menschen aus dem Umkreis des Aktionsbündnisses scheinen Angestellte des &amp;lsqb;$wayne[irgend eine hippe szene Bar]&amp;rsqb; körperlich bedroht zu haben.
+Scheinbar bricht der Shitstorm über $wayne[&amp;lsqb;irgend eine hippe szene Bar&amp;rsqb;] einfach nicht auf. Es ist sogar noch schlimmer geworden, denn Menschen aus dem Umkreis des Aktionsbündnisses scheinen Angestellte des $wayne[&amp;lsqb;irgend eine hippe szene Bar&amp;rsqb;] körperlich bedroht zu haben.
 Way over the top. Das geht einfach garnicht, wenn irgendwelche linken wieder Steine schmeißen, haben sie sich selber disqualifiziert.
 
 Ein Freund kommt mit einer Falafel vom Syrer zurück und du zeigst ihm sofort den Flyer. Er erzählt dir, er hätte gehört das der Bar bereits Scheiben vom Aktionsbündnis eingeworfen worden sind.
@@ -1310,7 +1325,7 @@ Eine Initiative sammelt Unterschriften für die Brache, denn diese wurde verkauf
 
 Nach all der Anstrengung hast du mega Kohldampf, doch beim Info-Point wirst du schnell enttäuscht, als man dich auf den Brunch an den Laden von früh verweist. So begibst du dich zum nächst gelegenen Café.
 
-Vor der &amp;lsqb;$wayne[irgendeine hippe szene Bar]&amp;rsqb; hat sich eine Menge versammelt, ein Generator läuft, aus dem Boxen hörst du eine weibliche Stimme. Es ist ein Redebeitrag. Du bleibst kurz stehen. Selbstverwaltete Räume auf der Eisi werden bedroht. Ein Aufruf zur Solidarität ans Viertel hallt leicht über die Straße.
+Vor der $wayne[&amp;lsqb;irgendeine hippe szene Bar&amp;rsqb;] hat sich eine Menge versammelt, ein Generator läuft, aus dem Boxen hörst du eine weibliche Stimme. Es ist ein Redebeitrag. Du bleibst kurz stehen. Selbstverwaltete Räume auf der Eisi werden bedroht. Ein Aufruf zur Solidarität ans Viertel hallt leicht über die Straße.
 
 Du fühlst dich tief berührt. Die Gentrifizierung kommt wohl doch schneller, als du es dir eingestehen wolltest. Schade. Du blickst noch mal zurück als du weiter zum Café latschst.</tw-passagedata><tw-passagedata pid="56" name="2.Cornern-Aktivistin" tags="" position="2356,1712" size="100,100">Draußen ist es kalt und nass. Du bist dir auch unsicher, was ein weiteres Cornern überhaupt noch bringen soll.
 
@@ -1324,15 +1339,15 @@ Würden die Orgas bei den Demonstrationen mitmachen, würde das ganze vielleicht
 
 Auch der Flyer an denen sie schon wieder schreiben findest du sehr kritikwürdig. Die Betreiber der Bar werden nicht mal gegendert und die Gruppe scheint einfach nicht verstehen zu wollen, wie schwierig ihre Umgang damit schon wieder ist.</tw-passagedata><tw-passagedata pid="58" name="Kundgebung-Bar" tags="" position="1954,2167" size="100,100">Du hast dich mit deinen Freunden in einem Kaffee verabredet, ihr wollt durch das Viertel latschen und euch die Läden anschauen, denn heute ist Zufällig Osten. Ein Freiraum Stadtteilfest, das ein oder zwei mal im Jahr stattfindet.
 
-Deine Freunde erzählen dir, dass die &amp;lsqb;$wayne[irgendeine hippe szene Bar]&amp;rsqb; in der ihr wart, scheinbar von irgendwelchen Leuten im Viertel angegriffen wurde und diese hätte nun einen klärenden &lt;a href=&quot;https://www.facebook.com/dergoldhorn/posts/1691604540876782?__tn__=K-R&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Facebook-Post&lt;/a&gt; veröffentlicht, der auf alle Punkte ziemlich gut eingeht.
+Deine Freunde erzählen dir, dass die $wayne[&amp;lsqb;irgendeine hippe szene Bar&amp;rsqb;] in der ihr wart, scheinbar von irgendwelchen Leuten im Viertel angegriffen wurde und diese hätte nun einen klärenden &lt;a href=&quot;https://www.facebook.com/dergoldhorn/posts/1691604540876782?__tn__=K-R&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Facebook-Post&lt;/a&gt; veröffentlicht, der auf alle Punkte ziemlich gut eingeht.
 
 Ein Freund ist richtig wütend, denn irgendwelche Zecken haben 45000€ Schäden verursacht und nicht nur das sie sich weigern für die Schäden aufzukommen, die sie am Eigentum anderer verursacht haben, sie fangen auch noch ein Krieg mit Rufschädigung an.
-Du versuchst ihn etwas zu beruhigen, doch eine Freundin sagt das es wahr sei. Sie wäre letztes in einem der Projekte bei der Bar gewesen und hätte Anti-&amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb;-Tags gesehen. &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; versuche sich jetzt nur zu Verteidigen.
+Du versuchst ihn etwas zu beruhigen, doch eine Freundin sagt das es wahr sei. Sie wäre letztes in einem der Projekte bei der Bar gewesen und hätte Anti-$wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;]-Tags gesehen. $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] versuche sich jetzt nur zu Verteidigen.
 
-Dein Freund erzählt weiter, dass einer der Läden froh sein soll, dass sie solange toleriert wurden. Schließlich gefährden sie mit ihren billigen Preisen die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb;.
-Du hackst nach, denn der Vorwurf ist dir zu schwammig, aber kriegst nur zuhören, dass die &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; schließlich Gehälter zahlt und davon Menschen leben. Das müse man mitbedenken, da der angrenzende Ladenkulturprojekt nur einer Art Studi-Künstlerin-Treff ist.
+Dein Freund erzählt weiter, dass einer der Läden froh sein soll, dass sie solange toleriert wurden. Schließlich gefährden sie mit ihren billigen Preisen die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;].
+Du hackst nach, denn der Vorwurf ist dir zu schwammig, aber kriegst nur zuhören, dass die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] schließlich Gehälter zahlt und davon Menschen leben. Das müse man mitbedenken, da der angrenzende Ladenkulturprojekt nur einer Art Studi-Künstlerin-Treff ist.
 
-Irgendwie erscheint dir die Behauptungen doch zu sehr aus der Luft gegriffen. Aber als deine Freundin dich anmotzt ob du Beweisen kannst, dass das alles nicht stimmen würde, schweigst du. Sie nippt wissend an ihrem Kaffee und erzählt dir sie hätte gehört, Leute aus dem Umkreis des Ladenprojekts hätten einem Mitarbeiter aus &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; zusammenschlagen wollen und seien ihm hinterhergerannt. Das sind wieder die selben Spinner wie bei G20, schließt sie ihren Punkt und dir ist auch klar, dass das einfach zu weit geht. Wer so handelt, hat deine Solidarität nicht verdient.</tw-passagedata><tw-passagedata pid="59" name="Party-Bar" tags="" position="221,2177" size="100,100">Die gesamte Straßenecke ist voll mit mehr als 250 Menschen. Du siehst auf der anderen Seite Polizeiautos. Jemand vor dir erzählt, die Bullen hätten die Party aufgelöst.
+Irgendwie erscheint dir die Behauptungen doch zu sehr aus der Luft gegriffen. Aber als deine Freundin dich anmotzt ob du Beweisen kannst, dass das alles nicht stimmen würde, schweigst du. Sie nippt wissend an ihrem Kaffee und erzählt dir sie hätte gehört, Leute aus dem Umkreis des Ladenprojekts hätten einem Mitarbeiter aus $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] zusammenschlagen wollen und seien ihm hinterhergerannt. Das sind wieder die selben Spinner wie bei G20, schließt sie ihren Punkt und dir ist auch klar, dass das einfach zu weit geht. Wer so handelt, hat deine Solidarität nicht verdient.</tw-passagedata><tw-passagedata pid="59" name="Party-Bar" tags="" position="221,2177" size="100,100">Die gesamte Straßenecke ist voll mit mehr als 250 Menschen. Du siehst auf der anderen Seite Polizeiautos. Jemand vor dir erzählt, die Bullen hätten die Party aufgelöst.
 Plötzlich wird eine Feuerwerksrakete gezündet und du hörst vereinzelt &quot;Bullen verpisst euch&quot; Schreie.
 Hinten aus den Räumen ruft eine Frauenstimme, dass die Party weitergeht und man sich von den Bullen nicht einschüchtern lassen will. Doch es hat sich ein Grüppchen am Einlass positioniert und lässt niemand rein.
 
@@ -1344,7 +1359,7 @@ Ein weitere Person am Eingang drückt dir ein [Zettel in die Hand]&lt;replace1|(
 
 Ihr seht, dass in den Räumen noch Menschen weiter feiern. Sie weigern sich zu gehen. Ein paar Menschen neben dir rufen, dass man sich von den Bullen nicht einschüchtern lassen darf und kletern durch ein offenes Fenster wieder in den Laden rein. Ein Freund neben dir stellt sich der Gruppe am Einlass entgegen und schreit: &quot;Was seit ihr für Linke, dass ihr vor der Polizei huscht.&quot; Doch es hilft nichts, die Gruppe will die Party nicht mehr fortsetzten.
 
-Du und ein paar Freunde wollen in die nächste &amp;lsqb;$wayne[hippe szene Bar]&amp;rsqb; ziehen. Hier werdet ihr nicht enttäuscht und bekommt auch schließlich das wofür ihr bezahlt.
+Du und ein paar Freunde wollen in die nächste $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] ziehen. Hier werdet ihr nicht enttäuscht und bekommt auch schließlich das wofür ihr bezahlt.
 
 Auf dem Nachhauseweg, seht ihr das in den Räumen immer noch Menschen feiern. Die letzte Tränengas-Katusche liegt noch auf der Kreuzung. Verständnislos fragt ihr euch, wieso man euch dann nicht rein gelassen hat.</tw-passagedata><tw-passagedata pid="60" name="Party-Aktivistin" tags="" position="366,2175" size="100,100">Die meisten Besucher&amp;#42;innen gehen recht zügig raus doch du, ein paar Freunde und ein weiteres Grüppchen bleiben in dem Laden. Du kannst einfach nicht verstehen, wie die Ladencrew einfach so die letzte Möglichkeit in diesen Räumen zu feiern nicht ausreizt.
 Die ersten persönlichen Vorwürfe lassen nicht lange auf sich warten. Eine Freundin wirft der Orga vom Eckladen voreiligen gehorsam vor. Nur weil die Nachbarn sich möglicherweise beschweren, sollte man die Party nicht abbrechen, es ist schließlich ehe aus. Vor wem beugt ihr euch denn und wieso überhaupt, fragst sie die Ladencrew. Das sei das selbe unterwürfige Verhalten, dass dazu geführt hat, dass die Räume einfach so geräumt wurden, anstelle dafür zu kämpfen. Anstelle gegen den Kapitalismus zu kämpfen, macht verschließt ihr die Tür, stimmt ihr ein junger Mann zu.
@@ -1395,8 +1410,8 @@ Bevor ihr euch wieder auf den Weg aufmacht, fängt es an zu Strömen und ihr war
 Ehe aus Langeweile macht ihr noch eine Runde um den Block, aber euch begegnet niemand mehr.</tw-passagedata><tw-passagedata pid="65" name="Flyer2" tags="" position="316,2350" size="100,100">&lt;img src=&quot;images/flyer2.jpg&quot; alt=&quot;Flyer&quot; height=&quot;724&quot; width=&quot;724&quot; /&gt;</tw-passagedata><tw-passagedata pid="66" name="Laden-Probleme" tags="" position="430,1082" size="100,100">{
 (set: $ladenInfo to it + 1)
 }\
-***Probleme von &amp;lsqb;$wayne[irgendeine Ladenprojekt]&amp;rsqb;***
-(if: $ladenInfo is 1)[Der Vermieter des &amp;lsqb;$wayne[irgendeine Ladenprojekt]&amp;rsqb; will schonwieder mehr Miete. Die Orga-Crew ist gestresst. Eigentlich macht es ihnen Spass die Ladenräume zu organisieren. Es sind soziokulurelle Räume, Reproduktionsräume, Räume wo man sich organisieren kann, sich gegenseitig eitwas beibirngen kann, Räume in dennen man wenigstens träumen kann von einer Gesellschaft die nicht durch Sexismus, Rassismus, Faschismus, Klassismus, usw. zersetzt ist. Oder einfach nur leben, sich mit Freunden treffen ohne, dass man als assozial hingestellt wird, weil Mensch kein Geld hat, ohne Konsumzwang, wo Mensch sich nicht erst seine/ihre existenzberechtigung erkaufen muss.
+***Probleme von $wayne[&amp;lsqb;irgendeine Ladenprojekt&amp;rsqb;]***
+(if: $ladenInfo is 1)[Der Vermieter des $wayne[&amp;lsqb;irgendeine Ladenprojekt&amp;rsqb;] will schonwieder mehr Miete. Die Orga-Crew ist gestresst. Eigentlich macht es ihnen Spass die Ladenräume zu organisieren. Es sind soziokulurelle Räume, Reproduktionsräume, Räume wo man sich organisieren kann, sich gegenseitig eitwas beibirngen kann, Räume in dennen man wenigstens träumen kann von einer Gesellschaft die nicht durch Sexismus, Rassismus, Faschismus, Klassismus, usw. zersetzt ist. Oder einfach nur leben, sich mit Freunden treffen ohne, dass man als assozial hingestellt wird, weil Mensch kein Geld hat, ohne Konsumzwang, wo Mensch sich nicht erst seine/ihre existenzberechtigung erkaufen muss.
 
 Eigentlich ist man hier um sich mit Carearbeit, Awareness-Arbeit, politische Arbeit oder kultruller Arbeit praktisch und theoretisch ausseinader zu setzten. Aber was macht man stattdessen? Arbeiten für Eigentümmer. Immer mehr Geld für sie anscheffeln, damit sie ihr Kapital noch weiter akkumulieren können. Für sie ihre Rendite erwirtschaften und ihre Kredite abbezahlen. Für Häuser die sie vor ein paar Jahren für 100.000€ gekauft haben, für Läden die man innerhalb der eigenen Mietdauer schon abbezahlt hat. Um sich von den Eigetnümer&amp;#42;innen noch dabei anhören, dass sie die Wohltäter der Gesellschaft sind, weil sie schließlich das Haus gekauft haben und irgendwelchen jungen linken Studis erlaubt haben ihre Räume zu benutzten.
 
