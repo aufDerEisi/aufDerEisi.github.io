@@ -16,7 +16,7 @@
 display: none;
 }
 tw-story {
-	background-color: #0b0016;
+	background-color: #0a0213;
 }
 
 tw-link, enchantment-link /* sets both base link colors */
@@ -119,7 +119,9 @@ color: #F5B4DD;
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -372,7 +374,7 @@ Etwas ungewohnt, aber wieso nicht. Du greifst in den Kühlschrank und kehrst wie
 &#39;Es ist ziemlich voll und du drängst dich bis an die Bar durch. Mit einem Getränk in der Hand läufst du durch die Räume, musst aber feststellen, dass du (either: &quot;absolut niemanden&quot;, &quot;eigentlich niemanden&quot;) kennst.
 Ein wenig versuchst du dir die Zeit mit einem herumliegenden (either: &quot;Heft&quot;, &quot;Maganzin&quot;, &quot;Flyer&quot;, &quot;Buch&quot;) zu vertreiben, aber zum Lesen ist es gerade zu laut.&#39;))
 
-(set: _gespraech1 to &#39;du trinkst 2 Getränke und unterhältst dich mit ein paar Freunden bei einer Zigarette.&#39;)
+(set: _gespraech1 to &#39;Du trinkst 2 Getränke und unterhältst dich mit ein paar Freunden bei einer Zigarette.&#39;)
 (set: _gespraech2 to &#39;Du lernst zwei linke an der Bar kennen. Ihr unterhaltet euch lange über eine fehlende linke Bewegung und leere Ideen. Am Ende bleibt ihr bei (either: &quot;Griechenland&quot;, &quot;Italien&quot;, &quot;Frankreich&quot;) hängen. Es gäbe dort momentan eine Masse die mobilisiert werden kann, das Problem ist nur, das auch viele Rechte Teil der Demonstrantinen sind.
 Nach 2-3 Bier stellen sie fest, dass man mit einer Beteiligung nur die Rechten stärker machen würde.&#39;)
 (set: _gespraech3 to &#39;Am Nebentisch unterhalten sich zwei Menschen sehr laut über Gentrifizierung. Sie streiten sich darum welche Rolle Hipster eigentlich in diesem Prozess spielen.
@@ -399,7 +401,13 @@ Stille bricht herein.&#39;)
   _vekueLine&#39;,
   &quot;Es ist ein gewöhnlicher Bar-Abend.
   
-  (either: _konzertLine, _langeweile, _gespreach)&quot;))
+  _langeweile&quot;,
+  &quot;Es ist ein Bar-Abend wie jede andere.
+  
+  _konzertLine&quot;,
+  &quot;Heute ist es etwas voll bei der Bar.
+  
+  _gespreach&quot;))
 
 (set: _plenumLine to (either:
   &#39;Es war für einige ein langer Tag und das merkt man/frau an der Trägheit des Plenums. Ihr schafft dennoch etwas für $wayne[&amp;lsqb;irgendein Projekt&amp;rsqb;] zu machen. Und unterhaltet euch danach vor der Tür noch etwas über das Life im Viertel.&#39;,
