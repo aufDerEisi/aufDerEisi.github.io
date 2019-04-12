@@ -251,6 +251,7 @@ color: #F5B4DD;
 (set: $bierTrinkAktionAktiv to false)
 (set: $aktionsBuendnisVorStreit to true)
 (set: $protestIstVorbei to false)
+(set: $zuAktionGegangen to 0)
 
 (set: _styleAuthor to (text-style: &quot;shadow&quot;) + (text-style: &quot;italic&quot;))
 (set: $wayne to (text-style: &quot;italic&quot;) + (text-style: &quot;smear&quot;))
@@ -1147,7 +1148,7 @@ Du hast (colour: red + white)[_ladenInfos] von 13 Geschichten über die Ladenpro
 
 Du hast das Aktionsbündnis (colour: red + white)[(if: $einladungPer is &#39;&#39;)[nicht] entdeckt](if: $einladungPer is not &#39;&#39;)[ und bist
 - (colour: red + white)[$besucheAktionsbuendnis] bei einem Plenum gewesen
-- (colour: red + white)[0] zu einer Aktion hingegangen
+- (colour: red + white)[$zuAktionGegangen] mal zu einer Aktion hingegangen
 - warst (colour: red + white)[nicht] an der Organisierung von öffentlichem Protest beteiligt]
 
 Das Ergebnis deiner Auswertung(click-replace: &quot;Das Ergebnis deiner Auswertung&quot;)[
@@ -1157,7 +1158,10 @@ Das Ergebnis deiner Auswertung(click-replace: &quot;Das Ergebnis deiner Auswertu
 - Du (colour: red + white)[hast nichts] gegen die Verbreitung von Lügen und Diffamierungen gegenüber ehrenamtlichen und linken Projekten (colour: red + white)[unternommen] oder hast diese Teilweise mit verbreitet
 - Du (colour: red + white)[lässt es zu], dass ein weiteres selbstverwaltetes Projekt von den selben Akteuren gefickt wird
 
-***Abzeichen:*** (colour: red + white)[(weißes) (akademisches) neoliberales (cis) Abschaum]]]</tw-passagedata><tw-passagedata pid="39" name="Solimail" tags="" position="2711,1078" size="100,100">&lt;img src=&quot;images/Solimail.png&quot; alt=&quot;solimail&quot; height=&quot;500&quot; width=&quot;700&quot; /&gt;
+(set: _ladenInfos to 12)\
+(set: _abStyle to (text-style: &#39;underline&#39;) + (text-style: &#39;bold&#39;))
+(set: _abzeichen to &quot;(if: _ladenInfos is 13)[(_abStyle[w]eißes) (_abStyle[a]kademisches) _abStyle[n]eoliberales (_abStyle[c]is) _abStyle[A]bschaum](else:)[(W) (A) N (C) A]&quot;)\
+***Abzeichen:*** _abzeichen]]</tw-passagedata><tw-passagedata pid="39" name="Solimail" tags="" position="2711,1078" size="100,100">&lt;img src=&quot;images/Solimail.png&quot; alt=&quot;solimail&quot; height=&quot;500&quot; width=&quot;700&quot; /&gt;
 
 [[6.Treffen&lt;-zurück]]</tw-passagedata><tw-passagedata pid="40" name="Antwort-Solimail" tags="" position="2827,1077" size="100,100">&lt;img src=&quot;images/antwort-solimail-1.png&quot; alt=&quot;antwort-auf-solimail-1&quot; height=&quot;700&quot; width=&quot;500&quot;/&gt;
 &lt;img src=&quot;images/antwort-solimail-2.png&quot; alt=&quot;antwort-auf-solimail-2&quot; height=&quot;700&quot; width=&quot;500&quot;/&gt;
@@ -1234,7 +1238,10 @@ Bis dahin ist noch einiges zu tun. Design, Materialkosten, Texte usw. um alles m
 
 Ihr verteilt die Aufgaben unter euch und [[Der Kiez&lt;-beendet das Plenum]].</tw-passagedata><tw-passagedata pid="45" name="10.Gehen" tags="Protest" position="3414,717" size="100,100">Doch es war einfach zu viel und du bist müde. Bevor die Pause noch vorbei ist, [[Der Kiez&lt;-verlässt du das Plenum]]</tw-passagedata><tw-passagedata pid="46" name="AktionsbuendnisPlakat" tags="Protest" position="3317,934" size="100,100">&lt;img src=&quot;images/Aktionsbündnis-stellt-sich-vor.jpg&quot; alt=&quot;Aktionsbnündnis Plakat&quot; height=&quot;800&quot; width=&quot;600&quot;/&gt;
 
-[[11.Treffen&lt;-zurück]]</tw-passagedata><tw-passagedata pid="47" name="Kleistern" tags="Protest" position="1393,1742" size="100,100">&lt;img src=&quot;images/kleistern.jpg&quot; alt=&quot;plakat&quot; style=&quot;height: 768; width:564&quot; /&gt;</tw-passagedata><tw-passagedata pid="48" name="1.Cornern-Aktivistin" tags="" position="1556,1699" size="100,100">Draußen ist es Warm und noch hell. Ein wenig aufgeregt bist du schon. Ob überhaupt eine&amp;#42;r kommen wird? Du hast mirbekommen, dass irgendjemand plakatieren war, aber so richtig Plenum und Treffen scheint es nicht mehr zu geben. Es ist nicht mal ganz klar ob genug Flyer gedruckt werden. Deshalb entscheidest du dich mit ein paar Freunden etwas später zu kommen.
+[[11.Treffen&lt;-zurück]]</tw-passagedata><tw-passagedata pid="47" name="Kleistern" tags="Protest" position="1393,1742" size="100,100">&lt;img src=&quot;images/kleistern.jpg&quot; alt=&quot;plakat&quot; style=&quot;height: 768; width:564&quot; /&gt;</tw-passagedata><tw-passagedata pid="48" name="1.Cornern-Aktivistin" tags="" position="1556,1699" size="100,100">{
+(set: $zuAktionGegangen to it + 1)
+}\
+Draußen ist es Warm und noch hell. Ein wenig aufgeregt bist du schon. Ob überhaupt eine&amp;#42;r kommen wird? Du hast mirbekommen, dass irgendjemand plakatieren war, aber so richtig Plenum und Treffen scheint es nicht mehr zu geben. Es ist nicht mal ganz klar ob genug Flyer gedruckt werden. Deshalb entscheidest du dich mit ein paar Freunden etwas später zu kommen.
 
 Als ihr ankommt seht ihr ungefähr 40 Menschen vor der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] in mehreren Grüppchen sitzen.
 
@@ -1295,7 +1302,10 @@ Doch als du an der Menge vorbei gehst und an der Bar nach den zwei fragst, heiß
 Sie wird schnell sauer als sie den Zettel liest. Es sei völlig irrational was hier abläuft, entgegnet sie dir und wirft dabei den Flyer auf den Tisch.
 Sie weiß durch Geschichten das der Eckladen bereits niedrigere Mieten als andere bezahlt und damit im ganzen Haus höhere Kosten verursacht. Und sowieso hätte der Ladenkulturprojekt die Vereinbarung mit der Bar freiwillig unterschrieben.
 
-Ihr unterhält euch noch lange über die Hetzkampagne vor der Tür und fragt euch was man dagegen unternehmen könnte. Irgendwann wird es dunkel und die Menge verschwindet.</tw-passagedata><tw-passagedata pid="53" name="Kundgebung-Aktivistin" tags="" position="1946,1718" size="100,100">Heute ist zufällig Osten und du hast über den E-Mail-Verteiler mitbekommen, dass ein paar Leute eine Kundgebung direkt vor der Bar der Eigentümer des Eckladens organisiert haben.
+Ihr unterhält euch noch lange über die Hetzkampagne vor der Tür und fragt euch was man dagegen unternehmen könnte. Irgendwann wird es dunkel und die Menge verschwindet.</tw-passagedata><tw-passagedata pid="53" name="Kundgebung-Aktivistin" tags="" position="1946,1718" size="100,100">{
+(set: $zuAktionGegangen to it + 1)
+}\
+Heute ist zufällig Osten und du hast über den E-Mail-Verteiler mitbekommen, dass ein paar Leute eine Kundgebung direkt vor der Bar der Eigentümer des Eckladens organisiert haben.
 Auf dem Weg dahin besuchst du ein paar Projekte. In den Ladenprojekten ist ziemlich viel Los. Es gibt eine Vielfalt an Brunches, Lese- und Bastelecken, Bands bauen gerade ihre Technik auf, auf der Brache ist ein Gewusel an Menschen um Info-Stände und Workshops gibt es auch noch.
 
 Als du einen Freund triffst, fällt euch auf das es ist schon spät Nachmittag ist und ihr wolltet euch die Kundgebung wenigstens anschauen. Nach ein paar Minuten kommt ihr bei der Kundgebung an. Die Anlage steht bereits und eine Person versucht gerade den Stromgenerator anzuwerfen. Scheinbar haben die Kundgebung nur 3-4 Leute organisiert. Du hattest leider selbst keine Zeit, aber irgendwie findest du es auch falsch sich so reinzuhängen, wenn einfach sonst niemand was tut. Außerdem ist die Art der drei sehr unangenehm, das zeigt sich schon darin, dass niemand mit ihnen zusammen arbeiten möchte.
