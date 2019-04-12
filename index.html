@@ -1115,7 +1115,7 @@ Du bist dir unsicher ob du [[Aktionsbuendnis&lt;-hingehen]] willst oder [[Der Ki
 (set: _styleAuthor to (text-style: &quot;shadow&quot;) + (text-style: &quot;italic&quot;))
 (set: _ladenInfos to $hopInfo + $hndrtnInfo + $ladenInfo)
 }\
-(background: #696969)[&lt;blockquote&gt;Wo auf der gesellschaftlichen Ebene Solidarität als Konzept aufgegeben wurde, werden privat Stress und Erschöpfung angehäuft.&lt;/blockquote&gt;]
+(background: #696969)[&lt;blockquote&gt;Wo auf der gesellschaftlichen Ebene Solidarität als Konzept aufgegeben wurde, werden privat Stress und Erschöpfung angehäuft. - Mark Fisher&lt;/blockquote&gt;]
 ###Ende
 (if: _ladenInfos is 13)[
 (display: &quot;hidden&quot;)
@@ -1128,7 +1128,7 @@ Das Spiel ist hier vorbei, die Geschichte nicht.
 
 Diese Text-Spiel ist ein Ergebnis aus Sammeln unzähliger Notitzen, Protokolle, Messenger-Gesprächsverläufe, E-Mails, Flyern und Gesprächen mit Beteiligten.
 
-_styleAuthor[Dank geht vor allem für Hilfe und Testen an:] F&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;d, T&amp;#42;&amp;#42;i, J&amp;#42;&amp;#42;&amp;#42;s, D&amp;#42;&amp;#42;&amp;#42;n, H&amp;#42;&amp;#42;&amp;#42;&amp;#42;s und 
+_styleAuthor[Dank geht vor allem für Hilfe und Testen an:] T&amp;#42;&amp;#42;i, F&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;d, D&amp;#42;&amp;#42;&amp;#42;n, J&amp;#42;&amp;#42;&amp;#42;s, H&amp;#42;&amp;#42;&amp;#42;&amp;#42;s und 
 
 Danke auch an dich fürs Spielen!
 
@@ -1158,8 +1158,8 @@ Das Ergebnis deiner Auswertung(click-replace: &quot;Das Ergebnis deiner Auswertu
 - Du (colour: red + white)[hast nichts] gegen die Verbreitung von Lügen und Diffamierungen gegenüber ehrenamtlichen und linken Projekten (colour: red + white)[unternommen] oder hast diese Teilweise mit verbreitet
 - Du (colour: red + white)[lässt es zu], dass ein weiteres selbstverwaltetes Projekt von den selben Akteuren gefickt wird
 
-(set: _ladenInfos to 12)\
-(set: _abStyle to (text-style: &#39;underline&#39;) + (text-style: &#39;bold&#39;))
+
+(set: _abStyle to (text-style: &#39;underline&#39;) + (text-style: &#39;bold&#39;))\
 (set: _abzeichen to &quot;(if: _ladenInfos is 13)[(_abStyle[w]eißes) (_abStyle[a]kademisches) _abStyle[n]eoliberales (_abStyle[c]is) _abStyle[A]bschaum](else:)[(W) (A) N (C) A]&quot;)\
 ***Abzeichen:*** _abzeichen]]</tw-passagedata><tw-passagedata pid="39" name="Solimail" tags="" position="2711,1078" size="100,100">&lt;img src=&quot;images/Solimail.png&quot; alt=&quot;solimail&quot; height=&quot;500&quot; width=&quot;700&quot; /&gt;
 
