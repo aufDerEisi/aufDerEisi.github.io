@@ -125,7 +125,9 @@ color: #F5B4DD;
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -381,7 +383,7 @@ Etwas ungewohnt, aber wieso nicht. Du greifst in den Kühlschrank und kehrst wie
 Ein wenig versuchst du dir die Zeit mit einem herumliegenden (either: &quot;Heft&quot;, &quot;Maganzin&quot;, &quot;Flyer&quot;, &quot;Buch&quot;) zu vertreiben, aber zum Lesen ist es gerade zu laut.&#39;))
 
 (set: _gespraech1 to &#39;Du trinkst 2 Getränke und unterhältst dich mit ein paar Freunden bei einer Zigarette.&#39;)
-(set: _gespraech2 to &#39;Du lernst zwei linke an der Bar kennen. Ihr unterhaltet euch lange über eine fehlende linke Bewegung und leere Ideen. Am Ende bleibt ihr bei (either: &quot;Griechenland&quot;, &quot;Italien&quot;, &quot;Frankreich&quot;) hängen. Es gäbe dort momentan eine Masse die mobilisiert werden kann, das Problem ist nur, das auch viele Rechte Teil der Demonstrantinen sind.
+(set: _gespraech2 to &#39;Du lernst zwei linke an der Bar kennen. Ihr unterhaltet euch lange über eine fehlende linke Bewegung und leere Ideen. Am Ende bleibt ihr bei (either: &quot;Griechenland&quot;, &quot;Italien&quot;, &quot;Spanien&quot;, &quot;Portugal&quot;) hängen. Es gäbe dort momentan eine Masse die mobilisiert werden kann, das Problem ist nur, das auch viele Rechte Teil der Demonstrantinen sind.
 Nach 2-3 Bier stellen sie fest, dass man mit einer Beteiligung nur die Rechten stärker machen würde.&#39;)
 (set: _gespraech3 to (display: &quot;ProjektGespaech1&quot;))
 (set: _gespraech4 to (display: &quot;ProjektGespaech2&quot;))
@@ -461,12 +463,12 @@ Du bist dir sicher heute ein tieferes Verständnis gewonnen zu haben und teils a
 (set: _werIstDa to (either:
 	&#39;Ein paar deiner Freunde sind auch schon da, ihr stoßt erstmal an und eine der Austellerin erzählt, dass sie gerade Stress hat alle Unterlagen für das Bafög einzureichen. Nach einer weiteren Kippe machst du eine kleine Runde.&#39;,
 	&#39;Beim reinkommen stellst du fest, noch ist niemand da. Alles wirkt sehr kalt. Du begrüßt die Künstler&amp;#42;innen und im zweiten Satz fragen sie schon ob es ok ist, wenn sie sich kurz einen Döner um die Ecke holen. Denn alle hätten heute kaum Zeit um etwas zu essen gehabt. Du nickst verständnisvoll und bleibst in der Stille zurück, um dir die Bilder anzuschauen.&#39;,
-	&#39;Als du da bist läuft laut Musik, du gehst an eine provisorisch errichtete Bar und siehst ein paar bekannte Gesichter. Scheinbar soll es auch eine Party geben, denn in der Eckke baut schon ein DJ auf. Nach kurzer Zeit, hast du zwei Gläser Sekt in dir und als die Bar die ersten Popsongs einschaltet, entscheidest du dich dir doch noch kurz die Bilder anzuschauen.&#39;,
+	&#39;Als du da bist läuft laut Musik, du gehst an eine provisorisch errichtete Bar und siehst ein paar bekannte Gesichter. Scheinbar soll es auch eine Party geben, denn in der Ecke baut schon ein DJ auf. Nach kurzer Zeit, hast du zwei Gläser Sekt in dir und als die Bar die ersten Popsongs einschaltet, entscheidest du dich dir doch noch kurz die Bilder anzuschauen.&#39;,
 	&#39;Niemand grüßt dich. Außer den Künstlern, sind nur zwei Menschen da. Die Wände und Boden sind voll mit unfertigen Zeichnungen und Farbe. Einer der ausstellenden drückt seine Kippe aus, geht zu einem Bild und malt weiter. Wahrscheinlich ist es eine Art Performance meets come together, denkst du dir und drehst dich einmal in langsamen Schritten im Kreis und nährst dich dem ersten Bild.&#39;))
 (set: _wasAusgestellt to (either:
 	&#39;Die Wand ist voll mit unzähligen Bilder verschiedener Größe. Auf jedem Bild ist ein Dreieck zu sehen. Der Raum ist voller Dreiecke in allen Farben. Du musst ironisch Schmunzeln, als du auf dem kleinsten Bild die sixtinische Madonna siehst, die von einem Dreiecke übermalt worden ist.&#39;,
 	&#39;Auf eine Wand ist ein Projektor gerichtet. Links und recht davon jeweils ein Bild. Die Projektion zeigt eine Aufnahme aus einem Videospiel. Es handelt sich um ein Rallye-Rennspiel aus dem Anfang des Jahrtausends. Pixelgrafik trifft Matsch. Auf den beiden Bildern an der Wand ist jeweils eine Abbildung einer Rennstrecke zu sehen. Du fragst den Küstler nach dem Grund und er erwidert, dass es sich um ein tolles Spiel handele.&#39;,
-	&#39;Es hängen mehrere Fotos verlassener Fabriken an der Wand. Verwildert, voll getaggt, zerstört, verwüstet und schön. Drunter hängen Versuche, die Fotos nachzuzeichnen. Du machst davon ein Foto um es mit deinen Insta-Friends zu teilen.&#39;,
+	&#39;Es hängen mehrere Fotos verlassener Fabriken an der Wand. Verwildert, voll getaggt, zerstört, verwüstet, authentisch, perfekt. Drunter hängen Versuche die Fotos nachzuzeichnen. Du machst davon ein Foto um es mit deinen Insta-Friends zu teilen.&#39;,
 	&#39;Die Bilder sind grotesk. Auf einem Zeichnung siehst du Jesus, dem aus der Vagina ein Dämon rauskriecht mit der Überschrift Versager. Der Künstler erzählt dir kurz danach das Bild auf einem Trip gesehen zu haben.&#39;,
 	&#39;Neben den Bildern hängt ein großer Spiegel. Ebenso auf der genau gegenüberliegenden Seite. Auf den Spiegel steht in großen Buchstaben DU. Du bist dir unsicher ob das wirklich so dumm ist, oder nur zu deep für dich, deshalb sagst du lieber nichts und startest mit einer Person neben dir ein Gespräch über den neuen Club, der vor kurzem aufgemacht hat. Die Person dir gegenüber finde dies auch spannend. Zurück starrend fragt deine Gegenüber rhetorisch was der neue Club für die musikalische Bereicherung dieser Stadt bedeutet wird.&#39;))
 }\
@@ -1167,6 +1169,7 @@ Das Ergebnis deiner Auswertung(click-replace: &quot;Das Ergebnis deiner Auswertu
 - Du (colour: red + white)[lässt es zu], dass ein weiteres selbstverwaltetes Projekt von den selben Akteuren gefickt wird
 
 
+(set: _ladenInfos to $hopInfo + $hndrtnInfo + $ladenInfo)\
 (set: _abStyle to (text-style: &#39;underline&#39;) + (text-style: &#39;bold&#39;))\
 (set: _abzeichen to &quot;(if: _ladenInfos is 13)[(_abStyle[w]eißes) (_abStyle[a]kademisches) _abStyle[n]eoliberales (_abStyle[c]is) _abStyle[A]bschaum](else:)[(W) (A) N (C) A]&quot;)\
 ***Abzeichen:*** _abzeichen]]</tw-passagedata><tw-passagedata pid="39" name="Solimail" tags="" position="2711,1078" size="100,100">&lt;img src=&quot;images/Solimail.png&quot; alt=&quot;solimail&quot; height=&quot;500&quot; width=&quot;700&quot; /&gt;
@@ -1551,7 +1554,7 @@ Als letztes seht ihr eine Kollage aus Auschnitten verschiedener Reportagen über
 
 Du führst mit der Freundin noch lange ein Gespräch über das Gesehene. Ihr stimmt den meisten Dingen zu, aber findet auch, dass die Filme ein wenig propagandistisch rüber kamen und die Kapitalismuskritik den eigentlichen Kern verwässerte.](else:)[Du gehst zu einer Veranstaltung mit künstlerischen und witzigen gesellschaftskritischen Kurzfilmen.
 
-Szeneklüngel, Akademikern, Lebensgeschichten, Kunstfilme, alles buntgemischt. Von ein paar Kurzfilmen fühlst du dich angesprochen.]</tw-passagedata><tw-passagedata pid="79" name="ZukunftPlakate" tags="" position="294.33333333333337,2300" size="100,100">&lt;img src=&quot;images/109plakat.jpg&quot; alt=&quot;109wichtig&quot; height&quot;500&quot; width=&quot;350&quot;/&gt;&lt;img src=&quot;images/109plakat1.jpg&quot; alt=&quot;ideen für&quot; height&quot;350&quot; width=&quot;500&quot;/&gt;
+Szeneklüngel, Akademikern, Lebensgeschichten, Kunstfilme, alles buntgemischt. Von ein paar Kurzfilmen fühlst du dich angesprochen.]</tw-passagedata><tw-passagedata pid="79" name="ZukunftPlakate" tags="" position="294,2300" size="100,100">&lt;img src=&quot;images/109plakat.jpg&quot; alt=&quot;109wichtig&quot; height&quot;500&quot; width=&quot;350&quot;/&gt;&lt;img src=&quot;images/109plakat1.jpg&quot; alt=&quot;ideen für&quot; height&quot;350&quot; width=&quot;500&quot;/&gt;
 &lt;img src=&quot;images/109plakat2.jpg&quot; alt=&quot;raum für&quot; height&quot;500&quot; width=&quot;350&quot;/&gt;&lt;img src=&quot;images/109plakat3.jpg&quot; alt=&quot;infrastruktur für&quot; height&quot;350&quot; width=&quot;500&quot;/&gt;
 
 
