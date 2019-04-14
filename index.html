@@ -124,7 +124,9 @@ color: #F5B4DD;
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -973,7 +975,7 @@ Du erstarrst ein wenig. Dir ist nicht wirklich klar was gerade passiert und wie 
 (set: _wieReagieren to &quot;(if: $projekt is &gt; 6)[_reaktionProjektFriends _reaktionKulturLinks](else-if: $kulturLinks is &gt; 6)[_reaktionKulturLinks _reaktionGeldbeutel](else:)[_reaktionGeldbeutel]&quot;)
 }\
 
-Eine Nachricht erscheint auf dem Display deines Smartphones. Du machst dein lieblings $wayne[&amp;lsqb;irgendein Messenger&amp;rsqb;] auf und siehst das Bild eines Flyers. (click: &quot;Flyers&quot;)[(display: &quot;Party-Flyer&quot;)]
+Eine Nachricht erscheint auf dem Display deines Smartphones. Du machst dein $wayne[&amp;lsqb;irgendein Messenger&amp;rsqb;] auf und siehst das Bild eines Flyers. (click: &quot;Flyers&quot;)[(display: &quot;Party-Flyer&quot;)]
 
 _wasMachtZu
 _wieReagieren
@@ -989,23 +991,23 @@ Was wohl demnächst in den Laden reinkommen wird?
 
 [[Auswertung&lt;-Ende]]](else:)[
 Du entscheidest dich mit ein paar Freund&amp;#42;innen die Party wenigstens noch mitzunehmen. Ihr trefft euch Abends und [[Party&lt;-geht zur Party]].]</tw-passagedata><tw-passagedata pid="29" name="Kiez-Beschreibung" tags="" position="711,151" size="100,100">{
-(set: _ort to &quot;(if: $kulturLinks is &lt;= 2 and $feiern is &lt;= 2)[Viertel wie jedes andere](else-if: $feiern is &gt; 2)[(if: $kulturLinks is &lt;= 2)[hippes Viertel wie jedes andere](else: )[szenniges hippes Viertel wie kein anderes]](else: )[szenniges Viertel]&quot;)
+(set: _ort to &quot;(if: $kulturLinks is &lt;= 2 and $feiern is &lt;= 2)[Eine Straße wie jede andere](else-if: $feiern is &gt; 2)[(if: $kulturLinks is &lt; 3)[Der Kern eines hippen Viertels](else: )[Ein szenniges hippes Kiez wie kein anderes]](else: )[Ein szenniges Kiez]&quot;)
 
 (set: _gentriStandHaus to &quot;(if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 5)[zwei-drei leerstehende Häuser](else-if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 8)[ein-zwei leerstehende Häuser](else:)[ein leer stehendes Haus]&quot;)
 
-(set: _gentriStandKultur to &quot;(if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 4)[Hier und da sieht man neben einem Dönerladen auch mal eine Bar oder ein Caffee.](else-if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 12)[Hier und da ist ein Platten- oder Tattooshop zu sehen. Aber das Bild der Eisi wird vordergründig von Baustellen geprägt.](else:)[Popup Geschäfte entstehen da wo früher mal ein Friseursalon war, aber da bist du ehe nie rein gegangen.]&quot;)
+(set: _gentriStandKultur to &quot;(if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 4)[Hier und da sieht man neben einem Dönerladen auch mal eine Bar oder ein Caffee.](else-if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 11)[Hier und da ist ein Platten- oder Tattooshop zu sehen. Aber das Bild der Eisi wird vordergründig von Baustellen geprägt.](else:)[Ein Popup Geschäft entstehen da wo früher mal ein Friseursalon war, aber da bist du ehe nie reingegangen.]&quot;)
 
 (set: _vielImmo to &#39;Es gibt viel Aktivität auf dem Immobilienmarkt&#39;)
 (set: _mietenBillig to &#39;Die Mieten sind billig und ermöglichen Menschen sich auszuprobieren.&#39;)
 (set: _gentriStand to &quot;(if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 2)[_mietenBillig](else-if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 4)[_mietenBillig _vielImmo.](else-if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 9)[_vielImmo und die Hauspreise explodieren.](else-if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 12)[_vielImmo und die Hauspreise explodieren... die Mieten ebenso.](else:)[_vielImmo die Mieten haben sich in den letzten Jahren verdoppelt, teilweise verdreifacht.]&quot;)
 
-(set: _umzug to &quot;(if: $feiern is &gt; 4)[Du wurdest gefragt ob du beim Umzug helfen kannst, aber die Gestalten hast du schon ewig nicht gesehen, obwohl du sie regelmäßig in die Karaoke-Bar einlädst, und sowieso hast du schon was vor...](else:)[]&quot;)
-(set: _ereignis to &quot;(if: (count: (history:), &#39;Der Kiez&#39;) is 2)[Eine Galerie im Viertel macht zu. Dort haben HGB-Studis aus dem Viertel ihre arbeiten ausgehängt. Als du früh Abends vor deinem Browser sitzt, liest du in einem Facebook-Kommentar es gäbe halt keine Künstlerinnen mehr im Viertel.
-Du antwortest darauf, dass die Atelierräume zwar billig waren, aber dafür ohne Strom und Wasser und ärgerst dich noch bis zum Abend über die blöde Bemerkung.](else-if: (count: (history:), &#39;Der Kiez&#39;) is 5)[War das öffentliche Leben früher von verschiedenen Vereinen und lokalen Initiativen geprägt, wird dieses heute nun mehr von lokalen Geschäften und ab und zu von ihren Stadt-Festen gestaltet.
-Du bist dir unsicher was du davon halten sollest, als du mit deinen Freund*innen in einem Caffee an der Ecke für ein Freiraum-capppuccini 5€ zahlst.](else-if: (count: (history:), &#39;Der Kiez&#39;) is 13)[Freunde von dir sind aus dem Viertel nach Anger-Crottendorf gezogen. Es ist zwar weiter von der Innenstadt weg, aber dafür etwas billiger. _umzug](else:)[]&quot;)
+(set: _umzug to &quot;(if: $feiern is &gt; 4)[Du wurdest gefragt ob du beim Umzug helfen kannst, aber die Gestalten hast du schon ewig nicht gesehen, obwohl du sie regelmäßig in die Bar einlädst](else:)[]&quot;)
+(set: _ereignis to &quot;(if: (count: (history:), &#39;Der Kiez&#39;) is 2)[Eine Galerie im Viertel macht zu. Dort haben HGB-Studis aus dem Viertel ihre Arbeiten ausgehängt. Als du früh Abends vor deinem Browser sitzt, liest du in einem Facebook-Kommentar es gäbe halt keine Künstlerinnen mehr im Viertel.
+Du antwortest darauf, dass die Atelierräume zwar billig waren, aber dafür ohne Strom und Wasser und ärgerst dich noch bis zum Abend über die blöde Bemerkung.](else-if: (count: (history:), &#39;Der Kiez&#39;) is 6)[War das öffentliche Leben früher von verschiedenen Vereinen und lokalen Initiativen geprägt, wird dieses heute nun mehr von lokalen Geschäften und ab und zu von ihren Stadt-Festen gestaltet.
+Du bist dir unsicher was du davon halten sollest, als du mit deinen Freund&amp;#42;innen in einem Caffee an der Ecke für ein Freiraum-capppuccini 5€ zahlst.](else-if: (count: (history:), &#39;Der Kiez&#39;) is 12)[Freunde von dir sind aus dem Viertel nach Anger-Crottendorf gezogen. Es ist zwar weiter von der Innenstadt weg, aber dafür etwas billiger. _umzug](else:)[]&quot;)
 
 }\
-Ein _ort.
+_ort.
 
 Das Viertel ist voll mit Lebensmittelläden, Handyläden, Schischabars und Spielhallen. Gleichzeitig sind Wagenplätze, Hausprojekte, Ladenprojekte, kleine Gärten und Bauspielplätze anzutreffen.
 
@@ -1198,7 +1200,7 @@ Das Ergebnis deiner Auswertung(click-replace: &quot;Das Ergebnis deiner Auswertu
 }\
 **Die Eisenbahnstraße**
 (display: &quot;Kiez-Beschreibung&quot;)\
-(if: (count: (history:), &quot;Der Kiez&quot;) is &lt; 2)[Du wohnst im Viertel.
+(if: (count: (history:), &quot;Der Kiez&quot;) is &lt; 1)[(text-style: &quot;underline&quot;)[Du wohnst im Viertel.]
 
 ]
 ***Was tust du heute Abend?***
@@ -1214,7 +1216,7 @@ Du gehst heute _lineFeiern oder _lineProjekt oder _lineKulturLinks oder _lineHei
 **Die Eisenbahnstraße**
 (display: &quot;Kiez-Beschreibung&quot;)\
 
-Du wohnst im Viertel.
+
 (if: $protestIstVorbei)[(display: &quot;Party-Anfang&quot;)](else-if:(count: (history:), &quot;Aktionsbuendnis&quot;) is &gt; 1)[
 Du hast mitbekommen das heute eine Aktion vom Aktionsbündnis ist und bist dir unsicher ob du (link: &quot;hingehst&quot;)[(set: $aktionMitbekommen to &quot;Hingehen&quot;)(goto: &quot;Aktion&quot;)] oder (link: &quot;nicht hingehst&quot;)[(set: $aktionMitbekommen to &quot;NichtHingehen&quot;)(goto: &quot;Aktion&quot;)]](else-if: $buendnisbesuchMoeglich is false and $projekt &gt; 7)[Du hast mitbekommen das heute eine Aktion vom Aktionsbnündnis ist, aber möchtest da (link: &quot;nicht hingehen&quot;)[(set: $aktionMitbekommen to &quot;NichtHingehen&quot;)(goto: &quot;Aktion&quot;)]](else:)[_lineAusgehen]</tw-passagedata><tw-passagedata pid="43" name="Selbstverstaendnis" tags="" position="3312,345" size="100,100">(background: #696969)[###Selbstverständnis
 
