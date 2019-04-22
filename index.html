@@ -138,7 +138,9 @@ color: #F5B4DD;
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -297,6 +299,7 @@ color: #F5B4DD;
 (set: $ProjektGespaech1 to 0)
 (set: $ProjektGespaech2 to 0)
 (set: $ProjektGespaech3 to 0)
+(set: $ProjektLangeweile1 to 0)
 (set: $KulturVortrag1 to 0)
 (set: $KulturVortrag2 to 0)
 (set: $KulturFilm1 to 0)
@@ -405,12 +408,9 @@ Heute ist wohl ein (either: _hoerspielLine, _vortragLine, _abendWieImmerLine)&qu
 &#39;Zwei Dudes verbinden elektronische Geräte und machen irgendwas mit Kabeln. Und zwar eine Stunde lang bis es losgeht! Endlich fangen sie an. Einer macht einen driving beat, der andere rapt. Zwischen durch klingelt beim einem das Handy und das Konzert wird kurz unterbrochen. Der flow wechselt manchmal abrupt und die Texte sind schwer zu deuten, aber die Authentizität beeindruckt dich schon ein wenig.&#39;)&quot;)
 (set: _langeweile to (either: &#39;Jede halbe Stunde folgt ein krasser Musik-Bruch dem nächsten, weil irgendjemand anderes an den Musikplayer kommt. Auch von den Gesprächen bist du heute schnell genervt und winkst relativ schnell ab.&#39;,
 &#39;Heute ist es etwas voll. Es wird viel geraucht und ist sehr laut. Deine Freunde erzählen eigentlich nichts spannendes, und du starrst alle 5 Minuten auf dein Smartphone. Nach zwei $wayne[&amp;lsqb;irgendein Getränk&amp;rsqb;] gibst du auf.&#39;,
-&#39;Mit ein paar Freunden triffst du dich bei $wayne[&amp;lsqb;irgendein Ladenprojekt&amp;rsqb;]. An der Bar angekommen, stellst du dich in die Schlange, nimmst 2€ aus deinem Geldbeutel in die Hand und wartest. Doch hinter der Theke ist niemand. Nach zwei Minuten Warten fragst du ein Mädel neben dir, ob sie wisse, wann der Barmensch zurück kommt. Sie antwortet dir, dass sie heute die Bar macht, aber gerade keine Lust hat. Du kannst dir selbst ein Getränk rausnehmen, wenn du willst.
-
-Etwas ungewohnt, aber wieso nicht. Du greifst in den Kühlschrank und kehrst wieder auf die andere Seite zurück. Deine Freunde sagen dir es wäre hier normal, als du sie darauf ansprichst. Die Leute seinen keine Angestellten, sondern betreiben den Raum ehe als Treffpunkt. Du antwortest genervt, dass du das selbst weißt.&#39;,
+&#39;(display: &quot;ProjektLangeweile1&quot;)&#39;,
 &#39;Es ist ziemlich voll und du drängst dich bis an die Bar durch. Mit einem Getränk in der Hand läufst du durch die Räume, musst aber feststellen, dass du (either: &quot;absolut niemanden&quot;, &quot;eigentlich niemanden&quot;) kennst.
-Ein wenig versuchst du dir die Zeit mit einem herumliegenden (either: &quot;Heft&quot;, &quot;Magazin&quot;, &quot;Flyer&quot;, &quot;Buch&quot;) zu vertreiben, aber zum Lesen ist es gerade zu laut.&#39;,
-&#39;Du trinkst 2 Getränke und unterhältst dich mit ein paar Freunden bei einer Zigarette.&#39;))
+Ein wenig versuchst du dir die Zeit mit einem herumliegenden (either: &quot;Heft&quot;, &quot;Magazin&quot;, &quot;Flyer&quot;, &quot;Buch&quot;) zu vertreiben, aber zum Lesen ist es gerade zu laut.&#39;))
 
 (set: _gespraech2 to &#39;Du lernst zwei linke an der Bar kennen. Ihr unterhaltet euch lange über eine fehlende linke Bewegung und leere Ideen. Am Ende bleibt ihr bei (either: &quot;Griechenland&quot;, &quot;Italien&quot;, &quot;Spanien&quot;, &quot;Portugal&quot;) hängen. Es gäbe dort momentan eine Masse die mobilisiert werden kann, das Problem ist nur, das auch viele Rechte Teil der Demonstrant&amp;#42;Innen sind.
 Nach 2-3 Bier stellen sie fest, dass man mit einer Beteiligung nur die Rechten stärker machen würde.&#39;)
@@ -429,6 +429,9 @@ Nach 2-3 Bier stellen sie fest, dass man mit einer Beteiligung nur die Rechten s
   
   _konzertLine&quot;,
   &quot;Heute ist es etwas voll bei der Bar.
+  
+  _gespreach&quot;,
+  &quot;Nicht wirklich voll, aber leer ist es heute bei der Bar auch nicht.
   
   _gespreach&quot;))
 
@@ -1602,14 +1605,14 @@ Seine Gesprächspartner&amp;#42;innen erwidern, dass Veränderungen nun mal sehr
 Das Gespräch bricht plötzlich ab, als die Person endlich unterbrochen wird. Man lasse sich nichts vor diktieren und schon gar nicht mit Ängsten unter Druck setzten.](else:)[Am Fenster sitzt eine Gruppe die sich mehr oder weniger laut streitet. Es geht schon wieder um Umweltzerstörung. Eigentlich ist dazu schon alles gesagt und das Thema durch, deswegen bist du etwas genervt und gehst weiter.]</tw-passagedata><tw-passagedata pid="73" name="ProjektGespaech3" tags="" position="230,1268" size="100,100">{
 (set: $ProjektGespaech3 to it + 1)
 }\
-(if: $ProjektGespaech3 is 1)[Drin ist es etwas voll und da es draußen sowieso noch warm ist, gehst du mit deinem $wayne[&amp;lsqb;irgendein Getränk&amp;rsqb;] raus.
+(if: $ProjektGespaech3 is 1)[Da es draußen sowieso noch warm ist, gehst du mit deinem $wayne[&amp;lsqb;irgendein Getränk&amp;rsqb;] raus.
 
 Vor der Tür sitzen 3 Menschen, die sich über die momentane Verdrängung von mehreren kollektiven Projekten aus einer alten Werkshalle im Leipziger Westen unterhalten.
 Eine Person philosophiert über die Untätigkeit der Szene im Leipziger Westen. Anstelle sich zusammen zu organisieren, feindet man sich gegenseitig an, entsolidarisiert sich von einander. Und weswegen? Weil man glaubt so in der Gunst der Eigentümer&amp;#42;innen zu stehen und so 1 Jahr länger bleiben darf?
 Eine weitere Person greift den Pfaden auf und Fragt offen, ob das die Konterrevolution der care-revolution ist? Immerhin seien dass Reproduktionsräume, soziale Räume, politische Räume, in denen man gemeinsam lernt sich um care-Arbeit zu kümmern und diese kollektiv zu organisieren. Von daher lässt sich dieser Rückschlag, zumindest als ein verlorene Kampf gegen das neoliberale System, gegen die Grenzen der kapitalistischen Verwertungslogik betrachten.
 Die Dritte Person unterbricht die Meta-Gespräche. Am Ende ist das Problem, dass es scheiß egal ist ob es ein Protest gibt oder was der Verlust dieser Räume bedeutet. In die Werkshalle kommt eine Billardhalle rein und den meisten Menschen ist das egal, wer oder was dafür verdrängt wurde, solange sie nach der Lohnarbeit ihr Bier trinken können.
 
-Stille bricht herein.](else:)[Drin ist es etwas voll und da es draußen sowieso noch warm ist, gehst du mit deinem $wayne[&amp;lsqb;irgendein Getränk&amp;rsqb;] raus.
+Stille bricht herein.](else:)[Da es draußen sowieso noch warm ist, gehst du mit deinem $wayne[&amp;lsqb;irgendein Getränk&amp;rsqb;] raus.
 
 Vor der Tür sitzen 3 Menschen, die sich über die momentane Verdrängung von Ladenräumen in Leipzig unterhalten.
 
@@ -1735,7 +1738,12 @@ Nach etwas schweigen, weicht ihr auf ein Gespräch über (either: &quot;das neue
 (set: _spielZug to (either: &#39;gewürfelt&#39;, &#39;gezogen&#39;))
 }\
 (if: $HausFreunde2 is 1)[zu einem Spieleabend ein. $wayne[&amp;lsqb;Dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] bring eine Sammlung Brettspiele mit. Ihr spielt nur nebenbei, denn eure Smartphones scheinen euch mehr zu unterhalten als die Spiele. Die Regeln sind sehr verwirrend und du hast vergessen ob du schon _spielZug hast.
-Nach dem $wayne[&amp;lsqb;dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] gewonnen hat, feixt ihr nur zum Spaß, dass das nur so ist weil $wayne[&amp;lsqb;dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] das Spiel schon so gut kennt.](else:)[zum Spieleabend ein. $wayne[&amp;lsqb;Ein&amp;#42;e Freund&amp;#42;in&amp;rsqb;] bring eine Sammlung Brettspiele mit. Ihr habt etwas Spaß, ansonsten ist es ein Abend wie jeder andere.]</tw-passagedata></tw-storydata>
+Nach dem $wayne[&amp;lsqb;dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] gewonnen hat, feixt ihr nur zum Spaß, dass das nur so ist weil $wayne[&amp;lsqb;dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] das Spiel schon so gut kennt.](else:)[zum Spieleabend ein. $wayne[&amp;lsqb;Ein&amp;#42;e Freund&amp;#42;in&amp;rsqb;] bring eine Sammlung Brettspiele mit. Ihr habt etwas Spaß, ansonsten ist es ein Abend wie jeder andere.]</tw-passagedata><tw-passagedata pid="88" name="ProjektLangeweile1" tags="" position="225.83333333333337,1381.6666666666667" size="100,100">{
+(set: $ProjektLangeweile1 to it + 1)
+}\
+(if: $ProjektLangeweile1 is 1)[Mit ein paar Freunden triffst du dich bei $wayne[&amp;lsqb;irgendein Ladenprojekt&amp;rsqb;]. An der Bar angekommen, stellst du dich in die Schlange, nimmst 2€ aus deinem Geldbeutel in die Hand und wartest. Doch hinter der Theke ist niemand. Nach zwei Minuten Warten fragst du ein Mädel neben dir, ob sie wisse, wann der Barmensch zurück kommt. Sie antwortet dir, dass sie heute die Bar macht, aber gerade keine Lust hat. Du kannst dir selbst ein Getränk rausnehmen, wenn du willst.
+
+Etwas ungewohnt, aber wieso nicht. Du greifst in den Kühlschrank und kehrst wieder auf die andere Seite zurück. Deine Freunde sagen dir es wäre hier normal, als du sie darauf ansprichst. Die Leute seinen keine Angestellten, sondern betreiben den Raum ehe als Treffpunkt. Du antwortest genervt, dass du das selbst weißt.](else:)[Du trinkst 2 Getränke und unterhältst dich mit ein paar Freunden bei einer Zigarette.]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
