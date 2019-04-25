@@ -321,6 +321,9 @@ color: #F5B4DD;
 (set: $KulturAustellung5 to 0)
 (set: $HausFreunde1 to 0)
 (set: $HausFreunde2 to 0)
+(set: $HausFreunde3 to 0)
+(set: $HausFreunde4 to 0)
+(set: $SpieFreunde1 to 0)
 }\
 
 
@@ -525,18 +528,12 @@ _werIstDa
 
 Für die Ausstellung (either: &quot;stehen zwei Räume&quot;, &quot;steht ein Raum&quot;) zur Verfügung. _wasAusgestellt
 
-Irgendwie hast du doch wieder genug und begibst dich wieder zurück.
 ]\
 
 Du bleibst noch etwas und [[Der Kiez&lt;-gehst]] dann nach Hause.</tw-passagedata><tw-passagedata pid="6" name="Haus" tags="" position="1067,734" size="100,100">{
 (set: $heim to it + 1)
 
-(set: _lineFriendsLabern to (either:
-	&#39;die neue Serie von $wayne[&amp;lsqb;irgendein&amp;#42;e Regisseur&amp;#42;in&amp;rsqb;] und über den Auftritt von Trump (either: &quot;bei einem Veteranen-Treff&quot;, &quot;vor dem Kongress&quot;, &quot;auf dem G7 Gipfel&quot;, &quot;in einer Fernsehen-Ansprache&quot;)&#39;,
-	&#39;Justin Trudeau coolen Handshake mit Trump und das Deutschland mehr Flüchtlinge im Mac-Pom aufnehmen könnte. Ein Freund merkt an, dass man einfach alles schlecht reden könnte und Sachen manchmal einfach positiver betrachtet werden müssten. Sonst bleibt bei dir nichts hängen.&#39;,
-	&#39;(display: &quot;HausFreunde1&quot;)&#39;,
-	&#39;die Auswirkungen von social Media. Es sei zwar toll, dass man so schnell sich über Alles informieren kann, aber irgendwie verbringt man doch die meiste Zeit mit Unsinn.
-Ein Freund erzählt darauf, dass er gerne mal bei anderen Leuten in der Straßenbahn auf den Screen schaut. Die meisten Leute, besonders abends, würden (either: &quot;sich nur Klamotten kaufen&quot;, &quot;nur Spiele spielen&quot;, &quot;sinnlos scrollen&quot;). Ihr lacht lange ohne dass du wirklich weißt warum.&#39;))
+(set: _lineFriendsLabern to (display: &#39;HausFreunde&#39;))
 
 (set: _andereVA to (either: &quot;$wayne[&amp;lsqb;irgendeine Veranstaltung&amp;rsqb;]&quot;, &quot;$wayne[&amp;lsqb;irgendeine Party&amp;rsqb;]&quot;, &quot;$wayne[&amp;lsqb;irgendein Barabend&amp;rsqb;]&quot;))
 
@@ -546,7 +543,7 @@ Ein Freund erzählt darauf, dass er gerne mal bei anderen Leuten in der Straßen
 (set: _freundeGehen to (either: &#39;Nach einem langen Abend verabschieden sich deine Freunde. Du bist sehr müde und&#39;,
 &#39;Die Zeit verfliegt und schon ist es nach 11, deine Freunde verabschieden sich eine&amp;#42;r nach dem/r anderen/m und du&#39;,
 &#39;Deine Freunde wollen weiter ziehen, heute sei _andereVA und sie fragen dich ob du mitkommen magst. Doch du hattest einen anstrengenden Tag, deswegen bleibst du und&#39;))
-(set: _spieleAbend to (display: &#39;HausFreunde2&#39;))
+(set: _spieleAbend to (display: &#39;SpieFreunde1&#39;))
 (set: _lineZuhauseFriends to &quot;Du lädst ein paar Freunde (either:
 	&#39;zu einem Kochabend ein. Für die Vorspeise hast du _vorSpeise besorgt und für die Hauptmahlzeit gibt es _mahlzeit.
 
@@ -1737,18 +1734,27 @@ Du kannst etwas ausgelassen feiern und deine Freunde auch. Nur ein&amp;#42;e Fre
 
 Mit einem Getränk in der Hand und einem leichten kribbeln läufst du auf die Tanzfläche. Die nächsten Stunden sind sehr aufregend. Du tanzt, schwitzt, lachst, weinst und bist überzeugt, dich in einen Typen verliebt zu haben. Aber als du ihn, nach dem du auf dem Klo warst, suchen gehst, findest du ihn nicht mehr.](else:)[Im $wayne[&amp;lsqb;stylischen Club&amp;rsqb;] legt heute $wayne[&amp;lsqb;irgendein DJ&amp;rsqb;] (either: 6, 5, 7) Stunden lang auf. Das musst du einfach dancen. Schon am Einlass fragst du dich nach Teilen durch und findest nach ein paar Minuten bereits dein 10€-Glück.
 
-Du hast einen schönen Abend. Sonst passiert nichts besonderes.]</tw-passagedata><tw-passagedata pid="86" name="HausFreunde1" tags="" position="1067,835" size="100,100">{
-(set: $HausFreunde1 to it + 1)
-(set: _kaText to &quot;$wayne[&amp;lsqb;irgendein Thema aus den Medien&amp;rsqb;]]. Als es kontrovers wird streitet ihr euch leicht und wechselt schnell das Thema.&quot;)
+Du hast einen schönen Abend. Sonst passiert nichts besonderes.]</tw-passagedata><tw-passagedata pid="86" name="HausFreunde" tags="" position="1065.3333333333333,943.3333333333334" size="100,100">{
+(set: _aus1 to (display: &quot;HausFreunde1&quot;))
+(set: _aus2 to (display: &quot;HausFreunde2&quot;))
+(set: _aus3 to (display: &quot;HausFreunde3&quot;))
+(set: _aus4 to (display: &quot;HausFreunde4&quot;))
+
+(set: _leereAus to &quot;$wayne[&amp;lsqb;irgendein Thema aus den Medien&amp;rsqb;]]. Als es kontrovers wird streitet ihr euch leicht und wechselt schnell das Thema.&quot;)
+
+(set: _freundeArray to (array: _aus1, _aus2, _aus3, _aus4))
+
+(if: $HausFreunde1 is &gt;= 1)[(set: _freundeArray to (_freundeArray - (array: _aus1)))]
+(if: $HausFreunde2 is &gt;= 1)[(set: _freundeArray to (_freundeArray - (array: _aus2)))]
+(if: $HausFreunde3 is &gt;= 1)[(set: _freundeArray to (_freundeArray - (array: _aus3)))]
+(if: $HausFreunde4 is &gt;= 1)[(set: _freundeArray to (_freundeArray - (array: _aus4)))]
+
 }\
-(if: $HausFreunde1 is 1)[das social credit System in China. Ein wenig mulmig ist dir schon, wenn du an das größte Systeme denkst, das mit Algorithmen Informationen über das Verhalten sammelt und Menschen kontrolliert und einschränkt.
-Eine Freundin weißt dich darauf hin, dass hier ähnliches mit (either: &quot;Schufa&quot;, &quot;Krankenkassen&quot;, &quot;Job-Platformen&quot;) abläuft. Der Unterschied wäre die Systeme seien in der Hand von Unternehmen und dort vom Staat.
-Du weiß auch nicht wieso, aber du fühlst dir auf den Schlips getreten. Nach dem du der Freundin gesagt hast, dass sie das differenzierter betrachten muss und du es schwierig findest, einfach Dienstleistungen und Diktatur in einen Brei zusammen zu werfen, unterbricht ihr die Diskussion.
-Nach etwas schweigen, weicht ihr auf ein Gespräch über (either: &quot;das neue tolle Caffee, welches&quot;, &quot;die neue schicke Bar, welche&quot;, &quot;die neue Natur-Bäckerei, die&quot;) um die Ecke aufgemacht hat, aus.](else:)[_kaText] </tw-passagedata><tw-passagedata pid="87" name="HausFreunde2" tags="" position="1074,937" size="100,100">{
-(set: $HausFreunde2 to it + 1)
+(if: ($HausFreunde1 is  &gt;= 1) &amp;&amp; (($HausFreunde2 is &gt;= 1) &amp;&amp; (($HausFreunde3 is &gt;= 1) &amp;&amp; (($HausFreunde4 is &gt;= 1)))))[_leereAus](else:)[(either: ..._freundeArray)]</tw-passagedata><tw-passagedata pid="87" name="SpieFreunde1" tags="" position="1065.6666666666667,840.3333333333334" size="100,100">{
+(set: $SpieFreunde1 to it + 1)
 (set: _spielZug to (either: &#39;gewürfelt&#39;, &#39;gezogen&#39;))
 }\
-(if: $HausFreunde2 is 1)[zu einem Spieleabend ein. $wayne[&amp;lsqb;Dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] bring eine Sammlung Brettspiele mit. Ihr spielt nur nebenbei, denn eure Smartphones scheinen euch mehr zu unterhalten als die Spiele. Die Regeln sind sehr verwirrend und du hast vergessen ob du schon _spielZug hast.
+(if: $SpieFreunde1 is 1)[zu einem Spieleabend ein. $wayne[&amp;lsqb;Dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] bring eine Sammlung Brettspiele mit. Ihr spielt nur nebenbei, denn eure Smartphones scheinen euch mehr zu unterhalten als die Spiele. Die Regeln sind sehr verwirrend und du hast vergessen ob du schon _spielZug hast.
 Nach dem $wayne[&amp;lsqb;dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] gewonnen hat, feixt ihr nur zum Spaß, dass das nur so ist weil $wayne[&amp;lsqb;dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] das Spiel schon so gut kennt.](else:)[zum Spieleabend ein. $wayne[&amp;lsqb;Ein&amp;#42;e Freund&amp;#42;in&amp;rsqb;] bring eine Sammlung Brettspiele mit. Ihr habt etwas Spaß, ansonsten ist es ein Abend wie jeder andere.]</tw-passagedata><tw-passagedata pid="88" name="ProjektLangeweile1" tags="" position="225,1381" size="100,100">{
 (set: $ProjektLangeweile1 to it + 1)
 }\
@@ -1764,12 +1770,6 @@ Etwas ungewohnt, aber wieso nicht. Du greifst in den Kühlschrank und kehrst wie
 Während der anschließenden Diskussion entsteht ein Streitgespräch ob die Bilder und ihre Entstehung als eine Form des Widerstands zu betrachten sind oder die Bilder Aufzeigen, was selbst unter Unterdrückung möglich ist und wie viel mehr an Kunst ohne die Unterdrückung möglich wäre.
 
 Du bist dir sicher heute ein tieferes Verständnis gewonnen zu haben und teils auf Insta gleich noch das Bild des Flyers neben deinem Gesicht.](else:)[]</tw-passagedata><tw-passagedata pid="91" name="KulturAustellung" tags="" position="675,845" size="100,100">{
-(set: $KulturAustellung1 to 1)
-(set: $KulturAustellung2 to 1)
-(set: $KulturAustellung3 to 1)
-(set: $KulturAustellung4 to 1)
-(set: $KulturAustellung5 to 1)
-
 (set: _aus1 to (display: &quot;KulturAustellung1&quot;))
 (set: _aus2 to (display: &quot;KulturAustellung2&quot;))
 (set: _aus3 to (display: &quot;KulturAustellung3&quot;))
@@ -1803,7 +1803,23 @@ Die Bilder sind grotesk. Auf einem Zeichnung siehst du Jesus, dem aus der Vagina
 (set: $KulturAustellung5 to it + 1)
 }\
 Neben den Bildern hängt ein großer Spiegel. Ebenso auf der genau gegenüberliegenden Seite. Auf den Spiegel steht in großen Buchstaben DU.
-Du bist dir unsicher ob das wirklich so dumm ist, oder nur zu deep für dich, deshalb sagst du lieber nichts und startest mit einer Person neben dir ein Gespräch über den neuen Club, der vor kurzem aufgemacht hat. Die Person dir gegenüber finde dies auch spannend. Zurück starrend fragt deine Gegenüber rhetorisch was der neue Club für die musikalische Bereicherung dieser Stadt bedeutet wird.</tw-passagedata></tw-storydata>
+Du bist dir unsicher ob das wirklich so dumm ist, oder nur zu deep für dich, deshalb sagst du lieber nichts und startest mit einer Person neben dir ein Gespräch über den neuen Club, der vor kurzem aufgemacht hat. Die Person dir gegenüber finde dies auch spannend. Zurück starrend fragt deine Gegenüber rhetorisch was der neue Club für die musikalische Bereicherung dieser Stadt bedeutet wird.</tw-passagedata><tw-passagedata pid="97" name="HausFreunde1" tags="" position="1065.8333333333335,1046.6666666666667" size="100,100">{
+(set: $HausFreunde1 to it + 1)
+}\
+die neue Serie von $wayne[&amp;lsqb;irgendein&amp;#42;e Regisseur&amp;#42;in&amp;rsqb;] und über den Auftritt von Trump (either: &quot;bei einem Veteranen-Treff&quot;, &quot;vor dem Kongress&quot;, &quot;auf dem G7 Gipfel&quot;, &quot;in einer Fernsehen-Ansprache&quot;)</tw-passagedata><tw-passagedata pid="98" name="HausFreunde2" tags="" position="1064.166666666667,1151.6666666666667" size="100,100">{
+(set: $HausFreunde2 to it + 1)
+}\
+Justin Trudeau coolen Handshake mit Trump und das Deutschland mehr Flüchtlinge im Mac-Pom aufnehmen könnte. Ein Freund merkt an, dass man einfach alles schlecht reden könnte und Sachen manchmal einfach positiver betrachtet werden müssten. Sonst bleibt bei dir nichts hängen.</tw-passagedata><tw-passagedata pid="99" name="HausFreunde3" tags="" position="1064.1666666666667,1255.8333333333335" size="100,100">{
+(set: $HausFreunde3 to it + 1)
+}\
+das social credit System in China. Ein wenig mulmig ist dir schon, wenn du an das größte Systeme denkst, das mit Algorithmen Informationen über das Verhalten sammelt und Menschen kontrolliert und einschränkt.
+Eine Freundin weißt dich darauf hin, dass hier ähnliches mit (either: &quot;Schufa&quot;, &quot;Krankenkassen&quot;, &quot;Job-Platformen&quot;) abläuft. Der Unterschied wäre die Systeme seien in der Hand von Unternehmen und dort vom Staat.
+Du weiß auch nicht wieso, aber du fühlst dir auf den Schlips getreten. Nach dem du der Freundin gesagt hast, dass sie das differenzierter betrachten muss und du es schwierig findest, einfach Dienstleistungen und Diktatur in einen Brei zusammen zu werfen, unterbricht ihr die Diskussion.
+Nach etwas schweigen, weicht ihr auf ein Gespräch über (either: &quot;das neue tolle Caffee, welches&quot;, &quot;die neue schicke Bar, welche&quot;, &quot;die neue Natur-Bäckerei, die&quot;) um die Ecke aufgemacht hat, aus.</tw-passagedata><tw-passagedata pid="100" name="HausFreunde4" tags="" position="1062.5,1364.1666666666667" size="100,100">{
+(set: $HausFreunde4 to it + 1)
+}\
+die Auswirkungen von social Media. Es sei zwar toll, dass man so schnell sich über Alles informieren kann, aber irgendwie verbringt man doch die meiste Zeit mit Unsinn.
+Ein Freund erzählt darauf, dass er gerne mal bei anderen Leuten in der Straßenbahn auf den Screen schaut. Die meisten Leute, besonders abends, würden (either: &quot;sich nur Klamotten kaufen&quot;, &quot;nur Spiele spielen&quot;, &quot;sinnlos scrollen&quot;). Ihr lacht lange ohne dass du wirklich weißt warum.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
