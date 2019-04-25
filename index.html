@@ -307,6 +307,9 @@ color: #F5B4DD;
 (set: $ProjektGespaech1 to 0)
 (set: $ProjektGespaech2 to 0)
 (set: $ProjektGespaech3 to 0)
+(set: $ProjektKonzert1 to 0)
+(set: $ProjektKonzert2 to 0)
+(set: $ProjektKonzert3 to 0)
 (set: $ProjektLangeweile1 to 0)
 (set: $KulturVortrag1 to 0)
 (set: $KulturVortrag2 to 0)
@@ -420,7 +423,8 @@ Du bist nicht ganz zufrieden mit dem Vortrag. Irgendwas fehlt, aber direkt mit d
 (set: _vekueLine to &quot;Von deinen Freunden ist niemand da, deswegen schnappst du dir ein Teller und setzt dich auf eine freie Couch.
 
 Heute ist wohl ein (either: _hoerspielLine, _vortragLine, _abendWieImmerLine)&quot;)
-(set: _konzertLine to &quot;Auf einmal bauen ein paar (either: &#39;flüchtige Bekannte&#39;, &#39;Menschen&#39;) ihr Instrumenten-Set auf. Sieht so aus als gäbe es spontan ein Konzert. (display: &#39;ProjektKonzert&#39;)&quot;)
+(set: _konzertLine to &quot;Auf einmal bauen ein paar (either: &#39;flüchtige Bekannte&#39;, &#39;Menschen&#39;) ihr Instrumenten-Set auf. Sieht so aus als gäbe es spontan ein Konzert.
+(display: &#39;ProjektKonzert&#39;)&quot;)
 (set: _langeweile to (either: &#39;Jede halbe Stunde folgt ein krasser Musik-Bruch dem nächsten, weil irgendjemand anderes an den Musikplayer kommt. Auch von den Gesprächen bist du heute schnell genervt und winkst relativ schnell ab.&#39;,
 &#39;Heute ist es etwas voll. Es wird viel geraucht und ist sehr laut. Deine Freunde erzählen eigentlich nichts spannendes, und du starrst alle 5 Minuten auf dein Smartphone. Nach zwei $wayne[&amp;lsqb;irgendein Getränk&amp;rsqb;] gibst du auf.&#39;,
 &#39;(display: &quot;ProjektLangeweile1&quot;)&#39;,
