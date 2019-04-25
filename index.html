@@ -418,18 +418,17 @@ Nach 2 Wodka-Matte fängst du an mit $wayne[&amp;lsqb;irgendjemand&amp;rsqb;] ru
 (set: _hoerspielLine to &quot;Hörspiel-Abend. Jemand hat einen Beitrag über (either: &#39;Oury Jalloh&#39;, &#39;Polizeigewalt in Sachsen&#39;, &#39;gesellschaftliche Reproduktionsarbeit und die Arbeitsbedienungen von Migrant&amp;#42;innen&#39;, &#39;Geschlecht im Kapitalismus&#39;, &#39;Queer in Russland - Zwischen Lebensgefahr und aufkeimender Szene&#39;) mitgebracht. Du bleibst nach dem Essen sitzen und hörst dir das Hörspiel zu ende an.&quot;)
 (set: _vortragLine to &quot;Vortrag-Abend. (either: (display: &#39;ProjektVortrag1&#39;), (display: &#39;ProjektVortrag2&#39;), &#39;Das Thema ist: Die neue Rechte in Europa. Es ist eine wilde Kollage aus Bildern und Erzählungen aus verschiedenen Ländern. Ungarn, Griechenland, Polen, Italien und Frankreich. Kleine soziale und kulturellere Eigenheiten und historische Ereignisse werden erläutert, um damit zu erklären wie diese den Keim eines neuen Faschismus bildeten.
 Du bist nicht ganz zufrieden mit dem Vortrag. Irgendwas fehlt, aber direkt mit dem Finger drauf zeigen kannst du auch nicht.&#39;)&quot;)
-(set: _abendWieImmerLine to &#39;eher gewöhnlicher Abend. Eigentlich nichts spannendes. Nach dem du dir ein paar Flyer angeschaut hast, langweilst du dich.&#39;)
 
 (set: _vekueLine to &quot;Von deinen Freunden ist niemand da, deswegen schnappst du dir ein Teller und setzt dich auf eine freie Couch.
 
-Heute ist wohl ein (either: _hoerspielLine, _vortragLine, _abendWieImmerLine)&quot;)
+Heute ist wohl ein (either: _hoerspielLine, _vortragLine)&quot;)
 (set: _konzertLine to &quot;Auf einmal bauen ein paar (either: &#39;flüchtige Bekannte&#39;, &#39;Menschen&#39;) ihr Instrumenten-Set auf. Sieht so aus als gäbe es spontan ein Konzert.
 (display: &#39;ProjektKonzert&#39;)&quot;)
 (set: _langeweile to (either: &#39;Jede halbe Stunde folgt ein krasser Musik-Bruch dem nächsten, weil irgendjemand anderes an den Musikplayer kommt. Auch von den Gesprächen bist du heute schnell genervt und winkst relativ schnell ab.&#39;,
 &#39;Heute ist es etwas voll. Es wird viel geraucht und ist sehr laut. Deine Freunde erzählen eigentlich nichts spannendes, und du starrst alle 5 Minuten auf dein Smartphone. Nach zwei $wayne[&amp;lsqb;irgendein Getränk&amp;rsqb;] gibst du auf.&#39;,
 &#39;(display: &quot;ProjektLangeweile1&quot;)&#39;,
 &#39;Es ist ziemlich voll und du drängst dich bis an die Bar durch. Mit einem Getränk in der Hand läufst du durch die Räume, musst aber feststellen, dass du (either: &quot;absolut niemanden&quot;, &quot;eigentlich niemanden&quot;) kennst.
-Ein wenig versuchst du dir die Zeit mit einem herumliegenden (either: &quot;Heft&quot;, &quot;Magazin&quot;, &quot;Flyer&quot;, &quot;Buch&quot;) zu vertreiben, aber zum Lesen ist es gerade zu laut.&#39;))
+Ein wenig versuchst du dir die Zeit mit ein paar herumliegenden (either: &quot;Magazinen&quot;, &quot;Broschüren&quot;, &quot;Bücher&quot;) zu vertreiben, aber zum Lesen ist es gerade zu laut.&#39;))
 
 (set: _gespraech2 to &#39;Du lernst zwei linke an der Bar kennen. Ihr unterhaltet euch lange über eine fehlende linke Bewegung und leere Ideen. Am Ende bleibt ihr bei (either: &quot;Griechenland&quot;, &quot;Italien&quot;, &quot;Spanien&quot;, &quot;Portugal&quot;) hängen. Es gäbe dort momentan eine Masse die mobilisiert werden kann, das Problem ist nur, das auch viele Rechte Teil der Demonstrant&amp;#42;Innen sind.
 Nach 2-3 Bier stellen sie fest, dass man mit einer Beteiligung nur die Rechten stärker machen würde.&#39;)
@@ -597,7 +596,7 @@ Jetzt ist es schon spät und du&quot;))
 }\
 
 ***Einladung***
-(if: $einladungPer is &#39;Mail&#39;)[_einladungMail](else_if: $einladungPer is &#39;Plenum&#39;)[_einladungPlenum(click-replace: _einladungPlenum)[(display: &quot;Einladungstext&quot;)]](else_if: $einladungPer is &#39;Freunde&#39;)[_einaldungErzählen(click-replace: _einaldungErzählen)[(display: &quot;Einladungstext&quot;)]]</tw-passagedata><tw-passagedata pid="8" name="1.Treffen" tags="Protest" position="2628,415" size="100,100">Du kommst etwas früher an als es für dich üblich. Im Raum sitzen ca. 40 Menschen. Neben den üblichen Gesichter auch einige die du nur vom sehen oder gar nicht kennst. In verschiedenen Ecken gibt es leise Gespräche, doch ansonsten ist die Stimmung angespannt.
+(if: $einladungPer is &#39;Mail&#39;)[_einladungMail](else_if: $einladungPer is &#39;Plenum&#39;)[_einladungPlenum(click: _einladungPlenum)[(display: &quot;Einladungstext&quot;)]](else_if: $einladungPer is &#39;Freunde&#39;)[_einaldungErzählen(click-replace: _einaldungErzählen)[(display: &quot;Einladungstext&quot;)]]</tw-passagedata><tw-passagedata pid="8" name="1.Treffen" tags="Protest" position="2628,415" size="100,100">Du kommst etwas früher an als es für dich üblich. Im Raum sitzen ca. 40 Menschen. Neben den üblichen Gesichter auch einige die du nur vom sehen oder gar nicht kennst. In verschiedenen Ecken gibt es leise Gespräche, doch ansonsten ist die Stimmung angespannt.
 
 Das Plenum beginnt in dem ein sehr großer junger Mann mit einer kurzen Einleitung die Lage umreißt. Zwei Menschen aus dem Viertel, die unter anderem eine $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] auf der Eisi besitzen und Eigentümer eines Hauses sind, gefährden die Existenz zweier kollektiven Projekte auf der Eisenbahnstraße. Und zwar von dem Eckladen und vom Ladenkulturprojekt. Dem Eckladen als Hauseigentümer mit dem nicht Verlängern des Mietvertrages. Bei dem Ladenkulturprojekt als Betreiber einer Bar im selben Haus und dem Erwirken von Getränke-Verbostklauseln gegen das Projekt.
 Auf die schnelle konnte man nur wenig Menschen erreichen, trotzdem soll heute geschaut werden, wie man als Viertel dagegen vorgehen kann.
@@ -1170,7 +1169,8 @@ Findest auch du es wichtig, als ein Mädchen bemerkt, dass neben all dem was in 
 	](else:)[(display: &quot;2.Cornern&quot;)]</tw-passagedata><tw-passagedata pid="36" name="Problem-Projekt" tags="" position="655,1587" size="100,100">{
 (set: _infoLaeden to &quot;(if: $hndrtnInfo is 5 and $hopInfo is &lt;= 5)[(display: &#39;Problem-Hop&#39;)](else-if: $hopInfo is 5 and $hndrtnInfo is &lt;= 5)[(display: &#39;Problem-hndrt&#39;)](else:)[(either: (display: &#39;Problem-Hop&#39;), (display: &#39;Problem-hndrt&#39;))]&quot;)
 }\
-_infoLaeden</tw-passagedata><tw-passagedata pid="37" name="Einladungstext" tags="" position="1671,90" size="100,100">Die Lage um zwei kollektive Räume auf der Eisi ist ziemlich eskaliert. Beide Projekte kriegen kein Mietvertrag und werden von den selben Akteuren in ihrer Existenz bedroht. Ein paar Menschen aus dem Viertel laden zu einem Krisentreffen ein.
+_infoLaeden</tw-passagedata><tw-passagedata pid="37" name="Einladungstext" tags="" position="1671,90" size="100,100">
+Die Lage um zwei kollektive Räume auf der Eisi ist ziemlich eskaliert. Beide Projekte kriegen kein Mietvertrag und werden von den selben Akteuren in ihrer Existenz bedroht. Ein paar Menschen aus dem Viertel laden zu einem Krisentreffen ein.
 Zusammen soll geschaut werden wie man dagegen vorgehen kann und wie viel Unterstützung aus dem Viertel da ist.
 
 Du bist dir unsicher ob du [[Aktionsbuendnis&lt;-hingehen]] willst oder [[Der Kiez&lt;-fernbleiben]] möchtest.</tw-passagedata><tw-passagedata pid="38" name="Auswertung" tags="" position="848,2878" size="100,100">{
