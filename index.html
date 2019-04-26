@@ -323,6 +323,9 @@ color: #F5B4DD;
 (set: $ProjektKonzert2 to 0)
 (set: $ProjektKonzert3 to 0)
 (set: $ProjektLangeweile1 to 0)
+(set: $ProjektLangeweile2 to 0)
+(set: $ProjektLangeweile3 to 0)
+(set: $ProjektLangeweile4 to 0)
 
 (set: $KulturVortrag1 to 0)
 (set: $KulturVortrag2 to 0)
@@ -388,6 +391,9 @@ _szeneBar&#39;,
 _szeneBar&#39;)]\
 (if: $woFeiern is &#39;ProjektBar&#39;)[(either: &quot;Deine Friends sind heute auf Abwechslung aus - und haben kein Geld. Ihr geht deshalb in ein Eckladen das auf Spende funktioniert.
 
+_ladenProjekt&quot;,
+&quot;Mit ein paar Freunden entscheidest du dich heute eine Bar auf Spende zu besuchen.
+
 _ladenProjekt&quot;)]\
 (if: $woFeiern is &#39;Club&#39;)[(either: &#39;(display: &quot;ClubAusgehen2&quot;)&#39;,
   &#39;(display: &quot;ClubAusgehen1&quot;)&#39;,
@@ -410,11 +416,7 @@ Nach 2 Wodka-Matte fängst du an mit $wayne[&amp;lsqb;irgendjemand&amp;rsqb;] ru
 Heute ist wohl ein (either: _hoerspielLine, _vortragLine)&quot;)
 (set: _konzertLine to &quot;Auf einmal bauen ein paar (either: &#39;flüchtige Bekannte&#39;, &#39;Menschen&#39;) ihr Instrumenten-Set auf. Sieht so aus als gäbe es spontan ein Konzert.
 (display: &#39;ProjektKonzert&#39;)&quot;)
-(set: _langeweile to (either: &#39;Jede halbe Stunde folgt ein krasser Musik-Bruch dem nächsten, weil irgendjemand anderes an den Musikplayer kommt. Auch von den Gesprächen bist du heute schnell genervt und winkst relativ schnell ab.&#39;,
-&#39;Heute ist es etwas voll. Es wird viel geraucht und ist sehr laut. Deine Freunde erzählen eigentlich nichts spannendes, und du starrst alle 5 Minuten auf dein Smartphone. Nach zwei $wayne[&amp;lsqb;irgendein Getränk&amp;rsqb;] gibst du auf.&#39;,
-&#39;(display: &quot;ProjektLangeweile1&quot;)&#39;,
-&#39;Es ist ziemlich voll und du drängst dich bis an die Bar durch. Mit einem Getränk in der Hand läufst du durch die Räume, musst aber feststellen, dass du (either: &quot;absolut niemanden&quot;, &quot;eigentlich niemanden&quot;) kennst.
-Ein wenig versuchst du dir die Zeit mit ein paar herumliegenden (either: &quot;Magazinen&quot;, &quot;Broschüren&quot;, &quot;Bücher&quot;) zu vertreiben, aber zum Lesen ist es gerade zu laut.&#39;))
+(set: _langeweile to (display: &quot;ProjektLangeweile&quot;))
 
 (set: _gespraech2 to &#39;Du lernst zwei linke an der Bar kennen. Ihr unterhaltet euch lange über eine fehlende linke Bewegung und leere Ideen. Am Ende bleibt ihr bei (either: &quot;Griechenland&quot;, &quot;Italien&quot;, &quot;Spanien&quot;, &quot;Portugal&quot;) hängen. Es gäbe dort momentan eine Masse die mobilisiert werden kann, das Problem ist nur, das auch viele Rechte Teil der Demonstrant&amp;#42;Innen sind.
 Nach 2-3 Bier stellen sie fest, dass man mit einer Beteiligung nur die Rechten stärker machen würde.&#39;)
@@ -914,7 +916,7 @@ Goldhorn soll nicht angegriffen werden</tw-passagedata><tw-passagedata pid="24" 
 (set: $protestIstVorbei to true)
 }\
 
-(if: $aktionMitbekommen is &quot;Hingehen&quot;)[(display: &quot;2.Cornern-Aktivistin&quot;)](else-if: $aktionMitbekommen is &quot;NichtHingehen&quot;)[(display: &quot;2.Cornern-Aufgeben&quot;)]</tw-passagedata><tw-passagedata pid="25" name="Problem-Hop" tags="" position="494,1737" size="100,100">{
+(if: $aktionMitbekommen is &quot;Hingehen&quot;)[(display: &quot;2.Cornern-Aktivistin&quot;)](else-if: $aktionMitbekommen is &quot;NichtHingehen&quot;)[(display: &quot;2.Cornern-Aufgeben&quot;)]</tw-passagedata><tw-passagedata pid="25" name="Problem-Hop" tags="" position="442.3333333333333,2002" size="100,100">{
 (set: $hopInfo to it + 1)
 }\
 ***Probleme beim Ladenkulturprojekt***
@@ -950,7 +952,7 @@ Die Barbetreiber verlangen unter anderem einen Getränkeschutz für sich. Demnac
 
 In deinen Ohren einen Skandal, doch die Ladengruppe widerspricht dir... Denn ein Gewerbe wollte man ehe nie anmelden, Getränke verkaufe man auch nicht und sobald die Klauseln unterschrieben sind, wurde ihnen und den Bewohner&amp;#42;innen des Hauses ziemlich gute Mietverträge versprochen.
 
-Du willst zunächst mit dem Kopf schütteln, doch bist dann von der Antwort verunsichert. Irgendwas scheinst du wieder nicht verstanden zu haben.]</tw-passagedata><tw-passagedata pid="26" name="Problem-hndrt" tags="" position="654,1736" size="100,100">{
+Du willst zunächst mit dem Kopf schütteln, doch bist dann von der Antwort verunsichert. Irgendwas scheinst du wieder nicht verstanden zu haben.]</tw-passagedata><tw-passagedata pid="26" name="Problem-hndrt" tags="" position="602.3333333333334,2001" size="100,100">{
 (set: $hndrtnInfo to it + 1)
 }\
 ***Probleme beim Eckladenprojekt***
@@ -983,13 +985,13 @@ Die Gruppe hat 1 Monat Zeit um sich mit einem Konzept und einem Finanzierungspla
 
 Sie fangen an zu brainstormen. Machen sich Notizen. Was soll Teil des Konzepts sein? Was gibt es bereits an ausformulierten Finanzierungskonzepten? Die Gruppe ist jedoch zuversichtlich, die Zeit sei knapp, aber vieles was man bräuchte ist da und muss nur noch zusammengetragen werden. Am Ende würde ein fertig ausformuliertes Konzept auch der Gruppe gut tun.
 
-Du erstarrst ein wenig. Dir ist nicht wirklich klar was gerade passiert und wie es soweit kommen konnte. Die Gruppe ist bereits ganz in ihrem Arbeitsmodus und jeder Versuch von dir noch zu erfahren was sie gerade machen und wieso scheitert.]</tw-passagedata><tw-passagedata pid="27" name="Party-Ende" tags="" position="405,2480" size="100,100">(if: $projekt &gt; 6)[(display: &quot;Party-Aktivistin&quot;)](else-if: $kulturLinks is &gt;= $feiern)[(display: &quot;Party-Kultur&quot;)](else:)[(display: &quot;Party-Bar&quot;)]
+Du erstarrst ein wenig. Dir ist nicht wirklich klar was gerade passiert und wie es soweit kommen konnte. Die Gruppe ist bereits ganz in ihrem Arbeitsmodus und jeder Versuch von dir noch zu erfahren was sie gerade machen und wieso scheitert.]</tw-passagedata><tw-passagedata pid="27" name="Party-Ende" tags="" position="405,2783.3333333333335" size="100,100">(if: $projekt &gt; 6)[(display: &quot;Party-Aktivistin&quot;)](else-if: $kulturLinks is &gt;= $feiern)[(display: &quot;Party-Kultur&quot;)](else:)[(display: &quot;Party-Bar&quot;)]
 
 
 
 
 
-[[Auswertung&lt;-Ende]]</tw-passagedata><tw-passagedata pid="28" name="Party-Anfang" tags="" position="412,2065" size="100,100">{
+[[Auswertung&lt;-Ende]]</tw-passagedata><tw-passagedata pid="28" name="Party-Anfang" tags="" position="412,2435" size="100,100">{
 (set: _wasMachtZu to &quot;(if: $projekt is &gt; 5)[Krass. Der Eckladen auf der Eisi schließt nun.](else-if: $kulturLinks is &gt; 4)[Einer der Ladenprojekte im Viertel macht zu, weil sie einen Wasserschaden verursacht haben.](else-if: $feiern is &gt; 4)[$wayne[&amp;lsqb;Irgendein Ladenprojekt&amp;rsqb;] macht heute eine Party.](else:)[$wayne[&amp;lsqb;Irgendein Ladenprojekt&amp;rsqb;] im Viertel macht zu. Eins das der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] aus dem Viertel Stress gemacht hat.]&quot;)
 
 (set: _reaktionProjektFriends to &quot;Schade, dass die Gruppe den Laden schließt.&quot;)
@@ -1070,7 +1072,7 @@ Da versuchen Betreiber einer kommerziellen Bar auf einmal zwei unkommerziele Pro
 
 Wir wollen uns am Dienstag Treffen und entscheiden wie wir zusammen agieren können. Wenn euch diese beiden Projekte am Herzen liegen kommt vorbei oder schickt jemensch als Vertretung für eure Stimme. Verbreitet diese Nachricht bitte nicht weiter bzw. nur an Menschen denen ihr Vertraut, wir wollen zuerst über gemeinsames Vorgehen beraten bzw. gemeinsam beschließen, bevor das ganze die Öffentlichkeit erreicht.]
 
-du [[Einladungstext&lt;-schließt]] die Mail</tw-passagedata><tw-passagedata pid="31" name="Party-Flyer" tags="" position="235,2067" size="100,100">&lt;img src=&quot;images/party.png&quot; alt=&quot;abschied&quot; style=&quot;height: 1000; width:700&quot;/&gt;</tw-passagedata><tw-passagedata pid="32" name="Party" tags="" position="446,2305" size="100,100">Als du mit deinen Freunden zu der Party kommst ist es brechend voll. Vor dem Laden stehen sicher 200 Leute, du kannst es kaum einschätzen. Naja, die Konzerte habt ihr wohl verpasst, aber du kanntest die Bands ehe nicht.
+du [[Einladungstext&lt;-schließt]] die Mail</tw-passagedata><tw-passagedata pid="31" name="Party-Flyer" tags="" position="224,2417" size="100,100">&lt;img src=&quot;images/party.png&quot; alt=&quot;abschied&quot; style=&quot;height: 1000; width:700&quot;/&gt;</tw-passagedata><tw-passagedata pid="32" name="Party" tags="" position="404.33333333333337,2600" size="100,100">Als du mit deinen Freunden zu der Party kommst ist es brechend voll. Vor dem Laden stehen sicher 200 Leute, du kannst es kaum einschätzen. Naja, die Konzerte habt ihr wohl verpasst, aber du kanntest die Bands ehe nicht.
 
 Ihr klettert durch ein Fenster in den Raum, weil es alle anderen vor euch auch tun. Die Räume wirken auf dich riiiesig. Fast gar keine Möbel steht drin - scheinbar wurde alles ausgeräumt. Schade eigentlich.
 
@@ -1152,7 +1154,7 @@ Findest auch du es wichtig, als ein Mädchen bemerkt, dass neben all dem was in 
 	(display: &quot;1.Cornern&quot;)
 	](else-if: (count: (history:), &quot;Aktion&quot;) is 1)[
 		(display: &quot;Kundgebung&quot;)
-	](else:)[(display: &quot;2.Cornern&quot;)]</tw-passagedata><tw-passagedata pid="36" name="Problem-Projekt" tags="" position="655,1587" size="100,100">{
+	](else:)[(display: &quot;2.Cornern&quot;)]</tw-passagedata><tw-passagedata pid="36" name="Problem-Projekt" tags="" position="603.3333333333334,1852" size="100,100">{
 (set: _infoLaeden to &quot;(if: $hndrtnInfo is 5 and $hopInfo is &lt;= 5)[(display: &#39;Problem-Hop&#39;)](else-if: $hopInfo is 5 and $hndrtnInfo is &lt;= 5)[(display: &#39;Problem-hndrt&#39;)](else:)[(either: (display: &#39;Problem-Hop&#39;), (display: &#39;Problem-hndrt&#39;))]&quot;)
 }\
 _infoLaeden</tw-passagedata><tw-passagedata pid="37" name="Einladungstext" tags="" position="1671,90" size="100,100">
@@ -1462,7 +1464,7 @@ Wait. Du hackst nach, denn der Vorwurf ist dir zu schwammig. Aber kriegst nur zu
 
 Irgendwie erscheint dir die Behauptungen doch zu sehr aus der Luft gegriffen. Aber als deine Freundin dich anmotzt ob du Beweisen kannst, dass das alles nicht stimmen würde, schweigst du. Sie schaut dich an und nippt wissend an ihrem Kaffee und erzählt dir weiter sie hätte gehört, Leute aus dem Umkreis des Ladenprojekts hätten einem Mitarbeiter aus $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] zusammenschlagen wollen und seien ihm hinterher gerannt. Das sind wieder die selben Spinner wie bei G20, schließt sie ihren Punkt und dir ist auch klar, dass das einfach zu weit geht. Wer so handelt, hat deine Solidarität nicht verdient.
 
-Als es irgendwann anfängt zu regnen [[Der Kiez&lt;-gehst du zurück nach Hause]]. Morgen hast du noch einiges vor.</tw-passagedata><tw-passagedata pid="59" name="Party-Bar" tags="" position="272,2647" size="100,100">Die gesamte Straßenecke ist voll mit mehr als 250 Menschen. Du siehst auf der anderen Seite Polizeiautos. Jemand vor dir erzählt die Bullen hätten die Party aufgelöst.
+Als es irgendwann anfängt zu regnen [[Der Kiez&lt;-gehst du zurück nach Hause]]. Morgen hast du noch einiges vor.</tw-passagedata><tw-passagedata pid="59" name="Party-Bar" tags="" position="272,2955.3333333333335" size="100,100">Die gesamte Straßenecke ist voll mit mehr als 250 Menschen. Du siehst auf der anderen Seite Polizeiautos. Jemand vor dir erzählt die Bullen hätten die Party aufgelöst.
 Plötzlich wird eine Feuerwerksrakete gezündet und du hörst vereinzelt &quot;Bullen verpisst euch&quot; Rufe.
 Hinten aus den Räumen schreit eine Frauenstimme, dass die Party weitergeht und man sich von den Bullen nicht einschüchtern lassen will.
 
@@ -1482,7 +1484,7 @@ Du und ein paar Freunde wollen in die nächste $wayne[&amp;lsqb;hippe szene Bar&
 
 ---
 
-Wieder auf dem Nachhauseweg seht ihr das in den Räumen weiter Menschen feiern. Die letzte Tränengas-Katusche liegt noch auf der Kreuzung. Verständnislos fragt ihr euch, wieso man euch dann nicht reingelassen hat.</tw-passagedata><tw-passagedata pid="60" name="Party-Aktivistin" tags="" position="417,2645" size="100,100">Die meisten Besucher&amp;#42;innen gehen recht zügig raus, doch du ein paar Freunde und ein weiteres Grüppchen bleiben in dem Laden. Du kannst einfach nicht verstehen wie die Ladencrew so die letzte Möglichkeit in diesen Räumen zu feiern nicht ausreizt.
+Wieder auf dem Nachhauseweg seht ihr das in den Räumen weiter Menschen feiern. Die letzte Tränengas-Katusche liegt noch auf der Kreuzung. Verständnislos fragt ihr euch, wieso man euch dann nicht reingelassen hat.</tw-passagedata><tw-passagedata pid="60" name="Party-Aktivistin" tags="" position="417,2953.3333333333335" size="100,100">Die meisten Besucher&amp;#42;innen gehen recht zügig raus, doch du ein paar Freunde und ein weiteres Grüppchen bleiben in dem Laden. Du kannst einfach nicht verstehen wie die Ladencrew so die letzte Möglichkeit in diesen Räumen zu feiern nicht ausreizt.
 Die ersten persönlichen Vorwürfe lassen nicht lange auf sich warten. Eine Freundin wirft der Orga vom Eckladen voreiligen gehorsam vor. Nur weil die Nachbarn sich möglicherweise beschweren sollte man die Party nicht abbrechen, es ist schließlich ehe aus. Vor wem beugt ihr euch denn und wieso überhaupt, fragst sie die Ladencrew. Das sei das selbe unterwürfige Verhalten das dazu geführt hat, dass die Räume einfach so geräumt wurden, anstelle dafür zu kämpfen. Anstelle gegen den Kapitalismus zu kämpfen verschließt ihr die Tür, stimmt ihr ein junger Mann zu.
 
 Zwei Menschen aus der Gruppe versuchen sich zu rechtfertigen, dass die sexistische Vorfälle und Schlägereien sich häuften, das Türschloss zu dem Technikraum sei aufgebrochen und Sachen wurden gestohlen. Jetzt müsste cut gemacht werden, da alles bereits aus dem Ruder gelaufen ist. Es gäbe keine Secu- und kein Awareness-Team. Die Party und die Vorbereitung alleine hätte sehr viel Kraft verbraucht und außer für die Barschichten hätte sich niemand für irgendeine Aufgabe eingetragen, schließt eine&amp;#42;r der zwei ab.
@@ -1500,7 +1502,7 @@ Doch der übriggebliebene Rest der Ladencrew, will ihm einfach nicht zuhören un
 
 Eine aufgeregte junge Frau spring in den Streit rein und versucht die Wogen zu glätten. Wir können so nicht auseinander gehen, sagt sie euch. Das müssten wir in Ruhe ausdiskutieren, ergänzt sie und reicht eine Stückpapier an dich. Eine E-Mail-Liste um einen Termin für ein Treffen auszumachen. Enttäuscht sagst du, dass es jetzt für das Projekt ehe zu spät ist und verlässt den Raum.
 
-Kurz bleibst du auf dem Bürgersteig stehen. Draußen ist es etwas ruhiger geworden. Der Geruch von Tränengas liegt noch in der Luft... vielleicht nur Einbildung. Du schaust die Straße runter. Der Blick auf die Eisi wird nie mehr ein Blick aus diesen kollektiven Raum sein.</tw-passagedata><tw-passagedata pid="61" name="Party-Kultur" tags="" position="545,2650" size="100,100">Du läufst langsam mit der Menge nach draußen. Leichtes brennen steigt in deiner Nase auf. Eine Feuerwerksrakete fliegt hoch und du bemerkst auf der anderen Straßenseite 1 oder 2 Polizeiautos, die von einer großen Menschenansammlung um den Eckladen verdeckt werden.
+Kurz bleibst du auf dem Bürgersteig stehen. Draußen ist es etwas ruhiger geworden. Der Geruch von Tränengas liegt noch in der Luft... vielleicht nur Einbildung. Du schaust die Straße runter. Der Blick auf die Eisi wird nie mehr ein Blick aus diesen kollektiven Raum sein.</tw-passagedata><tw-passagedata pid="61" name="Party-Kultur" tags="" position="545,2958.3333333333335" size="100,100">Du läufst langsam mit der Menge nach draußen. Leichtes brennen steigt in deiner Nase auf. Eine Feuerwerksrakete fliegt hoch und du bemerkst auf der anderen Straßenseite 1 oder 2 Polizeiautos, die von einer großen Menschenansammlung um den Eckladen verdeckt werden.
 
 Vor der Tür entdeckst du wieder deine Freunde mit denen du hergekommen bist. Sie unterhalten sich über einen Flyer, denn ihn jemand auf der Party gegeben hat. (click: &quot;Flyer&quot;)[(display: &quot;Flyer2&quot;)]
 
@@ -1535,7 +1537,7 @@ Bevor ihr euch wieder auf den Weg aufmacht, fängt es an zu Strömen und ihr war
 
 Ehe aus Langeweile macht ihr noch eine Runde um den Block, aber euch begegnet niemand mehr und du gehst [[Der Kiez&lt;-zurück nach Hause]].
 
-Ein paar Tage später geht eine Mail über den Verteiler des Aktionsbündnisses mit der Bitte um Weiterleitung an Freunde und Projekte. Es ist ein &lt;a href=&quot;https://rawcdn.githack.com/aufDerEisi/aufDerEisi.github.io/052acdf088d2d58317417e784bd89c0e8bc3d5eb/images/AnschuldigungStatement.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Statement zur Anschuldigungen&lt;/a&gt;, die die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] über die Ladenprojekte verbreitet. Doch du findest es viel zu anstrengend und leitest die Mail an niemanden weiter.</tw-passagedata><tw-passagedata pid="65" name="Flyer2" tags="" position="367,2820" size="100,100">&lt;img src=&quot;images/flyer2.jpg&quot; alt=&quot;Flyer&quot; style=&quot;height: 724; width:724&quot;/&gt;</tw-passagedata><tw-passagedata pid="66" name="Laden-Probleme" tags="" position="808,1728" size="100,100">{
+Ein paar Tage später geht eine Mail über den Verteiler des Aktionsbündnisses mit der Bitte um Weiterleitung an Freunde und Projekte. Es ist ein &lt;a href=&quot;https://rawcdn.githack.com/aufDerEisi/aufDerEisi.github.io/052acdf088d2d58317417e784bd89c0e8bc3d5eb/images/AnschuldigungStatement.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Statement zur Anschuldigungen&lt;/a&gt;, die die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] über die Ladenprojekte verbreitet. Doch du findest es viel zu anstrengend und leitest die Mail an niemanden weiter.</tw-passagedata><tw-passagedata pid="65" name="Flyer2" tags="" position="367,3128.3333333333335" size="100,100">&lt;img src=&quot;images/flyer2.jpg&quot; alt=&quot;Flyer&quot; style=&quot;height: 724; width:724&quot;/&gt;</tw-passagedata><tw-passagedata pid="66" name="Laden-Probleme" tags="" position="756.3333333333334,1993" size="100,100">{
 (set: $ladenInfo to it + 1)
 }\
 ***Probleme von $wayne[&amp;lsqb;irgendeine Ladenprojekt&amp;rsqb;]***
@@ -1658,7 +1660,7 @@ Als letztes seht ihr eine Kollage aus Auschnitten verschiedener Reportagen über
 
 Du führst mit der Freundin noch lange ein Gespräch über das Gesehene. Ihr stimmt den meisten Dingen zu, aber findet auch, dass ein paar Filme ein wenig propagandistisch rüberkamen und die Kapitalismuskritik den eigentlichen Kern verwässerte.](else:)[Du gehst zu einer Veranstaltung mit künstlerischen und witzigen gesellschaftskritischen Kurzfilmen.
 
-Szeneklüngel, Akademikern, Lebensgeschichten, Kunstfilme, alles bunt gemischt. Von ein paar Kurzfilmen fühlst du dich angesprochen.]</tw-passagedata><tw-passagedata pid="79" name="ZukunftPlakate" tags="" position="294,2300" size="100,100">&lt;img src=&quot;images/109plakat.jpg&quot; alt=&quot;109wichtig&quot; height&quot;500&quot; width=&quot;350&quot;/&gt;&lt;img src=&quot;images/109plakat1.jpg&quot; alt=&quot;ideen für&quot; height&quot;350&quot; width=&quot;500&quot;/&gt;
+Szeneklüngel, Akademikern, Lebensgeschichten, Kunstfilme, alles bunt gemischt. Von ein paar Kurzfilmen fühlst du dich angesprochen.]</tw-passagedata><tw-passagedata pid="79" name="ZukunftPlakate" tags="" position="219,2608.3333333333335" size="100,100">&lt;img src=&quot;images/109plakat.jpg&quot; alt=&quot;109wichtig&quot; height&quot;500&quot; width=&quot;350&quot;/&gt;&lt;img src=&quot;images/109plakat1.jpg&quot; alt=&quot;ideen für&quot; height&quot;350&quot; width=&quot;500&quot;/&gt;
 &lt;img src=&quot;images/109plakat2.jpg&quot; alt=&quot;raum für&quot; height&quot;500&quot; width=&quot;350&quot;/&gt;&lt;img src=&quot;images/109plakat3.jpg&quot; alt=&quot;infrastruktur für&quot; height&quot;350&quot; width=&quot;500&quot;/&gt;
 
 
@@ -1733,12 +1735,12 @@ Du hast einen schönen Abend. Sonst passiert nichts besonderes.]</tw-passagedata
 (set: _spielZug to (either: &#39;gewürfelt&#39;, &#39;gezogen&#39;))
 }\
 (if: $SpieFreunde1 is 1)[zu einem Spieleabend ein. $wayne[&amp;lsqb;Dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] bring eine Sammlung Brettspiele mit. Ihr spielt nur nebenbei, denn eure Smartphones scheinen euch mehr zu unterhalten als die Spiele. Die Regeln sind sehr verwirrend und du hast vergessen ob du schon _spielZug hast.
-Nach dem $wayne[&amp;lsqb;dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] gewonnen hat, feixt ihr nur zum Spaß, dass das nur so ist weil $wayne[&amp;lsqb;dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] das Spiel schon so gut kennt.](else:)[zum Spieleabend ein. $wayne[&amp;lsqb;Ein&amp;#42;e Freund&amp;#42;in&amp;rsqb;] bring eine Sammlung Brettspiele mit. Ihr habt etwas Spaß, ansonsten ist es ein Abend wie jeder andere.]</tw-passagedata><tw-passagedata pid="88" name="ProjektLangeweile1" tags="" position="351,1560" size="100,100">{
+Nach dem $wayne[&amp;lsqb;dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] gewonnen hat, feixt ihr nur zum Spaß, dass das nur so ist weil $wayne[&amp;lsqb;dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] das Spiel schon so gut kennt.](else:)[zum Spieleabend ein. $wayne[&amp;lsqb;Ein&amp;#42;e Freund&amp;#42;in&amp;rsqb;] bring eine Sammlung Brettspiele mit. Ihr habt etwas Spaß, ansonsten ist es ein Abend wie jeder andere.]</tw-passagedata><tw-passagedata pid="88" name="ProjektLangeweile1" tags="" position="491,1403.3333333333335" size="100,100">{
 (set: $ProjektLangeweile1 to it + 1)
 }\
-(if: $ProjektLangeweile1 is 1)[Mit ein paar Freunden triffst du dich bei $wayne[&amp;lsqb;irgendein Ladenprojekt&amp;rsqb;]. An der Bar angekommen, stellst du dich in die Schlange, nimmst 2€ aus deinem Geldbeutel in die Hand und wartest. Doch hinter der Theke ist niemand. Nach zwei Minuten Warten fragst du ein Mädel neben dir, ob sie wisse, wann der Barmensch zurück kommt. Sie antwortet dir, dass sie heute die Bar macht, aber gerade keine Lust hat. Du kannst dir selbst ein Getränk rausnehmen, wenn du willst.
+Mit ein paar Freunden triffst du dich bei $wayne[&amp;lsqb;irgendein Ladenprojekt&amp;rsqb;]. An der Bar angekommen, stellst du dich in die Schlange, nimmst 2€ aus deinem Geldbeutel in die Hand und wartest. Doch hinter der Theke ist niemand. Nach zwei Minuten Warten fragst du ein Mädel neben dir, ob sie wisse, wann der Barmensch zurück kommt. Sie antwortet dir, dass sie heute die Bar macht, aber gerade keine Lust hat. Du kannst dir selbst ein Getränk rausnehmen, wenn du willst.
 
-Etwas ungewohnt, aber wieso nicht. Du greifst in den Kühlschrank und kehrst wieder auf die andere Seite zurück. Deine Freunde sagen dir es wäre hier normal, als du sie darauf ansprichst. Die Leute seinen keine Angestellten, sondern betreiben den Raum ehe als Treffpunkt. Du antwortest genervt, dass du das selbst weißt.](else:)[Du trinkst 2 Getränke und unterhältst dich mit ein paar Freunden bei einer Zigarette.]</tw-passagedata><tw-passagedata pid="89" name="Facebookpost" tags="" position="2101,1941" size="100,100">&lt;a href=&quot;https://www.facebook.com/dergoldhorn/posts/1691604540876782?__tn__=K-R&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;img src=&quot;images/goldhorn-facebookpost.jpeg&quot; alt=&quot;facebook-goldhorn&quot; height&quot;500&quot; width=&quot;800&quot;/&gt;&lt;/a&gt;
+Etwas ungewohnt, aber wieso nicht. Du greifst in den Kühlschrank und kehrst wieder auf die andere Seite zurück. Deine Freunde sagen dir es wäre hier normal, als du sie darauf ansprichst. Die Leute seinen keine Angestellten, sondern betreiben den Raum ehe als Treffpunkt. Du antwortest genervt, dass du das selbst weißt.</tw-passagedata><tw-passagedata pid="89" name="Facebookpost" tags="" position="2101,1941" size="100,100">&lt;a href=&quot;https://www.facebook.com/dergoldhorn/posts/1691604540876782?__tn__=K-R&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;img src=&quot;images/goldhorn-facebookpost.jpeg&quot; alt=&quot;facebook-goldhorn&quot; height&quot;500&quot; width=&quot;800&quot;/&gt;&lt;/a&gt;
 
 [[Kundgebung-Bar&lt;-zurück]]</tw-passagedata><tw-passagedata pid="90" name="KulturVortrag3" tags="" position="800,1047" size="100,100">{
 (set: $KulturVortrag3 to it + 1)
@@ -1917,7 +1919,33 @@ Es passiert nichts aufregendes. Ihr habt ein ganz normalen Abend.&quot;))
 (if: $LadenAusgehen4 is &gt;= 1)[(set: _ladenAusgehArray to (_ladenAusgehArray - (array: _aus4)))]
 
 }\
-(if: ($LadenAusgehen1 is  &gt;= 1) &amp;&amp; (($LadenAusgehen2 is &gt;= 1) &amp;&amp; (($LadenAusgehen3 is &gt;= 1) &amp;&amp; (($LadenAusgehen4 is &gt;= 1)))))[_leereAus](else:)[(either: ..._ladenAusgehArray)]</tw-passagedata></tw-storydata>
+(if: ($LadenAusgehen1 is  &gt;= 1) &amp;&amp; (($LadenAusgehen2 is &gt;= 1) &amp;&amp; (($LadenAusgehen3 is &gt;= 1) &amp;&amp; (($LadenAusgehen4 is &gt;= 1)))))[_leereAus](else:)[(either: ..._ladenAusgehArray)]</tw-passagedata><tw-passagedata pid="115" name="ProjektLangeweile" tags="" position="492.5,1295" size="100,100">{
+(set: _aus1 to (display: &quot;ProjektLangeweile1&quot;))
+(set: _aus2 to (display: &quot;ProjektLangeweile2&quot;))
+(set: _aus3 to (display: &quot;ProjektLangeweile3&quot;))
+(set: _aus4 to (display: &quot;ProjektLangeweile4&quot;))
+
+(set: _leereAus to &quot;Du trinkst 2 Getränke und unterhältst dich mit ein paar Freunden bei einer Zigarette.&quot;)
+
+(set: _ladenLangArray to (array: _aus1, _aus2, _aus3, _aus4))
+
+(if: $ProjektLangeweile1 is &gt;= 1)[(set: _ladenLangArray to (_ladenLangArray - (array: _aus1)))]
+(if: $ProjektLangeweile2 is &gt;= 1)[(set: _ladenLangArray to (_ladenLangArray - (array: _aus2)))]
+(if: $ProjektLangeweile3 is &gt;= 1)[(set: _ladenLangArray to (_ladenLangArray - (array: _aus3)))]
+(if: $ProjektLangeweile4 is &gt;= 1)[(set: _ladenLangArray to (_ladenLangArray - (array: _aus4)))]
+
+}\
+(if: ($ProjektLangeweile1 is  &gt;= 1) &amp;&amp; (($ProjektLangeweile2 is &gt;= 1) &amp;&amp; (($ProjektLangeweile3 is &gt;= 1) &amp;&amp; (($ProjektLangeweile4 is &gt;= 1)))))[_leereAus](else:)[(either: ..._ladenLangArray)]</tw-passagedata><tw-passagedata pid="116" name="ProjektLangeweile2" tags="" position="490.8333333333334,1512.5000000000002" size="100,100">{
+(set: $ProjektLangeweile2 to it + 1)
+}\
+Jede halbe Stunde folgt ein krasser Musik-Bruch dem nächsten, weil irgendjemand anderes an den Musikplayer kommt. Auch von den Gesprächen bist du heute schnell genervt und winkst relativ schnell ab.</tw-passagedata><tw-passagedata pid="117" name="ProjektLangeweile3" tags="" position="485.8333333333335,1615.8333333333335" size="100,100">{
+(set: $ProjektLangeweile3 to it + 1)
+}\
+Heute ist es etwas voll. Es wird viel geraucht und ist sehr laut. Deine Freunde erzählen eigentlich nichts spannendes, und du starrst alle 5 Minuten auf dein Smartphone. Nach zwei $wayne[&amp;lsqb;irgendein Getränk&amp;rsqb;] gibst du auf.</tw-passagedata><tw-passagedata pid="118" name="ProjektLangeweile4" tags="" position="485.8333333333333,1719.1666666666667" size="100,100">{
+(set: $ProjektLangeweile4 to it + 1)
+}\
+Es ist ziemlich voll und du drängst dich bis an die Bar durch. Mit einem Getränk in der Hand läufst du durch die Räume, musst aber feststellen, dass du (either: &quot;absolut niemanden&quot;, &quot;eigentlich niemanden&quot;) kennst.
+Ein wenig versuchst du dir die Zeit mit ein paar herumliegenden (either: &quot;Magazinen&quot;, &quot;Broschüren&quot;, &quot;Bücher&quot;) zu vertreiben, aber zum Lesen ist es gerade zu laut.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
