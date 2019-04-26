@@ -146,7 +146,9 @@ color: #F5B4DD;
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -478,10 +480,6 @@ Nach einer Weile [[Der Kiez&lt;-verabschiedest]] du dich und gehst Heim.]</tw-pa
 
 (set: _getraenk to (either: &quot;eine Flasche Weißwein&quot;, &quot;einen Sekt&quot;, &quot;zwei Flaschen Bier&quot;))
 
-(set: _unterdKunst to (display: &quot;KulturVortrag3&quot;))
-(set: _linkeSzene to (display: &quot;KulturVortrag1&quot;))
-(set: _hochkunst to (display: &quot;KulturVortrag2&quot;))
-
 (set: _woGalerie to (either: &#39;in ihrem Atelier&#39;, &#39;in der Galerie eines Freundes/Bekannten&#39;, &#39;in einem Ladenprojekt um die Ecke&#39;))
 (set: _werIstDa to (either:
 	&#39;Ein paar deiner Freunde sind auch schon da, ihr stoßt erst mal an und eine der Ausstellerin erzählt, dass sie gerade Stress hat alle Unterlagen für das Bafög einzureichen. Nach einer weiteren Kippe machst du eine kleine Runde.&#39;,
@@ -491,15 +489,8 @@ Nach einer Weile [[Der Kiez&lt;-verabschiedest]] du dich und gehst Heim.]</tw-pa
 (set: _wasAusgestellt to (display: &quot;KulturAustellung&quot;))
 }\
 &lt;!-- progressive neoliberale--&gt;
-(if: $wasHip is &#39;Vortrag&#39;)[(either:
-	_unterdKunst, 
-	_linkeSzene,
-	_hochkunst
-	)]\
-(if: $wasHip is &#39;Film&#39;)[(either:
-	(display: &quot;KulturFilm1&quot;),
-	(display: &quot;KulturFilm2&quot;),
-	(display: &quot;KulturFilm2&quot;))]\
+(if: $wasHip is &#39;Vortrag&#39;)[(display: &quot;KulturVortrag&quot;)]\
+(if: $wasHip is &#39;Film&#39;)[(display: &quot;KulturFilm&quot;)]\
 (if: $wasHip is &#39;Galerie&#39;)[(either: &#39;Zwei&#39;, &#39;Drei&#39;) Freunde von dir machen heute eine Ausstellung _woGalerie. Du läufst auf dem Weg dahin bei einem Späti vorbei und holst _getraenk.
 
 _werIstDa
@@ -1595,56 +1586,46 @@ Eine Person philosophiert über die Untätigkeit der Szene im Leipziger Westen. 
 Eine weitere Person greift den Pfaden auf und Fragt offen, ob das die Konterrevolution der care-revolution ist? Immerhin seien dass Reproduktionsräume, soziale Räume, politische Räume, in denen man gemeinsam lernt sich um care-Arbeit zu kümmern und diese kollektiv zu organisieren. Von daher lässt sich dieser Rückschlag, zumindest als ein verlorene Kampf gegen das neoliberale System, gegen die Grenzen der kapitalistischen Verwertungslogik betrachten.
 Die Dritte Person unterbricht die Meta-Gespräche. Am Ende ist das Problem, dass es scheiß egal ist ob es ein Protest gibt oder was der Verlust dieser Räume bedeutet. In die Werkshalle kommt eine Billardhalle rein und den meisten Menschen ist das egal, wer oder was dafür verdrängt wurde, solange sie nach der Lohnarbeit ihr Bier trinken können.
 
-Stille bricht herein.</tw-passagedata><tw-passagedata pid="74" name="KulturVortrag1" tags="" position="805,827" size="100,100">{
+Stille bricht herein.</tw-passagedata><tw-passagedata pid="74" name="KulturVortrag1" tags="" position="801.6666666666667,957" size="100,100">{
 (set: $KulturVortrag1 to it + 1)
 }\
-(if: $KulturVortrag1 is 1)[Du gehst zu einem Vortrag mit anschließender Diskussion. Auf dem Flyer stand so etwas wie Analyse von Problemen in linken und szenischen Gruppen. Deine Crew wollte da unbedingt hin, weil das ein super wichtiges Thema ist, deshalb bist du auch hin. Aber als du ankommst, ist von denen niemand da. Du bleibst trotzdem.
+Du gehst zu einem Vortrag mit anschließender Diskussion. Auf dem Flyer stand so etwas wie Analyse von Problemen in linken und szenischen Gruppen. Deine Crew wollte da unbedingt hin, weil das ein super wichtiges Thema ist, deshalb bist du auch hin. Aber als du ankommst, ist von denen niemand da. Du bleibst trotzdem.
 	
 Die Vortragende fängt mit Beispielen einer Raumproduktion in der linken Szene in Berlin an und geht zu Kollektive Identität in sozialen Bewegungen über, symbolischen Strukturen die rekursiv reproduziert werden und Raumproduktion im Alltag.
 
 Du kannst kaum folgen, doch dafür wird die Diskussion um so hitziger. Nach dem Vortrag streitest du dich mit dir zwei unbekannten Menschen - ein dürrer Mann und eine erwachsene Frau - um den Begriff des Freiraums. Du bist dir nicht sicher, ob der Begriff nicht zu beliebig verwendet wird und bist kritisch. Die Frau behauptet es gehe bei den Räumen vor allem um die emotional körperliche Identitätskonstruktion. Der Typ wirft euch eine Depersonalisierung von Wahrnehmung vor, die durch Selbstkategorisierung zustande kommt. Ihr würdet von idealen Mitglieder&amp;#42;innen einer In-Group, ihren Eigenschaften, Einstellungen und Verhaltensweisen ausgehen, wo es jedoch in der Realität keine gäbe.
 
-Die Vortragende unterbricht darauf die Diskussion und gibt euch auf dem Weg, dass in Heilig Damm die Inszenierung der linken Gewalt in den Medien in der absoluten absurdesten Überspitzung gezeichnet wurde, und dies in der sogenannten szenische Linken dennoch zur Distanzierung und Spaltung führte.](else:)[Du gehst zu einem links-kulturellen Vortag.
-
-Eigentlich bleibt bei dir nicht viel hängen. Die Diskussionen haben einen Beigeschmack von Selbstdarstellung und gehen oft am Thema vorbei. Einigen fehlt der Blick auf die eigene Strukturen und Verantwortung. Und andere fordern eine differenziertere Betrachtung.]</tw-passagedata><tw-passagedata pid="75" name="KulturVortrag2" tags="" position="803,937" size="100,100">{
+Die Vortragende unterbricht darauf die Diskussion und gibt euch auf dem Weg, dass in Heilig Damm die Inszenierung der linken Gewalt in den Medien in der absoluten absurdesten Überspitzung gezeichnet wurde, und dies in der sogenannten szenische Linken dennoch zur Distanzierung und Spaltung führte.</tw-passagedata><tw-passagedata pid="75" name="KulturVortrag2" tags="" position="799.6666666666666,1058.6666666666667" size="100,100">{
 (set: $KulturVortrag2 to it + 1)
 }\
-(if: $KulturVortrag2 is 1)[Du gehst mit einem Freund zu einem Vortrag über die Auswirkung der kapitalistischen Ideologie an Kunsthochschulen. Die Vortragenden erzählen von ihren persönlichen Erlebnissen an Kunsthochschulen. Die Ideologie der Profitmaximierung herrscht über die Gesellschaft und da Kunsthochschulen Teil der Gesellschaft sind, ist diese auch an der Kunsthochschule zu finden, heißt es. Die Kunsthochschulen müssen sparen um eine gute Bilanz vorweisen zu können, deshalb fehlt es überall an Geld, Lehrstühlen und Räumen.
+Du gehst mit einem Freund zu einem Vortrag über die Auswirkung der kapitalistischen Ideologie an Kunsthochschulen. Die Vortragenden erzählen von ihren persönlichen Erlebnissen an Kunsthochschulen. Die Ideologie der Profitmaximierung herrscht über die Gesellschaft und da Kunsthochschulen Teil der Gesellschaft sind, ist diese auch an der Kunsthochschule zu finden, heißt es. Die Kunsthochschulen müssen sparen um eine gute Bilanz vorweisen zu können, deshalb fehlt es überall an Geld, Lehrstühlen und Räumen.
 Abgeschlossen wird der Vortrag mit Bildern einer kollektiven Performance auf dem HGB-Rundgang, bei dem die mitmachenden Schriftzüge mit -10.000€ tragen und in trauenden Schwarz angezogen sind.
 
 Eine Zuhörerin erwidert, dass diese Wellen vom Sparen die letzten Jahre durch viele Unis in Deutschland gegangen sind und fragt ob man sich nicht z.B. mit Studieprotesten der anderen Hochschulen in Leipzig verbinden könnte. Doch ihr wird entgegnet, dass sich Kunst-Unis mit den technischen Unis nicht einfach so vergleichen lassen.
 
-Du bist dir nicht sicher, ob das Argument einleuchtend war. Aber als du nach dem Vortrag mit deinem Freund darüber reden willst, ist das Interesse kaum vorhanden. Denn er sagt, er wäre dieses Semester eher nur zweimal an der Uni gewesen.](else:)[Du gehst zu einem Vortrag der sich kritisch mit Kunst und der Gesellschaft beschäftigt.
-
-Irgendwie ist es eine Unmenge an neuer Information und doch hat sich dein Blick auf die Dinge dieser Welt danach nicht verändert.]</tw-passagedata><tw-passagedata pid="76" name="KulturFilm1" tags="" position="801,1169" size="100,100">{
+Du bist dir nicht sicher, ob das Argument einleuchtend war. Aber als du nach dem Vortrag mit deinem Freund darüber reden willst, ist das Interesse kaum vorhanden. Denn er sagt, er wäre dieses Semester eher nur zweimal an der Uni gewesen.</tw-passagedata><tw-passagedata pid="76" name="KulturFilm1" tags="" position="799.3333333333334,1371" size="100,100">{
 (set: $KulturFilm1 to it + 1)
 }\
-(if: $KulturFilm1 is 1)[In $wayne[&amp;lsqb;irgendeinem kleinem Kino&amp;rsqb;] wird ein Film über die Ästhetik des G20 Protests gezeigt und behandelt wohl die Inszenierung der Gewalt in der linken Szene. Ein wichtiges Thema, findest du und gehst hin.
+In $wayne[&amp;lsqb;irgendeinem kleinem Kino&amp;rsqb;] wird ein Film über die Ästhetik des G20 Protests gezeigt und behandelt wohl die Inszenierung der Gewalt in der linken Szene. Ein wichtiges Thema, findest du und gehst hin.
 
 Die erste halbe Stunde lange werden selfie-Aufnahmen von schick angezogenen jungen Menschen vor brennenden Autos gezeigt. Danach wird eine vermute Person in einem abgedunkelten Raum interviewt. Der Film endet mit eine Professorin, die die Zurschaustellung von ausufernder Gewalt, als einen Prozess vor der eigenen Hilflosigkeit gegenüber dem dominierenden Neoliberalen System zu fliehen, bewertet.
 
-Als der Abspann läuft, schnappst du neben dir die Wortfetzen &quot;Randalierer Zerstören den Rückhalt&quot;, &quot;mediale Aufmerksamkeit&quot; und &quot;Respekt vor Eigentum&quot; auf. Du bist still und starrst auf eine Nachricht auf deinem Smartphone.](else:)[In $wayne[&amp;lsqb;irgendeinem kleinem Kino&amp;rsqb;] gibt es ein Film der sich kritisch mit der linken Szene auseinandersetzt.
-
-Ein paar schöne Bilder, selbst-referenzielle Aussagen. Und eine akademische Interpretation. Nach 2 Stunden kannst du nicht behaupten etwas neues gelernt zu haben.]</tw-passagedata><tw-passagedata pid="77" name="KulturFilm2" tags="" position="799,1274" size="100,100">{
+Als der Abspann läuft, schnappst du neben dir die Wortfetzen &quot;Randalierer Zerstören den Rückhalt&quot;, &quot;mediale Aufmerksamkeit&quot; und &quot;Respekt vor Eigentum&quot; auf. Du bist still und starrst auf eine Nachricht auf deinem Smartphone.</tw-passagedata><tw-passagedata pid="77" name="KulturFilm2" tags="" position="799,1474.3333333333333" size="100,100">{
 (set: $KulturFilm2 to it + 1)
 }\
-(if: $KulturFilm2 is 1)[Du gehst mit deinen Peoples zu einem Film über feministischen Rap in Porno-Filmen mit eingeladenen Regisseur&amp;#42;innen.
+Du gehst mit deinen Peoples zu einem Film über feministischen Rap in Porno-Filmen mit eingeladenen Regisseur&amp;#42;innen.
 
 Auf der Bühne sitzen zwei Cis-Männer gekleidet in Bunten Röcken und einem BH. Während hinter ihnen auf der Leinwand der Film läuft, erzählen sie einzelne Anekdoten, die während der Aufnahmen stattgefunden haben. Die meisten Penisse, die in den man-on-man Szenen zu sehen sind, seien nicht echt, da keiner der Darsteller lange genug eine Erektion vorweisen konnte.
 
-Du findest die Geschichten gewitzt und spannend. Doch die Musik ist leider viel zu leise und du kannst nichts von den Rap-Texten verstehen. Nach dem letzten Applaus verlässt du den Raum mit einem Gefühl von Ekel und Notgeilheit.](else:)[Du gehst mit Freunden zu einem hippen szenischen Film.
-
-Es ist ganz witzig, hat Höhen und Tiefen. In der Werbung machte der Film zumindest den Anschein eine Aussage machen zu wollen, aber nach dem schauen wüsstest du nicht welche.]</tw-passagedata><tw-passagedata pid="78" name="KulturFilm3" tags="" position="799,1381" size="100,100">{
+Du findest die Geschichten gewitzt und spannend. Doch die Musik ist leider viel zu leise und du kannst nichts von den Rap-Texten verstehen. Nach dem letzten Applaus verlässt du den Raum mit einem Gefühl von Ekel und Notgeilheit.</tw-passagedata><tw-passagedata pid="78" name="KulturFilm3" tags="" position="799,1574.3333333333335" size="100,100">{
 (set: $KulturFilm3 to it + 1)
 }\
-(if: $KulturFilm3 is 1)[Auf einem Flyer hast du gesehen, dass heute ein Kurzfilmabend ist, mit dem Thema critical whiteness and postcapitalism. Das klang spannend, deswegen bist mit einer weiteren Freundin hin.
+Auf einem Flyer hast du gesehen, dass heute ein Kurzfilmabend ist, mit dem Thema critical whiteness and postcapitalism. Das klang spannend, deswegen bist mit einer weiteren Freundin hin.
 
 Gezeigt wird eine wilde Sammlung von Kurzclips. Ein paar kannst du nicht einordnen, denn man sieht nur verzehrte Körper, ein Raum der sich mit Geld füllt, oder Haare die sich um Menschen schlingen.
 Als letztes seht ihr eine Kollage aus Auschnitten verschiedener Reportagen über &amp;lsqb;S&amp;rsqb;chwarze trans Personen, die gegen Obdachlosigkeit und Ausbeutung protestieren. Fliegende Steine und Polizeigewalt werden eingeblendet. Ausschnitten aus einem Interview nach den Protesten folgen. Eine Person wirft Akademiker&amp;#42;in vor, sich das Wort queer repressiv und subversiv anzueignen. Ökonomische Unterdrückung von queers wird aus den Diskussionen verdrängt und durch Ziele ersetzt, die sich um Diskriminierungsfreiheit im Beruf oder um Ehe- und Steuerrecht drehen. Eigener Rassismus und Sexismus wird nicht reflektiert und die Kritik auf andere projiziert.
 
-Du führst mit der Freundin noch lange ein Gespräch über das Gesehene. Ihr stimmt den meisten Dingen zu, aber findet auch, dass ein paar Filme ein wenig propagandistisch rüberkamen und die Kapitalismuskritik den eigentlichen Kern verwässerte.](else:)[Du gehst zu einer Veranstaltung mit künstlerischen und witzigen gesellschaftskritischen Kurzfilmen.
-
-Szeneklüngel, Akademikern, Lebensgeschichten, Kunstfilme, alles bunt gemischt. Von ein paar Kurzfilmen fühlst du dich angesprochen.]</tw-passagedata><tw-passagedata pid="79" name="ZukunftPlakate" tags="" position="219,2608" size="100,100">&lt;img src=&quot;images/109plakat.jpg&quot; alt=&quot;109wichtig&quot; height&quot;500&quot; width=&quot;350&quot;/&gt;&lt;img src=&quot;images/109plakat1.jpg&quot; alt=&quot;ideen für&quot; height&quot;350&quot; width=&quot;500&quot;/&gt;
+Du führst mit der Freundin noch lange ein Gespräch über das Gesehene. Ihr stimmt den meisten Dingen zu, aber findet auch, dass ein paar Filme ein wenig propagandistisch rüberkamen und die Kapitalismuskritik den eigentlichen Kern verwässerte.</tw-passagedata><tw-passagedata pid="79" name="ZukunftPlakate" tags="" position="219,2608" size="100,100">&lt;img src=&quot;images/109plakat.jpg&quot; alt=&quot;109wichtig&quot; height&quot;500&quot; width=&quot;350&quot;/&gt;&lt;img src=&quot;images/109plakat1.jpg&quot; alt=&quot;ideen für&quot; height&quot;350&quot; width=&quot;500&quot;/&gt;
 &lt;img src=&quot;images/109plakat2.jpg&quot; alt=&quot;raum für&quot; height&quot;500&quot; width=&quot;350&quot;/&gt;&lt;img src=&quot;images/109plakat3.jpg&quot; alt=&quot;infrastruktur für&quot; height&quot;350&quot; width=&quot;500&quot;/&gt;
 
 
@@ -1679,7 +1660,7 @@ Ihr geht an die Bar und du findest die Kasse nicht. Deshalb fragst du das Barper
 Es ist noch Sonnig und die meisten hängen draußen vor der Tür. Ihr geht rein um euch ein Getränk zu holen.
 	
 Vor der Bar sitz ein Penner. Vermutlich leicht betrunken. Er spricht dich an.
-Zur Abwechslung gehst du mal auf das Gespräch ein - auch weil du dich etwas langweilst. Nach einer Weile erzählt er, dass er manchmal hier schlafen darf. Du spendest beim dem nächsten (either: &quot;Wein&quot;, &quot;Bier&quot;) etwas mehr und gehst zurück zu deiner Clique.</tw-passagedata><tw-passagedata pid="84" name="ClubAusgehen1" tags="" position="21,1377" size="100,100">{
+Zur Abwechslung gehst du mal auf das Gespräch ein - auch weil du dich etwas langweilst. Nach einer Weile erzählt er, dass er manchmal hier schlafen darf. Du spendest beim dem nächsten (either: &quot;Wein&quot;, &quot;Bier&quot;) etwas mehr und gehst zurück zu deiner Clique.</tw-passagedata><tw-passagedata pid="84" name="ClubAusgehen1" tags="" position="22.666666666666668,1403.6666666666667" size="100,100">{
 (set: $ClubAusgehen1 to it + 1)
 }\
 (if: $ClubAusgehen1 is 1)[Deine Friends schleppen dich zu einem Club mit, doch am Einlass erklären dir Menschen, dass dem gar nicht so sei. Es ist $wayne[&amp;lsqb;irgendein Projekt&amp;rsqb;] und sie sammeln Geld für $wayne[&amp;lsqb;irgendein Projekt&amp;rsqb;] mit einer Soliparty.
@@ -1691,7 +1672,7 @@ Lichter in Blau und dunkel Violett blinken in dein Gesicht. Der Raum ist voll un
 Deine Klamotten sind nass als du merkst, dass du vielleicht doch zu viel Alkohol getrunken hast. Du suchst dir ein Platz zum chillen und kannst von den Menschen neben dir Tabak schnorren.
 Blauer Rauch steigt über deinem Kopf auf, als deine Freunde dich endlich finden und dir einen Saft in die Hand drücken.](else:)[Deine Friends schleppen dich zu einem Club mit, doch am Einlass erklären dir Menschen, dass dem gar nicht so sei. Es ist $wayne[&amp;lsqb;irgendein Projekt&amp;rsqb;] und sie sammeln Geld für $wayne[&amp;lsqb;irgendein Projekt&amp;rsqb;] mit einer Soliparty.
 
-Du kannst etwas ausgelassen feiern und deine Freunde auch. Nur ein&amp;#42;e Freund&amp;#42;in nicht. Irgendwann erzählt sie&amp;#42;er nicht mehr so viel Kohle zu haben. Deine Freunde versuchen zu erklären, dass es hier keine Rolle spielt, aber sie&amp;#42;er, sagt es gäbe ja trotzdem Leute die einen anstarren. Du ziehst sie&amp;#42;ihn halb betrunken an die Bar und sagst du spendest einfach etwas mehr und sie&amp;#42;er etwas weniger.]</tw-passagedata><tw-passagedata pid="85" name="ClubAusgehen2" tags="" position="28,1487" size="100,100">{
+Du kannst etwas ausgelassen feiern und deine Freunde auch. Nur ein&amp;#42;e Freund&amp;#42;in nicht. Irgendwann erzählt sie&amp;#42;er nicht mehr so viel Kohle zu haben. Deine Freunde versuchen zu erklären, dass es hier keine Rolle spielt, aber sie&amp;#42;er, sagt es gäbe ja trotzdem Leute die einen anstarren. Du ziehst sie&amp;#42;ihn halb betrunken an die Bar und sagst du spendest einfach etwas mehr und sie&amp;#42;er etwas weniger.]</tw-passagedata><tw-passagedata pid="85" name="ClubAusgehen2" tags="" position="28,1510.3333333333333" size="100,100">{
 (set: $ClubAusgehen2 to it + 1)
 }\
 (if: $ClubAusgehen2 is 1)[Im $wayne[&amp;lsqb;stylischen Club&amp;rsqb;] legt heute $wayne[&amp;lsqb;irgendein DJ&amp;rsqb;] (either: 6, 5, 7) Stunden lang auf. Das musst du einfach dancen. Schon am Einlass fragst du dich nach Teilen durch und findest nach ein paar Minuten bereits dein 10€-Glück.
@@ -1726,14 +1707,14 @@ Mit ein paar Freunden triffst du dich bei $wayne[&amp;lsqb;irgendein Ladenprojek
 
 Etwas ungewohnt, aber wieso nicht. Du greifst in den Kühlschrank und kehrst wieder auf die andere Seite zurück. Deine Freunde sagen dir es wäre hier normal, als du sie darauf ansprichst. Die Leute seinen keine Angestellten, sondern betreiben den Raum ehe als Treffpunkt. Du antwortest genervt, dass du das selbst weißt.</tw-passagedata><tw-passagedata pid="89" name="Facebookpost" tags="" position="2101,1941" size="100,100">&lt;a href=&quot;https://www.facebook.com/dergoldhorn/posts/1691604540876782?__tn__=K-R&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;img src=&quot;images/goldhorn-facebookpost.jpeg&quot; alt=&quot;facebook-goldhorn&quot; height&quot;500&quot; width=&quot;800&quot;/&gt;&lt;/a&gt;
 
-[[Kundgebung-Bar&lt;-zurück]]</tw-passagedata><tw-passagedata pid="90" name="KulturVortrag3" tags="" position="800,1047" size="100,100">{
+[[Kundgebung-Bar&lt;-zurück]]</tw-passagedata><tw-passagedata pid="90" name="KulturVortrag3" tags="" position="800,1163.6666666666665" size="100,100">{
 (set: $KulturVortrag3 to it + 1)
 }\
-(if: $KulturVortrag3 is 1)[Du gehst zu einem Vortrag über Antisemitismus, Gender und freie Kunst und bist fasziniert von den Bildern die während der Präsentation gezeigt wurden und den Geschichten ihrer Entstehung.
+Du gehst zu einem Vortrag über Antisemitismus, Gender und freie Kunst und bist fasziniert von den Bildern die während der Präsentation gezeigt wurden und den Geschichten ihrer Entstehung.
 
 Während der anschließenden Diskussion entsteht ein Streitgespräch ob die Bilder und ihre Entstehung als eine Form des Widerstands zu betrachten sind oder die Bilder Aufzeigen, was selbst unter Unterdrückung möglich ist und wie viel mehr an Kunst ohne die Unterdrückung möglich wäre.
 
-Du bist dir sicher heute ein tieferes Verständnis gewonnen zu haben und teils auf Insta gleich noch das Bild des Flyers neben deinem Gesicht.](else:)[]</tw-passagedata><tw-passagedata pid="91" name="KulturAustellung" tags="" position="935,860" size="100,100">{
+Du bist dir sicher heute ein tieferes Verständnis gewonnen zu haben und teils auf Insta gleich noch das Bild des Flyers neben deinem Gesicht.</tw-passagedata><tw-passagedata pid="91" name="KulturAustellung" tags="" position="935,860" size="100,100">{
 (set: _aus1 to (display: &quot;KulturAustellung1&quot;))
 (set: _aus2 to (display: &quot;KulturAustellung2&quot;))
 (set: _aus3 to (display: &quot;KulturAustellung3&quot;))
@@ -2006,7 +1987,48 @@ Ihr unterhaltet euch lange darüber wie mögliche Hierarchien aufgelöst werden 
 (set: $ProjektPlenum2 to it + 1)
 }\
 Es ist echt kein gutes Plenum. Alle fallen sich ins Wort und kein einziges Top wird zu ende besprochen, bevor ihr nicht zu einem anderen Thema abschweift. Als die/der Protokollant&amp;#42;in sich beschwert, dass das Protokollieren fast unmöglich ist, entsteht auch noch ein Streit mit denjenigen, die finden das alles nun mal im ganzen so besprochen werden muss und zusammenhängt.
-Du forderst eine Pause und ihr beschließt, dass ihr heute doch jemand zum Moderieren braucht. Ihr schafft danach zumindest ein Thema zu Ende zu besprechen, doch dann es ist schon halb 10 und niemand hat Energie noch weiter zu plenieren</tw-passagedata></tw-storydata>
+Du forderst eine Pause und ihr beschließt, dass ihr heute doch jemand zum Moderieren braucht. Ihr schafft danach zumindest ein Thema zu Ende zu besprechen, doch dann es ist schon halb 10 und niemand hat Energie noch weiter zu plenieren</tw-passagedata><tw-passagedata pid="128" name="KulturVortrag" tags="" position="804.1666666666666,854.1666666666667" size="100,100">{
+(set: _aus1 to (display: &quot;KulturVortrag1&quot;))
+(set: _aus2 to (display: &quot;KulturVortrag2&quot;))
+(set: _aus3 to (display: &quot;KulturVortrag3&quot;))
+
+(set: _leereAus to (either: &quot;Du gehst zu einem links-kulturellen Vortag.
+
+Eigentlich bleibt bei dir nicht viel hängen. Die Diskussionen haben einen Beigeschmack von Selbstdarstellung und gehen oft am Thema vorbei. Einigen fehlt der Blick auf die eigene Strukturen und Verantwortung. Und andere fordern eine differenziertere Betrachtung.&quot;,
+&quot;Du gehst zu einem Vortrag der sich kritisch mit Kunst und der Gesellschaft beschäftigt.
+
+Irgendwie ist es eine Unmenge an neuer Information und doch hat sich dein Blick auf die Dinge dieser Welt danach nicht verändert.&quot;))
+
+(set: $kulturVorArray to (array: _aus1, _aus2, _aus3))
+
+(if: $KulturVortrag1 is &gt;= 1)[(set: $kulturVorArray to ($kulturVorArray - (array: _aus1)))]
+(if: $KulturVortrag2 is &gt;= 1)[(set: $kulturVorArray to ($kulturVorArray - (array: _aus2)))]
+(if: $KulturVortrag3 is &gt;= 1)[(set: $kulturVorArray to ($kulturVorArray - (array: _aus3)))]
+
+}\
+(if: ($KulturVortrag1 is  &gt;= 1) &amp;&amp; (($KulturVortrag2 is &gt;= 1) &amp;&amp; (($KulturVortrag3 is &gt;= 1))))[_leereAus](else:)[(either: ...$kulturVorArray)]</tw-passagedata><tw-passagedata pid="129" name="KulturFilm" tags="" position="799.1666666666666,1269.1666666666667" size="100,100">{
+(set: _aus1 to (display: &quot;KulturFilm1&quot;))
+(set: _aus2 to (display: &quot;KulturFilm2&quot;))
+(set: _aus3 to (display: &quot;KulturFilm3&quot;))
+
+(set: _leereAus to (either: &quot;In $wayne[&amp;lsqb;irgendeinem kleinem Kino&amp;rsqb;] gibt es ein Film der sich kritisch mit der linken Szene auseinandersetzt.
+
+Ein paar schöne Bilder, selbst-referenzielle Aussagen. Und eine akademische Interpretation. Nach 2 Stunden kannst du nicht behaupten etwas neues gelernt zu haben.&quot;,
+&quot;Du gehst mit Freunden zu einem hippen szenischen Film.
+
+Es ist ganz witzig, hat Höhen und Tiefen. In der Werbung machte der Film zumindest den Anschein eine Aussage machen zu wollen, aber nach dem schauen wüsstest du nicht welche.&quot;,
+&quot;Du gehst zu einer Veranstaltung mit künstlerischen und witzigen gesellschaftskritischen Kurzfilmen.
+
+Szeneklüngel, Akademikern, Lebensgeschichten, Kunstfilme, alles bunt gemischt. Von ein paar Kurzfilmen fühlst du dich angesprochen.&quot;))
+
+(set: $kulturFilmArray to (array: _aus1, _aus2, _aus3))
+
+(if: $KulturFilm1 is &gt;= 1)[(set: $kulturFilmArray to ($kulturFilmArray - (array: _aus1)))]
+(if: $KulturFilm2 is &gt;= 1)[(set: $kulturFilmArray to ($kulturFilmArray - (array: _aus2)))]
+(if: $KulturFilm3 is &gt;= 1)[(set: $kulturFilmArray to ($kulturFilmArray - (array: _aus3)))]
+
+}\
+(if: ($KulturFilm1 is  &gt;= 1) &amp;&amp; (($KulturFilm2 is &gt;= 1) &amp;&amp; (($KulturFilm3 is &gt;= 1))))[_leereAus](else:)[(either: ...$kulturFilmArray)]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
