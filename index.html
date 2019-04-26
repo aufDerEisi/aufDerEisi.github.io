@@ -316,6 +316,9 @@ color: #F5B4DD;
 (set: $ProjektVortrag1 to 0)
 (set: $ProjektVortrag2 to 0)
 (set: $ProjektVortrag3 to 0)
+(set: $ProjektHelfen1 to 0)
+(set: $ProjektHelfen2 to 0)
+(set: $ProjektHelfen3 to 0)
 (set: $ProjektGespaech1 to 0)
 (set: $ProjektGespaech2 to 0)
 (set: $ProjektGespaech3 to 0)
@@ -442,16 +445,8 @@ Heute ist wohl ein (either: _hoerspielLine, _vortragLine)&quot;)
 Ihr unterhaltet euch lange darüber wie mögliche Hierarchien aufgelöst werden könnten. Es gibt zwar kein abschließendes Ergebnis, aber du hast das Gefühl ihr seit  als Gruppe weiter als davor.&#39;,
   &#39;Es ist echt kein gutes Plenum. Alle fallen sich ins Wort und kein einziges Top wird zu ende besprochen, bevor ihr nicht zu einem anderen Thema abschweift. Als die/der Protokollant&amp;#42;in sich beschwert, dass das Protokollieren fast unmöglich ist, entsteht auch noch ein Streit mit denjenigen, die finden das alles nun mal im ganzen so besprochen werden muss und zusammenhängt.
 Du forderst eine Pause und ihr beschließt, dass ihr heute doch jemand zum Moderieren braucht. Ihr schafft danach zumindest ein Thema zu Ende zu besprechen, doch dann es ist schon halb 10 und niemand hat Energie noch weiter zu plenieren&#39;))
-(set: _muell to (either: &quot;einer Kamera, Bücher und T-Shirts&quot;,
-&quot;Schlitzschuhen, einem Notizbuch mit ein paar ausgerissenen Seiten und zwei leeren(?) Tapes&quot;, &quot;Fahrradpumpe, einer Hose und zwei Paar Schuhe&quot;))
-(set: _zahlS to (either: &quot;zwei&quot;, &quot;drei&quot;))
-(set: _helfenLine to (either:
-	&#39;Heute war VeKü und du hast dich entschieden etwas im Viertel zu helfen in dem du ein paar Töpfe sauber machst. Nach einer (either: &quot;halben Stunde&quot;, &quot;viertel Stunde&quot;) (either: &quot;gibst du bei einem eingebrannten Topf auf und weichst denn ein, in der Hoffnung das jemand später weiter spült&quot;, &quot;kommt jemand dazu und hilft dir bei dem Rest.&quot;)&#39;,
-	&#39;Du hast mitbekommen, dass in $wayne[&amp;lsqb;irgendein Ladenprojekt&amp;rsqb;] heute Aktionstag ist. Als du ankommst stellst du fest, dass eigentlich nichts geplant ist. Eine Person wollte ein (either: &quot;Regal für Flyer bauen, aber weder wurde Holz noch Fahrradschläuche besorgt.&quot;, &quot;Eine Tafel bauen um aktuelle Infos und Termin vom Laden drauf schreiben zu können, aber weder wurde eine Holzplatte noch Tafelfarbe besorgt.&quot;, &quot;Plan mit Aufgaben erstellen, aber ist selbst nicht da.&quot;)
-Du räumst irgendwie planlos Sachen von Raum zu Raum, aber gibst auf, da sich das ganze etwas sinnlos anfühlt.&#39;,
-	&#39;Über einen Verteiler hast du gelesen, dass heute im $wayne[&amp;lsqb;irgendein Ladenprojekt&amp;rsqb;] Ausmisten-Tag ist. Es hat sich also wieder irgendein Scheiß angehäuft und der soll weg.
 
-Nach einer Stunden hast du ein Haufen mit _muell gemacht, welchen du mitnimmst. Und _zahlS Müllsäcken, die jemand zu einem (anderen) Umsonstladen bringen will.&#39;))
+(set: _helfenLine to (display: &quot;ProjektHelfen&quot;))
 
 }\
 
@@ -1962,7 +1957,37 @@ Du bist da etwas kritischer. Natürlich ist es schade, wenn Projekte wegmüssen.
 (set: $ProjektGespaech4 to it + 1)
 }\
 Du lernst zwei linke an der Bar kennen. Ihr unterhaltet euch lange über eine fehlende linke Bewegung und leere Ideen. Am Ende bleibt ihr bei (either: &quot;Griechenland&quot;, &quot;Italien&quot;, &quot;Spanien&quot;, &quot;Portugal&quot;) hängen. Es gäbe dort momentan eine Masse die mobilisiert werden kann, das Problem ist nur, das auch viele Rechte Teil der Demonstrant&amp;#42;Innen sind.
-Nach 2-3 Bier stellen sie fest, dass man mit einer Beteiligung nur die Rechten stärker machen würde.</tw-passagedata></tw-storydata>
+Nach 2-3 Bier stellen sie fest, dass man mit einer Beteiligung nur die Rechten stärker machen würde.</tw-passagedata><tw-passagedata pid="121" name="ProjektHelfen" tags="" position="597.5,824.1666666666666" size="100,100">{
+(set: _aus1 to (display: &quot;ProjektHelfen1&quot;))
+(set: _aus2 to (display: &quot;ProjektHelfen2&quot;))
+(set: _aus3 to (display: &quot;ProjektHelfen3&quot;))
+
+(set: _leereAus to &quot;Heute war VeKü und du hast dich entschieden etwas im Viertel zu helfen in dem du ein paar Töpfe sauber machst. Nach einer (either: &#39;halben Stunde&#39;, &#39;viertel Stunde&#39;) gibst du bei einem eingebrannten Topf auf und weichst denn ein, in der Hoffnung das jemand später weiter spült&quot;)
+
+(set: _pHelfenArray to (array: _aus1, _aus2, _aus3))
+
+(if: $ProjektHelfen1 is &gt;= 1)[(set: _pHelfenArray to (_pHelfenArray - (array: _aus1)))]
+(if: $ProjektHelfen2 is &gt;= 1)[(set: _pHelfenArray to (_pHelfenArray - (array: _aus2)))]
+(if: $ProjektHelfen3 is &gt;= 1)[(set: _pHelfenArray to (_pHelfenArray - (array: _aus3)))]
+
+}\
+(if: ($ProjektHelfen1 is  &gt;= 1) &amp;&amp; (($ProjektHelfen2 is &gt;= 1) &amp;&amp; (($ProjektHelfen3 is &gt;= 1))))[_leereAus](else:)[(either: ..._pHelfenArray)]</tw-passagedata><tw-passagedata pid="122" name="ProjektHelfen1" tags="" position="609.1666666666666,934.1666666666666" size="100,100">{
+(set: $ProjektHelfen1 to it + 1)
+(set: _muell to (either: &quot;einer Kamera, Bücher und T-Shirts&quot;,
+&quot;Schlitzschuhen, einem Notizbuch mit ein paar ausgerissenen Seiten und zwei leeren(?) Tapes&quot;, &quot;Fahrradpumpe, einer Hose und zwei Paar Schuhe&quot;))
+(set: _zahlS to (either: &quot;zwei&quot;, &quot;drei&quot;))
+}\
+Über einen Verteiler hast du gelesen, dass heute im $wayne[&amp;lsqb;irgendein Ladenprojekt&amp;rsqb;] Ausmisten-Tag ist. Es hat sich also wieder irgendein Scheiß angehäuft und der soll weg.
+
+Nach einer Stunden hast du ein Haufen mit _muell gemacht, welchen du mitnimmst. Und _zahlS Müllsäcken, die jemand zu einem (anderen) Umsonstladen bringen will.</tw-passagedata><tw-passagedata pid="123" name="ProjektHelfen2" tags="" position="607.5,1040.8333333333333" size="100,100">{
+(set: $ProjektHelfen2 to it + 1)
+}\
+Du hast mitbekommen, dass in $wayne[&amp;lsqb;irgendein Ladenprojekt&amp;rsqb;] heute Aktionstag ist. Als du ankommst stellst du fest, dass eigentlich nichts geplant ist.
+Eine Person wollte ein (either: &quot;Regal für Flyer bauen, aber weder wurde Holz noch Fahrradschläuche besorgt.&quot;, &quot;Eine Tafel bauen um aktuelle Infos und Termin vom Laden drauf schreiben zu können, aber weder wurde eine Holzplatte noch Tafelfarbe besorgt.&quot;, &quot;Plan mit Aufgaben erstellen, aber ist selbst nicht da.&quot;)
+Du räumst irgendwie planlos Sachen von Raum zu Raum, aber gibst auf, da sich das ganze etwas sinnlos anfühlt.</tw-passagedata><tw-passagedata pid="124" name="ProjektHelfen3" tags="" position="606.6666666666666,1149.1666666666667" size="100,100">{
+(set: $ProjektHelfen3 to it + 1)
+}\
+Heute war VeKü und du hast dich entschieden etwas im Viertel zu helfen in dem du ein paar Töpfe sauber machst. Nach einer (either: &quot;halben Stunde&quot;, &quot;viertel Stunde&quot;) kommt jemand dazu und hilft dir bei dem Rest.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
