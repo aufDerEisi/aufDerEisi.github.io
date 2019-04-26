@@ -348,6 +348,10 @@ color: #F5B4DD;
 (set: $KulturAustellung3 to 0)
 (set: $KulturAustellung4 to 0)
 (set: $KulturAustellung5 to 0)
+(set: $WerBeiGalerie1 to 0)
+(set: $WerBeiGalerie2 to 0)
+(set: $WerBeiGalerie3 to 0)
+(set: $WerBeiGalerie4 to 0)
 
 (set: $HausFreunde1 to 0)
 (set: $HausFreunde2 to 0)
@@ -481,17 +485,13 @@ Nach einer Weile [[Der Kiez&lt;-verabschiedest]] du dich und gehst Heim.]</tw-pa
 (set: _getraenk to (either: &quot;eine Flasche Weißwein&quot;, &quot;einen Sekt&quot;, &quot;zwei Flaschen Bier&quot;))
 
 (set: _woGalerie to (either: &#39;in ihrem Atelier&#39;, &#39;in der Galerie eines Freundes/Bekannten&#39;, &#39;in einem Ladenprojekt um die Ecke&#39;))
-(set: _werIstDa to (either:
-	&#39;Ein paar deiner Freunde sind auch schon da, ihr stoßt erst mal an und eine der Ausstellerin erzählt, dass sie gerade Stress hat alle Unterlagen für das Bafög einzureichen. Nach einer weiteren Kippe machst du eine kleine Runde.&#39;,
-	&#39;Beim reinkommen stellst du fest, noch ist niemand da. Alles wirkt sehr kalt. Du begrüßt die Künstler&amp;#42;innen und im zweiten Satz fragen sie schon ob es ok ist, wenn sie sich kurz einen Döner um die Ecke holen. Denn alle hätten heute kaum Zeit um etwas zu essen gehabt. Du nickst verständnisvoll und bleibst in der Stille zurück, um dir die Bilder anzuschauen.&#39;,
-	&#39;Als du da bist läuft laut Musik, du gehst an eine provisorisch errichtete Bar und siehst ein paar bekannte Gesichter. Scheinbar soll es auch eine Party geben, denn in der Ecke baut schon ein DJ auf. Nach kurzer Zeit, hast du zwei Gläser Sekt in dir und als die Bar die ersten Popsongs einschaltet, entscheidest du dich dir doch noch kurz die Bilder anzuschauen.&#39;,
-	&#39;Niemand grüßt dich. Außer den Künstlern, sind nur zwei Menschen da. Die Wände und Boden sind voll mit unfertigen Zeichnungen und Farbe. Einer der ausstellenden drückt seine Kippe aus, geht zu einem Bild und malt weiter. Wahrscheinlich ist es eine Art Performance meets come together, denkst du dir und drehst dich einmal in langsamen Schritten im Kreis und nährst dich dem ersten Bild.&#39;))
+(set: _werIstDa to (display: &quot;WerBeiGalerie&quot;))
 (set: _wasAusgestellt to (display: &quot;KulturAustellung&quot;))
 }\
 &lt;!-- progressive neoliberale--&gt;
 (if: $wasHip is &#39;Vortrag&#39;)[(display: &quot;KulturVortrag&quot;)]\
 (if: $wasHip is &#39;Film&#39;)[(display: &quot;KulturFilm&quot;)]\
-(if: $wasHip is &#39;Galerie&#39;)[(either: &#39;Zwei&#39;, &#39;Drei&#39;) Freunde von dir machen heute eine Ausstellung _woGalerie. Du läufst auf dem Weg dahin bei einem Späti vorbei und holst _getraenk.
+(if: $wasHip is &#39;Galerie&#39;)[(either: &#39;Zwei&#39;, &#39;Drei&#39;) Bekannte von dir machen heute eine Ausstellung _woGalerie. Du läufst auf dem Weg dahin bei einem Späti vorbei und holst _getraenk.
 
 _werIstDa
 
@@ -2028,7 +2028,35 @@ Szeneklüngel, Akademikern, Lebensgeschichten, Kunstfilme, alles bunt gemischt. 
 (if: $KulturFilm3 is &gt;= 1)[(set: $kulturFilmArray to ($kulturFilmArray - (array: _aus3)))]
 
 }\
-(if: ($KulturFilm1 is  &gt;= 1) &amp;&amp; (($KulturFilm2 is &gt;= 1) &amp;&amp; (($KulturFilm3 is &gt;= 1))))[_leereAus](else:)[(either: ...$kulturFilmArray)]</tw-passagedata></tw-storydata>
+(if: ($KulturFilm1 is  &gt;= 1) &amp;&amp; (($KulturFilm2 is &gt;= 1) &amp;&amp; (($KulturFilm3 is &gt;= 1))))[_leereAus](else:)[(either: ...$kulturFilmArray)]</tw-passagedata><tw-passagedata pid="130" name="WerBeiGalerie1" tags="" position="1047.5,969.1666666666667" size="100,100">{
+(set: $WerBeiGalerie1 to it + 1)
+}\
+Ein paar deiner Freunde sind auch schon da, ihr stoßt erst mal an und eine der Ausstellerin erzählt, dass sie gerade Stress hat alle Unterlagen für das Bafög einzureichen. Nach einer weiteren Kippe machst du eine kleine Runde.</tw-passagedata><tw-passagedata pid="131" name="WerBeiGalerie" tags="" position="1050.8333333333333,855.8333333333334" size="100,100">{
+(set: _aus1 to (display: &quot;WerBeiGalerie1&quot;))
+(set: _aus2 to (display: &quot;WerBeiGalerie2&quot;))
+(set: _aus3 to (display: &quot;WerBeiGalerie3&quot;))
+(set: _aus4 to (display: &quot;WerBeiGalerie4&quot;))
+
+(set: _leereAus to &quot;Die selben Gesichter wie immer. Du unterhält dich ein wenig und schaust dir dann die Ausstellung an.&quot;)
+
+(set: $werBeiGalerieArr to (array: _aus1, _aus2, _aus3, _aus4))
+
+(if: $WerBeiGalerie1 is &gt;= 1)[(set: $werBeiGalerieArr to ($werBeiGalerieArr - (array: _aus1)))]
+(if: $WerBeiGalerie2 is &gt;= 1)[(set: $werBeiGalerieArr to ($werBeiGalerieArr - (array: _aus2)))]
+(if: $WerBeiGalerie3 is &gt;= 1)[(set: $werBeiGalerieArr to ($werBeiGalerieArr - (array: _aus3)))]
+(if: $WerBeiGalerie4 is &gt;= 1)[(set: $werBeiGalerieArr to ($werBeiGalerieArr - (array: _aus4)))]
+
+}\
+(if: ($WerBeiGalerie1 is  &gt;= 1) &amp;&amp; (($WerBeiGalerie2 is &gt;= 1) &amp;&amp; (($WerBeiGalerie3 is &gt;= 1) &amp;&amp; (($WerBeiGalerie4 is &gt;= 1)))))[_leereAus](else:)[(either: ...$werBeiGalerieArr)]</tw-passagedata><tw-passagedata pid="132" name="WerBeiGalerie2" tags="" position="1044.1666666666667,1072.5" size="100,100">{
+(set: $WerBeiGalerie2 to it + 1)
+}\
+Als du da bist läuft laut Musik, du gehst an eine provisorisch errichtete Bar und siehst ein paar bekannte Gesichter. Scheinbar soll es auch eine Party geben, denn in der Ecke baut schon ein DJ auf. Nach kurzer Zeit, hast du zwei Gläser Sekt in dir und als die Bar die ersten Popsongs einschaltet, entscheidest du dich dir doch noch kurz die Bilder anzuschauen.</tw-passagedata><tw-passagedata pid="133" name="WerBeiGalerie3" tags="" position="1047.5,1177.5" size="100,100">{
+(set: $WerBeiGalerie3 to it + 1)
+}\
+Niemand grüßt dich. Außer den Künstlern, sind nur 7 Menschen da. Die Wände und Boden sind voll mit unfertigen Zeichnungen und Farbe. Einer der ausstellenden drückt seine Kippe aus, geht zu einem Bild und malt weiter. Wahrscheinlich ist es eine Art Performance meets come together, denkst du dir und drehst dich einmal in langsamen Schritten im Kreis und nährst dich dem ersten Bild.</tw-passagedata><tw-passagedata pid="134" name="WerBeiGalerie4" tags="" position="1044.1666666666667,1284.1666666666667" size="100,100">{
+(set: $WerBeiGalerie4 to it + 1)
+}\
+Beim reinkommen stellst du fest, noch ist fast niemand da. Alles wirkt sehr kalt. Du begrüßt die Künstler&amp;#42;innen und im zweiten Satz fragen sie schon ob es ok ist, wenn sie sich kurz einen Döner um die Ecke holen. Denn alle hätten heute kaum Zeit um etwas zu essen gehabt. Du nickst verständnisvoll und bleibst in der Stille zurück, um dir die Bilder anzuschauen.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
