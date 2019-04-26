@@ -330,6 +330,8 @@ color: #F5B4DD;
 (set: $ProjektLangeweile2 to 0)
 (set: $ProjektLangeweile3 to 0)
 (set: $ProjektLangeweile4 to 0)
+(set: $ProjektPlenum1 to 0)
+(set: $ProjektPlenum2 to 0)
 
 (set: $KulturVortrag1 to 0)
 (set: $KulturVortrag2 to 0)
@@ -439,12 +441,7 @@ Heute ist wohl ein (either: _hoerspielLine, _vortragLine)&quot;)
   
   _gespreach&quot;))
 
-(set: _plenumLine to (either:
-  &#39;Es war für einige ein langer Tag und das merkt man/frau an der Trägheit des Plenums. Ihr schafft dennoch etwas für $wayne[&amp;lsqb;irgendein Projekt&amp;rsqb;] zu machen. Und unterhaltet euch danach vor der Tür noch etwas über das Life im Viertel.&#39;,
-  &#39;Ihr macht heute ein Emo-Plenum um über aufgestaute Probleme in der Gruppe zu reden. Du hast (either: &quot;selbst gemachte Muffins&quot;, &quot;Kekse vom Netto&quot;, &quot;Birnen und Bananen&quot;) mitgebracht, über die sich die wenigen aus der Gruppe freuen die gekommen sind. Einige empfinden die Art wie in letzter Zeit Entscheidungen getroffen wurden nicht ideal.
-Ihr unterhaltet euch lange darüber wie mögliche Hierarchien aufgelöst werden könnten. Es gibt zwar kein abschließendes Ergebnis, aber du hast das Gefühl ihr seit  als Gruppe weiter als davor.&#39;,
-  &#39;Es ist echt kein gutes Plenum. Alle fallen sich ins Wort und kein einziges Top wird zu ende besprochen, bevor ihr nicht zu einem anderen Thema abschweift. Als die/der Protokollant&amp;#42;in sich beschwert, dass das Protokollieren fast unmöglich ist, entsteht auch noch ein Streit mit denjenigen, die finden das alles nun mal im ganzen so besprochen werden muss und zusammenhängt.
-Du forderst eine Pause und ihr beschließt, dass ihr heute doch jemand zum Moderieren braucht. Ihr schafft danach zumindest ein Thema zu Ende zu besprechen, doch dann es ist schon halb 10 und niemand hat Energie noch weiter zu plenieren&#39;))
+(set: _plenumLine to )
 
 (set: _helfenLine to (display: &quot;ProjektHelfen&quot;))
 
@@ -1987,7 +1984,27 @@ Eine Person wollte ein (either: &quot;Regal für Flyer bauen, aber weder wurde H
 Du räumst irgendwie planlos Sachen von Raum zu Raum, aber gibst auf, da sich das ganze etwas sinnlos anfühlt.</tw-passagedata><tw-passagedata pid="124" name="ProjektHelfen3" tags="" position="606.6666666666666,1149.1666666666667" size="100,100">{
 (set: $ProjektHelfen3 to it + 1)
 }\
-Heute war VeKü und du hast dich entschieden etwas im Viertel zu helfen in dem du ein paar Töpfe sauber machst. Nach einer (either: &quot;halben Stunde&quot;, &quot;viertel Stunde&quot;) kommt jemand dazu und hilft dir bei dem Rest.</tw-passagedata></tw-storydata>
+Heute war VeKü und du hast dich entschieden etwas im Viertel zu helfen in dem du ein paar Töpfe sauber machst. Nach einer (either: &quot;halben Stunde&quot;, &quot;viertel Stunde&quot;) kommt jemand dazu und hilft dir bei dem Rest.</tw-passagedata><tw-passagedata pid="125" name="ProjektPlenum" tags="" position="605.8333333333333,1264.1666666666667" size="100,100">{
+(set: _aus1 to (display: &quot;ProjektPlenum1&quot;))
+(set: _aus2 to (display: &quot;ProjektPlenum2&quot;))
+
+(set: _leereAus to &quot;Es war für einige ein langer Tag und das merkt man/frau an der Trägheit des Plenums. Ihr schafft dennoch etwas für $wayne[&amp;lsqb;irgendein Projekt&amp;rsqb;] zu machen. Und unterhaltet euch danach vor der Tür noch etwas über das Life im Viertel.&quot;)
+
+(set: _proPleArray to (array: _aus1, _aus2))
+
+(if: $ProjektPlenum1 is &gt;= 1)[(set: _proPleArray to (_proPleArray - (array: _aus1)))]
+(if: $ProjektPlenum2 is &gt;= 1)[(set: _proPleArray to (_proPleArray - (array: _aus2)))]
+
+}\
+(if: ($ProjektPlenum1 is  &gt;= 1) &amp;&amp; (($ProjektPlenum2 is &gt;= 1)))[_leereAus](else:)[(either: ..._proPleArray)]</tw-passagedata><tw-passagedata pid="126" name="ProjektPlenum1" tags="" position="604.1666666666666,1374.1666666666667" size="100,100">{
+(set: $ProjektPlenum1 to it + 1)
+}\
+Ihr macht heute ein Emo-Plenum um über aufgestaute Probleme in der Gruppe zu reden. Du hast (either: &quot;selbst gemachte Muffins&quot;, &quot;Kekse vom Netto&quot;, &quot;Birnen und Bananen&quot;) mitgebracht, über die sich die wenigen aus der Gruppe freuen die gekommen sind. Einige empfinden die Art wie in letzter Zeit Entscheidungen getroffen wurden nicht ideal.
+Ihr unterhaltet euch lange darüber wie mögliche Hierarchien aufgelöst werden könnten. Es gibt zwar kein abschließendes Ergebnis, aber du hast das Gefühl ihr seit  als Gruppe weiter als davor.</tw-passagedata><tw-passagedata pid="127" name="ProjektPlenum2" tags="" position="604.1666666666666,1485.8333333333335" size="100,100">{
+(set: $ProjektPlenum2 to it + 1)
+}\
+Es ist echt kein gutes Plenum. Alle fallen sich ins Wort und kein einziges Top wird zu ende besprochen, bevor ihr nicht zu einem anderen Thema abschweift. Als die/der Protokollant&amp;#42;in sich beschwert, dass das Protokollieren fast unmöglich ist, entsteht auch noch ein Streit mit denjenigen, die finden das alles nun mal im ganzen so besprochen werden muss und zusammenhängt.
+Du forderst eine Pause und ihr beschließt, dass ihr heute doch jemand zum Moderieren braucht. Ihr schafft danach zumindest ein Thema zu Ende zu besprechen, doch dann es ist schon halb 10 und niemand hat Energie noch weiter zu plenieren</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
