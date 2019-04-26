@@ -319,6 +319,7 @@ color: #F5B4DD;
 (set: $ProjektGespaech1 to 0)
 (set: $ProjektGespaech2 to 0)
 (set: $ProjektGespaech3 to 0)
+(set: $ProjektGespaech4 to 0)
 (set: $ProjektKonzert1 to 0)
 (set: $ProjektKonzert2 to 0)
 (set: $ProjektKonzert3 to 0)
@@ -417,13 +418,7 @@ Heute ist wohl ein (either: _hoerspielLine, _vortragLine)&quot;)
 (set: _konzertLine to &quot;Auf einmal bauen ein paar (either: &#39;flüchtige Bekannte&#39;, &#39;Menschen&#39;) ihr Instrumenten-Set auf. Sieht so aus als gäbe es spontan ein Konzert.
 (display: &#39;ProjektKonzert&#39;)&quot;)
 (set: _langeweile to (display: &quot;ProjektLangeweile&quot;))
-
-(set: _gespraech2 to &#39;Du lernst zwei linke an der Bar kennen. Ihr unterhaltet euch lange über eine fehlende linke Bewegung und leere Ideen. Am Ende bleibt ihr bei (either: &quot;Griechenland&quot;, &quot;Italien&quot;, &quot;Spanien&quot;, &quot;Portugal&quot;) hängen. Es gäbe dort momentan eine Masse die mobilisiert werden kann, das Problem ist nur, das auch viele Rechte Teil der Demonstrant&amp;#42;Innen sind.
-Nach 2-3 Bier stellen sie fest, dass man mit einer Beteiligung nur die Rechten stärker machen würde.&#39;)
-(set: _gespraech3 to (display: &quot;ProjektGespaech1&quot;))
-(set: _gespraech4 to (display: &quot;ProjektGespaech2&quot;))
-(set: _gespraech5 to (display: &quot;ProjektGespaech3&quot;))
-(set: _gespreach to (either: _gespraech2, _gespraech3, _gespraech4, _gespraech5))
+(set: _gespreach to (display: &quot;ProjektGespaech&quot;))
 
 (set: _rumhaengenLine to (either:
   &#39;Heute gibt es _essenLine bei der VeKü.
@@ -1583,35 +1578,30 @@ Er fragt das Barpersonal und kriegt eine Nummer von friends of friends, die zuf�
 Menschen von der IWW haben eine Präsentation über das Währungssystem vorbereitet. Der Vortrag wird leider ständig gestört, weil jemand unbedingt quer durch den Raum will. Am Ende sitzt nur noch die Hälfte der Zuhörer&amp;#42;innen.</tw-passagedata><tw-passagedata pid="70" name="ProjektVortrag2" tags="" position="348,1037" size="100,100">{
 (set: $ProjektVortrag2 to it + 1)
 }\
-Eine junge Frau hat zusammen mit einer Gruppe eine Reise in Südamerika gemacht und dort verschiedene basisdemokratische Organisationen besucht. Die Reise haben sie mit vielen Fotos dokumentiert die ihr euch anschaut und Geschichten hört wie sich dort die Menschen für ihre Rechte einsetzten und gegen große Zerstörung durch Konzerne kämpfen.</tw-passagedata><tw-passagedata pid="71" name="ProjektGespaech1" tags="" position="346,1352" size="100,100">{
+Eine junge Frau hat zusammen mit einer Gruppe eine Reise in Südamerika gemacht und dort verschiedene basisdemokratische Organisationen besucht. Die Reise haben sie mit vielen Fotos dokumentiert die ihr euch anschaut und Geschichten hört wie sich dort die Menschen für ihre Rechte einsetzten und gegen große Zerstörung durch Konzerne kämpfen.</tw-passagedata><tw-passagedata pid="71" name="ProjektGespaech1" tags="" position="346,1376.6666666666667" size="100,100">{
 (set: $ProjektGespaech1 to it + 1)
 }\
-(if: $ProjektGespaech1 is 1)[Am Nebentisch unterhalten sich zwei Menschen sehr laut über Gentrifizierung. Sie streiten sich darum welche Rolle Studis, junge linke und Hippser eigentlich in diesem Prozess spielen.
+Am Nebentisch unterhalten sich zwei Menschen sehr laut über Gentrifizierung. Sie streiten sich darum welche Rolle Studis, junge linke und Hippser eigentlich in diesem Prozess spielen.
 Eine Person ist der Meinung, dass Problem fange schon im Kleinen an; in für uns unbedeutenden Handlungen. Verdrängung die wir unreflektiert stehen lassen und im Laufe der Zeit akkumulieren. Da wo vorher Alkis am Hauseingang standen, ist jetzt das Haus voller junger &quot;linker&quot; Studis. Die Menschen zuvor müssen sich einen anderen Ort suchen und in diesem Vertreiben von Körpern zeigt sich bereits Gentrifizierung. Anstelle Othering zu betreiben, wäre hier richtig den Menschen als neue Einwohner&amp;#42;in entgegenzukommen; schon ein Klo anzubieten wäre so ein Fortschritt.
 Die zweite Person ist da anderer Meinung. Das Problem sei nicht, dass in einem Haus auf einmal fast nur junge Leute wohnen oder mit Anwesenheit und lauter Musik die alten vertrieben werden. Sondern dass sich die Einwohner&amp;#42;innen, die mit ihrer direkten Nachbarschaft nicht mehr zufrieden sind, im Viertel sonst nirgendwo mehr die Mieten leisten können.
-Beide Perspektiven findest du kritisch, da für dich zu kurz gedacht. Aber da du weder die beiden kennst, noch weißt was du sagen könntest, sagst du nichts.](else:)[Am Nebentisch unterhalten sich zwei Menschen sehr laut über Gentrifizierung. Sie streiten sich darum welche Rolle junge Leute eigentlich in diesem Prozess spielen.
-Irgendwie nervig. Schon wieder. Am Ende geht es doch darum, dass man seine eigene Rolle in diesem Prozess reflektieren muss. Das fehlt dir zumindest immer bei der Diskussion... Gelangweilt gehst du weiter.]</tw-passagedata><tw-passagedata pid="72" name="ProjektGespaech2" tags="" position="347,1247" size="100,100">{
+Beide Perspektiven findest du kritisch, da für dich zu kurz gedacht. Aber da du weder die beiden kennst, noch weißt was du sagen könntest, sagst du nichts.</tw-passagedata><tw-passagedata pid="72" name="ProjektGespaech2" tags="" position="340.3333333333333,1483.3333333333333" size="100,100">{
 (set: $ProjektGespaech2 to it + 1)
 }\
-(if: $ProjektGespaech2 is 1)[Am Fenster sitzt eine Gruppe die sich mehr oder weniger laut streitet. Es geht schon wieder um Umweltzerstörung. Eigentlich ist dazu schon alles gesagt und das Thema ausgebrannt, deswegen bist du etwas genervt.
+Am Fenster sitzt eine Gruppe die sich mehr oder weniger laut streitet. Es geht schon wieder um Umweltzerstörung. Eigentlich ist dazu schon alles gesagt und das Thema ausgebrannt, deswegen bist du etwas genervt.
 
 Eine Person regt sich über die allgemeine Untätigkeit auf. Das Ökosystem breche zusammen und das einzige was alle interessiert ist der Wirtschaftswachstum der neue MacBook, die Arbeitslosenzahlen und der nächste Urlaub.
 Seine Gesprächspartner&amp;#42;innen erwidern, dass Veränderungen nun mal sehr viel Zeit brauchen, da Verständnis sich nur langsam verbreitet und man in einer Demokratie alle mitnehmen muss. Die Person widerspricht jedoch. Am Ende wurde und wird alles hingenommen, weils kurzfristig billig ist. Jetzt bleibe keine Zeit mehr und müsste zusammen Proteste und Blockaden organisieren. Durch Reden werde man nichts bewegen können und die Zeit drängt.
-Das Gespräch bricht plötzlich ab, als die Person endlich unterbrochen wird. Man lasse sich nichts vor diktieren und schon gar nicht mit Ängsten unter Druck setzten.](else:)[Am Fenster sitzt eine Gruppe die sich mehr oder weniger laut streitet. Es geht schon wieder um Umweltzerstörung. Eigentlich ist dazu schon alles gesagt und das Thema durch, deswegen bist du etwas genervt und gehst weiter.]</tw-passagedata><tw-passagedata pid="73" name="ProjektGespaech3" tags="" position="347,1455" size="100,100">{
+Das Gespräch bricht plötzlich ab, als die Person endlich unterbrochen wird. Man lasse sich nichts vor diktieren und schon gar nicht mit Ängsten unter Druck setzten.</tw-passagedata><tw-passagedata pid="73" name="ProjektGespaech3" tags="" position="346,1588.3333333333333" size="100,100">{
 (set: $ProjektGespaech3 to it + 1)
 }\
-(if: $ProjektGespaech3 is 1)[Da es draußen sowieso noch warm ist, gehst du mit deinem $wayne[&amp;lsqb;irgendein Getränk&amp;rsqb;] raus.
+Da es draußen sowieso noch warm ist, gehst du mit deinem $wayne[&amp;lsqb;irgendein Getränk&amp;rsqb;] raus.
 
 Vor der Tür sitzen 3 Menschen, die sich über die momentane Verdrängung von mehreren kollektiven Projekten aus einer alten Werkshalle im Leipziger Westen unterhalten.
 Eine Person philosophiert über die Untätigkeit der Szene im Leipziger Westen. Anstelle sich zusammen zu organisieren, feindet man sich gegenseitig an, entsolidarisiert sich von einander. Und weswegen? Weil man glaubt so in der Gunst der Eigentümer&amp;#42;innen zu stehen und so 1 Jahr länger bleiben darf?
 Eine weitere Person greift den Pfaden auf und Fragt offen, ob das die Konterrevolution der care-revolution ist? Immerhin seien dass Reproduktionsräume, soziale Räume, politische Räume, in denen man gemeinsam lernt sich um care-Arbeit zu kümmern und diese kollektiv zu organisieren. Von daher lässt sich dieser Rückschlag, zumindest als ein verlorene Kampf gegen das neoliberale System, gegen die Grenzen der kapitalistischen Verwertungslogik betrachten.
 Die Dritte Person unterbricht die Meta-Gespräche. Am Ende ist das Problem, dass es scheiß egal ist ob es ein Protest gibt oder was der Verlust dieser Räume bedeutet. In die Werkshalle kommt eine Billardhalle rein und den meisten Menschen ist das egal, wer oder was dafür verdrängt wurde, solange sie nach der Lohnarbeit ihr Bier trinken können.
 
-Stille bricht herein.](else:)[Da es draußen sowieso noch warm ist, gehst du mit deinem $wayne[&amp;lsqb;irgendein Getränk&amp;rsqb;] raus.
-
-Vor der Tür sitzen 3 Menschen, die sich über die momentane Verdrängung von Ladenräumen in Leipzig unterhalten.
-
-Du bist da etwas kritischer. Natürlich ist es schade, wenn Projekte wegmüssen. Aber deswegen gegen die Vermieter zu hetzten findest du auch daneben.]</tw-passagedata><tw-passagedata pid="74" name="KulturVortrag1" tags="" position="805,856" size="100,100">{
+Stille bricht herein.</tw-passagedata><tw-passagedata pid="74" name="KulturVortrag1" tags="" position="805,856" size="100,100">{
 (set: $KulturVortrag1 to it + 1)
 }\
 (if: $KulturVortrag1 is 1)[Du gehst zu einem Vortrag mit anschließender Diskussion. Auf dem Flyer stand so etwas wie Analyse von Problemen in linken und szenischen Gruppen. Deine Crew wollte da unbedingt hin, weil das ein super wichtiges Thema ist, deshalb bist du auch hin. Aber als du ankommst, ist von denen niemand da. Du bleibst trotzdem.
@@ -1945,7 +1935,34 @@ Heute ist es etwas voll. Es wird viel geraucht und ist sehr laut. Deine Freunde 
 (set: $ProjektLangeweile4 to it + 1)
 }\
 Es ist ziemlich voll und du drängst dich bis an die Bar durch. Mit einem Getränk in der Hand läufst du durch die Räume, musst aber feststellen, dass du (either: &quot;absolut niemanden&quot;, &quot;eigentlich niemanden&quot;) kennst.
-Ein wenig versuchst du dir die Zeit mit ein paar herumliegenden (either: &quot;Magazinen&quot;, &quot;Broschüren&quot;, &quot;Bücher&quot;) zu vertreiben, aber zum Lesen ist es gerade zu laut.</tw-passagedata></tw-storydata>
+Ein wenig versuchst du dir die Zeit mit ein paar herumliegenden (either: &quot;Magazinen&quot;, &quot;Broschüren&quot;, &quot;Bücher&quot;) zu vertreiben, aber zum Lesen ist es gerade zu laut.</tw-passagedata><tw-passagedata pid="119" name="ProjektGespaech" tags="" position="345.83333333333326,1272" size="100,100">{
+(set: _aus1 to (display: &quot;ProjektGespaech1&quot;))
+(set: _aus2 to (display: &quot;ProjektGespaech2&quot;))
+(set: _aus3 to (display: &quot;ProjektGespaech3&quot;))
+(set: _aus4 to (display: &quot;ProjektGespaech4&quot;))
+
+(set: _leereAus to (either: &quot;Am Nebentisch unterhalten sich zwei Menschen sehr laut über Gentrifizierung. Sie streiten sich darum welche Rolle junge Leute eigentlich in diesem Prozess spielen.
+Irgendwie nervig. Schon wieder. Am Ende geht es doch darum, dass man seine eigene Rolle in diesem Prozess reflektieren muss. Das fehlt dir zumindest immer bei der Diskussion... Gelangweilt gehst du weiter.&quot;,
+&quot;Am Fenster sitzt eine Gruppe die sich mehr oder weniger laut streitet. Es geht schon wieder um Umweltzerstörung. Eigentlich ist dazu schon alles gesagt und das Thema durch, deswegen bist du etwas genervt und gehst weiter.&quot;,
+&quot;Da es draußen sowieso noch warm ist, gehst du mit deinem $wayne[&amp;lsqb;irgendein Getränk&amp;rsqb;] raus.
+
+Vor der Tür sitzen 3 Menschen, die sich über die momentane Verdrängung von Ladenräumen in Leipzig unterhalten.
+
+Du bist da etwas kritischer. Natürlich ist es schade, wenn Projekte wegmüssen. Aber deswegen gegen die Vermieter zu hetzten findest du auch daneben.&quot;))
+
+(set: _ladenGespraArray to (array: _aus1, _aus2, _aus3, _aus4))
+
+(if: $ProjektGespaech1 is &gt;= 1)[(set: _ladenGespraArray to (_ladenGespraArray - (array: _aus1)))]
+(if: $ProjektGespaech2 is &gt;= 1)[(set: _ladenGespraArray to (_ladenGespraArray - (array: _aus2)))]
+(if: $ProjektGespaech3 is &gt;= 1)[(set: _ladenGespraArray to (_ladenGespraArray - (array: _aus3)))]
+(if: $ProjektGespaech4 is &gt;= 1)[(set: _ladenGespraArray to (_ladenGespraArray - (array: _aus4)))]
+
+}\
+(if: ($ProjektGespaech1 is  &gt;= 1) &amp;&amp; (($ProjektGespaech2 is &gt;= 1) &amp;&amp; (($ProjektGespaech3 is &gt;= 1) &amp;&amp; (($ProjektGespaech4 is &gt;= 1)))))[_leereAus](else:)[(either: ..._ladenGespraArray)]</tw-passagedata><tw-passagedata pid="120" name="ProjektGespaech4" tags="" position="345.83333333333326,1694.1666666666667" size="100,100">{
+(set: $ProjektGespaech4 to it + 1)
+}\
+Du lernst zwei linke an der Bar kennen. Ihr unterhaltet euch lange über eine fehlende linke Bewegung und leere Ideen. Am Ende bleibt ihr bei (either: &quot;Griechenland&quot;, &quot;Italien&quot;, &quot;Spanien&quot;, &quot;Portugal&quot;) hängen. Es gäbe dort momentan eine Masse die mobilisiert werden kann, das Problem ist nur, das auch viele Rechte Teil der Demonstrant&amp;#42;Innen sind.
+Nach 2-3 Bier stellen sie fest, dass man mit einer Beteiligung nur die Rechten stärker machen würde.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
