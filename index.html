@@ -143,7 +143,9 @@ color: #F5B4DD;
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -300,6 +302,12 @@ color: #F5B4DD;
 (set: $LadenAusgehen1 to 0)
 (set: $LadenAusgehen2 to 0)
 (set: $LadenAusgehen3 to 0)
+(set: $AusgehenSzeneBar1 to 0)
+(set: $AusgehenSzeneBar2 to 0)
+(set: $AusgehenSzeneBar3 to 0)
+(set: $AusgehenSzeneBar4 to 0)
+(set: $AusgehenSzeneBar5 to 0)
+
 (set: $ClubAusgehen1 to 0)
 (set: $ClubAusgehen2 to 0)
 (set: $ProjektVortrag1 to 0)
@@ -352,25 +360,7 @@ _styleAuthor[Außenstehnde*r im inneren Kreis]
 (if: $aktionsBuendnisVorStreit)[(display: &quot;Kiez-Vor-Protest&quot;)](else:)[(display: &quot;Kiez-Ende&quot;)]</tw-passagedata><tw-passagedata pid="3" name="Ausgehen" tags="" position="30,729" size="100,100">{
 (set: $feiern to it + 1)
 
-(set: _szeneBar to (either:
-&#39;Ihr wollt euch bei $wayne[&amp;lsqb;irgendeine Bar&amp;rsqb;] treffen, doch als du ankommst stellst du fest: Es ist heute voll. Also schreibst du deinen friends, dass du in die Bar gegenüber gehst und bestellst einen $wayne[&amp;lsqb;hipper Cocktail&amp;rsqb;].
-Deine Freunde tauchen nicht auf und das Staren auf WhatsApp hilft nicht dabei vorzutäuschen das du dich langweilst.&#39;,
-  &#39;Du lernst (either:&quot;einen Jungen, in einem grünen Pullover und einem USB als Ohrring&quot;, &quot;ein Mädchen, mit silbernen Haaren und großen Sicherheitsnadel als Jackenknöpfe&quot;, &quot;eine Frau in einem langen schwarzen Mantel und einem halben Iro&quot;), kennen. Ihr habt den ganzen Abend ein hinreißendes Gespräch.
-Die Person studiert in zwei Fächern: (either: &quot;Genderstudies und BWL&quot;, &quot;Geschichte und Marketing&quot;, &quot;Sozialwissenschaften und VWL&quot;). Lange redet ihr über Hindernissen in der freien Entfaltung und wie sich die Wirtschaft mit freiwilligen Regeln selbst helfen könnte. Am Ende des Abends hast du jedoch den Namen vergessen.
-
-Eigentlich ist nichts aufregendes passiert, aber es war mal wieder einer der Abende die dich erinner wieso du eigentlich hierhergezogen bist. Wegen den Menschen! Hypezig ist vielleicht in den Medien vorbei, doch hier in diesem Viertel nicht!&#39;,
-  &#39;Du sprichst drei Stunde lang mit deinen Freunden über (either: &quot;Legida&quot;, &quot;AfD&quot;, &quot;Pegida&quot;), die neue Tapete in der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;], die Ex von $wayne[&amp;lsqb;irgendeinem Freund&amp;rsqb;] und (either: &quot;das Georg Orwell Recht hatte&quot;, &quot;wieso $wayne[&amp;lsqb;irgendein Philosoph&amp;rsqb;] nicht mehr zeitgemäß sei&quot;).
-
-Ein Freund nörgelt den ganzen Abend rum, wie Menschenverachtend gerade alles auf der Welt ist, bist du ihm erwiderst, dass es Menschen gibt die einfach alles schlecht reden und nie das Gute sehen wollen.&#39;,
-  &#39;Ein Freund hat $wayne[&amp;lsqb;irgendein Ereignis&amp;rsqb;], also gibt es was zu feiern. Früh kommt ihr schon an und die Stimmung ist gut. Der Abend wird lang und du hast mehr Geld ausgegeben als du eigentlich wolltest. Yolo!
-
-Du versuchst dir noch was klar zumachen, aber es ist zu spät und nichts vernünftiges ist übrig. Jetzt schon spürst du einen Kater.
-
-Als du vom Klo zurückkommst, rennst du (either: &quot;in deine&amp;#42;n Ex&quot;, &quot;in eine&amp;#42;n alte&amp;#42;n Freund&amp;#42;in, mit dem du nichts mehr zu tun haben willst&quot;). Wichtig wirkend starrst du sofort auf dein Smartphone und tust so als hättest du niemand gesehen.&#39;,
-  &#39;Die Bar ist heute Abend nicht so aufregend. So ziehst du mit deinen Freunden von einer Bar zur der nächsten, bist du aussteigst und müde nach Hause läufst&#39;,
-  &#39;In der neuen $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] ist heute Karaoke Abend. Deine Freunde sind heiß drauf. Du brauchst jedoch etwas Mut und gehst an die Bar.
-
-Nach einem Bier stehst du schon auf der Bühne. Selbstironisch singst du ein Lied über (either: &quot;Dreiecke&quot;, &quot;Liebe&quot;, &quot;Freiheit&quot;). Deine Crew geben dir cred und einen aus. Nach 15 min willst du nochmal, aber leider ist die nächste (either: &quot;halbe Stunde&quot;, &quot;Stunde&quot;) bereits voll.&#39;))
+(set: _szeneBar to (display: &quot;AusgehenSzeneBar&quot;))
   
 (set: _ladenProjekt to (either:
 	&#39;(display: &quot;LadenAusgehen2&quot;)&#39;,
@@ -411,7 +401,7 @@ Am Einlass stellst du fest, dass der Eintritt (either: &quot;12€&quot;, &quot;
 Du versuchst mit einem Bier zu tanzen, aber kommst nicht so richtig in Stimmung. Auch nach dem zweiten Bier und mehreren Blicken auf die Uhr ist die meiste an dich selbst gestellte Frage, wann du wohl genug da warst um gehen zu können.
 Nach 2 Wodka-Matte fängst du an mit $wayne[&amp;lsqb;irgendjemand&amp;rsqb;] rum zumachen. Doch auch das ist eher enttäuschend, denn er&amp;#42;sie (either: &quot;sabbert leicht beim Küssen.&quot;, &quot;labert manchmal Mist&quot;, &quot;ist nicht wirklich dein Typ&quot;)&#39;) ]
 
-[[Der Kiez&lt;-_guteNacht]]</tw-passagedata><tw-passagedata pid="4" name="Projekt" tags="" position="368.6666666666667,733.6666666666666" size="100,100">{
+[[Der Kiez&lt;-_guteNacht]]</tw-passagedata><tw-passagedata pid="4" name="Projekt" tags="" position="368,733" size="100,100">{
 (set: $projekt to it + 1)
 
 (set: _essenLine to (either: &#39;veganes Sushi&#39;, &#39;Nudeln mit Tomatensoße&#39;, &#39;Eintopf mit Kartoffeln&#39;, &#39;herzhafte Pfannkuchen&#39;, &#39;veganes Gulasch mit Reis&#39;, &#39;Salat und eine Kürbissuppe&#39;, &#39;vegane Burger mit gebackenen Kartoffeln&#39;))
@@ -531,7 +521,7 @@ Für die Ausstellung (either: &quot;stehen zwei Räume&quot;, &quot;steht ein Ra
 
 ]\
 
-Du bleibst noch etwas und [[Der Kiez&lt;-gehst]] dann nach Hause.</tw-passagedata><tw-passagedata pid="6" name="Haus" tags="" position="1233.6666666666667,737.3333333333334" size="100,100">{
+Du bleibst noch etwas und [[Der Kiez&lt;-gehst]] dann nach Hause.</tw-passagedata><tw-passagedata pid="6" name="Haus" tags="" position="1233,737" size="100,100">{
 (set: $heim to it + 1)
 
 (set: _lineFriendsLabern to (display: &#39;HausFreunde&#39;))
@@ -1115,7 +1105,7 @@ Doch als die Tür dafür aufgeht, bricht die Musik ab.
 
 Ein junger Mann und eine junge Frau stehen vor dem Ausgang und versuchen sich Gehör zu verschaffen.
 
-Du hörst nur &quot;Die Party ist vorbei!&quot; und ihr sollt alle langsam [[Party-Ende&lt;-rausgehen]].]</tw-passagedata><tw-passagedata pid="33" name="Ausreden" tags="" position="1618.3333333333333,1164" size="100,100">--aus der &quot;linken Szene&quot;: Man solle Dankbar sein, dass F. und V. überhaupt das Haus gekauft haben, anstelle das sie das Haus irgendeinem Investor überliesen.
+Du hörst nur &quot;Die Party ist vorbei!&quot; und ihr sollt alle langsam [[Party-Ende&lt;-rausgehen]].]</tw-passagedata><tw-passagedata pid="33" name="Ausreden" tags="" position="1618,1164" size="100,100">--aus der &quot;linken Szene&quot;: Man solle Dankbar sein, dass F. und V. überhaupt das Haus gekauft haben, anstelle das sie das Haus irgendeinem Investor überliesen.
 
 --Gestern haben viele Leute aus der linken Szene und ihre Party Freunde die 109 Crew emotional heftig fertig gemacht, so dass einige Stunden lang nicht mehr klarkamen oder zuhause mit Freunden den Frust weg gesoffen haben. Der Vorwurf grob, die 109 ist selber schuld und jetzt ist ehe alles zu spät. Gepaart mit den selben Vorwürfen bzgl der LETZTEN Party. Dabei hat &quot;niemand&quot; weder versucht zu kämpfen(was denke ich immer noch erfolgreich wäre), noch bei der 109 repro Arbeit oder sonst wo geholfen.
 
@@ -1592,27 +1582,27 @@ Der erster Eindruck ist ganz nett. Sie kommen aus Marseille. Er ist Neuro-Wissen
 Sie sind einfach Unterwegs, besuchen mal Leipzig und suchen ein billiges Zimmer für 4-6 Wochen.
 Er fragt das Barpersonal und kriegt eine Nummer von friends of friends, die zufällig ein leerstehendes Zimmer haben.](else:)[Ihr kommt rein und geht geradeaus an voll getaggte Bar. Du wartest mit einem Portemonnaie in der Hand bis du dein Bier bekommst und spendest etwas.
 
-Ihr lernt zusammen ein paar abgefahren Leute kennen, die dich kurz inspirieren. Aber irgendwie wird der Abend für dich doch wie jeder andere. Einen engeren Kontakt suchst du danach zu ihnen nicht und vergisst sie recht schnell.]</tw-passagedata><tw-passagedata pid="69" name="ProjektVortrag1" tags="" position="361.6666666666667,851.6666666666666" size="100,100">{
+Ihr lernt zusammen ein paar abgefahren Leute kennen, die dich kurz inspirieren. Aber irgendwie wird der Abend für dich doch wie jeder andere. Einen engeren Kontakt suchst du danach zu ihnen nicht und vergisst sie recht schnell.]</tw-passagedata><tw-passagedata pid="69" name="ProjektVortrag1" tags="" position="361,851" size="100,100">{
 (set: $ProjektVortrag1 to it + 1)
 }\
-(if: $ProjektVortrag1 is 1)[Menschen von der IWW haben eine Präsentation über das Währungssystem vorbereitet. Der Vortrag wird leider ständig gestört, weil jemand unbedingt quer durch den Raum will. Am Ende sitzt nur noch die Hälfte der Zuhörer&amp;#42;innen.](else:)[$wayne[&amp;lsqb;Irgendwer&amp;rsqb;] hält einen Vortrag über $wayne[&amp;lsqb;ökonomisches Thema&amp;rsqb;]. Es ist nicht sehr spannend und die Hälfte der Zuhörer&amp;#42;innen gehen schnell.]</tw-passagedata><tw-passagedata pid="70" name="ProjektVortrag2" tags="" position="363.6666666666667,952.6666666666666" size="100,100">{
+(if: $ProjektVortrag1 is 1)[Menschen von der IWW haben eine Präsentation über das Währungssystem vorbereitet. Der Vortrag wird leider ständig gestört, weil jemand unbedingt quer durch den Raum will. Am Ende sitzt nur noch die Hälfte der Zuhörer&amp;#42;innen.](else:)[$wayne[&amp;lsqb;Irgendwer&amp;rsqb;] hält einen Vortrag über $wayne[&amp;lsqb;ökonomisches Thema&amp;rsqb;]. Es ist nicht sehr spannend und die Hälfte der Zuhörer&amp;#42;innen gehen schnell.]</tw-passagedata><tw-passagedata pid="70" name="ProjektVortrag2" tags="" position="363,952" size="100,100">{
 (set: $ProjektVortrag2 to it + 1)
 }\
-(if: $ProjektVortrag2 is 1)[Eine junge Frau hat zusammen mit einer Gruppe eine Reise in Südamerika gemacht und dort verschiedene basisdemokratische Organisationen besucht. Die Reise haben sie mit vielen Fotos dokumentiert die ihr euch anschaut und Geschichten hört wie sich dort die Menschen für ihre Rechte einsetzten und gegen große Zerstörung durch Konzerne kämpfen.](else:)[Es geht um linke Strukturen in fernen Ländern. Der Vortrag besteht aus Fotos, Videos und Erzählungen. Linke Themen scheinen dort viel mehr Menschen zu organisieren, aber irgendwie hörst du sonst nie davon.]</tw-passagedata><tw-passagedata pid="71" name="ProjektGespaech1" tags="" position="366.6666666666667,1057.6666666666667" size="100,100">{
+(if: $ProjektVortrag2 is 1)[Eine junge Frau hat zusammen mit einer Gruppe eine Reise in Südamerika gemacht und dort verschiedene basisdemokratische Organisationen besucht. Die Reise haben sie mit vielen Fotos dokumentiert die ihr euch anschaut und Geschichten hört wie sich dort die Menschen für ihre Rechte einsetzten und gegen große Zerstörung durch Konzerne kämpfen.](else:)[Es geht um linke Strukturen in fernen Ländern. Der Vortrag besteht aus Fotos, Videos und Erzählungen. Linke Themen scheinen dort viel mehr Menschen zu organisieren, aber irgendwie hörst du sonst nie davon.]</tw-passagedata><tw-passagedata pid="71" name="ProjektGespaech1" tags="" position="366,1057" size="100,100">{
 (set: $ProjektGespaech1 to it + 1)
 }\
 (if: $ProjektGespaech1 is 1)[Am Nebentisch unterhalten sich zwei Menschen sehr laut über Gentrifizierung. Sie streiten sich darum welche Rolle Studis, junge linke und Hippser eigentlich in diesem Prozess spielen.
 Eine Person ist der Meinung, dass Problem fange schon im Kleinen an; in für uns unbedeutenden Handlungen. Verdrängung die wir unreflektiert stehen lassen und im Laufe der Zeit akkumulieren. Da wo vorher Alkis am Hauseingang standen, ist jetzt das Haus voller junger &quot;linker&quot; Studis. Die Menschen zuvor müssen sich einen anderen Ort suchen und in diesem Vertreiben von Körpern zeigt sich bereits Gentrifizierung. Anstelle Othering zu betreiben, wäre hier richtig den Menschen als neue Einwohner&amp;#42;in entgegenzukommen; schon ein Klo anzubieten wäre so ein Fortschritt.
 Die zweite Person ist da anderer Meinung. Das Problem sei nicht, dass in einem Haus auf einmal fast nur junge Leute wohnen oder mit Anwesenheit und lauter Musik die alten vertrieben werden. Sondern dass sich die Einwohner&amp;#42;innen, die mit ihrer direkten Nachbarschaft nicht mehr zufrieden sind, im Viertel sonst nirgendwo mehr die Mieten leisten können.
 Beide Perspektiven findest du kritisch, da für dich zu kurz gedacht. Aber da du weder die beiden kennst, noch weißt was du sagen könntest, sagst du nichts.](else:)[Am Nebentisch unterhalten sich zwei Menschen sehr laut über Gentrifizierung. Sie streiten sich darum welche Rolle junge Leute eigentlich in diesem Prozess spielen.
-Irgendwie nervig. Schon wieder. Am Ende geht es doch darum, dass man seine eigene Rolle in diesem Prozess reflektieren muss. Das fehlt dir zumindest immer bei der Diskussion... Gelangweilt gehst du weiter.]</tw-passagedata><tw-passagedata pid="72" name="ProjektGespaech2" tags="" position="364.6666666666667,1161.6666666666667" size="100,100">{
+Irgendwie nervig. Schon wieder. Am Ende geht es doch darum, dass man seine eigene Rolle in diesem Prozess reflektieren muss. Das fehlt dir zumindest immer bei der Diskussion... Gelangweilt gehst du weiter.]</tw-passagedata><tw-passagedata pid="72" name="ProjektGespaech2" tags="" position="364,1161" size="100,100">{
 (set: $ProjektGespaech2 to it + 1)
 }\
 (if: $ProjektGespaech2 is 1)[Am Fenster sitzt eine Gruppe die sich mehr oder weniger laut streitet. Es geht schon wieder um Umweltzerstörung. Eigentlich ist dazu schon alles gesagt und das Thema ausgebrannt, deswegen bist du etwas genervt.
 
 Eine Person regt sich über die allgemeine Untätigkeit auf. Das Ökosystem breche zusammen und das einzige was alle interessiert ist der Wirtschaftswachstum der neue MacBook, die Arbeitslosenzahlen und der nächste Urlaub.
 Seine Gesprächspartner&amp;#42;innen erwidern, dass Veränderungen nun mal sehr viel Zeit brauchen, da Verständnis sich nur langsam verbreitet und man in einer Demokratie alle mitnehmen muss. Die Person widerspricht jedoch. Am Ende wurde und wird alles hingenommen, weils kurzfristig billig ist. Jetzt bleibe keine Zeit mehr und müsste zusammen Proteste und Blockaden organisieren. Durch Reden werde man nichts bewegen können und die Zeit drängt.
-Das Gespräch bricht plötzlich ab, als die Person endlich unterbrochen wird. Man lasse sich nichts vor diktieren und schon gar nicht mit Ängsten unter Druck setzten.](else:)[Am Fenster sitzt eine Gruppe die sich mehr oder weniger laut streitet. Es geht schon wieder um Umweltzerstörung. Eigentlich ist dazu schon alles gesagt und das Thema durch, deswegen bist du etwas genervt und gehst weiter.]</tw-passagedata><tw-passagedata pid="73" name="ProjektGespaech3" tags="" position="361.6666666666667,1264.6666666666667" size="100,100">{
+Das Gespräch bricht plötzlich ab, als die Person endlich unterbrochen wird. Man lasse sich nichts vor diktieren und schon gar nicht mit Ängsten unter Druck setzten.](else:)[Am Fenster sitzt eine Gruppe die sich mehr oder weniger laut streitet. Es geht schon wieder um Umweltzerstörung. Eigentlich ist dazu schon alles gesagt und das Thema durch, deswegen bist du etwas genervt und gehst weiter.]</tw-passagedata><tw-passagedata pid="73" name="ProjektGespaech3" tags="" position="361,1264" size="100,100">{
 (set: $ProjektGespaech3 to it + 1)
 }\
 (if: $ProjektGespaech3 is 1)[Da es draußen sowieso noch warm ist, gehst du mit deinem $wayne[&amp;lsqb;irgendein Getränk&amp;rsqb;] raus.
@@ -1626,7 +1616,7 @@ Stille bricht herein.](else:)[Da es draußen sowieso noch warm ist, gehst du mit
 
 Vor der Tür sitzen 3 Menschen, die sich über die momentane Verdrängung von Ladenräumen in Leipzig unterhalten.
 
-Du bist da etwas kritischer. Natürlich ist es schade, wenn Projekte wegmüssen. Aber deswegen gegen die Vermieter zu hetzten findest du auch daneben.]</tw-passagedata><tw-passagedata pid="74" name="KulturVortrag1" tags="" position="805,856.6666666666666" size="100,100">{
+Du bist da etwas kritischer. Natürlich ist es schade, wenn Projekte wegmüssen. Aber deswegen gegen die Vermieter zu hetzten findest du auch daneben.]</tw-passagedata><tw-passagedata pid="74" name="KulturVortrag1" tags="" position="805,856" size="100,100">{
 (set: $KulturVortrag1 to it + 1)
 }\
 (if: $KulturVortrag1 is 1)[Du gehst zu einem Vortrag mit anschließender Diskussion. Auf dem Flyer stand so etwas wie Analyse von Problemen in linken und szenischen Gruppen. Deine Crew wollte da unbedingt hin, weil das ein super wichtiges Thema ist, deshalb bist du auch hin. Aber als du ankommst, ist von denen niemand da. Du bleibst trotzdem.
@@ -1637,7 +1627,7 @@ Du kannst kaum folgen, doch dafür wird die Diskussion um so hitziger. Nach dem 
 
 Die Vortragende unterbricht darauf die Diskussion und gibt euch auf dem Weg, dass in Heilig Damm die Inszenierung der linken Gewalt in den Medien in der absoluten absurdesten Überspitzung gezeichnet wurde, und dies in der sogenannten szenische Linken dennoch zur Distanzierung und Spaltung führte.](else:)[Du gehst zu einem links-kulturellen Vortag.
 
-Eigentlich bleibt bei dir nicht viel hängen. Die Diskussionen haben einen Beigeschmack von Selbstdarstellung und gehen oft am Thema vorbei. Einigen fehlt der Blick auf die eigene Strukturen und Verantwortung. Und andere fordern eine differenziertere Betrachtung.]</tw-passagedata><tw-passagedata pid="75" name="KulturVortrag2" tags="" position="803.3333333333333,961.6666666666667" size="100,100">{
+Eigentlich bleibt bei dir nicht viel hängen. Die Diskussionen haben einen Beigeschmack von Selbstdarstellung und gehen oft am Thema vorbei. Einigen fehlt der Blick auf die eigene Strukturen und Verantwortung. Und andere fordern eine differenziertere Betrachtung.]</tw-passagedata><tw-passagedata pid="75" name="KulturVortrag2" tags="" position="803,961" size="100,100">{
 (set: $KulturVortrag2 to it + 1)
 }\
 (if: $KulturVortrag2 is 1)[Du gehst mit einem Freund zu einem Vortrag über die Auswirkung der kapitalistischen Ideologie an Kunsthochschulen. Die Vortragenden erzählen von ihren persönlichen Erlebnissen an Kunsthochschulen. Die Ideologie der Profitmaximierung herrscht über die Gesellschaft und da Kunsthochschulen Teil der Gesellschaft sind, ist diese auch an der Kunsthochschule zu finden, heißt es. Die Kunsthochschulen müssen sparen um eine gute Bilanz vorweisen zu können, deshalb fehlt es überall an Geld, Lehrstühlen und Räumen.
@@ -1647,7 +1637,7 @@ Eine Zuhörerin erwidert, dass diese Wellen vom Sparen die letzten Jahre durch v
 
 Du bist dir nicht sicher, ob das Argument einleuchtend war. Aber als du nach dem Vortrag mit deinem Freund darüber reden willst, ist das Interesse kaum vorhanden. Denn er sagt, er wäre dieses Semester eher nur zweimal an der Uni gewesen.](else:)[Du gehst zu einem Vortrag der sich kritisch mit Kunst und der Gesellschaft beschäftigt.
 
-Irgendwie ist es eine Unmenge an neuer Information und doch hat sich dein Blick auf die Dinge dieser Welt danach nicht verändert.]</tw-passagedata><tw-passagedata pid="76" name="KulturFilm1" tags="" position="801.6666666666666,1169.6666666666667" size="100,100">{
+Irgendwie ist es eine Unmenge an neuer Information und doch hat sich dein Blick auf die Dinge dieser Welt danach nicht verändert.]</tw-passagedata><tw-passagedata pid="76" name="KulturFilm1" tags="" position="801,1169" size="100,100">{
 (set: $KulturFilm1 to it + 1)
 }\
 (if: $KulturFilm1 is 1)[In $wayne[&amp;lsqb;irgendeinem kleinem Kino&amp;rsqb;] wird ein Film über die Ästhetik des G20 Protests gezeigt und behandelt wohl die Inszenierung der Gewalt in der linken Szene. Ein wichtiges Thema, findest du und gehst hin.
@@ -1656,7 +1646,7 @@ Die erste halbe Stunde lange werden selfie-Aufnahmen von schick angezogenen jung
 
 Als der Abspann läuft, schnappst du neben dir die Wortfetzen &quot;Randalierer Zerstören den Rückhalt&quot;, &quot;mediale Aufmerksamkeit&quot; und &quot;Respekt vor Eigentum&quot; auf. Du bist still und starrst auf eine Nachricht auf deinem Smartphone.](else:)[In $wayne[&amp;lsqb;irgendeinem kleinem Kino&amp;rsqb;] gibt es ein Film der sich kritisch mit der linken Szene auseinandersetzt.
 
-Ein paar schöne Bilder, selbst-referenzielle Aussagen. Und eine akademische Interpretation. Nach 2 Stunden kannst du nicht behaupten etwas neues gelernt zu haben.]</tw-passagedata><tw-passagedata pid="77" name="KulturFilm2" tags="" position="799.1666666666667,1274.6666666666667" size="100,100">{
+Ein paar schöne Bilder, selbst-referenzielle Aussagen. Und eine akademische Interpretation. Nach 2 Stunden kannst du nicht behaupten etwas neues gelernt zu haben.]</tw-passagedata><tw-passagedata pid="77" name="KulturFilm2" tags="" position="799,1274" size="100,100">{
 (set: $KulturFilm2 to it + 1)
 }\
 (if: $KulturFilm2 is 1)[Du gehst mit deinen Peoples zu einem Film über feministischen Rap in Porno-Filmen mit eingeladenen Regisseur&amp;#42;innen.
@@ -1665,7 +1655,7 @@ Auf der Bühne sitzen zwei Cis-Männer gekleidet in Bunten Röcken und einem BH.
 
 Du findest die Geschichten gewitzt und spannend. Doch die Musik ist leider viel zu leise und du kannst nichts von den Rap-Texten verstehen. Nach dem letzten Applaus verlässt du den Raum mit einem Gefühl von Ekel und Notgeilheit.](else:)[Du gehst mit Freunden zu einem hippen szenischen Film.
 
-Es ist ganz witzig, hat Höhen und Tiefen. In der Werbung machte der Film zumindest den Anschein eine Aussage machen zu wollen, aber nach dem schauen wüsstest du nicht welche.]</tw-passagedata><tw-passagedata pid="78" name="KulturFilm3" tags="" position="799.1666666666667,1381.6666666666667" size="100,100">{
+Es ist ganz witzig, hat Höhen und Tiefen. In der Werbung machte der Film zumindest den Anschein eine Aussage machen zu wollen, aber nach dem schauen wüsstest du nicht welche.]</tw-passagedata><tw-passagedata pid="78" name="KulturFilm3" tags="" position="799,1381" size="100,100">{
 (set: $KulturFilm3 to it + 1)
 }\
 (if: $KulturFilm3 is 1)[Auf einem Flyer hast du gesehen, dass heute ein Kurzfilmabend ist, mit dem Thema critical whiteness and postcapitalism. Das klang spannend, deswegen bist mit einer weiteren Freundin hin.
@@ -1736,7 +1726,7 @@ Du kannst etwas ausgelassen feiern und deine Freunde auch. Nur ein&amp;#42;e Fre
 
 Mit einem Getränk in der Hand und einem leichten kribbeln läufst du auf die Tanzfläche. Die nächsten Stunden sind sehr aufregend. Du tanzt, schwitzt, lachst, weinst und bist überzeugt, dich in einen Typen verliebt zu haben. Aber als du ihn, nach dem du auf dem Klo warst, suchen gehst, findest du ihn nicht mehr.](else:)[Im $wayne[&amp;lsqb;stylischen Club&amp;rsqb;] legt heute $wayne[&amp;lsqb;irgendein DJ&amp;rsqb;] (either: 6, 5, 7) Stunden lang auf. Das musst du einfach dancen. Schon am Einlass fragst du dich nach Teilen durch und findest nach ein paar Minuten bereits dein 10€-Glück.
 
-Du hast einen schönen Abend. Sonst passiert nichts besonderes.]</tw-passagedata><tw-passagedata pid="86" name="HausFreunde" tags="" position="1232,946.6666666666667" size="100,100">{
+Du hast einen schönen Abend. Sonst passiert nichts besonderes.]</tw-passagedata><tw-passagedata pid="86" name="HausFreunde" tags="" position="1232,946" size="100,100">{
 (set: _aus1 to (display: &quot;HausFreunde1&quot;))
 (set: _aus2 to (display: &quot;HausFreunde2&quot;))
 (set: _aus3 to (display: &quot;HausFreunde3&quot;))
@@ -1752,12 +1742,12 @@ Du hast einen schönen Abend. Sonst passiert nichts besonderes.]</tw-passagedata
 (if: $HausFreunde4 is &gt;= 1)[(set: _freundeArray to (_freundeArray - (array: _aus4)))]
 
 }\
-(if: ($HausFreunde1 is  &gt;= 1) &amp;&amp; (($HausFreunde2 is &gt;= 1) &amp;&amp; (($HausFreunde3 is &gt;= 1) &amp;&amp; (($HausFreunde4 is &gt;= 1)))))[_leereAus](else:)[(either: ..._freundeArray)]</tw-passagedata><tw-passagedata pid="87" name="SpieFreunde1" tags="" position="1232.3333333333335,843.6666666666667" size="100,100">{
+(if: ($HausFreunde1 is  &gt;= 1) &amp;&amp; (($HausFreunde2 is &gt;= 1) &amp;&amp; (($HausFreunde3 is &gt;= 1) &amp;&amp; (($HausFreunde4 is &gt;= 1)))))[_leereAus](else:)[(either: ..._freundeArray)]</tw-passagedata><tw-passagedata pid="87" name="SpieFreunde1" tags="" position="1232,843" size="100,100">{
 (set: $SpieFreunde1 to it + 1)
 (set: _spielZug to (either: &#39;gewürfelt&#39;, &#39;gezogen&#39;))
 }\
 (if: $SpieFreunde1 is 1)[zu einem Spieleabend ein. $wayne[&amp;lsqb;Dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] bring eine Sammlung Brettspiele mit. Ihr spielt nur nebenbei, denn eure Smartphones scheinen euch mehr zu unterhalten als die Spiele. Die Regeln sind sehr verwirrend und du hast vergessen ob du schon _spielZug hast.
-Nach dem $wayne[&amp;lsqb;dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] gewonnen hat, feixt ihr nur zum Spaß, dass das nur so ist weil $wayne[&amp;lsqb;dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] das Spiel schon so gut kennt.](else:)[zum Spieleabend ein. $wayne[&amp;lsqb;Ein&amp;#42;e Freund&amp;#42;in&amp;rsqb;] bring eine Sammlung Brettspiele mit. Ihr habt etwas Spaß, ansonsten ist es ein Abend wie jeder andere.]</tw-passagedata><tw-passagedata pid="88" name="ProjektLangeweile1" tags="" position="356.6666666666667,1377.6666666666667" size="100,100">{
+Nach dem $wayne[&amp;lsqb;dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] gewonnen hat, feixt ihr nur zum Spaß, dass das nur so ist weil $wayne[&amp;lsqb;dein&amp;#42;e momentane&amp;#42;r Lieblings-Freund&amp;#42;in&amp;rsqb;] das Spiel schon so gut kennt.](else:)[zum Spieleabend ein. $wayne[&amp;lsqb;Ein&amp;#42;e Freund&amp;#42;in&amp;rsqb;] bring eine Sammlung Brettspiele mit. Ihr habt etwas Spaß, ansonsten ist es ein Abend wie jeder andere.]</tw-passagedata><tw-passagedata pid="88" name="ProjektLangeweile1" tags="" position="356,1377" size="100,100">{
 (set: $ProjektLangeweile1 to it + 1)
 }\
 (if: $ProjektLangeweile1 is 1)[Mit ein paar Freunden triffst du dich bei $wayne[&amp;lsqb;irgendein Ladenprojekt&amp;rsqb;]. An der Bar angekommen, stellst du dich in die Schlange, nimmst 2€ aus deinem Geldbeutel in die Hand und wartest. Doch hinter der Theke ist niemand. Nach zwei Minuten Warten fragst du ein Mädel neben dir, ob sie wisse, wann der Barmensch zurück kommt. Sie antwortet dir, dass sie heute die Bar macht, aber gerade keine Lust hat. Du kannst dir selbst ein Getränk rausnehmen, wenn du willst.
@@ -1789,39 +1779,39 @@ Du bist dir sicher heute ein tieferes Verständnis gewonnen zu haben und teils a
 (if: $KulturAustellung5 is &gt;= 1)[(set: _kulturArray to (_kulturArray - (array: _aus5)))]
 
 }\
-(if: ($KulturAustellung1 is  &gt;= 1) &amp;&amp; (($KulturAustellung2 is &gt;= 1) &amp;&amp; (($KulturAustellung3 is &gt;= 1) &amp;&amp; (($KulturAustellung4 is &gt;= 1) &amp;&amp; ($KulturAustellung5 is &gt;= 1)))))[_leereAus](else:)[(either: ..._kulturArray)]</tw-passagedata><tw-passagedata pid="92" name="KulturAustellung1" tags="" position="933.3333333333333,966.6666666666667" size="100,100">{
+(if: ($KulturAustellung1 is  &gt;= 1) &amp;&amp; (($KulturAustellung2 is &gt;= 1) &amp;&amp; (($KulturAustellung3 is &gt;= 1) &amp;&amp; (($KulturAustellung4 is &gt;= 1) &amp;&amp; ($KulturAustellung5 is &gt;= 1)))))[_leereAus](else:)[(either: ..._kulturArray)]</tw-passagedata><tw-passagedata pid="92" name="KulturAustellung1" tags="" position="933,966" size="100,100">{
 (set: $KulturAustellung1 to it + 1)
 }\
-Die Wand ist voll mit unzähligen Bilder verschiedener Größe. Auf jedem Bild ist ein Dreieck zu sehen. Der Raum ist voller Dreiecke in allen Farben. Du musst ironisch Schmunzeln, als du auf dem kleinsten Bild die sixtinische Madonna siehst, die von einem Dreiecke übermalt worden ist.</tw-passagedata><tw-passagedata pid="93" name="KulturAustellung3" tags="" position="931.6666666666666,1172" size="100,100">{
+Die Wand ist voll mit unzähligen Bilder verschiedener Größe. Auf jedem Bild ist ein Dreieck zu sehen. Der Raum ist voller Dreiecke in allen Farben. Du musst ironisch Schmunzeln, als du auf dem kleinsten Bild die sixtinische Madonna siehst, die von einem Dreiecke übermalt worden ist.</tw-passagedata><tw-passagedata pid="93" name="KulturAustellung3" tags="" position="931,1172" size="100,100">{
 (set: $KulturAustellung3 to it + 1)
 }\
-Es hängen mehrere Fotos verlassener Fabriken an der Wand. Verwildert, voll getaggt, zerstört, verwüstet, authentisch, perfekt. Drunter hängen Versuche die Fotos nachzuzeichnen. Du machst davon ein Foto um es mit deinen Insta-Friends zu teilen.</tw-passagedata><tw-passagedata pid="94" name="KulturAustellung2" tags="" position="930,1068.6666666666667" size="100,100">{
+Es hängen mehrere Fotos verlassener Fabriken an der Wand. Verwildert, voll getaggt, zerstört, verwüstet, authentisch, perfekt. Drunter hängen Versuche die Fotos nachzuzeichnen. Du machst davon ein Foto um es mit deinen Insta-Friends zu teilen.</tw-passagedata><tw-passagedata pid="94" name="KulturAustellung2" tags="" position="930,1068" size="100,100">{
 (set: $KulturAustellung2 to it + 1)
 }\
-Auf eine Wand ist ein Projektor gerichtet. Links und recht davon jeweils ein Bild. Die Projektion zeigt eine Aufnahme aus einem Videospiel. Es handelt sich um ein Rallye-Rennspiel aus dem Anfang des Jahrtausends. Pixelgrafik trifft Matsch. Auf den beiden Bildern an der Wand ist jeweils eine Abbildung einer Rennstrecke zu sehen. Du fragst den Künstler nach dem Grund und er erwidert, dass es sich um ein tolles Spiel handele.</tw-passagedata><tw-passagedata pid="95" name="KulturAustellung4" tags="" position="929.1666666666667,1279.1666666666667" size="100,100">{
+Auf eine Wand ist ein Projektor gerichtet. Links und recht davon jeweils ein Bild. Die Projektion zeigt eine Aufnahme aus einem Videospiel. Es handelt sich um ein Rallye-Rennspiel aus dem Anfang des Jahrtausends. Pixelgrafik trifft Matsch. Auf den beiden Bildern an der Wand ist jeweils eine Abbildung einer Rennstrecke zu sehen. Du fragst den Künstler nach dem Grund und er erwidert, dass es sich um ein tolles Spiel handele.</tw-passagedata><tw-passagedata pid="95" name="KulturAustellung4" tags="" position="929,1279" size="100,100">{
 (set: $KulturAustellung4 to it + 1)
 }\
-Die Bilder sind grotesk. Auf einem Zeichnung siehst du Jesus, dem aus der Vagina ein Dämon rauskriecht mit der Überschrift Versager. Der Künstler erzählt dir kurz danach das Bild auf einem Trip gesehen zu haben.</tw-passagedata><tw-passagedata pid="96" name="KulturAustellung5" tags="" position="929.1666666666667,1382.5" size="100,100">{
+Die Bilder sind grotesk. Auf einem Zeichnung siehst du Jesus, dem aus der Vagina ein Dämon rauskriecht mit der Überschrift Versager. Der Künstler erzählt dir kurz danach das Bild auf einem Trip gesehen zu haben.</tw-passagedata><tw-passagedata pid="96" name="KulturAustellung5" tags="" position="929,1382" size="100,100">{
 (set: $KulturAustellung5 to it + 1)
 }\
 Neben den Bildern hängt ein großer Spiegel. Ebenso auf der genau gegenüberliegenden Seite. Auf den Spiegel steht in großen Buchstaben DU.
-Du bist dir unsicher ob das wirklich so dumm ist, oder nur zu deep für dich, deshalb sagst du lieber nichts und startest mit einer Person neben dir ein Gespräch über den neuen Club, der vor kurzem aufgemacht hat. Die Person dir gegenüber finde dies auch spannend. Zurück starrend fragt deine Gegenüber rhetorisch was der neue Club für die musikalische Bereicherung dieser Stadt bedeutet wird.</tw-passagedata><tw-passagedata pid="97" name="HausFreunde1" tags="" position="1232.5000000000002,1050" size="100,100">{
+Du bist dir unsicher ob das wirklich so dumm ist, oder nur zu deep für dich, deshalb sagst du lieber nichts und startest mit einer Person neben dir ein Gespräch über den neuen Club, der vor kurzem aufgemacht hat. Die Person dir gegenüber finde dies auch spannend. Zurück starrend fragt deine Gegenüber rhetorisch was der neue Club für die musikalische Bereicherung dieser Stadt bedeutet wird.</tw-passagedata><tw-passagedata pid="97" name="HausFreunde1" tags="" position="1232,1050" size="100,100">{
 (set: $HausFreunde1 to it + 1)
 }\
-die neue Serie von $wayne[&amp;lsqb;irgendein&amp;#42;e Regisseur&amp;#42;in&amp;rsqb;] und über den Auftritt von Trump (either: &quot;bei einem Veteranen-Treff&quot;, &quot;vor dem Kongress&quot;, &quot;auf dem G7 Gipfel&quot;, &quot;in einer Fernsehen-Ansprache&quot;)</tw-passagedata><tw-passagedata pid="98" name="HausFreunde2" tags="" position="1230.8333333333337,1155" size="100,100">{
+die neue Serie von $wayne[&amp;lsqb;irgendein&amp;#42;e Regisseur&amp;#42;in&amp;rsqb;] und über den Auftritt von Trump (either: &quot;bei einem Veteranen-Treff&quot;, &quot;vor dem Kongress&quot;, &quot;auf dem G7 Gipfel&quot;, &quot;in einer Fernsehen-Ansprache&quot;)</tw-passagedata><tw-passagedata pid="98" name="HausFreunde2" tags="" position="1230,1155" size="100,100">{
 (set: $HausFreunde2 to it + 1)
 }\
-Justin Trudeau coolen Handshake mit Trump und das Deutschland mehr Flüchtlinge im Mac-Pom aufnehmen könnte. Ein Freund merkt an, dass man einfach alles schlecht reden könnte und Sachen manchmal einfach positiver betrachtet werden müssten. Sonst bleibt bei dir nichts hängen.</tw-passagedata><tw-passagedata pid="99" name="HausFreunde3" tags="" position="1230.8333333333335,1259.1666666666667" size="100,100">{
+Justin Trudeau coolen Handshake mit Trump und das Deutschland mehr Flüchtlinge im Mac-Pom aufnehmen könnte. Ein Freund merkt an, dass man einfach alles schlecht reden könnte und Sachen manchmal einfach positiver betrachtet werden müssten. Sonst bleibt bei dir nichts hängen.</tw-passagedata><tw-passagedata pid="99" name="HausFreunde3" tags="" position="1230,1259" size="100,100">{
 (set: $HausFreunde3 to it + 1)
 }\
 das social credit System in China. Ein wenig mulmig ist dir schon, wenn du an das größte Systeme denkst, das mit Algorithmen Informationen über das Verhalten sammelt und Menschen kontrolliert und einschränkt.
 Eine Freundin weißt dich darauf hin, dass hier ähnliches mit (either: &quot;Schufa&quot;, &quot;Krankenkassen&quot;, &quot;Job-Platformen&quot;) abläuft. Der Unterschied wäre die Systeme seien in der Hand von Unternehmen und dort vom Staat.
 Du weiß auch nicht wieso, aber du fühlst dir auf den Schlips getreten. Nach dem du der Freundin gesagt hast, dass sie das differenzierter betrachten muss und du es schwierig findest, einfach Dienstleistungen und Diktatur in einen Brei zusammen zu werfen, unterbricht ihr die Diskussion.
-Nach etwas schweigen, weicht ihr auf ein Gespräch über (either: &quot;das neue tolle Caffee, welches&quot;, &quot;die neue schicke Bar, welche&quot;, &quot;die neue Natur-Bäckerei, die&quot;) um die Ecke aufgemacht hat, aus.</tw-passagedata><tw-passagedata pid="100" name="HausFreunde4" tags="" position="1229.1666666666667,1367.5" size="100,100">{
+Nach etwas schweigen, weicht ihr auf ein Gespräch über (either: &quot;das neue tolle Caffee, welches&quot;, &quot;die neue schicke Bar, welche&quot;, &quot;die neue Natur-Bäckerei, die&quot;) um die Ecke aufgemacht hat, aus.</tw-passagedata><tw-passagedata pid="100" name="HausFreunde4" tags="" position="1229,1367" size="100,100">{
 (set: $HausFreunde4 to it + 1)
 }\
 die Auswirkungen von social Media. Es sei zwar toll, dass man so schnell sich über Alles informieren kann, aber irgendwie verbringt man doch die meiste Zeit mit Unsinn.
-Ein Freund erzählt darauf, dass er gerne mal bei anderen Leuten in der Straßenbahn auf den Screen schaut. Die meisten Leute, besonders abends, würden (either: &quot;sich nur Klamotten kaufen&quot;, &quot;nur Spiele spielen&quot;, &quot;sinnlos scrollen&quot;). Ihr lacht lange ohne dass du wirklich weißt warum.</tw-passagedata><tw-passagedata pid="101" name="ProjektKonzert" tags="" position="494.16666666666674,852.5" size="100,100">{
+Ein Freund erzählt darauf, dass er gerne mal bei anderen Leuten in der Straßenbahn auf den Screen schaut. Die meisten Leute, besonders abends, würden (either: &quot;sich nur Klamotten kaufen&quot;, &quot;nur Spiele spielen&quot;, &quot;sinnlos scrollen&quot;). Ihr lacht lange ohne dass du wirklich weißt warum.</tw-passagedata><tw-passagedata pid="101" name="ProjektKonzert" tags="" position="494,852" size="100,100">{
 (set: _aus1 to (display: &quot;ProjektKonzert1&quot;))
 (set: _aus2 to (display: &quot;ProjektKonzert2&quot;))
 (set: _aus3 to (display: &quot;ProjektKonzert3&quot;))
@@ -1835,16 +1825,61 @@ Ein Freund erzählt darauf, dass er gerne mal bei anderen Leuten in der Straßen
 (if: $ProjektKonzert3 is &gt;= 1)[(set: _konzertArray to (_konzertArray - (array: _aus3)))]
 
 }\
-(if: ($ProjektKonzert1 is  &gt;= 1) &amp;&amp; (($ProjektKonzert2 is &gt;= 1) &amp;&amp; (($ProjektKonzert3 is &gt;= 1))))[_leereAus](else:)[(either: ..._konzertArray)]</tw-passagedata><tw-passagedata pid="102" name="ProjektKonzert1" tags="" position="495.8333333333335,954.1666666666666" size="100,100">{
+(if: ($ProjektKonzert1 is  &gt;= 1) &amp;&amp; (($ProjektKonzert2 is &gt;= 1) &amp;&amp; (($ProjektKonzert3 is &gt;= 1))))[_leereAus](else:)[(either: ..._konzertArray)]</tw-passagedata><tw-passagedata pid="102" name="ProjektKonzert1" tags="" position="495,954" size="100,100">{
 (set: $ProjektKonzert1 to it + 1)
 }\
-Zuerst spielt Raduz etwas auf seinem Klavier und Nichtfreund folgt mit einer selbst gebastelten frickel Musik auf seinem Laptop. Danach versuchen sie zusammen etwas zu spielen was an Berghain anmutet, aber sich zu einem undefinierten etwas entwickelt. Die Künstler&amp;#42;innen sind begeistert, die anderen ehe nicht.</tw-passagedata><tw-passagedata pid="103" name="ProjektKonzert2" tags="" position="497.50000000000006,1059.1666666666665" size="100,100">{
+Zuerst spielt Raduz etwas auf seinem Klavier und Nichtfreund folgt mit einer selbst gebastelten frickel Musik auf seinem Laptop. Danach versuchen sie zusammen etwas zu spielen was an Berghain anmutet, aber sich zu einem undefinierten etwas entwickelt. Die Künstler&amp;#42;innen sind begeistert, die anderen ehe nicht.</tw-passagedata><tw-passagedata pid="103" name="ProjektKonzert2" tags="" position="497,1059" size="100,100">{
 (set: $ProjektKonzert2 to it + 1)
 }\
-Es sind zwei Bewohner&amp;#42;innen des Nachbarhauses. Sie spielen auf Gitarre Radiohead-Covers. Als danach noch mehr Menschen mit Instrumenten auftauchen und halbe Stunde lang laut chaotisch Musik machen, bittet sie der Mensch von der Bar genervt dafür die Jam-Session von $wayne[&amp;lsqb;irgendein Ladenprojekt&amp;rsqb;] zu nutzen.</tw-passagedata><tw-passagedata pid="104" name="ProjektKonzert3" tags="" position="497.5000000000001,1165.3333333333335" size="100,100">{
+Es sind zwei Bewohner&amp;#42;innen des Nachbarhauses. Sie spielen auf Gitarre Radiohead-Covers. Als danach noch mehr Menschen mit Instrumenten auftauchen und halbe Stunde lang laut chaotisch Musik machen, bittet sie der Mensch von der Bar genervt dafür die Jam-Session von $wayne[&amp;lsqb;irgendein Ladenprojekt&amp;rsqb;] zu nutzen.</tw-passagedata><tw-passagedata pid="104" name="ProjektKonzert3" tags="" position="497,1165" size="100,100">{
 (set: $ProjektKonzert3 to it + 1)
 }\
-Zwei Dudes verbinden elektronische Geräte und machen irgendwas mit Kabeln. Und zwar eine Stunde lang bis es losgeht! Endlich fangen sie an. Einer macht einen driving beat, der andere rapt. Zwischen durch klingelt beim einem das Handy und das Konzert wird kurz unterbrochen. Der flow wechselt manchmal abrupt und die Texte sind schwer zu deuten, aber die Authentizität beeindruckt dich schon ein wenig.</tw-passagedata></tw-storydata>
+Zwei Dudes verbinden elektronische Geräte und machen irgendwas mit Kabeln. Und zwar eine Stunde lang bis es losgeht! Endlich fangen sie an. Einer macht einen driving beat, der andere rapt. Zwischen durch klingelt beim einem das Handy und das Konzert wird kurz unterbrochen. Der flow wechselt manchmal abrupt und die Texte sind schwer zu deuten, aber die Authentizität beeindruckt dich schon ein wenig.</tw-passagedata><tw-passagedata pid="105" name="AusgehenSzeneBar" tags="" position="150,835" size="100,100">{
+(set: _aus1 to (display: &quot;AusgehenSzeneBar1&quot;))
+(set: _aus2 to (display: &quot;AusgehenSzeneBar2&quot;))
+(set: _aus3 to (display: &quot;AusgehenSzeneBar3&quot;))
+(set: _aus4 to (display: &quot;AusgehenSzeneBar4&quot;))
+(set: _aus5 to (display: &quot;AusgehenSzeneBar5&quot;))
+
+(set: _leereAus to &quot;Die Bar ist heute Abend nicht so aufregend. So ziehst du mit deinen Freunden von einer Bar zur der nächsten, bist du aussteigst und müde nach Hause läufst&quot;)
+
+(set: _szeneBarArray to (array: _aus1, _aus2, _aus3, _aus4, _aus5))
+
+(if: $AusgehenSzeneBar1 is &gt;= 1)[(set: _szeneBarArray to (_szeneBarArray - (array: _aus1)))]
+(if: $AusgehenSzeneBar2 is &gt;= 1)[(set: _szeneBarArray to (_szeneBarArray - (array: _aus2)))]
+(if: $AusgehenSzeneBar3 is &gt;= 1)[(set: _szeneBarArray to (_szeneBarArray - (array: _aus3)))]
+(if: $AusgehenSzeneBar4 is &gt;= 1)[(set: _szeneBarArray to (_szeneBarArray - (array: _aus4)))]
+(if: $AusgehenSzeneBar5 is &gt;= 1)[(set: _szeneBarArray to (_szeneBarArray - (array: _aus5)))]
+
+}\
+(if: ($AusgehenSzeneBar1 is  &gt;= 1) &amp;&amp; (($AusgehenSzeneBar2 is &gt;= 1) &amp;&amp; (($AusgehenSzeneBar3 is &gt;= 1) &amp;&amp; (($AusgehenSzeneBar4 is &gt;= 1) &amp;&amp; ($AusgehenSzeneBar5 is &gt;= 1)))))[_leereAus](else:)[(either: ..._szeneBarArray)]</tw-passagedata><tw-passagedata pid="106" name="AusgehenSzeneBar1" tags="" position="158.33333333333337,943.3333333333334" size="100,100">{
+(set: $AusgehenSzeneBar1 to it + 1)
+}\
+Ihr wollt euch bei $wayne[&amp;lsqb;irgendeine Bar&amp;rsqb;] treffen, doch als du ankommst stellst du fest: Es ist heute voll. Also schreibst du deinen friends, dass du in die Bar gegenüber gehst und bestellst einen $wayne[&amp;lsqb;hipper Cocktail&amp;rsqb;].
+Deine Freunde tauchen nicht auf und das Staren auf WhatsApp hilft nicht dabei vorzutäuschen das du dich langweilst.</tw-passagedata><tw-passagedata pid="107" name="AusgehenSzeneBar2" tags="" position="155,1046.6666666666667" size="100,100">{
+(set: $AusgehenSzeneBar2 to it + 1)
+}\
+Du lernst (either:&quot;einen Jungen, in einem grünen Pullover und einem USB als Ohrring&quot;, &quot;ein Mädchen, mit silbernen Haaren und großen Sicherheitsnadel als Jackenknöpfe&quot;, &quot;eine Frau in einem langen schwarzen Mantel und einem halben Iro&quot;), kennen. Ihr habt den ganzen Abend ein hinreißendes Gespräch.
+Die Person studiert in zwei Fächern: (either: &quot;Genderstudies und BWL&quot;, &quot;Geschichte und Marketing&quot;, &quot;Sozialwissenschaften und VWL&quot;). Lange redet ihr über Hindernissen in der freien Entfaltung und wie sich die Wirtschaft mit freiwilligen Regeln selbst helfen könnte. Am Ende des Abends hast du jedoch den Namen vergessen.
+
+Eigentlich ist nichts aufregendes passiert, aber es war mal wieder einer der Abende die dich erinner wieso du eigentlich hierhergezogen bist. Wegen den Menschen! Hypezig ist vielleicht in den Medien vorbei, doch hier in diesem Viertel nicht!</tw-passagedata><tw-passagedata pid="108" name="AusgehenSzeneBar3" tags="" position="150,1151.6666666666667" size="100,100">{
+(set: $AusgehenSzeneBar3 to it + 1)
+}\
+Du sprichst drei Stunde lang mit deinen Freunden über (either: &quot;Legida&quot;, &quot;AfD&quot;, &quot;Pegida&quot;), die neue Tapete in der $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;], die Ex von $wayne[&amp;lsqb;irgendeinem Freund&amp;rsqb;] und (either: &quot;das Georg Orwell Recht hatte&quot;, &quot;wieso $wayne[&amp;lsqb;irgendein Philosoph&amp;rsqb;] nicht mehr zeitgemäß sei&quot;).
+
+Ein Freund nörgelt den ganzen Abend rum, wie Menschenverachtend gerade alles auf der Welt ist, bist du ihm erwiderst, dass es Menschen gibt die einfach alles schlecht reden und nie das Gute sehen wollen.</tw-passagedata><tw-passagedata pid="109" name="AusgehenSzeneBar4" tags="" position="148.33333333333326,1256.6666666666667" size="100,100">{
+(set: $AusgehenSzeneBar4 to it + 1)
+}\
+Ein Freund hat $wayne[&amp;lsqb;irgendein Ereignis&amp;rsqb;], also gibt es was zu feiern. Früh kommt ihr schon an und die Stimmung ist gut. Der Abend wird lang und du hast mehr Geld ausgegeben als du eigentlich wolltest. Yolo!
+
+Du versuchst dir noch was klar zumachen, aber es ist zu spät und nichts vernünftiges ist übrig. Jetzt schon spürst du einen Kater.
+
+Als du vom Klo zurückkommst, rennst du (either: &quot;in deine&amp;#42;n Ex&quot;, &quot;in eine&amp;#42;n alte&amp;#42;n Freund&amp;#42;in, mit dem du nichts mehr zu tun haben willst&quot;). Wichtig wirkend starrst du sofort auf dein Smartphone und tust so als hättest du niemand gesehen.</tw-passagedata><tw-passagedata pid="110" name="AusgehenSzeneBar5" tags="" position="141.66666666666663,1361.6666666666667" size="100,100">{
+(set: $AusgehenSzeneBar5 to it + 1)
+}\
+In der neuen $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] ist heute Karaoke Abend. Deine Freunde sind heiß drauf. Du brauchst jedoch etwas Mut und gehst an die Bar.
+
+Nach einem Bier stehst du schon auf der Bühne. Selbstironisch singst du ein Lied über (either: &quot;Dreiecke&quot;, &quot;Liebe&quot;, &quot;Freiheit&quot;). Deine Crew geben dir cred und einen aus. Nach 15 min willst du nochmal, aber leider ist die nächste (either: &quot;halbe Stunde&quot;, &quot;Stunde&quot;) bereits voll.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
