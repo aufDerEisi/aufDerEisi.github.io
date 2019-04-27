@@ -152,7 +152,9 @@ color: #F5B4DD;
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -1248,7 +1250,7 @@ Du gehst heute _lineFeiern oder _lineProjekt oder _lineKulturLinks oder _lineHei
 
 (set: _lineNichtAusgehen to &quot;Das Wetter ist schön deswegen hast du Lust heute einen kleinen [[Aktion&lt;-Spaziergang]] zu machen.&quot;)
 
-(set: _lineAusgehen to &quot;(if: $feiern is &gt;= (max: $kulturLinks, $heim))[_lineAusgehenBar(set: $aktionMitbekommen to &#39;Bar&#39;)](else-if: $kulturLinks is &gt;= (max: $feiern, $heim))[_lineAusgehenKultur(set: $aktionMitbekommen to &#39;Kultur&#39;)](else-if: $heim is &gt;= (max: $kulturLinks, $feiern))[_lineNichtAusgehen(set: $aktionMitbekommen to &#39;Heim&#39;)]&quot;)
+(set: _lineAusgehen to &quot;(if: $feiern is &gt;= (max: $kulturLinks, $heim))[_lineAusgehenBar(set: $aktionMitbekommen to &#39;Bar&#39;)](else-if: $kulturLinks is &gt;= (max: $feiern, $heim))[_lineAusgehenKultur(set: $aktionMitbekommen to &#39;Kultur&#39;)](else-if: $heim is &gt;= (max: $kulturLinks, $feiern))[_lineNichtAusgehen(set: $aktionMitbekommen to &#39;Heim&#39;)](else:)[fehler]&quot;)
 }\
 **Die Eisenbahnstraße**
 (display: &quot;Kiez-Beschreibung&quot;)\
@@ -1334,10 +1336,11 @@ Du biegst auf die Eisenbahnstraße ab. Es ist laut, aber du magst die Gegend, di
 
 Als du neben einer Bar vorbei läuft, gibt dir jemand ein Flyer in die Hand.
 
-Du schaust es dir kurz an
-(click: ?replace1)[(live:1s)[(set:$pause to it +1)(if:$pause &lt;5)[&lt;img src=&quot;images/flyer1-straße.jpg&quot; alt=&quot;Flyer&quot; style=&quot;height: 200; width:100&quot;/&gt;](elseif:$pause &gt;5)[(set:$pause to 0)(stop:)
+Du [schaust es dir kurz an]&lt;replace1|(click: ?replace1)[(live:1s)[(set:$pause to it +1)(if:$pause &lt;5)[&lt;img src=&quot;images/flyer1-straße.jpg&quot; alt=&quot;Flyer&quot; style=&quot;height: 200; width:100&quot;/&gt;](elseif:$pause &gt;5)[(set:$pause to 0)(stop:).
 
-Es ist irgend ein Info-Text, dafür hast du nun wirklich keine Zeit. Du gibst den Flyer zurück und gehst weiter.
+*Es ist irgend ein Info-Text, dafür hast du nun wirklich keine Zeit. Du gibst den Flyer zurück und gehst weiter.*
+
+]]]
 
 
 Du gehst [[Der Kiez&lt;-zurück nach Hause]], denn morgen hast du noch einiges vor.</tw-passagedata><tw-passagedata pid="52" name="1.Cornern-Kultur" tags="" position="1564,2160" size="100,100">Als du die Straße entlang gehst, begegnen dir ein Paar Freund&amp;#42;innen. Du erzählst ihnen von einer coolen Party die morgen stattfinden soll und ihr verabredet euch für den Samstag auf jeden Fall auf einen Kaffee.
@@ -1468,7 +1471,7 @@ Du und ein paar Freunde wollen in die nächste $wayne[&amp;lsqb;hippe szene Bar&
 
 ---
 
-Wieder auf dem Nachhauseweg seht ihr das in den Räumen weiter Menschen feiern. Die letzte Tränengas-Katusche liegt noch auf der Kreuzung. Verständnislos fragt ihr euch, wieso man euch dann nicht reingelassen hat.</tw-passagedata><tw-passagedata pid="60" name="Party-Aktivistin" tags="" position="415.3333333333333,2959.6666666666665" size="100,100">Die meisten Besucher&amp;#42;innen gehen recht zügig raus, doch du ein paar Freunde und ein weiteres Grüppchen bleiben in dem Laden. Du kannst einfach nicht verstehen wie die Ladencrew so die letzte Möglichkeit in diesen Räumen zu feiern nicht ausreizt.
+Wieder auf dem Nachhauseweg seht ihr das in den Räumen weiter Menschen feiern. Die letzte Tränengas-Katusche liegt noch auf der Kreuzung. Verständnislos fragt ihr euch, wieso man euch dann nicht reingelassen hat.</tw-passagedata><tw-passagedata pid="60" name="Party-Aktivistin" tags="" position="415,2959" size="100,100">Die meisten Besucher&amp;#42;innen gehen recht zügig raus, doch du ein paar Freunde und ein weiteres Grüppchen bleiben in dem Laden. Du kannst einfach nicht verstehen wie die Ladencrew so die letzte Möglichkeit in diesen Räumen zu feiern nicht ausreizt.
 Die ersten persönlichen Vorwürfe lassen nicht lange auf sich warten. Eine Freundin wirft der Orga vom Eckladen voreiligen gehorsam vor. Nur weil die Nachbarn sich möglicherweise beschweren sollte man die Party nicht abbrechen, es ist schließlich ehe aus. Vor wem beugt ihr euch denn und wieso überhaupt, fragst sie die Ladencrew. Das sei das selbe unterwürfige Verhalten das dazu geführt hat, dass die Räume einfach so geräumt wurden, anstelle dafür zu kämpfen. Anstelle gegen den Kapitalismus zu kämpfen verschließt ihr die Tür, stimmt ihr ein junger Mann zu.
 
 Zwei Menschen aus der Gruppe versuchen sich zu rechtfertigen, dass die sexistische Vorfälle und Schlägereien sich häuften, das Türschloss zu dem Technikraum sei aufgebrochen und Sachen wurden gestohlen. Jetzt müsste cut gemacht werden, da alles bereits aus dem Ruder gelaufen ist. Es gäbe keine Secu- und kein Awareness-Team. Die Party und die Vorbereitung alleine hätte sehr viel Kraft verbraucht und außer für die Barschichten hätte sich niemand für irgendeine Aufgabe eingetragen, schließt eine&amp;#42;r der zwei ab.
