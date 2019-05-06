@@ -41,241 +41,7 @@ color: #F5B4DD;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1157,7 +923,6 @@ Du bist dir unsicher ob du [[Aktionsbuendnis&lt;-hingehen]] willst oder [[Der Ki
 (set: _ladenInfos to $hopInfo + $hndrtnInfo + $ladenInfo)
 }\
 (background: #696969)[&lt;blockquote&gt;Wo auf der gesellschaftlichen Ebene Solidarität als Konzept aufgegeben wurde, werden privat Stress und Erschöpfung angehäuft. - Mark Fisher&lt;/blockquote&gt;]
-###Ende
 (if: _ladenInfos is 13)[
 (display: &quot;hidden&quot;)
 ]
@@ -1165,15 +930,15 @@ _styleAuthor[Auf der Eisi
 &amp;ensp; &amp;ensp; &amp;ensp;Ein Spiel von:] &lt;a href=&quot;mailto:l_i_e_b_e@riseup.net&quot;&gt;liebe&lt;/a&gt;
 &amp;ensp; &amp;ensp; &amp;ensp;_styleAuthor[Erstellt mit] &lt;a href=&quot;http://twinery.org&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;twine&lt;/a&gt;
 
-Das Spiel ist hier vorbei; die Geschichte nicht.
-
 Dieses Text-Spiel ist das Ergebnis von Sammeln unzähliger Notizen, Protokolle, Messenger-Gesprächsverläufen, E-Mails, Posts auf Socialmedia, Flyern, Fotos und Gesprächen mit Beteiligten, Besucher&amp;#42;innen von Bars&amp;co. und &quot;Außenstehenden&quot; im Viertel.
 
-_styleAuthor[Dank geht vor allem für Hilfe an:] T&amp;#42;&amp;#42;i, F&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;d, D&amp;#42;&amp;#42;&amp;#42;n, J&amp;#42;&amp;#42;&amp;#42;s, H&amp;#42;&amp;#42;&amp;#42;&amp;#42;s, A&amp;#42;&amp;#42;x, E&amp;#42;&amp;#42;l und
+_styleAuthor[Dank geht vor allem für Hilfe an:] T&amp;#42;&amp;#42;i, F&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;&amp;#42;d, D&amp;#42;&amp;#42;&amp;#42;n, J&amp;#42;&amp;#42;&amp;#42;s, H&amp;#42;&amp;#42;&amp;#42;&amp;#42;s, A&amp;#42;&amp;#42;x, E&amp;#42;&amp;#42;l
 
 Danke auch an dich fürs Spielen!
 
 Falls du diese Geschichte der hippen Eisenbahnstraße selbst noch weiter erzählen möchtest, kannst du dies &lt;a href=&quot;https://github.com/aufDerEisi/aufDerEisi.github.io&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;hier&lt;/a&gt; tun.
+
+Das Spiel ist hier vorbei; die Geschichte nicht.
 
 Zur Auswertung(click-replace: &quot;Zur Auswertung&quot;)[
 ###Auswertung
@@ -1201,7 +966,11 @@ Das Ergebnis deiner Auswertung(click-replace: &quot;Das Ergebnis deiner Auswertu
 (set: _ladenInfos to $hopInfo + $hndrtnInfo + $ladenInfo)
 (set: _abStyle to (text-style: &#39;underline&#39;) + (text-style: &#39;bold&#39;))
 (set: _abzeichen to &quot;(if: _ladenInfos is 13)[(_abStyle[w]eißes) (_abStyle[a]kademisches) _abStyle[n]eoliberales (_abStyle[c]is) _abStyle[A]bschaum](else:)[(W) (A) N (C) A]&quot;)
-***Abzeichen:*** _abzeichen]]</tw-passagedata><tw-passagedata pid="39" name="Solimail" tags="" position="2711,1078" size="100,100">&lt;img src=&quot;images/Solimail.png&quot; alt=&quot;solimail&quot; height=&quot;500&quot; width=&quot;700&quot; /&gt;
+***Abzeichen:*** _abzeichen
+(if: _ladenInfos is not 13)[
+
+Willst du es &lt;a HREF=&quot;javascript:history.go(0)&quot;&gt;nochmal versuchen&lt;/a&gt;?
+]]]</tw-passagedata><tw-passagedata pid="39" name="Solimail" tags="" position="2711,1078" size="100,100">&lt;img src=&quot;images/Solimail.png&quot; alt=&quot;solimail&quot; height=&quot;500&quot; width=&quot;700&quot; /&gt;
 
 [[6.Treffen&lt;-zurück]]</tw-passagedata><tw-passagedata pid="40" name="Antwort-Solimail" tags="" position="2827,1077" size="100,100">&lt;img src=&quot;images/antwort-solimail-1.png&quot; alt=&quot;antwort-auf-solimail-1&quot; height=&quot;700&quot; width=&quot;500&quot;/&gt;
 &lt;img src=&quot;images/antwort-solimail-2.png&quot; alt=&quot;antwort-auf-solimail-2&quot; height=&quot;700&quot; width=&quot;500&quot;/&gt;
@@ -1392,7 +1161,7 @@ Der Regen hört langsam auf. Die Straßen sind endlich etwas kühler geworden. D
 Ein paar Tage später geht eine Mail über den Verteiler des Aktionsbündnisses mit der Bitte um Weiterleitung an Freunde und Projekte. Es ist ein &lt;a href=&quot;https://rawcdn.githack.com/aufDerEisi/aufDerEisi.github.io/052acdf088d2d58317417e784bd89c0e8bc3d5eb/images/AnschuldigungStatement.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Statement zur Anschuldigungen&lt;/a&gt;, die die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] über die Ladenprojekte verbreitet. Doch du findest es viel zu anstrengend und leitest die Mail an niemanden weiter.</tw-passagedata><tw-passagedata pid="54" name="Kundgebung-Kultur" tags="" position="1959,2164" size="100,100">Du triffst dich mit ein paar Freunden an der Brache, den heute ist Zufällig Osten und die Fläche ist voll mit Menschen. Ein Redepult wurde aufgestellt, an dem ihr eine Ewigkeit verbringt um Fotos zu schießen.
 
 Als eine Band anfängt zu spielen, verstreut ihr euch jedoch etwas. Ein Freund möchte sich noch ein Döner holen, ein&amp;#42;e andere&amp;#42;r unbedingt in den Umsonst-Klamotten stöbern.
-Du gehst die Info-Stände ab, als dir ein schicker Flyer auffällt. (click: &quot;Flyer&quot;)[(display: &quot;Scheiße-und-Goldhorn&quot;)]
+Du gehst die Info-Stände ab, als dir ein schicker Flyer auffällt. (click: &quot;schicker Flyer&quot;)[(display: &quot;Scheiße-und-Goldhorn&quot;)]
 
 Scheinbar bricht der Shitstorm über $wayne[&amp;lsqb;irgend eine hippe szene Bar&amp;rsqb;] einfach nicht auf. Es ist sogar noch schlimmer geworden, denn Menschen aus dem Umkreis des Aktionsbündnisses sollen Angestellte des $wayne[&amp;lsqb;irgend eine hippe szene Bar&amp;rsqb;] körperlich bedroht haben.
 Way over the top. Das geht einfach gar nicht, wenn irgendwelche linken wieder Steine schmeißen, haben sie sich selber disqualifiziert.
@@ -1498,17 +1267,17 @@ Kurz bleibst du auf dem Bürgersteig stehen. Draußen ist es etwas ruhiger gewor
 
 Vor der Tür entdeckst du wieder deine Freunde mit denen du hergekommen bist. Sie unterhalten sich über einen Flyer, denn ihn jemand auf der Party gegeben hat. (click: &quot;Flyer&quot;)[(display: &quot;Flyer2&quot;)]
 
-Sie regen sich darüber auf, dass Menschen vom Aktionsbündnis selbst bei der Abschiedsparty gegen die Eigentümer persönlich hetzten. Der Hass der gegen Individuen verbreitet ist sei einfach kontraproduktiv.
+Sie regen sich darüber auf, dass Menschen vom Aktionsbündnis selbst bei der Abschiedsparty gegen die Eigentümer persönlich hetzten. Der Hass, der gegen Individuen verbreitet wird, sei einfach kontraproduktiv.
 Außerdem hätte sich der Eckladen mit dem ganzen Haus angelegt. Schon seit langem würden sich Bewohner&amp;#42;innen über das Projekt beschweren, erzählt ein Freund, der das von einem Bekannten gehört hat, der jemand kennt der im Haus wohnt.
 
 Drei Menschen, die du glaubst aus dem Dunstkreis des Eckladens wiederzuerkennen, laufen gerade aus den Raum, als die Straße immer leerer wird. Eine davon scheint einen Zusammenbruch zu haben. Sie zittert und hockst sich ein paar Meter vor einem großem Fenster nieder. Du überlegst dir kurz ob es angebracht ist zu ihr zu gehen, aber sie hat schon Menschen um sich, die sie zu trösten versuchen.
 
-Nach dem dein Blick etwas auf ihr geruht hat, wendest du dich wieder deinen Freunden zu und widersprichst ihnen zunächst. Denn der Eckladen sei ein soziokultureller Raum von verschiedensten Menschen, man könne nicht die Kritik so einfach auf &quot;der Eckladen ist selbst schuld&quot; herunterbrechen. 
+Nach dem dein Blick etwas auf ihr ruhte, wendest du dich wieder deinen Freunden zu und widersprichst ihnen zunächst. Denn der Eckladen sei ein soziokultureller Raum von und für verschiedenste(n) Menschen. Man könne nicht die Kritik so einfach auf &quot;der Eckladen ist selbst schuld&quot; herunterbrechen. 
 
 Deine Freunde stimmen dir zu und ihr einigt euch schnell, hätte das Aktionsbündnis nicht gezündelt, wäre alles anders ausgegangen, denn ihr habt gehört dem Eckladen hätte man erst gekündigt, als aus dessen Umgebung die Proteste anfingen.
 
 Individuen rauspicken und unabhängig von den kapitalistischen Verhältnis, in dem man schließlich lebt, anzugreifen ist struktureller Antisemitismus, kritisiert ein Freund daraufhin das Aktionsbündnis. Die Eigentümer und ihrer Bar, versuchten nur ihren Lebensunterhalt zu finanzieren. Sie müssen die Kredite abbezahlen und bieten mehreren Menschen einen Arbeitsplatz. Und was soll überhaupt daran falsch sein, wenn Eigentümer ihrer Räume anderweitig vermieten wollen? Das alleine an sich sei nicht falsch. Das hätte das Aktionsbündnis wohl nicht verstanden, deshalb ist ihre Kritik bei den Menschen im Viertel zu recht nicht angekommen.
-Und überhaupt dürfte man in den Zeiten in denen die AfD in dem Landtag sitzt, sich in der linken nicht gegenseitig zerfleischen. Das sei schon immer das Problem der modernen Antifaschisten, beendet er ohne das weiter noch jemand darauf eingeht. Vielleicht aus Müdigkeit, vielleicht weil niemand mehr etwas hinzuzufügen hat, vielleicht auch einfach weil niemand mehr sprechen will.
+Und außerdem dürfte man in den Zeiten in denen die AfD in dem Landtag sitzt, sich in der linken nicht gegenseitig zerfleischen. Das sei schon immer das Problem der modernen Antifaschisten, beendet er ohne das weiter noch jemand darauf eingeht. Vielleicht aus Müdigkeit, vielleicht weil niemand mehr etwas hinzuzufügen hat, vielleicht auch einfach weil niemand mehr sprechen will.
 
 Dir dreht sich leicht alles und du bist dir unsicher was genau wahr und falsch ist. Eins ist sicher. Die Communities um diesen Raum werden nicht mehr so sein wie vorher.</tw-passagedata><tw-passagedata pid="62" name="Flyer1" tags="" position="1401,1943" size="100,100">&lt;img src=&quot;images/flyer1.jpg&quot; alt=&quot;Flyer&quot; style=&quot;height: 768; width:647&quot;/&gt;</tw-passagedata><tw-passagedata pid="63" name="Scheiße-und-Goldhorn" tags="" position="2088,2166" size="100,100">&lt;img src=&quot;images/scheisse-und-goldhorn.jpg&quot; alt=&quot;scheisse-und-goldhorn&quot; height= &quot;350&quot; width=&quot;700&quot;/&gt;</tw-passagedata><tw-passagedata pid="64" name="Kundgebung-Aufgeben" tags="" position="1953,1828" size="100,100">Es ist ein herrlicher Tag und auf der Eisi ist super viel los, denn heute ist ein Stadtteilfest. Zufällig haben alle möglichen Ladenprojekte, Bars und Kaffees auf. Auf der Brache wurden Bühnen für Bands aufgebaut, Infostände von verschiedenen politischen Projekten und Umsonst-Ecken mit einen Haufen Klamotten.
 
