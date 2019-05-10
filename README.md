@@ -1,5 +1,5 @@
 # Auf der Eisi
-Auf der hippen Eisenbahnstraße 2016-2018. Eine interaktive Geschichte über Aufgeben, kollektive Projekte, Ausgehabende in einem schillerndem Viertel, Solidarität, kommerzielle Strukturen und Schuld.
+Auf der hippen Eisenbahnstraße 2016-2018. Eine interaktive Geschichte über Aufgeben, kollektive Projekte, Ausgehabende in einem schillerndem Viertel, Solidarität, kommerzielle Strukturen, soziale Kämpfe und Schuld.
 
 
 Ein Spiel von: <a href="mailto:l_i_e_b_e@riseup.net">liebe</a>
