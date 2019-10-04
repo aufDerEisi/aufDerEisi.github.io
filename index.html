@@ -11,7 +11,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="aufdereisi" startnode="1" creator="Twine" creator-version="2.2.1" ifid="1787FEE6-F93E-4535-A5BB-BA26D9054ECE" zoom="0.6" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar
+<tw-storydata name="aufdereisi" startnode="1" creator="Twine" creator-version="2.3.4" ifid="1787FEE6-F93E-4535-A5BB-BA26D9054ECE" zoom="0.6" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar
 {
 display: none;
 }
@@ -39,7 +39,9 @@ color: #F5B4DD;
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -303,7 +305,7 @@ Nach einer Weile ist dein Teller leer und dein Browserverlauf voll. Was hast du 
 
 Naja, vielleicht kannst du morgen die Zeit etwas sinnvoller nutzen, wenn du noch Kraft hast. Du wechselst vom Computer zu Smartphone, von Tisch zu Bett und&quot;))
 
-(set: _aloneLine to (either: &quot;Der warst den ganzen Tag wieder $wayne[&amp;lsqb;irgendeine Tätigkeit&amp;rsqb;] und willst dich nicht wirklich noch mit irgendwas Beschäftigen. Du isst schnell was und bleibst dann vor dem Bildschirm hängen. Nach 3 Stunden stellst du fest, dass weder Facebook noch Youtube irgendwas spannendes bieten kann. Weil es aber schon spät ist entscheidest du dich dafür ins Bett zu legen und $wayne[&amp;lsqb;irgendeine Sendung&amp;rsqb;] anzumachen.
+(set: _aloneLine to (either: &quot;Der warst den ganzen Tag wieder $wayne[&amp;lsqb;irgendeine Tätigkeit&amp;rsqb;] und willst dich nicht wirklich noch mit irgendwas Beschäftigen. Du isst schnell was und bleibst dann vor dem Bildschirm hängen. Nach 3 Stunden stellst du fest, dass weder Facebook noch Youtube heute irgendwas spannendes bieten kann. Weil es aber schon spät ist, entscheidest du dich dafür dich ins Bett zu legen und $wayne[&amp;lsqb;irgendeine Sendung&amp;rsqb;] anzumachen.
 
 Dein Smartphone blinkt ständig auf und das $wayne[&amp;lsqb;irgendeine Sendung&amp;rsqb;] verkommt zu einem bloßen Hintergrundrauschen.
 
@@ -780,7 +782,7 @@ Du entscheidest dich mit ein paar Freund&amp;#42;innen die Party wenigstens noch
 
 (set: _gentriStandHaus to &quot;(if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 4)[zwei-drei leerstehende Häuser](else-if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 7)[ein-zwei leerstehende Häuser](else:)[ein leer stehendes Haus]&quot;)
 
-(set: _gentriStandKultur to &quot;(if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 5)[Hier und da sieht man neben einem Dönerladen auch mal eine Bar oder ein Caffee.](else-if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 10)[Hier und da ist ein Platten- oder Tattooshop zu sehen. Aber das Bild der Eisi wird vordergründig von Baustellen geprägt.](else:)[Ein Popup Geschäft entstehen da wo früher mal ein Friseursalon war, aber da bist du ehe nie reingegangen.]&quot;)
+(set: _gentriStandKultur to &quot;(if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 5)[Hier und da sieht man neben einem Dönerladen auch mal eine Bar oder ein Caffee.](else-if: (count: (history:), &#39;Der Kiez&#39;) is &lt; 10)[Hier und da ist ein Platten- oder Tattooshop zu sehen. Aber das Bild der Eisi wird vordergründig von Baustellen geprägt.](else:)[Ein Popup Geschäft entstehen da wo früher mal ein arabischer Friseursalon war, aber da bist du ehe nie reingegangen.]&quot;)
 
 (set: _vielImmo to &#39;Es gibt viel Aktivität auf dem Immobilienmarkt&#39;)
 (set: _mietenBillig to &#39;Die Mieten sind billig und ermöglichen Menschen sich auszuprobieren.&#39;)
@@ -1097,7 +1099,7 @@ Als es dunkel wird, fängt die Corner-Crowd aufzustehen und sich zu sammeln. Nac
 
 Du gehst [[Der Kiez&lt;-zurück nach Hause]], denn morgen hast du noch einiges vor.</tw-passagedata><tw-passagedata pid="51" name="1.Cornern-Heim" tags="" position="1565,2046" size="100,100">Die Sonne scheint und das merkt man auch daran, dass soviel Menschen unterwegs sind.
 
-Du biegst auf die Eisenbahnstraße ab. Es ist laut, aber du magst die Gegend, die Vielfalt der Menschen die einem beim runter laufen dieser Straße begegnen und die vielen Läden.
+Du biegst auf die Eisenbahnstraße ab. Es ist laut, aber du magst die Gegend, die Vielfalt der Menschen, die einem beim runter laufen dieser Straße begegnen, und die vielen Läden.
 
 Als du neben einer Bar vorbei läuft, gibt dir jemand ein Flyer in die Hand.
 
@@ -1110,16 +1112,16 @@ Du [schaust es dir kurz an]&lt;replace1|(click: ?replace1)[(live:1s)[(set:$pause
 
 Du gehst [[Der Kiez&lt;-zurück nach Hause]], denn morgen hast du noch einiges vor.</tw-passagedata><tw-passagedata pid="52" name="1.Cornern-Kultur" tags="" position="1564,2160" size="100,100">Als du die Straße entlang gehst, begegnen dir ein Paar Freund&amp;#42;innen. Du erzählst ihnen von einer coolen Party die morgen stattfinden soll und ihr verabredet euch für den Samstag auf jeden Fall auf einen Kaffee.
 
-Als du weiter gehst begegnet dir eine größere Gruppe vor deiner $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;]. Sie scheinen zu demonstrieren und verteilen Flyer. Du nimmst eins in die Hand und läufst cool weiter ohne etwas zu sagen.
+Als du weiter gehst begegnet dir eine größere Gruppe vor deiner rumhäng $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;]. Sie scheinen zu demonstrieren und verteilen Flyer. Du nimmst eins in die Hand und läufst cool weiter ohne etwas zu sagen.
 
 Nach ein paar Meter schaust du dir den Flyer an.(click: &quot;schaust du dir den Flyer an&quot;)[
 (display: &quot;Flyer1&quot;)]
 
-Nach dem du den Flyer kurz überflogen hast stoppst du. Du kennst die Bar-Dudes von weitem, denn sie bewegen sich in ähnlichen Kreisen wie du. Du bist dir nicht sicher was du davon halten sollst. Der Flyer ist voller wagen Anschuldigungen. Es wird quasi so getan als würden die beiden einen Plan gegen zwei Projekt-Bars schmieden.
+Nach dem du den Flyer kurz überflogen hast stoppst du. Du kennst die Bar-Dudes über ein paar Ecken, denn sie bewegen sich in ähnlichen Kreisen wie du. Du bist dir nicht sicher was du davon halten sollst. Der Flyer ist deiner Meinung nach voller vager Anschuldigungen. Es wird quasi so getan als würden die beiden einen Plan gegen zwei Projekt-Bars schmieden.
 
 An der übernächsten Ecke biegst du ab um eine Runde um den Block zu drehen und läufst zurück. Du willst sehen ob die Dudes schon informiert wurden und bei ihrer Bar sind.
 
-Doch als du an der Menge vorbei gehst und an der Bar nach den zwei fragst, heißt es die wären informiert würden aber nicht kommen. Du setzt dich an den nächsten Tisch zu ein paar Bekannten und unterhältst dich über den Aufruhr draußen. Eine Bekannte die hier mal gearbeitet hat kommt an euren Tisch und fragt ob sie sich mal den Flyer anschauen darf.
+Doch als du an der Menge vorbei in die Räume läufst und an der Bar nach den zwei fragst, heißt es die wären informiert würden aber nicht kommen. Du setzt dich an den nächsten Tisch zu ein paar Bekannten und unterhältst dich über den Aufruhr draußen. Eine Bekannte die hier mal gearbeitet hat kommt an euren Tisch und fragt ob sie sich mal den Flyer anschauen darf.
 
 Sie wird schnell sauer als sie den Zettel liest. Es sei völlig irrational was hier abläuft, entgegnet sie dir und wirft dabei den Flyer auf den Tisch.
 Sie weiß durch Geschichten das der Eckladen bereits niedrigere Mieten als andere bezahlt und damit im ganzen Haus höhere Kosten verursacht. Und sowieso hätte der Ladenkulturprojekt die Vereinbarung mit der Bar freiwillig unterschrieben. Vereinbarungen an die sich der Ladenkulturprojekt schon wieder nicht halten würde.
@@ -1151,11 +1153,11 @@ Der Regen hört langsam auf. Die Straßen sind endlich etwas kühler geworden. D
 
 Ein paar Tage später geht eine Mail über den Verteiler des Aktionsbündnisses mit der Bitte um Weiterleitung an Freunde und Projekte. Es ist ein &lt;a href=&quot;https://rawcdn.githack.com/aufDerEisi/aufDerEisi.github.io/052acdf088d2d58317417e784bd89c0e8bc3d5eb/images/AnschuldigungStatement.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Statement zur Anschuldigungen&lt;/a&gt;, die die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] über die Ladenprojekte verbreitet. Doch du findest es viel zu anstrengend und leitest die Mail an niemanden weiter.</tw-passagedata><tw-passagedata pid="54" name="Kundgebung-Kultur" tags="" position="1959,2164" size="100,100">Du triffst dich mit ein paar Freunden an der Brache, den heute ist Zufällig Osten und die Fläche ist voll mit Menschen. Ein Redepult wurde aufgestellt, an dem ihr eine Ewigkeit verbringt um Fotos zu schießen.
 
-Als eine Band anfängt zu spielen, verstreut ihr euch jedoch etwas. Ein Freund möchte sich noch ein Döner holen, ein&amp;#42;e andere&amp;#42;r unbedingt in den Umsonst-Klamotten stöbern.
+Als eine Band anfängt zu spielen, verstreut ihr euch jedoch etwas. Ein Freund möchte sich noch ein Döner holen und ein&amp;#42;e andere&amp;#42;r unbedingt in den Umsonst-Klamotten stöbern.
 Du gehst die Info-Stände ab, als dir ein schicker Flyer auffällt. (click: &quot;schicker Flyer&quot;)[(display: &quot;Scheiße-und-Goldhorn&quot;)]
 
-Scheinbar bricht der Shitstorm über $wayne[&amp;lsqb;irgend eine hippe szene Bar&amp;rsqb;] einfach nicht auf. Es ist sogar noch schlimmer geworden, denn Menschen aus dem Umkreis des Aktionsbündnisses sollen Angestellte des $wayne[&amp;lsqb;irgend eine hippe szene Bar&amp;rsqb;] körperlich bedroht haben.
-Way over the top. Das geht einfach gar nicht, wenn irgendwelche linken wieder Steine schmeißen, haben sie sich selber disqualifiziert.
+Scheinbar bricht der Shitstorm über $wayne[&amp;lsqb;irgend eine hippe szene Bar&amp;rsqb;] einfach nicht ab. Es ist sogar noch schlimmer geworden, denn Menschen aus dem Umkreis des Aktionsbündnisses sollen Angestellte des $wayne[&amp;lsqb;irgend eine hippe szene Bar&amp;rsqb;] körperlich bedroht haben.
+Way over the top. Das geht einfach gar nicht! Wenn irgendwelche linken wieder Steine schmeißen, haben sie sich selber disqualifiziert.
 
 Ein Freund kommt mit einer Falafel vom Syrer zurück. Du zeigst ihm sofort den Flyer. Er erzählt dir, er hätte gehört das der Bar bereits Scheiben vom Aktionsbündnis eingeworfen worden sind.
 Eine unbekannte Person, du kennst ihn nur vom Sehen, mischt sich in euer Gespräch ein. Er widerspricht euch und sagt, dass es reine Gerüchte und Lügen sind, die im Viertel verbreitet werden.
@@ -1180,13 +1182,14 @@ An der Brache ist richtig was los. Ein Transpi verrät dir, dass diese heute zum
 
 Zelte, ein Podium, Kleider-Tausch und ein Gewusel über die ganze Fläche. Du siehst junge schöne Menschen und erfreust dich an der Eisi. Es macht Spaß zu sehen was alles auf die Beine gestellt wird. Eine Jazz-Band setzt an, als du dich durch die Kleiderbügel durchkämpfst und ein schönes Muster entdeckst. Hinter einer aufgestellten Wand probierst du es an und behältst es gleich.
 
-Am Infostand ist eine unüberschaubare Ansammlung an Flyer. Du nimmst den erst besten in die Hand. Eine Initiative sammelt Unterschriften für die Brache, denn diese wurde vor ein paar Monaten von der Stadt für 1 Million versteigert. Möglicherweise soll ein Rewe drauf, genauer weiß es niemand. Schade das die Brache bald weg ist, seufzt jemand neben dir. Aber jetzt erst nach dem Verkauf anfangen etwas zu unternehmen ist doch schon ein wenig zu spät, sagt der Mensch dazu. Die Gruppe hinter dem Infostand ist etwas irritiert und fängt ein Gespräch an. Tja, ist vielleicht nicht so gut ankommen. Ist dir gerade zu stressig... du gehst einfach weiter.
+Am Infostand ist eine unüberschaubare Ansammlung an Flyer. Du nimmst den erst besten in die Hand. Eine Initiative sammelt Unterschriften für die Brache, denn diese wurde vor ein paar Monaten von der Stadt für 1 Million versteigert. Möglicherweise soll ein Rewe drauf, genauer weiß es niemand.
+Schade das die Brache bald weg ist, seufzt jemand neben dir. Aber jetzt erst nach dem Verkauf anfangen etwas zu unternehmen ist doch schon ein wenig zu spät, sagt der Mensch dazu. Die Gruppe hinter dem Infostand ist etwas irritiert und fängt ein Gespräch an. Tja, ist vielleicht nicht so gut angekommen, stellst du innerlich fest. Aber es ist dir gerade zu stressig... du gehst einfach weiter.
 
 Nach all der Anstrengung hast du mega Kohldampf, doch beim Info-Point wirst du schnell enttäuscht, als man dich nur auf den Brunch an den Laden von früh verweist. So begibst du dich zum nächst gelegenen Café.
 
 Vor der $wayne[&amp;lsqb;irgendeine hippe szene Bar&amp;rsqb;] hat sich eine Menge versammelt. Ein Generator läuft, aus dem Boxen hörst du eine weibliche Stimme. Es ist ein  &lt;a href=&quot;http://aktionsbuendnis.blogsport.eu/files/2018/06/es_ist_ein_bedrohungsszenario_welches-1.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Redebeitrag&lt;/a&gt;. Du bleibst kurz stehen um zu lauschen. Selbstverwaltete Räume auf der Eisi werden bedroht. Ein Aufruf zur Solidarität ans Viertel hallt leicht über die Straße.
 
-Du fühlst dich tief berührt. Die Gentrifizierung kommt wohl doch schneller, als du es dir eingestehen wolltest. Schade. Du blickst noch mal zurück als du weiter zum Café latschst.
+Du fühlst dich tief berührt. Die Gentrifizierung kommt wohl doch schneller, als du es dir eingestehen wolltest. FUCK. Du blickst noch mal zurück als du weiter zum Café latschst.
 
 
 Du gehst [[Der Kiez&lt;-zurück nach Hause]], denn morgen hast du noch einiges vor.</tw-passagedata><tw-passagedata pid="56" name="2.Cornern-Aktivistin" tags="" position="2356,1712" size="100,100">Draußen ist es kalt und nass. Du bist dir auch unsicher, was ein weiteres Cornern überhaupt noch bringen soll.
@@ -1208,15 +1211,15 @@ Du bleibst [[Der Kiez&lt;-zu Hause]], denn das Wetter ist gerade mies.</tw-passa
 
 Deine Freunde erzählen dir, dass die $wayne[&amp;lsqb;irgendeine hippe szene Bar&amp;rsqb;] von irgendwelchen Leuten im Viertel angegriffen wurde. Die Bar hätte nun einen klärenden [[Facebookpost]] veröffentlicht, der auf alle Punkte ziemlich gut eingehen würde.
 
-Ein Freund ist richtig wütend, denn irgendwelche Zecken haben 45000€ Schäden verursacht und nicht nur das sie sich weigern für die Schäden aufzukommen, die sie am Eigentum anderer verursacht haben, sie fangen auch noch ein Shitstorm mit Rufschädigung an.
-Du versuchst ihn etwas zu beruhigen, doch eine Freundin sagt das es wahr sei. Sie wäre letztes in einem der Projekte bei der Bar gewesen und hätte Anti-$wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;]-Tags gesehen. $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] versuche sich jetzt nur zu Verteidigen.
+Ein Freund ist richtig wütend. Denn irgendwelche Zecken haben in ihren Mieträumen Schäden von 45000€ verursacht und nicht nur das sie sich weigern für die Schäden aufzukommen, die sie am Eigentum anderer verursacht haben, sie fangen auch noch ein Shitstorm mit Rufschädigung an.
+Du versuchst ihn etwas zu beruhigen, doch eine Freundin sagt das es wahr sei. Sie wäre letztes in einem der Projekte bei der Bar gewesen und hätte auf dem Klo Anti-$wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;]-Tags gesehen. $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] versuche sich jetzt nur zu Verteidigen.
 
 Dein Freund erzählt weiter, dass einer der Läden froh sein soll, dass sie solange toleriert wurden. Schließlich gefährden sie mit ihren billigen Preisen die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;].
 (text-style: &quot;underline&quot;)[Wait]! Du hackst nach, denn der Vorwurf ist dir zu schwammig. Aber kriegst nur zuhören, dass die $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] schließlich Gehälter zahlt und davon Menschen leben. Das müsse man mit bedenken, da der angrenzende Ladenkulturprojekt nur einer Art Studi-Künstler&amp;#42;in-Treff ist.
 
-Irgendwie erscheint dir die Behauptungen doch zu sehr aus der Luft gegriffen. Aber als deine Freundin dich anmotzt ob du Beweisen kannst, dass das alles nicht stimmen würde, schweigst du. Sie schaut dich an und nippt wissend an ihrem Kaffee und erzählt dir weiter sie hätte gehört, Leute aus dem Umkreis des Ladenprojekts hätten einem Mitarbeiter aus $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] zusammenschlagen wollen und seien ihm hinterher gerannt. Das sind wieder die selben Spinner wie bei G20, schließt sie ihren Punkt und dir ist auch klar, dass das einfach zu weit geht. Wer so handelt, hat deine Solidarität nicht verdient.
+Irgendwie erscheint dir die Behauptungen doch zu sehr aus der Luft gegriffen. Aber als deine Freundin dich anmotzt ob du Beweisen kannst, dass das alles nicht stimmen würde, schweigst du. Sie schaut dich wissend an und nippt an ihrem Kaffee und erzählt weiter. Sie hätte gehört, Leute aus dem Umkreis des Ladenprojekts hätten einem Mitarbeiter aus $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] zusammenschlagen wollen und seien ihm hinterher gerannt. Das sind wieder die selben Spinner wie bei G20 in Hamburg, schließt sie ihren Punkt und dir ist auch klar, dass das einfach zu weit geht. Wer so handelt, hat deine Solidarität nicht verdient.
 
-Als es irgendwann anfängt zu regnen [[Der Kiez&lt;-gehst du zurück nach Hause]]. Morgen hast du noch einiges vor.</tw-passagedata><tw-passagedata pid="59" name="Party-Bar" tags="" position="272,2955" size="100,100">Die gesamte Straßenecke ist voll mit mehr als 250 Menschen. Du siehst auf der anderen Seite Polizeiautos. Jemand vor dir erzählt die Bullen hätten die Party aufgelöst.
+Als es irgendwann anfängt zu regnen [[Der Kiez&lt;-gehst du zurück nach Hause]]. Morgen hast du noch einiges vor.</tw-passagedata><tw-passagedata pid="59" name="Party-Bar" tags="" position="272,2955" size="100,100">Die gesamte Straßenecke ist voll, sowohl links und rechts vor dir, als auch auf der anderen Straßenseite. Du erblickst auf der anderen Seite 2 Polizeiautos. Jemand vor dir erzählt die Bullen hätten die Party aufgelöst.
 Plötzlich wird eine Feuerwerksrakete gezündet und du hörst vereinzelt &quot;Bullen verpisst euch&quot; Rufe.
 Hinten aus den Räumen schreit eine Frauenstimme, dass die Party weitergeht und man sich von den Bullen nicht einschüchtern lassen will.
 
@@ -1230,13 +1233,13 @@ Ein weitere Person am Eingang drückt dir ein [Zettel in die Hand]&lt;replace1|(
 
 ]]]
 
-Hinter der Gruppe erblickst du, dass in den Räumen noch Menschen weiter feiern. Sie weigern sich zu gehen, heißt es als du bei der Gruppe an der Tür nachhakst. Ein paar Menschen 5 Meter neben dir rufen, dass man sich von den Bullen nicht einschüchtern lassen darf und klettern durch ein offenes Fenster wieder in den Laden rein. Ein Freund neben dir stellt sich der Gruppe am Einlass entgegen und schreit: &quot;Was seit ihr für Linke, dass ihr vor der Polizei huscht.&quot; Doch es hilft nichts, die Gruppe will die Party nicht mehr fortsetzten!
+Hinter der Gruppe erblickst du, dass in den Räumen noch einige Menschen weiter feiern. Sie weigern sich zu gehen, heißt es als du bei der Gruppe an der Tür nachhakst. Ein paar Menschen 5 Meter neben dir rufen, dass man sich von den Bullen nicht einschüchtern lassen darf und klettern durch ein offenes Fenster wieder in den Laden rein. Ein Freund neben dir stellt sich der Gruppe am Einlass entgegen und schreit: &quot;Was seit ihr für Linke, dass ihr vor der Polizei huscht.&quot; Doch es hilft nichts, die Gruppe will die Party nicht mehr fortsetzten!
 
 Du und ein paar Freunde wollen in die nächste $wayne[&amp;lsqb;hippe szene Bar&amp;rsqb;] ziehen. Hier werdet ihr nicht enttäuscht und bekommt auch schließlich das wofür ihr bezahlt habt.
 
 ---
 
-Wieder auf dem Nachhauseweg seht ihr das in den Räumen weiter Menschen feiern. Die letzte Tränengas-Katusche liegt noch auf der Kreuzung. Verständnislos fragt ihr euch, wieso man euch dann nicht reingelassen hat.</tw-passagedata><tw-passagedata pid="60" name="Party-Aktivistin" tags="" position="415,2959" size="100,100">Die meisten Besucher&amp;#42;innen gehen recht zügig raus, doch du ein paar Freunde und ein weiteres Grüppchen bleiben in dem Laden. Du kannst einfach nicht verstehen wie die Ladencrew so die letzte Möglichkeit in diesen Räumen zu feiern nicht ausreizt.
+Wieder auf dem Nachhauseweg seht ihr das in den Räumen weiterhin ein paar Menschen feiern. Die letzte Tränengas-Katusche liegt noch auf der Kreuzung. Verständnislos fragst du die anderen, wieso man euch dann nicht reingelassen hat.</tw-passagedata><tw-passagedata pid="60" name="Party-Aktivistin" tags="" position="415,2959" size="100,100">Die meisten Besucher&amp;#42;innen gehen recht zügig raus, doch du ein paar Freunde und ein weiteres Grüppchen bleiben in dem Laden. Du kannst einfach nicht verstehen wie die Ladencrew so die letzte Möglichkeit in diesen Räumen zu feiern nicht ausreizt.
 Die ersten persönlichen Vorwürfe lassen nicht lange auf sich warten. Eine Freundin wirft der Orga vom Eckladen voreiligen gehorsam vor. Nur weil die Nachbarn sich möglicherweise beschweren sollte man die Party nicht abbrechen, es ist schließlich ehe aus. Vor wem beugt ihr euch denn und wieso überhaupt, fragst sie die Ladencrew. Das sei das selbe unterwürfige Verhalten das dazu geführt hat, dass die Räume einfach so geräumt wurden, anstelle dafür zu kämpfen. Anstelle gegen den Kapitalismus zu kämpfen verschließt ihr die Tür, stimmt ihr ein junger Mann zu.
 
 Zwei Menschen aus der Gruppe versuchen sich zu rechtfertigen, dass die sexistische Vorfälle und Schlägereien sich häuften, das Türschloss zu dem Technikraum sei aufgebrochen und Sachen wurden gestohlen. Jetzt müsste cut gemacht werden, da alles bereits aus dem Ruder gelaufen ist. Es gäbe keine Secu- und kein Awareness-Team. Die Party und die Vorbereitung alleine hätte sehr viel Kraft verbraucht und außer für die Barschichten hätte sich niemand für irgendeine Aufgabe eingetragen, schließt eine&amp;#42;r der zwei ab.
@@ -1261,14 +1264,14 @@ Vor der Tür entdeckst du wieder deine Freunde mit denen du hergekommen bist. Si
 Sie regen sich darüber auf, dass Menschen vom Aktionsbündnis selbst bei der Abschiedsparty gegen die Eigentümer persönlich hetzten. Der Hass, der gegen Individuen verbreitet wird, sei einfach kontraproduktiv.
 Außerdem hätte sich der Eckladen mit dem ganzen Haus angelegt. Schon seit langem würden sich Bewohner&amp;#42;innen über das Projekt beschweren, erzählt ein Freund, der das von einem Bekannten gehört hat, der jemand kennt der im Haus wohnt.
 
-Drei Menschen, die du glaubst aus dem Dunstkreis des Eckladens wiederzuerkennen, laufen gerade aus den Raum, als die Straße immer leerer wird. Eine davon scheint einen Zusammenbruch zu haben. Sie zittert und hockst sich ein paar Meter vor einem großem Fenster nieder. Du überlegst dir kurz ob es angebracht ist zu ihr zu gehen, aber sie hat schon Menschen um sich, die sie zu trösten versuchen.
+Drei Menschen, die du glaubst aus dem Dunstkreis des Eckladens wiederzuerkennen, laufen gerade aus den Raum, als die Straße immer leerer wird. Eine davon scheint einen Zusammenbruch zu haben. Sie zittert und hockst sich ein paar Meter vor einem großem Fenster nieder. Du überlegst dir kurz ob es angebracht ist zu ihr zu gehen, aber nach einer halben Minute hat sie schon Menschen um sich, die sie zu trösten versuchen.
 
-Nach dem dein Blick etwas auf ihr ruhte, wendest du dich wieder deinen Freunden zu und widersprichst ihnen zunächst. Denn der Eckladen sei ein soziokultureller Raum von und für verschiedenste(n) Menschen. Man könne nicht die Kritik so einfach auf &quot;der Eckladen ist selbst schuld&quot; herunterbrechen. 
+Nach dem dein Blick etwas auf ihr ruhte, wendest du dich wieder deinen Freunden zu und widersprichst ihnen. Denn der Eckladen sei ein soziokultureller Raum von und für verschiedenste(n) Menschen. Man könne nicht die Kritik so einfach auf &quot;der Eckladen ist selbst schuld&quot; herunterbrechen. 
 
 Deine Freunde stimmen dir zu und ihr einigt euch schnell, hätte das Aktionsbündnis nicht gezündelt, wäre alles anders ausgegangen, denn ihr habt gehört dem Eckladen hätte man erst gekündigt, als aus dessen Umgebung die Proteste anfingen.
 
 Individuen rauspicken und unabhängig von den kapitalistischen Verhältnis, in dem man schließlich lebt, anzugreifen ist struktureller Antisemitismus, kritisiert ein Freund daraufhin das Aktionsbündnis. Die Eigentümer und ihrer Bar, versuchten nur ihren Lebensunterhalt zu finanzieren. Sie müssen die Kredite abbezahlen und bieten mehreren Menschen einen Arbeitsplatz. Und was soll überhaupt daran falsch sein, wenn Eigentümer ihrer Räume anderweitig vermieten wollen? Das alleine an sich sei nicht falsch. Das hätte das Aktionsbündnis wohl nicht verstanden, deshalb ist ihre Kritik bei den Menschen im Viertel zu recht nicht angekommen.
-Und außerdem dürfte man in den Zeiten in denen die AfD in dem Landtag sitzt, sich in der linken nicht gegenseitig zerfleischen. Das sei schon immer das Problem der modernen Antifaschisten, beendet er ohne das weiter noch jemand darauf eingeht. Vielleicht aus Müdigkeit, vielleicht weil niemand mehr etwas hinzuzufügen hat, vielleicht auch einfach weil niemand mehr sprechen will.
+Und außerdem dürfte man in den Zeiten in denen die AfD in dem Landtag sitzt, sich in der linken nicht gegenseitig zerfleischen. Das sei schon immer das Problem der modernen Antifaschisten, beendet er ohne das weiter noch jemand darauf eingeht. Vielleicht aus Müdigkeit, vielleicht weil niemand mehr etwas hinzuzufügen hat, vielleicht auch einfach weil sonst niemand mehr sprechen möchte.
 
 Dir dreht sich leicht alles und du bist dir unsicher was genau wahr und falsch ist. Eins ist sicher. Die Communities um diesen Raum werden nicht mehr so sein wie vorher.</tw-passagedata><tw-passagedata pid="62" name="Flyer1" tags="" position="1401,1943" size="100,100">&lt;img src=&quot;images/flyer1.jpg&quot; alt=&quot;Flyer&quot; style=&quot;height: 768; width:647&quot;/&gt;</tw-passagedata><tw-passagedata pid="63" name="Scheiße-und-Goldhorn" tags="" position="2088,2166" size="100,100">&lt;img src=&quot;images/scheisse-und-goldhorn.jpg&quot; alt=&quot;scheisse-und-goldhorn&quot; height= &quot;350&quot; width=&quot;700&quot;/&gt;</tw-passagedata><tw-passagedata pid="64" name="Kundgebung-Aufgeben" tags="" position="1953,1828" size="100,100">Es ist ein herrlicher Tag und auf der Eisi ist super viel los, denn heute ist ein Stadtteilfest. Zufällig haben alle möglichen Ladenprojekte, Bars und Kaffees auf. Auf der Brache wurden Bühnen für Bands aufgebaut, Infostände von verschiedenen politischen Projekten und Umsonst-Ecken mit einen Haufen Klamotten.
 
@@ -1332,7 +1335,7 @@ Sie sind einfach Unterwegs, besuchen mal Leipzig und suchen ein billiges Zimmer 
 Er fragt das Barpersonal und kriegt eine Nummer von friends of friends, die zufällig ein leerstehendes Zimmer haben.</tw-passagedata><tw-passagedata pid="69" name="ProjektVortrag1" tags="" position="347,933" size="100,100">{
 (set: $ProjektVortrag1 to it + 1)
 }\
-Menschen von der IWW haben eine Präsentation über das Währungssystem vorbereitet. Der Vortrag wird leider ständig gestört, weil jemand unbedingt quer durch den Raum will. Am Ende sitzt nur noch die Hälfte der Zuhörer&amp;#42;innen.</tw-passagedata><tw-passagedata pid="70" name="ProjektVortrag2" tags="" position="348,1037" size="100,100">{
+Menschen von der IWW haben eine Präsentation über das Währungssystem vorbereitet. Der Vortrag wird leider ständig gestört, weil jemand unbedingt quer durch den Raum will. Am Ende bleibt nur noch die Hälfte der Zuhörer&amp;#42;innen sitzen.</tw-passagedata><tw-passagedata pid="70" name="ProjektVortrag2" tags="" position="348,1037" size="100,100">{
 (set: $ProjektVortrag2 to it + 1)
 }\
 Eine junge Frau hat zusammen mit einer Gruppe eine Reise in Südamerika gemacht und dort verschiedene basisdemokratische Organisationen besucht. Die Reise haben sie mit vielen Fotos dokumentiert die ihr euch anschaut und Geschichten hört wie sich dort die Menschen für ihre Rechte einsetzten und gegen große Zerstörung durch Konzerne kämpfen.</tw-passagedata><tw-passagedata pid="71" name="ProjektGespaech1" tags="" position="346,1376" size="100,100">{
@@ -1824,7 +1827,7 @@ Ein paar deiner Freunde sind auch schon da, ihr stoßt erst mal an und eine der 
 Als du da bist läuft laut Musik, du gehst an eine provisorisch errichtete Bar und siehst ein paar bekannte Gesichter. Scheinbar soll es auch eine Party geben, denn in der Ecke baut schon ein DJ auf. Nach kurzer Zeit, hast du zwei Gläser Sekt in dir und als die Bar die ersten Popsongs einschaltet, entscheidest du dich dir doch noch kurz die Bilder anzuschauen.</tw-passagedata><tw-passagedata pid="133" name="WerBeiGalerie3" tags="" position="1047,1177" size="100,100">{
 (set: $WerBeiGalerie3 to it + 1)
 }\
-Niemand grüßt dich. Außer den Künstlern, sind nur 7 Menschen da. Die Wände und Boden sind voll mit unfertigen Zeichnungen und Farbe. Einer der ausstellenden drückt seine Kippe aus, geht zu einem Bild und malt weiter. Wahrscheinlich ist es eine Art Performance meets come together, denkst du dir und drehst dich einmal in langsamen Schritten im Kreis und nährst dich dem ersten Bild.</tw-passagedata><tw-passagedata pid="134" name="WerBeiGalerie4" tags="" position="1044,1284" size="100,100">{
+Niemand grüßt dich. Außer den Künstlern, sind nur 7 Menschen da. Wände und Boden sind voll mit unfertigen Zeichnungen und Farbe. Einer der ausstellenden drückt seine Kippe aus, geht zu einem Bild und malt weiter. Wahrscheinlich ist es eine Art Performance meets come together, denkst du dir und drehst dich einmal in langsamen Schritten im Kreis und nährst dich dem ersten hängendem Bild.</tw-passagedata><tw-passagedata pid="134" name="WerBeiGalerie4" tags="" position="1044,1284" size="100,100">{
 (set: $WerBeiGalerie4 to it + 1)
 }\
 Beim reinkommen stellst du fest, noch ist fast niemand da. Alles wirkt sehr kalt. Du begrüßt die Künstler&amp;#42;innen und im zweiten Satz fragen sie schon ob es ok ist, wenn sie sich kurz einen Döner um die Ecke holen. Denn alle hätten heute kaum Zeit um etwas zu essen gehabt. Du nickst verständnisvoll und bleibst in der Stille zurück, um dir die Bilder anzuschauen.</tw-passagedata><tw-passagedata pid="135" name="ClubAusgehen" tags="" position="25,1374" size="100,100">{
