@@ -8,7 +8,7 @@ Erstellt mit: [twine](http://twinery.org)
 Spielbar unter [aufDerEisi.github.io](https://aufdereisi.github.io).
 Außerdem auf itch.io
 
-<iframe src="https://itch.io/embed/492765?bg_color=0a0213&amp;fg_color=fcecf6&amp;link_color=395284&amp;border_color=5b74a6" height="167" frameborder="0" width="552"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dHHmUF9gs70" frameborder="0" allowfullscreen></iframe>
 
 Ohne Account auch hier zum bearbeiten kopierbar: [eisi-aura.glitch.me](https://glitch.com/edit/#!/eisi-aura)
 
